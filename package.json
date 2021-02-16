@@ -10,6 +10,19 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "bcryptjs": "^2.4.3",
+    "connect-tedious": "^1.1.2",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "express-session": "^1.17.0",
+    "morgan": "^1.9.1",
+    "mssql": "^6.0.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "qrcode": "^1.4.4",
+    "serve-favicon": "^2.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
   }
 }
