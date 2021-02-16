@@ -147,24 +147,24 @@ app.use('/configuracion_tarjeta',require('./routes/modulos/punto_venta/configura
 app.use('/configuracion_tipo_pago',require('./routes/modulos/punto_venta/configuracion_tipo_pago.js'));
 app.use('/reportes_punto_venta',require('./routes/modulos/punto_venta/reportes_punto_venta.js'));
 
-// app.use('/ventas',require('./routes/modulos/ventas/ventas.js'));
-// app.use('/cotizacion',require('./routes/modulos/ventas/cotizacion.js'));
-// app.use('/pedido',require('./routes/modulos/ventas/pedido.js'));
-// app.use('/guia',require('./routes/modulos/ventas/guia.js'));
-// app.use('/facturacion',require('./routes/modulos/ventas/facturacion.js'));
-// app.use('/sunat',require('./routes/modulos/ventas/sunat.js'));
-// app.use('/reportes_ventas',require('./routes/modulos/ventas/reportes_ventas.js'));
-// app.use('/compras',require('./routes/modulos/compras/compras.js'));
-// app.use('/requerimientos',require('./routes/modulos/compras/requerimientos.js'));
-// app.use('/orden_compra',require('./routes/modulos/compras/orden_compra.js'));
-// app.use('/pre_cotizacion',require('./routes/modulos/compras/pre_cotizacion.js'));
-// app.use('/comparativo_precios',require('./routes/modulos/compras/comparativo_precios.js'));
-// app.use('/reportes_compras',require('./routes/modulos/compras/reportes_compras.js'));
-// app.use('/dua',require('./routes/modulos/compras/dua.js'));
-// app.use('/almacen',require('./routes/modulos/almacen/almacen.js'));
-// app.use('/guia_entrada',require('./routes/modulos/almacen/guia_entrada.js'));
-// app.use('/transaccion_almacen',require('./routes/modulos/almacen/transaccion_almacen.js'));
-// app.use('/reportes_almacen',require('./routes/modulos/almacen/reportes_almacen.js'));
+app.use('/ventas',require('./routes/modulos/ventas/ventas.js'));
+app.use('/cotizacion',require('./routes/modulos/ventas/cotizacion.js'));
+app.use('/pedido',require('./routes/modulos/ventas/pedido.js'));
+app.use('/guia',require('./routes/modulos/ventas/guia.js'));
+app.use('/facturacion',require('./routes/modulos/ventas/facturacion.js'));
+app.use('/sunat',require('./routes/modulos/ventas/sunat.js'));
+app.use('/reportes_ventas',require('./routes/modulos/ventas/reportes_ventas.js'));
+app.use('/compras',require('./routes/modulos/compras/compras.js'));
+app.use('/requerimientos',require('./routes/modulos/compras/requerimientos.js'));
+app.use('/orden_compra',require('./routes/modulos/compras/orden_compra.js'));
+app.use('/pre_cotizacion',require('./routes/modulos/compras/pre_cotizacion.js'));
+app.use('/comparativo_precios',require('./routes/modulos/compras/comparativo_precios.js'));
+app.use('/reportes_compras',require('./routes/modulos/compras/reportes_compras.js'));
+app.use('/dua',require('./routes/modulos/compras/dua.js'));
+app.use('/almacen',require('./routes/modulos/almacen/almacen.js'));
+app.use('/guia_entrada',require('./routes/modulos/almacen/guia_entrada.js'));
+app.use('/transaccion_almacen',require('./routes/modulos/almacen/transaccion_almacen.js'));
+app.use('/reportes_almacen',require('./routes/modulos/almacen/reportes_almacen.js'));
 
 app.use('/tablas',require('./routes/modulos/mantenimientos/tablas.js'));
 
