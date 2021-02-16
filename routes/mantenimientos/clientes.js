@@ -2,6 +2,74 @@ const express = require('express');
 const router = express.Router();
 const {poolPromise, mssql} = require ('../../database');
 
+router.get('/lista', async (req, res) => {
+  try {
+      const codigo_empresa = req.user.codigo_empresa
+      const pool = await poolPromise
+
+      const lista = await pool
+      .request()
+      .input('codigo_empresa', mssql.VarChar(10), codigo_empresa)
+      .query("Select "+ 
+      "Hcliente.ccod_cliente as Codigo, "+ 
+      "Hcliente.cnom_cliente as Nombre, "+ 
+      "(RTRIM(Htipdociden.ccod_sunatid) + ' - ' + Htipdociden.abvr) as Tipo_Cliente, "+ 
+      "Hcliente.ndoc_id as Numero_Doc, "+ 
+      "Hcliente.cnum_ruc as Numero_Ruc, "+ 
+      "Hcliente.cdireccion as Direccion, "+ 
+      "Hcliente.ctelefonos as Telefono, "+ 
+      "(RTRIM(Hpais.ccod_pais) + ' - ' + Hpais.cnom_pais) as Pais, "+ 
+      "(RTRIM(Hdepto.ccod_departamento) + ' - ' + Hdepto.cnom_departamento) as Departamento, "+ 
+      "(RTRIM(Hdistrit.ccod_distrito) + ' - ' + Hdistrit.cnom_distrito) as Distrito, "+ 
+      "(RTRIM(Hciudad.ccod_ciudad) + ' - ' + Hciudad.cnom_ciudad)as Ciudad, "+ 
+      "ISNULL(Hcliente.erp_observacion01, '') as Observacion1, "+ 
+      "ISNULL(Hcliente.erp_observacion02, '') as Observacion2, "+ 
+      "isnull(Hcliente.estado, 'Inactivo') as Estado, "+ 
+      "Hcliente.codigo_interno as Codigo_Internoo, "+ 
+      "Hcliente.erpusuario as Usuario, "+ 
+      "Hcliente.NombreEquipo as Pc_user , "+ 
+      "Hcliente.FechaEquipo as Pc_Fecha, "+ 
+      "Hcliente.IpEquipo as Pc_ip, "+ 
+      "Hcliente.erp_pc_fechamodificacion as Fecha_Modidificacion,  "+ 
+      "LTRIM(RTRIM(Hpais.ccod_pais)) as Codigo_Pais, "+ 
+      "LTRIM(RTRIM(Hdepto.ccod_departamento)) as Codigo_Departamento, "+ 
+      "LTRIM(RTRIM(Hdistrit.ccod_distrito)) as Codigo_Distrito, "+ 
+      "LTRIM(RTRIM(Hciudad.ccod_ciudad)) as Codigo_Ciudad "+ 
+      "From Hcliente with (nolock) "+ 
+      "left Join Htipdociden with (nolock)On  "+ 
+      "Hcliente.tip_doc = Htipdociden.ccod_tdid "+ 
+      "left Join Hpais with (nolock) On  "+ 
+      "Hcliente.ccod_empresa=Hpais.ccod_empresa AND  "+ 
+      "Hcliente.ccod_pais=Hpais.ccod_pais  "+ 
+      "left Join Hdepto with (nolock) On  "+ 
+      "Hcliente.ccod_empresa=Hdepto.ccod_empresa AND  "+ 
+      "Hcliente.ccod_pais=Hdepto.ccod_pais AND  "+ 
+      "Hcliente.ccod_departamento=Hdepto.ccod_departamento  "+ 
+      "left Join Hdistrit with (nolock) On  "+ 
+      "Hcliente.ccod_empresa=Hdistrit.ccod_empresa AND "+ 
+      "Hcliente.ccod_pais=Hdistrit.ccod_pais AND "+ 
+      "Hcliente.ccod_departamento=Hdistrit.ccod_departamento AND "+ 
+      "Hcliente.cciudad=Hdistrit.ccod_ciudad AND "+ 
+      "Hcliente.cdistrito=Hdistrit.ccod_distrito  "+ 
+      "left Join Hciudad with (nolock) On  "+ 
+      "Hcliente.ccod_empresa=Hciudad.ccod_empresa AND "+ 
+      "Hcliente.ccod_pais=Hciudad.ccod_pais AND "+ 
+      "Hcliente.ccod_departamento=Hciudad.ccod_departamento AND "+ 
+      "Hcliente.cciudad=Hciudad.ccod_ciudad "+
+      "where Hcliente.ccod_empresa =@codigo_empresa ");
+        
+      const recordset = lista.recordset;
+      res.json(recordset); 
+  } catch (err) {
+    
+    if(req.user==null){
+      res.send("El usuario ha sido expulsado");
+    }else{
+      res.send(err.message)
+    }
+  }
+});
+
 router.post('/lista', async (req, res) => {
   try {
       const codigo_empresa = req.user.codigo_empresa
