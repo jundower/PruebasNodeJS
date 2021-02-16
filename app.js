@@ -163,7 +163,7 @@ app.use('/retencion',require('./routes/modulos/provisiones/retencion.js'));
 // app.use('/dua',require('./routes/modulos/compras/dua.js'));
 // app.use('/almacen',require('./routes/modulos/almacen/almacen.js'));
 // app.use('/guia_entrada',require('./routes/modulos/almacen/guia_entrada.js'));
-app.use('/transaccion_almacen',require('./routes/modulos/almacen/transaccion_almacen.js'));
+// app.use('/transaccion_almacen',require('./routes/modulos/almacen/transaccion_almacen.js'));
 // app.use('/reportes_almacen',require('./routes/modulos/almacen/reportes_almacen.js'));
 
 app.use('/tablas',require('./routes/modulos/mantenimientos/tablas.js'));
