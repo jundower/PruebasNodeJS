@@ -1,0 +1,113 @@
+<div class="container-fluid border mt-2 pt-2">
+    <div class="row  d-none">
+        <div class="col" id ="modulo">{{modulo}}</div>
+        <input id="modulo_formatos" type="text" value="{{modulo}}">
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-sm-6">
+                <form class="m-0 p-0">
+                    <div class="form-group row my-05 py-05">
+                        <label for="estado" class="col-sm-6 col-form-label col-form-label-sm">Estado:</label>
+                        <select class="col-sm-6 form-control form-control-sm m-0 p-0" id="estado">
+                            <option value="Sin Aprobacion">Sin Aprobación</option>
+                            <option value="Aprobado">Aprobado</option>
+                            <option value="Desaprobado">Desaprobado</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="row p-2">
+        <div class="col-md-12 ">
+            <table id="lista_documentos"></table>
+        </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col-md-6">
+            <div class="col-sm-6">
+                <form class="m-0 p-0">
+                    <div class="form-group row my-0">
+                        <label for="responsable" class="col-sm-6 col-form-label col-form-label-sm">Persona Responsable:</label>
+                        <select class="col-sm-6 form-control form-control-sm m-0 p-0 c_mantenimientos" id="responsable">
+                            <option value="00">Ninguno</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-4">
+            <form class="m-0 p-0">
+                <div class="form-group row m-0">
+                    <button type="button" class="btn btn-secondary mx-2 py-0">Línea de Crédito</button>
+                    <button type="button" class="btn btn-secondary mx-2 py-0">Rentabilidad</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col-md-6">
+            <div class="col-sm-6">
+                <form class="m-0 p-0">
+                    <div class="form-group row my-0">
+                        <label for="responsable" class="col-sm-6 col-form-label col-form-label-sm">Comentario:</label>
+                        <textarea class="col-sm-6 form-control form-control-sm m-0 p-0" id="comentario1" rows="5"></textarea>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    {{!-- <div class="row mt-2">
+        <div class="col-md-12">
+            <div class="col-sm-6">
+                <form class="m-0 p-0">
+                    <div class="form-group row my-05 py-05">
+                        <label for="comentario" class="col-sm-4 col-form-label col-form-label-sm">Comentario:</label>
+                    </div>
+                </form>
+            </div>
+            <div class="col-sm-6">
+                <form class="m-0 p-0">
+                    <div class="form-group row m-0 p-0">
+                    <input type="text" class="form-control col-sm-6 form-control form-control-sm m-0 p-0" id="comentario1" maxlength = "50">
+                    </div>
+                </form>
+            </div>
+            <div class="col-sm-6">
+                <form class="m-0 p-0">
+                    <div class="form-group row m-0 p-0">
+                    <input type="text" class="form-control col-sm-6 form-control form-control-sm m-0 p-0" id="comentario2" maxlength = "50">
+                    </div>
+                </form>
+            </div>
+            <div class="col-sm-6">
+                <form class="m-0 p-0">
+                    <div class="form-group row m-0 p-0">
+                    <input type="text" class="form-control col-sm-6 form-control form-control-sm m-0 p-0" id="comentario3" maxlength = "50">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div> --}}
+
+    <div class="hoja_impresion_erp" id ="contenedor_formato_impresion"  style="background: white;">
+        <div>
+            <div style="text-align: right;">
+            <button type="button" class="btn btn-close-modal" id="close_print" style="float: none;">
+                <p class="btn-close-modal-text">x</p>
+            </button>
+            </div>
+            <div id="aprobaciones_contenedor_formato_impresion">
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{{> mantenimientos/formato_impresion}}
+{{> mantenimientos/lista_mantenimientos}}
+<script src="/js/modulos/mantenimientos/aprobaciones.js"></script>

@@ -1,0 +1,110 @@
+<div class="container-fluid pl-0">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_asiento_patron_codigo" class="col-sm-3 col-form-label col-form-label-sm">Codigo:</label>
+                            <input type="text" id="tablas_asiento_patron_codigo" class="col-sm-9 form-control form-control-sm m-0 p-0"value="{{datos.Codigo}}" placeholder="Codigo" maxlength="50">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_asiento_patron_abreviatura" class="col-sm-3 col-form-label col-form-label-sm">Abreviatura:</label>
+                            <input type="text" id="tablas_asiento_patron_abreviatura" class="col-sm-9 form-control form-control-sm m-0 p-0"value="{{datos.Abreviatura}}" placeholder="Abreviatura" maxlength="5">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-9">
+                    <div class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_asiento_patron_nombre" class="col-sm-2 col-form-label col-form-label-sm">Nombre:</label>
+                            <input type="text" id="tablas_asiento_patron_nombre" class="col-sm-10 form-control form-control-sm m-0 p-0"value="{{datos.Nombre}}" placeholder="Nombre" >
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 text-right">
+                    <div class="m-0 p-0">
+                        <div class="form-check row my-05 py-05">
+                            <input class="form-check-input" type="checkbox" id="tablas_asiento_patron_provision">
+                            <label class="form-check-label col-form-label-sm" for="tablas_asiento_patron_provision">Provision</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_asiento_patron_cuenta_soles" class="col-sm-3 col-form-label col-form-label-sm pr-0 ">Cuenta Soles:</label>
+                            <select type="text" id="tablas_asiento_patron_cuenta_soles" class="col-sm-9 form-control form-control-sm m-0 p-0 tablas_asiento_patron_cuenta c_mantenimientos" tabla="plan_contable"></select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_asiento_patron_tipo_documento" class="col-sm-3 col-form-label col-form-label-sm pr-0">Tipo Doc:</label>
+                            <select type="text" id="tablas_asiento_patron_tipo_documento" class="col-sm-9 form-control form-control-sm m-0 p-0 c_mantenimientos" tabla="tipo_documento" ></select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_asiento_patron_cuenta_dolares" class="col-sm-3 col-form-label col-form-label-sm pr-0">Cuenta Dolares:</label>
+                            <select type="text" id="tablas_asiento_patron_cuenta_dolares" class="col-sm-9 form-control form-control-sm m-0 p-0 tablas_asiento_patron_cuenta c_mantenimientos" tabla="plan_contable"></select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row cuenta_provision" hidden>
+                <div class="col-sm-6">
+                    <div class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_asiento_patron_cuenta_prov_soles" class="col-sm-3 col-form-label col-form-label-sm pr-0">Cta. Prov. Soles:</label>
+                            <select type="text" id="tablas_asiento_patron_cuenta_prov_soles" class="col-sm-9 form-control form-control-sm m-0 p-0 tablas_asiento_patron_cuenta c_mantenimientos" tabla="plan_contable"></select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row cuenta_provision" hidden>
+                <div class="col-sm-6">
+                    <div class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_asiento_patron_cuenta_prov_dolares" class="col-sm-3 col-form-label col-form-label-sm pr-0">Cta. Prov. Dolares:</label>
+                            <select type="text" id="tablas_asiento_patron_cuenta_prov_dolares" class="col-sm-9 form-control form-control-sm m-0 p-0 tablas_asiento_patron_cuenta c_mantenimientos" tabla="plan_contable" ></select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="d-none">
+    {{#if datos}}
+        <input id="tablas_asiento_patron_cuenta_soles_predeterminado" type="text" value="{{datos.Cuenta_Soles}}">
+        <input id="tablas_asiento_patron_tipo_documento_predeterminado" type="text" value="{{datos.Tipo_Documento}}">
+        <input id="tablas_asiento_patron_cuenta_dolares_predeterminado" type="text" value="{{datos.Cuenta_Dolares}}">
+        <input id="tablas_asiento_patron_cuenta_prov_soles_predeterminado" type="text" value="{{datos.Cuenta_Provision_Soles}}">
+        <input id="tablas_asiento_patron_cuenta_prov_dolares_predeterminado" type="text" value="{{datos.Cuenta_Provision_Dolares}}">
+
+        <input type="text" id="tablas_asiento_patron_provision_predeterminado" value="{{datos.Si_Provision}}">
+    {{else}}
+        <input id="tablas_asiento_patron_cuenta_soles_predeterminado" type="text" value="00">
+        <input id="tablas_asiento_patron_tipo_documento_predeterminado" type="text" value="00">
+        <input id="tablas_asiento_patron_cuenta_dolares_predeterminado" type="text" value="00">
+        <input id="tablas_asiento_patron_cuenta_prov_soles_predeterminado" type="text" value="00">
+        <input id="tablas_asiento_patron_cuenta_prov_dolares_predeterminado" type="text" value="00">
+
+        <input type="text" id="tablas_asiento_patron_provision_predeterminado" value="N">
+    {{/if}}
+</div>

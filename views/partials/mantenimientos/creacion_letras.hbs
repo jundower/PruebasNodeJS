@@ -1,0 +1,92 @@
+<!--<div class="modal fullscreen-modal fade bd-example-modal-xl" tabindex="-1" role="dialog" id="modal_ventana_lista">
+  <div class="modal-dialog modal-xl " role="document">
+    <div class="modal-content">
+      <div class="modal-header">-->
+ <!-- Modal Cliente -->
+<div class="modal fade" tabindex="-1" role="dialog" id="creacion_letras">
+  <div class="modal-dialog-full-width modal-dialog">
+    <div class="modal-content-full-width modal-content">
+      <div class="modal-header-full-width modal-header p-2">
+        
+        <div class="row" >
+            <ul class="list-group list-group-horizontal-sm">
+            <li class="list-group px-4">
+              <h4 class="modal-title titulos_erp">Creación de Letras</h4>
+            </li>
+            {{!-- <li class="list-group">
+                <button id="pagar" type="button" class="btn btn-primary" data-dismiss="modal">Pagar</button>
+            </li>
+            <li class="list-group">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Salir</button>
+            </li> --}}
+          </ul>
+        </div>
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <form class="pb-2">
+          <div class="row m-0 mb-2" >
+              <table id="lista-facturas"></table>
+              <div id="lista-facturas-pager" style="text-align:center" > </div>
+          </div>
+          <div class="row m-0 mb-2">
+            <table id="lista-letras"></table>
+            <div id="lista-letras-pager" style="text-align:center" > </div>
+          </div>
+          <div class="row m-0">
+            <div class="col-sm-2">
+              <form class="m-0 p-0">
+                  <div class="form-group row my-05 py-05">
+                      <label for="numero_letras" class="col-sm-5 col-form-label col-form-label-sm">Numero:</label>
+                      <input type="number" id = "numero_letras" class="col-sm-7 form-control form-control-sm m-0 p-0 text-center">
+                  </div>
+              </form>
+            </div>
+            <div class="col-sm-2">
+              <div class="input-group">
+                <div class="form-check form-check-inline form-control-sm-erp pl-3">
+                    <input class="form-check-input" type="radio" name="correlativo_letra" id="automatico" value="automatico">
+                    <label class="form-check-label col-form-label-sm" for="automatico">Auto</label>
+                </div>
+                <div class="form-check form-check-inline form-control-sm-erp pl-3">
+                    <input class="form-check-input" type="radio" name="correlativo_letra" id="manual" value="manual">
+                    <label class="form-check-label col-form-label-sm" for="manual">Manual</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <form class="m-0 p-0">
+                  <div class="form-group row my-05 py-05">
+                      <label for="serie_letra" class="col-sm-4 col-form-label col-form-label-sm">Serie:</label>
+                      <select class="col-sm-8 form-control form-control-sm m-0 p-0 " id="serie_letra">
+                      </select>
+                      <input type="text" id = "serie_letra_manual" class="col-sm-7 form-control form-control-sm m-0 p-0 text-center" hidden>
+                      <input type="text" id = "correlativo_letra" class="col-sm-7 form-control form-control-sm m-0 p-0 text-center" hidden>
+                  </div>
+              </form>
+            </div>
+            <div class="col-sm-2">
+              <form class="m-0 p-0">
+                  <div class="form-group row my-05 py-05">
+                      <label for="dias_letras" class="col-sm-5 col-form-label col-form-label-sm">Dias:</label>
+                      <input type="number" id = "dias_letras" class="col-sm-7 form-control form-control-sm m-0 p-0 text-center">
+                  </div>
+              </form>
+            </div>
+            <div class="col-sm-4" style="text-align: right;">
+              <button type="button" class="btn btn-success" id="finalizar">Finalizar</button>
+              <button type="button" class="btn btn-secondary" id="cancelar">Cancelar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div> 
+
+
+<script src="/js/mantenimientos/creacion_letras.js"></script>

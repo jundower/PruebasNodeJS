@@ -1,0 +1,282 @@
+{{#if user}}<ul class="nav nav-tabs tabs group pl-4 d-print-none" id="myTab" role="tablist">
+  <li class="nav-item active nav-tab-rounded">
+    <a class="active my-0 py-2" data-toggle="tab" href="#generales">Datos Generales</a>
+  </li>
+  <li class="nav-item nav-tab-rounded">
+    <a class="my-0 py-2" data-toggle="tab" href="#profile">Datos Complementarios</a>
+  </li>
+</ul>
+
+<div class="tab-content mr-3 d-print-none" id="myTabContent">
+    <div class="tab-pane fade show active" id="generales" role="tabpanel" aria-labelledby="generales-tab">
+        <div class="container-fluid border">
+            <div class="row border">
+                <div class="col-md-4 border">
+                    <div class="input-group form-control-sm-erp">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text col-form-label col-form-label-sm py-0 background-title-jqgrid" for="ejercicio">Ejercicio</label>
+                        </div>
+                        <select type="text" id="ejercicio" class="form-control form-control-sm  text-center" style="margin-right: 10px;"></select>
+                        
+                        <div class="input-group-prepend">
+                            <label class="input-group-text col-form-label col-form-label-sm py-0 background-title-jqgrid" for="periodo">Periodo</label>
+                        </div>
+                        <select type="text" id="periodo" class="form-control form-control-sm  text-center"></select>
+                    </div>
+                    <div class="row">
+                         <div class="col-lg container-fluid border" style=" padding: 0px 0px 0px 5px; margin: 5px 263px 5px 15px">
+                            <form class="form-group row m-0 p-0">
+                                <div class="form-check col-sm-12 form-check-inline">
+                                    <label class="form-check-label col-form-label-sm">Tipo Registro: </label>
+                                </div>
+                                <div class="form-check col-sm-12 form-check-inline">
+                                    <input class="form-check-input" type="radio" name="tipo_registro" id="Standar" value="ST">
+                                    <label class="form-check-label col-form-label-sm" for="Standar">Standar</label>
+                                </div>
+                                <div class="form-check col-sm-12 form-check-inline">
+                                    <input class="form-check-input" type="radio" name="tipo_registro" id="registro_venta" value="RV">
+                                    <label class="form-check-label col-form-label-sm" for="registro_venta" >Registro de Venta</label>
+                                </div>
+                                <div class="form-check col-sm-12 form-check-inline">
+                                    <input class="form-check-input" type="radio" name="tipo_registro" id="registro_compra" value="RC">
+                                    <label class="form-check-label col-form-label-sm" for="registro_compra" >Registro de Compra</label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-11" style=" padding: 0px; margin: 10px 0px 10px 15px">
+                            <div class="input-group form-control-sm-erp">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text col-form-label col-form-label-sm py-0 background-title-jqgrid" for="destino_operacion">Dest Operacion</label>
+                                </div>
+                                <select class="form-control form-control-sm " id="destino_operacion">
+                                    <option value="001">Grabada</option>
+                                    <option value="004">No Grabada</option>
+                                    <option value="005">Mixta</option>
+                                    <option value="007">Fact. Exportacion</option>
+                                    <option value="008">No Domiciliada</option>
+                                    <option value="009">Dua</option>
+                                    <option value="010">Op. Grav. Dest. No Grav.</option>
+                                    <option value="011">Op. Mixta Dest No Grav</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="col-lg-11" style=" padding: 0px; margin: 0px 0px 10px 15px">
+                            <div class="input-group form-control-sm-erp">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text col-form-label col-form-label-sm py-0 background-title-jqgrid" for="detraccion_provisiones" style="padding-right: 32px;">Detraccion:</label>
+                                </div>
+                                <select class="form-control form-control-sm " id="detraccion_provisiones"></select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 border">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="input-group form-control-sm-erp">
+                                <div class="input-group-prepend" >
+                                    <label class="input-group-text col-form-label col-form-label-sm py-0 background-title-jqgrid" for="subvoucher" style="padding-right: 16px">Voucher</label>
+                                </div>
+                                <select class="form-control form-control-sm c_mantenimientos" id="subvoucher" ></select>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="input-group form-control-sm-erp">
+                                <div class="input-group-prepend" >
+                                    <label class="input-group-text col-form-label col-form-label-sm py-0 background-title-jqgrid" for="fecha_registro">Fecha Reg:</label>
+                                </div>
+                                <input type="date" id="fecha_registro" class="col-sm-7 form-control form-control-sm m-0 p-0 text-center">
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <form class="m-0 p-0">
+                                <div class="form-check form-check-inline m-0 p-0">
+                                    <input class="form-check-input" type="radio" name="forma" id="automatico" value="A">
+                                    <label class="form-check-label col-form-label-sm" for="automatico">Automatico: </label>
+                                </div>
+                                <div class="form-check form-check-inline m-0 p-0">
+                                    <input class="form-check-input" type="radio" name="forma" id="manual" value="M">
+                                    <label class="form-check-label col-form-label-sm" for="manual">Manual: </label>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-sm-1">
+                        </div>
+                        <div class="col-sm-2">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 " style="padding-right: 10px;">
+                                    <input type="text" id="numero_documento" class="col-sm-12 form-control form-control-sm m-0 p-0 text-center">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="input-group">
+                                <select class="form-control form-control-sm form-control-sm-moneda no-spin" id="moneda" disabled=""><option value="S/">S/</option><option value="$">$</option></select>
+                                <select class=" form-control form-control-sm " id="tipo_cambio"><option value="VTA">Venta</option><option value="COM">Compra</option><option value="ESP">Especial </option></select>
+                                <input type="number" class="form-control form-control-sm text-right no-spin-number form-control-sm-tasa-cambio" id="tasa_cambio" disabled="">
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                        </div>
+                        <div class="col-sm-3">
+                        </div>
+                         <div class="col-sm-3" style="padding-right: 10px;">
+                            <div class="input-group form-control-sm-erp">
+                                <div class="input-group-prepend" >
+                                    <label class="input-group-text col-form-label col-form-label-sm py-0 background-title-jqgrid" for= "importe">Importe:</label>
+                                </div>
+                                <input type="number" id= "importe" class="col-sm-12 form-control form-control-sm m-0 p-0 text-right focusIn">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3" style="margin-top: 5px;">
+                            <div class="input-group form-control-sm-erp">
+                                <div class="input-group-prepend" >
+                                    <label class="input-group-text col-form-label col-form-label-sm py-0 background-title-jqgrid" for="">T. Anexo:</label>
+                                </div>
+                                <select class="form-control form-control-sm c_mantenimientos" id="tipo_anexo" ></select>
+                            </div>
+                        </div>
+                        <div class="col-sm-6" style="margin-top: 5px;">
+                            <div class="input-group form-control-sm-erp">
+                                <div class="input-group-prepend" >
+                                    <label for="codigo_anexo" class="input-group-text col-form-label col-form-label-sm py-0 background-title-jqgrid" style="padding-right: 20px;">Anexo :</label>
+                                </div>
+                                <input type="text" id = "codigo_anexo" class="col-sm-4 form-control form-control-sm m-0 p-0 text-let c_mantenimientos">
+                                <input type="text" id = "nombre_anexo" class="col-sm-8 form-control form-control-sm m-0 p-0 text-left">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3" style="margin-top: 5px;">
+                            <div class="input-group form-control-sm-erp">
+                                <div class="input-group-prepend" >
+                                    <label class="input-group-text col-form-label col-form-label-sm py-0 background-title-jqgrid" for="tipo_documento" style="padding-right: 29px;">Ref 1:</label>
+                                </div>
+                                <select class="col-sm 9 form-control form-control-sm m-0 p-0"id="tipo_documento" ></select>
+                            </div>
+                        </div>
+                        <div class="col-sm-4" style="margin-top: 5px;">
+                            <div class="input-group form-control-sm-erp">
+                                <input type="text" id = "serie" class="col-sm-3 form-control form-control-sm m-0 p-0 text-center">
+                                <input type="text" id = "numero" class="col-sm-5 form-control form-control-sm m-0 p-0 text-center">
+                                <input type="date" id="fecha_emision" class="col-sm-7 form-control form-control-sm m-0 p-0 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3" style="margin-top: 5px;">
+                            <div class="input-group form-control-sm-erp">
+                                <div class="input-group-prepend" >
+                                    <label class="input-group-text col-form-label col-form-label-sm py-0 background-title-jqgrid" for="tipo_documento" style="padding-right: 29px;">Ref 2:</label>
+                                </div>
+                                <select class="col-sm 9 form-control form-control-sm m-0 p-0" id="tipo_documento_referencia"></select>
+                            </div>
+                        </div>
+                        <div class="col-sm-4" style="margin-top: 5px;">
+                            <div class="input-group form-control-sm-erp">
+                                <input type="text" id = "serie_referencia" class="col-sm-3 form-control form-control-sm m-0 p-0 text-center">
+                                <input type="text" id = "numero_referencia" class="col-sm-5 form-control form-control-sm m-0 p-0 text-center">
+                                <input type="date" id="fecha_referencia" class="col-sm-7 form-control form-control-sm m-0 p-0 text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3" style="margin-top: 5px;">
+                            <div class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="subtotal" class="col-sm-5 col-form-label col-form-label-sm">Subtotal:</label>
+                                    <input onkeypress="return isNumeric(event)" oninput="maxLengthCheck(this)" type = "number" maxlength = "9" min = "1" max = "999" id="subtotal" class="col-sm-7 form-control form-control-sm m-0 p-0 text-right focusIn" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3" style="margin-top: 5px;">
+                            <div class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="mixta" class="col-sm-4 col-form-label col-form-label-sm">Mix:</label>
+                                    <input type="number" id = "mixta" class="col-sm-8 form-control form-control-sm m-0 p-0 text-right focusIn" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-7 d-none">
+                            <div class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="porcentaje_impuesto" class="col-sm-5 col-form-label col-form-label-sm">% Imp.:</label>
+                                    <input type="number" id = "porcentaje_impuesto" class="col-sm-7 form-control form-control-sm m-0 p-0 text-right">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="impuesto" class="col-sm-5 col-form-label col-form-label-sm">Impuesto:</label>
+                                    <input type="number" id = "impuesto" class="col-sm-7 form-control form-control-sm m-0 p-0 text-right focusIn" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3" >
+                            <div class="m-0 p-0">
+                                <div class="form-group row my-05 py-05" style="padding-right: 10px;">
+                                    <label for="icbper" class="col-sm-5 col-form-label col-form-label-sm">Icbper:</label>
+                                    <input type="number" id = "icbper" class="col-sm-7 form-control form-control-sm m-0 p-0 text-right focusIn" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="row">
+                        <div class="col-sm-12" style="margin-top: 5px; padding-right: 10px; margin-bottom: 5px;">
+                            <div class="input-group form-control-sm-erp">
+                                <div class="input-group-prepend" >
+                                    <label for="glosa" class="input-group-text col-form-label col-form-label-sm py-0 background-title-jqgrid" style="padding-right: 26px;">Glosa:</label>
+                                </div>
+                                <input type="text" id = "glosa" class="col-sm-12 form-control form-control-sm m-0 p-0 text-left focusIn">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        
+        <div class="container-fluid border">
+            <div class="row border">
+                <div class="col-sm-6 border">
+                    
+                </div>
+                <div class="col-sm-6 border">
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="d-none">
+    <input id="user-Ventas_Mas_Igv" type="text" value="{{user.ventas_mas_igv}}">
+    <input id="user-Unidad_negocio" type="text" value="{{user.codigo_unidad_negocio}}">
+    <input id="user-codigo_centro_costos" type="text" value="{{user.codigo_centro_costos}}">
+    <input id="user-codigo_punto_venta" type="text" value="{{user.codigo_punto_venta}}">
+    <input id="user-codigo_ninguno" type="text" value="00">
+    <input id="user-Busqueda_Punto_Venta" type="text" value="{{user.globales_busqueda_pto_venta}}">
+    <input id="modulo_formatos" type="text" value="guia">
+    <input id="subvoucher_predeterminado" type="text" value="{{subvoucher}}">
+</div>
+
+{{> mantenimientos/ventas_pendientes}}
+{{> mantenimientos/detalle_contable}}
+{{> mantenimientos/lista_mantenimientos}}
+{{> mantenimientos/documentos_listas}}
+{{> mantenimientos/documentos_pendientes_contable}}
+
+<script src="/js/mantenimientos/cabecera_provisiones.js"></script>
+<script src="/js/modulos/contabilidad/movimientos_contables.js"></script>
+
+{{/if}}

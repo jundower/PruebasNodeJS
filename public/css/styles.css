@@ -1,0 +1,773 @@
+
+.hidden {
+  visibility: none;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+visibility: hidden;
+width: 120px;
+background-color: black;
+color: #fff;
+text-align: center;
+border-radius: 6px;
+padding: 5px 0;
+
+/* Position the tooltip */
+position: absolute;
+z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+visibility: visible;
+}
+
+.col-form-label-sm{
+  font-size: 0.68rem;
+}
+.sm{
+  font-size: 0.68rem;
+}
+.md{
+  font-size: 1.5rem;
+}
+.form-control-sm{
+  font-size: 0.68rem;
+}
+
+.my-05 {
+  margin-top : 0rem;
+  margin-bottom : 0.3rem;
+}
+
+.py-05 {
+  padding-top : 0rem;
+  padding-bottom : 0rem;
+}
+
+body{
+  background: #f3f3f3;
+  color: #6e6e6e
+}
+.navbar {
+  background: #f3f3f3!important;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+}
+/*
+Full screen Modal 
+*/    
+.modal-dialog-full-width {
+  width: 90% !important;
+  height: 90% !important;
+  margin: 5 !important;
+  padding: 5 !important;
+  max-width:none !important;
+
+}
+
+.modal-content-full-width  {
+  height: auto !important;
+  min-height: 100% !important;
+  border-radius: 50 !important;
+  background-color: #ececec !important 
+}
+
+.modal-header-full-width  {
+  border-bottom: 1px solid #9ea2a2 !important;
+}
+
+.modal-footer-full-width  {
+  border-top: 1px solid #9ea2a2 !important;
+}
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.hoja_impresion_erp{
+  min-height: 750px;
+  max-width: 750px;
+}
+#formato_impresion{
+  background: white;
+  /* color: #6e6e6e; */
+  color:black;
+  min-height: 750px;
+  width: 750px;
+}
+.formato_reporte_anexos{
+  /* min-height: 750px; */
+  width: 1050px;
+  color:black;
+  /* background: white; */
+  /* color: #6e6e6e; */
+  /* color:black; */
+  /* min-height: 3508px;
+  width: 2480px; */
+  /* width: 21cm; */
+  /* min-height: 29.7cm; */
+  /* margin: 30mm 45mm 30mm 45mm;  */
+}
+.modal-print{
+  background: #abafb3 transparent!important;
+  /* opacity: 0.5; */
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  /*padding: 5 !important; */
+  max-width:none !important;
+}
+#print_botones{
+  position: absolute;
+  margin: 10px;
+  top: 0;
+  z-index: 1042;
+  right: 0;
+}
+.print_botones_imprimir{
+  margin-right: 30px;
+  font-size: 1rem;
+}
+.print_botones_excel{
+  margin-right: 30px;
+}
+.print_botones_descargar{
+  margin-right: 30px;
+}
+.print_botones_onedrive{
+  margin-right: 30px;
+}
+#print_botones2{
+  position: absolute;
+  margin: 10px;
+  top: 0;
+  z-index: 1042;
+  left: 0;
+}
+.print_botones_atras{
+  margin-left: 30px;
+}
+#print_botones_top{
+  position: absolute;
+  width: 100%;
+  height: 90px;
+  top: 0;
+  z-index: 1042;
+  background: #000;
+  opacity: .45;
+}
+#print_rango_fechas{
+  position: absolute;
+  top: 0;
+  z-index: 1042;
+  left: 0;
+  color:white;
+  margin: 50px;
+  width: 500px;
+  display: flex;
+}
+
+
+#print_moneda{
+  position: absolute;
+  top: 0;
+  z-index: 1042;
+  width: 200px;
+  color:white;
+  right: 0;
+  margin: 50px;
+}
+.svg-white{
+  fill: white;
+}
+#contenedor_impresion{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1041;
+  width: 100vw;
+  margin-top:50px;
+  /* height: 100vh; */
+}
+.modal-print-backdrop{
+  opacity: .85;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+}
+.breaker{
+  opacity: 0.85;
+  background-color: #000;
+  height: 50px;
+}
+.d--none{
+  display: none;
+}
+.d---none{
+  left: -10000px!important;
+  z-index: -100!important;
+}
+.btn-close-modal{
+  display: inline-block;
+  float: right;
+  margin: 0px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: #343a40;
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.btn-close-modal-text{
+  padding-left: .5rem;
+  padding-right: .5rem;
+  padding-bottom: 0;
+  padding-top: 0;
+  margin: 0;
+}
+.ui-widget{
+  font-size: 0.7em;
+}
+
+
+
+.tabs { 
+  font-size: 0.8rem;
+}
+
+    
+.tabs li { 
+  /* Makes a horizontal row */
+  float: left; 
+  
+  /* So the psueudo elements can be
+     abs. positioned inside */
+  position: relative; 
+}
+.tabs a { 
+  /* Make them block level
+     and only as wide as they need */
+  float: left; 
+  padding: 10px 40px; 
+  text-decoration: none;
+  
+  /* Default colors */ 
+  color: inherit;
+  background: #f3f3f3; 
+  
+  /* Only round the top corners */
+  -webkit-border-top-left-radius: 15px;
+  -webkit-border-top-right-radius: 15px;
+  -moz-border-radius-topleft: 15px;
+  -moz-border-radius-topright: 15px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px; 
+}
+.tabs .active {
+  /* Highest, active tab is on top */
+  z-index: 3;
+}
+.tabs .active a { 
+  /* Colors when tab is active */
+  background: white; 
+  color: #495057; 
+}
+.tabs li:before, .tabs li:after, 
+.tabs li a:before, .tabs li a:after {
+  /* All pseudo elements are 
+     abs. positioned and on bottom */
+  position: absolute;
+  bottom: 0;
+}
+/* Only the first, last, and active
+   tabs need pseudo elements at all */
+.tabs li:last-child:after,   .tabs li:last-child a:after,
+.tabs li:first-child:before, .tabs li:first-child a:before,
+.tabs .active:after,   .tabs .active:before, 
+.tabs .active a:after, .tabs .active a:before {
+  content: "";
+}
+.tabs .active:before, .tabs .active:after {
+  background: white; 
+  
+  /* Squares below circles */
+  /* z-index: 1; */
+}
+/* Squares */
+.tabs li:before, .tabs li:after {
+  background: #f3f3f3;
+  width: 10px;
+  height: 10px;
+}
+.tabs li:before {
+  left: -10px;      
+}
+.tabs li:after { 
+  right: -10px;
+}
+/* Circles */
+.tabs li a:after, .tabs li a:before {
+  width: 20px; 
+  height: 20px;
+  /* Circles are circular */
+  -webkit-border-radius: 10px;
+  -moz-border-radius:    10px;
+  border-radius:         10px;
+  background: #f3f3f3;
+  
+  /* Circles over squares */
+  z-index: 2;
+}
+.tabs .active a:after, .tabs .active a:before {
+  background: #f3f3f3;
+}
+/* First and last tabs have different
+   outside color needs */
+.tabs li:first-child.active a:before,
+.tabs li:last-child.active a:after {
+  background: #f3f3f3;
+}
+.tabs li a:before {
+  left: -20px;
+}
+.tabs li a:after {
+  right: -20px;
+}
+/* Elemento cambiado para quitar la negrita en la cabecera del jqgrid */
+th {
+  font-weight:normal !important
+}
+
+tr .no-wrap{
+  width: 1%;
+  white-space:nowrap;
+}
+.sm-auto{
+  width: auto;
+  font-size: 0.68rem;
+}
+
+#tables_500{
+  max-height: 500px;
+}
+#tables_500 td{
+  padding: 0.2rem;
+}
+
+#linea1{
+  border-left: 6px solid black;
+  height: 500px;
+}
+/* 
+.ui-jqgrid>.ui-jqgrid-view{
+  font-size: 0.68rem; ///original 11px
+} */
+.ui-jqgrid tr.jqfoot>td, .ui-jqgrid tr.jqgroup>td, .ui-jqgrid tr.jqgrow>td, .ui-jqgrid tr.ui-subgrid>td, .ui-jqgrid tr.ui-subtblcell>td{
+  height: 17px; /*Original: 22px*/
+}
+.ui-jqgrid tr.footrow td{
+  height: 16px; /*Original: 21px*/ 
+}
+.ui-jqdialog .ui-jqdialog-titlebar, .ui-jqgrid .ui-jqgrid-errorbar, .ui-jqgrid .ui-jqgrid-titlebar{
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+/* #gbox_reporte-documentos .ui-jqgrid-titlebar{
+  padding-bottom: 0px;
+  padding-top: 0px;
+} */
+#gview_grid_reporte .ui-jqgrid-titlebar{
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+
+#gbox_reporte-documentos .ui-jqgrid-titlebar{
+  height: .5rem;
+}
+
+#gbox_grid_detalle_ventas .ui-jqgrid-titlebar, #gbox_grid_detalle_contable .ui-jqgrid-titlebar, #gbox_grid_reporte .ui-jqgrid-titlebar{
+  height: .5rem;
+}
+
+.rotate-270{
+  transform: rotate(270deg);
+}
+.min-width-90{
+  min-width: 90em;
+}
+.select-sm{
+  height: calc(.8em + .5rem + 2px);
+  padding: 0;
+}
+
+@page {
+  size: auto;
+  margin: 2mm;
+  /* size: A4 portrait; */
+}
+
+@media print {
+  
+  body{
+    background: white;
+  }
+  #formato_impresion {
+      top: 0px;
+      padding-top: 0px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      display: block;
+  }
+  /* #contenedor_impresion{
+    background-color: white!important;
+    border-color: white!important;
+  } */
+  .printable{
+    display: block!important;
+  }
+  .print-page
+  {
+            -webkit-transform: scale(1.35);  /* Saf3.1+, Chrome */
+               -moz-transform: scale(1.35);  /* FF3.5+ */
+                -ms-transform: scale(1.35);  /* IE9 */
+                 -o-transform: scale(1.35);  /* Opera 10.5+ */
+                    transform: scale(1.35);
+          margin-top:  -50px!important;
+          /* margin-left: 40%!important; */
+          transform-origin: 0 0;
+            /* big hack to reposition the page top the top and left of the viewer control */
+  }
+}
+
+
+th>.truncate, td>.truncate{
+  width: auto;
+  min-width: 0;
+  max-width: 200px;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+.no-spin::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.no-calendar::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+.unstyled-calendar::-webkit-inner-spin-button,
+.unstyled-calendar::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+.no-spin-number::-webkit-inner-spin-button {
+    display: none;
+}
+
+.border-inside{
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 1px solid #ced4da;
+  border-radius: .2rem
+}
+
+.background-title-jqgrid{
+  background: #eaf4fc;
+}
+.ui-jqgrid>.ui-jqgrid-view button, .ui-jqgrid>.ui-jqgrid-view input, .ui-jqgrid>.ui-jqgrid-view select, .ui-jqgrid>.ui-jqgrid-view textarea{
+  font-size: 0.68rem!important;
+  /* color: #495057; */
+}
+.ui-jqgrid>.ui-jqgrid-view{
+  font-size: 0.68rem!important;
+  /* color: #495057; */
+
+}
+
+.ui-jqgrid-bdiv{
+  font-size: 0.60rem!important;
+  /* color: #495057; */
+}
+
+.ui-widget-content{
+  /* color: #495057; */
+}
+
+.close {
+  color: red;
+}
+
+.form-control-sm-date{
+  height: calc(1.5em + .5rem );
+}
+
+.form-control-sm-moneda{
+  min-width: 50px;
+  max-width: 50px;
+}
+.form-control-sm-almacen{
+  min-width: 137px;
+  max-width: 137px;
+}
+
+.form-control-sm-tasa-cambio{
+  min-width: 60px;
+  max-width: 60px;
+}
+.form-control-sm-group-motivo{
+  min-width: 530px;
+  max-width: 530px;
+}
+.form-control-sm-group-correlativo{
+  min-width: 450px;
+  max-width: 450px;
+}
+
+.form-control-sm-group-serie{
+  min-width: 530px;
+  max-width: 530px;
+}
+
+.form-control-sm-group-moneda{
+  min-width: 200px;
+  max-width: 200px;
+}
+
+.form-control-sm-group-moneda-igv{
+  min-width: 280px;
+  max-width: 280px;
+}
+
+.form-control-sm-dias-forma-pago{
+  min-width: 60px;
+  max-width: 60px;
+}
+
+.form-control-sm-group-fechas{
+  min-width: 390px;
+  max-width: 390px;
+}
+.form-control-sm-group-fechas-2{
+  min-width: 413px;
+  max-width: 413px;
+}
+
+.form-control-sm-group-fechas-3{
+  min-width: 560px;
+  max-width: 560px;
+}
+
+.form-control-sm-erp{
+  height: 26.313px;
+  max-height: 26.313px;
+}
+.form-control-sm-erp-25{
+  height: 25.313px;
+  max-height: 25.313px;
+}
+.form-label-sm-erp-80{
+  min-width: 80px;
+  max-width: 80px;
+}
+
+.form-control-sm-motivo{
+  min-width: 148px!important;
+  max-width: 148px;
+}
+
+.form-control-sm-serie{
+  min-width: 65px!important;
+  max-width: 65px;
+}
+
+.form-control-sm-numero{
+  min-width: 77px!important;
+  max-width: 77px;
+}
+
+.form-control-sm-ref-text{
+  min-width: 90px!important;
+  max-width: 90px;
+}
+
+.form-control-sm-ref-tipo{
+  min-width: 50px!important;
+  max-width: 50px;
+}
+
+.form-control-sm-ref-serie{
+  min-width: 45px!important;
+  max-width: 45px;
+}
+
+.form-control-sm-ref-numero{
+  min-width: 70px!important;
+  max-width: 70px;
+}
+
+.form-control-sm-ref-fecha{
+  min-width: 90px!important;
+  max-width: 90px;
+}
+
+.form-control-sm-periodo{
+  min-width: 110px!important;
+  max-width: 110px;
+}
+
+.form-control-sm-tipo_anexo{
+  min-width: 100px;
+  max-width: 299px;
+}
+
+.form-control-sm-erp-anexos{
+  min-width: 722px;
+  max-width: 739px;
+}
+
+.col-form-label-sm-erp-anexo{
+  min-width: 66px;
+  max-width: 66px;
+}
+.col-form-label-sm-erp-forma-pago{
+  min-width: 175px;
+  max-width: 175px;
+}
+.btn-sm-erp{
+  background: #eaf4fc;
+  border: 1px solid #ced4da;
+  
+}
+.col-form-label-sm-clasificacion-erp{
+  width: 101px;
+}
+/* .input-container input {
+  border: none;
+  box-sizing: border-box;
+  outline: 0;
+  padding: .75rem;
+  position: relative;
+  width: 100%;
+} */
+
+.calendar-sm::-webkit-calendar-picker-indicator {
+  /* background: transparent; */
+  /* bottom: 0; */
+  color: transparent;
+  cursor: pointer;
+  /* height: auto; */
+  /* left: 0; */
+  position: absolute;
+  right: 0;
+  /* top: 0; */
+  /* width: auto;  */
+  
+}
+
+.bg-lightgrey{
+  background-color:lightgrey;
+}
+
+.btn-login, .btn-login:hover, .btn-login:not(:disabled):not(.disabled):active, .btn-login:focus{
+  background-color: #fd821a; 
+  font-weight:bold; 
+  border-color: #fd821a
+}
+
+.btn-login:disabled{
+  background-color: #ffbf8a; 
+  font-weight:normal; 
+  border-color: #ffbf8a
+}
+
+.btn-sm{
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.btn-image-lt{
+  /* margin-top: 65px; */
+  position: absolute;
+  opacity: 0.5;
+}
+.btn-image-gt{
+  margin-left: -37px;
+  /* margin-top: 65px; */
+  position: initial;
+  opacity: 0.5;
+}
+
+.col-align-items-center{
+  display: flex;
+  -webkit-box-align: center!important;
+  align-items: center!important
+}
+
+#canvas_container {
+  width: 800px;
+  height: 450px;
+  overflow: auto;
+  
+  background: #333;
+  text-align: center;
+  border: solid 3px;
+}
+
+
+
+.ui-jqgrid tr.jqfoot>td, .ui-jqgrid tr.jqgroup>td, .ui-jqgrid tr.jqgrow>td, .ui-jqgrid tr.ui-subgrid>td, .ui-jqgrid tr.ui-subtblcell>td{
+  text-align: left;
+}
+
+
+.titulos_erp{
+  font-Weight: 500;
+  font-size: 1.25rem;
+  color: #6e6e6e;
+  text-decoration: none;
+}
+
+.titulos_reporte{
+  /* font-Weight: 700; */
+  font-size: 14px;
+  color: maroon;
+  text-align: center;
+}
+
+/*dropdown*/
+.min-width-110{
+  min-width: 110em;
+}
+.col-tabla{
+  flex: 0 0 8.333333%;
+  max-width: 14.7888888%;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+

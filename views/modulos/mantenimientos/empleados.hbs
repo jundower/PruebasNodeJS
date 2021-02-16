@@ -1,0 +1,314 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-6">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_empleados_tipo_trabajador" class="col-sm-4 col-form-label col-form-label-sm">Tipo Trabajador:</label>
+                            <select id="tablas_empleados_tipo_trabajador" class="col-sm-8 form-control form-control-sm m-0 p-0 " >
+                                <option value="T">Trabajador</option>
+                                <option value="O">Obrero</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-6">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_empleados_tipo_documento" class="col-sm-4 col-form-label col-form-label-sm">Tipo Documento:</label>
+                            <select id="tablas_empleados_tipo_documento" class="col-sm-8 form-control form-control-sm m-0 p-0 " >
+                                <option>Ninguno</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_empleados_codigo" class="col-sm-4 col-form-label col-form-label-sm">Codigo:</label>
+                            <input type="text" id="tablas_empleados_codigo" class="col-sm-8 form-control form-control-sm m-0 p-0"value="{{datos.Codigo}}" placeholder="Codigo" maxlength="50">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-6">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_empleados_numero_documento" class="col-sm-4 col-form-label col-form-label-sm">Nro Documento:</label>
+                            <input type="text" id="tablas_empleados_numero_documento" class="col-sm-8 form-control form-control-sm m-0 p-0"value="{{datos.Numero_Documento}}" placeholder="Nro Documento" maxlength="50">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_empleados_apellido_paterno" class="col-sm-4 col-form-label col-form-label-sm">Ape. Paterno:</label>
+                            <input type="text" id="tablas_empleados_apellido_paterno" class="col-sm-8 form-control form-control-sm m-0 p-0"value="{{datos.Apellido_Paterno}}" placeholder="Apellido Paterno" maxlength="50">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-6">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_empleados_apellido_materno" class="col-sm-4 col-form-label col-form-label-sm">Ape. Materno:</label>
+                            <input type="text" id="tablas_empleados_apellido_materno" class="col-sm-8 form-control form-control-sm m-0 p-0"value="{{datos.Apellido_Materno}}" placeholder="Apellido Materno" maxlength="50">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_empleados_nombre" class="col-sm-4 col-form-label col-form-label-sm">Nombres:</label>
+                            <input type="text" id="tablas_empleados_nombre" class="col-sm-8 form-control form-control-sm m-0 p-0" value="{{datos.Nombres}}" placeholder="Nombres" maxlength="50">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-6">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_empleados_fecha_ingreso" class="col-sm-4 col-form-label col-form-label-sm">Fecha Ing.:</label>
+                            <input type="date" id="tablas_empleados_fecha_ingreso" class="col-sm-8 form-control form-control-sm m-0 p-0" value="{{datos.Fecha_Ingreso}}" >
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_empleados_direccion" class="col-sm-2 col-form-label col-form-label-sm">Direccion:</label>
+                            <input type="text" id="tablas_empleados_direccion" class="col-sm-10 form-control form-control-sm m-0 p-0"value="{{datos.Direccion}}" placeholder="Direccion" >
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_empleados_pais" class="col-sm-4 col-form-label col-form-label-sm">Pais:</label>
+                            <select id="tablas_empleados_pais" class="col-sm-8 form-control form-control-sm m-0 p-0 " >
+                                <option>Ninguno</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-6">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_empleados_sexo" class="col-sm-4 col-form-label col-form-label-sm">Sexo:</label>
+                            <div class="form-check form-check-inline form-check-inline-sm">
+                                <input class="form-check-input " type="radio" name="tablas_empleados_sexo" id="tabla_empleados_masculino" value="M" ="{{datos.Sexo}}">
+                                <label class="form-check-label col-form-label-sm" for="tabla_empleados_masculino">M</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="tablas_empleados_sexo" id="tabla_empleados_femenino" value="F" >
+                                <label class="form-check-label col-form-label-sm" for="tabla_empleados_femenino">F</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_empleados_correo" class="col-sm-2 col-form-label col-form-label-sm">E-mail:</label>
+                            <input type="text" id="tablas_empleados_correo" class="col-sm-10 form-control form-control-sm m-0 p-0"value="{{datos.Email}}" placeholder="E-mail" >
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_empleados_usuario" class="col-sm-4 col-form-label col-form-label-sm">Usuario:</label>
+                            <select id="tablas_empleados_usuario" class="col-sm-8 form-control form-control-sm m-0 p-0 " >
+                                <option>Ninguno</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-6">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_empleados_cargo" class="col-sm-4 col-form-label col-form-label-sm">Cargo:</label>
+                            <input type="text" id="tablas_empleados_cargo" class="col-sm-8 form-control form-control-sm m-0 p-0"value="{{datos.Erp_cargo}}" placeholder="Cargo" >
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_empleados_firma" class="col-sm-2 col-form-label col-form-label-sm">Firma:</label>
+                            <input type="text" id="tablas_empleados_firma" class="col-sm-10 form-control form-control-sm m-0 p-0"value="{{datos.Imagen_Firma}}" placeholder="Firma" >
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="row">
+                <div class="col-sm-12">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_empleados_aprob_req_1" class="col-sm-4 col-form-label col-form-label-sm">Aprob. Req. I:</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input " type="radio" name="tablas_empleados_aprob_req_1" id="tabla_empleados_aprob_req_1_si" value="S">
+                                <label class="form-check-label  col-form-label-sm" for="tabla_empleados_aprob_req_1_si">Si</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="tablas_empleados_aprob_req_1" id="tabla_empleados_aprob_req_1_no" value="N" >
+                                <label class="form-check-label  col-form-label-sm" for="tabla_empleados_aprob_req_1_no">No</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_empleados_aprob_req_2" class="col-sm-4 col-form-label col-form-label-sm">Aprob. Req. II:</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input " type="radio" name="tablas_empleados_aprob_req_2" id="tabla_empleados_aprob_req_2_si" value="S">
+                                <label class="form-check-label  col-form-label-sm" for="tabla_empleados_aprob_req_2_si">Si</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="tablas_empleados_aprob_req_2" id="tabla_empleados_aprob_req_2_no" value="N" >
+                                <label class="form-check-label  col-form-label-sm" for="tabla_empleados_aprob_req_2_no">No</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_empleados_aprob_orden_compra" class="col-sm-4 col-form-label col-form-label-sm">Aprob. O/C:</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input " type="radio" name="tablas_empleados_aprob_orden_compra" id="tabla_empleados_aprob_orden_compra_si" value="S">
+                                <label class="form-check-label  col-form-label-sm" for="tabla_empleados_aprob_orden_compra_si">Si</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="tablas_empleados_aprob_orden_compra" id="tabla_empleados_aprob_orden_compra_no" value="N" >
+                                <label class="form-check-label  col-form-label-sm" for="tabla_empleados_aprob_orden_compra_no">No</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_empleados_generar_orden_compra" class="col-sm-4 col-form-label col-form-label-sm">Generar O/C:</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input " type="radio" name="tablas_empleados_generar_orden_compra" id="tabla_empleados_generar_orden_compra_si" value="S">
+                                <label class="form-check-label  col-form-label-sm" for="tabla_empleados_generar_orden_compra_si">Si</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="tablas_empleados_generar_orden_compra" id="tabla_empleados_generar_orden_compra_no" value="N" >
+                                <label class="form-check-label  col-form-label-sm" for="tabla_empleados_generar_orden_compra_no">No</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="row">
+                <div class="col-sm-12">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_empleados_aprobar_cotizacion" class="col-sm-4 col-form-label col-form-label-sm">Aprob. Cotización:</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input ckecked" type="radio" name="tablas_empleados_aprobar_cotizacion" id="tabla_empleados_aprobar_cotizacion_si" value="S">
+                                <label class="form-check-label  col-form-label-sm" for="tabla_empleados_aprobar_cotizacion_si">Si</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="tablas_empleados_aprobar_cotizacion" id="tabla_empleados_aprobar_cotizacion_no" value="N" >
+                                <label class="form-check-label  col-form-label-sm" for="tabla_empleados_aprobar_cotizacion_no">No</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_empleados_aprobar_pedido" class="col-sm-4 col-form-label col-form-label-sm">Aprob. Pedido:</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input " type="radio" name="tablas_empleados_aprobar_pedido" id="tabla_empleados_aprobar_pedido_si" value="S">
+                                <label class="form-check-label  col-form-label-sm" for="tabla_empleados_aprobar_pedido_si">Si</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="tablas_empleados_aprobar_pedido" id="tabla_empleados_aprobar_pedido_no" value="N" >
+                                <label class="form-check-label  col-form-label-sm" for="tabla_empleados_aprobar_pedido_no">No</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_empleados_cierre_fondo_fijo" class="col-sm-4 col-form-label col-form-label-sm">Cierre Fondo Fijo:</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input " type="radio" name="tablas_empleados_cierre_fondo_fijo" id="tabla_empleados_cierre_fondo_fijo_si" value="S">
+                                <label class="form-check-label  col-form-label-sm" for="tabla_empleados_cierre_fondo_fijo_si">Si</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="tablas_empleados_cierre_fondo_fijo" id="tabla_empleados_cierre_fondo_fijo_no" value="N" >
+                                <label class="form-check-label  col-form-label-sm" for="tabla_empleados_cierre_fondo_fijo_no">No</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="d-none">
+    {{#if datos}}
+        <input id="tablas_empleados_tipo_trabajador_predeterminado" type="text" value="{{datos.Tipo_Trabajador}}">
+        <input id="tablas_empleados_tipo_documento_predeterminado" type="text" value="{{datos.Tipo_Documento}}">
+        <input id="tablas_empleados_pais_predeterminado" type="text" value="{{datos.Pais}}">
+        <input id="tabla_empleados_sexo_predeterminado" type="text" value="{{datos.Sexo}}">
+        <input id="tablas_empleados_usuario_predeterminado" type="text" value="{{datos.Codigo_Usuario}}">
+        <input id="tablas_empleados_aprob_req_1_predeterminado" type="text" value="{{datos.Aprobar_Req}}">
+        <input id="tablas_empleados_aprob_req_2_predeterminado" type="text" value="{{datos.Aprobar_Req_2}}">
+        <input id="tablas_empleados_aprob_orden_compra_predeterminado" type="text" value="{{datos.Aprobar_OC}}">
+        <input id="tablas_empleados_generar_orden_compra_predeterminado" type="text" value="{{datos.Genera_OC}}">
+        <input id="tablas_empleados_aprobar_cotizacion_predeterminado" type="text" value="{{datos.Erp_Aprob_Cot}}">
+        <input id="tablas_empleados_aprobar_pedido_predeterminado" type="text" value="{{datos.Aprobar_Pedido}}">
+        <input id="tablas_empleados_cierre_fondo_fijo_predeterminado" type="text" value="{{datos.Cierre_Fondo_Fijo}}">
+    {{else}}
+        <input id="tablas_empleados_tipo_trabajador_predeterminado" type="text" value="T">
+        <input id="tablas_empleados_tipo_documento_predeterminado" type="text" value="01">
+        <input id="tablas_empleados_pais_predeterminado" type="text" value="001">
+        <input id="tabla_empleados_sexo_predeterminado" type="text" value="M">
+        <input id="tablas_empleados_aprob_req_1_predeterminado" type="text" value="N">
+        <input id="tablas_empleados_aprob_req_2_predeterminado" type="text" value="N">
+        <input id="tablas_empleados_aprob_orden_compra_predeterminado" type="text" value="N">
+        <input id="tablas_empleados_generar_orden_compra_predeterminado" type="text" value="N">
+        <input id="tablas_empleados_aprobar_cotizacion_predeterminado" type="text" value="N">
+        <input id="tablas_empleados_aprobar_pedido_predeterminado" type="text" value="N">
+        <input id="tablas_empleados_cierre_fondo_fijo_predeterminado" type="text" value="N">
+    {{/if}}
+</div>

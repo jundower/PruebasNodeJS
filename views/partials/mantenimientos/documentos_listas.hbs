@@ -1,0 +1,114 @@
+<!--<div class="modal fullscreen-modal fade bd-example-modal-xl" tabindex="-1" role="dialog" id="modal_ventana_lista">
+  <div class="modal-dialog modal-xl " role="document">
+    <div class="modal-content">
+      <div class="modal-header">-->
+ <!-- Modal Cliente -->
+<div class="modal fade" tabindex="-1" role="dialog" id="modal_ventana_lista">
+  <div class="modal-dialog-full-width modal-dialog">
+    <div class="modal-content-full-width modal-content">
+      <div class="modal-header-full-width modal-header " style="padding: 7px 8px 0px 8px;">
+        
+        <div class="row" >
+          <ul class="list-group list-group-horizontal-sm" style="padding: 0px 0px 0px 20px;">
+            <li class="list-group ">
+                <button type="button" class="btn m-0 p-0" id ="modificar_lista" data-toggle="tooltip" data-placement="top" title="Modificar">
+                  <img src="/img/modificar_1.png" style="height: 28px; width: 28px;"></img>
+                </button>
+            </li>
+            <li class="list-group">
+                <button type="button" class="btn m-0 p-0" id ="eliminar_lista" data-toggle="tooltip" data-placement="top" title="Eliminar">
+                  <img src="/img/eliminar_1.png" style="height: 28px; width: 28px;"></img>
+                </button>
+            </li>
+            <li class="list-group">
+                <button type="button" class="btn m-0 p-0" id ="anular_lista" data-toggle="tooltip" data-placement="top" title="Anular">
+                  <img src="/img/anular_1.png" style="height: 28px; width: 28px;" ></img>
+                </button>
+            </li>
+            <li class="list-group">
+                <button type="button" class="btn m-0 p-0" id ="consultar_lista" data-toggle="tooltip" data-placement="top" title="Consultar">
+                  <img src="/img/consultar_1.png" style="height: 28px; width: 28px;" ></img>
+                </button>
+            </li>
+            <li class="list-group">
+                <button type="button" class="btn m-0 p-0" id ="duplicar_lista" data-toggle="tooltip" data-placement="top" title="Duplicar">
+                  <img src="/img/duplicar_1.png" style="height: 28px; width: 28px;"></img>
+                </button>
+            </li>
+            <li class="list-group">
+                <button type="button" class="btn m-0 p-0" id ="exportar_excel_lista" data-toggle="tooltip" data-placement="top" title="Exportar a Excel">
+                  <img src="/img/exportar_1.png" style="height: 28px; width: 28px;"></img>
+                </button>
+            </li>
+            <li class="list-group px-4">
+              <h4 class="modal-title titulos_erp" id ="titulo_ventana_lista">Titulo</h4>
+            </li>
+          </ul>
+        </div>
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body" style=" padding: 5px 8px 0px 17px;">
+        <div class="row" style="margin-bottom: 5px;">
+          <div class="col-md-1" style="margin-right: 38px;">
+            <div class="form-check form-control-sm-erp">
+              <input class="form-check-input" style="margin-top: 7px;" type="radio" name="busqueda" id="año_mes" value="año_mes" checked>
+              <label class="form-check-label col-form-label-sm" for="año_mes">Año-Mes</label>
+            </div>
+          </div>
+          <div class="col-md-2" style="margin-right: 85px;">
+            <form class="año_mes">
+              <div class="form-row">
+                <div class="col-md-6">
+                  <select name="lista-años" id="años_lista" type="text" class="form-control form-control-sm "></select>
+                </div>
+                <div class="col-md-6">
+                  <select type="text" id="meses_lista" name="lista-meses" class="form-control form-control-sm "></select>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-1" style="padding: 0px 0px 0px 19px; margin-left: 20px;">
+            <div>
+              <input class="form-check-input" style="margin-top: 7px;" type="radio" name="busqueda" id="rango_fechas" value="rango_fechas">
+              <label class="form-check-label col-form-label-sm" for="rango_fechas"> Rango </label>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <form class="rango_fechas">
+              <div class="form-row">
+                <label class="form-control-sm" style="margin: 0;">Del</label>
+                <div>
+                  <input type="date" class="form-control form-control-sm" id="fecha_inicio">
+                </div>
+                <label class="form-control-sm" style="margin: 0;">Al</label>
+                <div>
+                  <input type="date" class="form-control form-control-sm" id="fecha_final">
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-2 px-0">
+            <div class="form-check form-control-sm-erp">
+              <input class="form-check-input" style="margin-top: 7px;" type="radio" name="busqueda" id="todos_documentos" value="todos">
+              <label class="form-check-label col-form-label-sm" for="todos_documentos"> Todos </label>
+            </div>
+          </div>
+        </div>
+        
+
+        <table id="lista-documentos"></table>
+        <div id="lista-documentos-pager" style="text-align:center" > </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/js/mantenimientos/documentos_listas.js"></script>

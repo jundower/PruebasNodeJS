@@ -1,0 +1,192 @@
+
+{{#if user}}
+<nav class="navbar navbar-expand-lg navbar-light bg-light m-1 p-1" id ="nav_title_bar">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <button type="button" id="sidebarCollapse" class="btn btn-secondary py-0">
+            <i class="fas fa-align-left"></i>
+        </button>
+        <ul class="navbar-nav mr-auto  p-0 y-0">
+        <li class="nav-item">
+            <button type="button" class="btn d--none m-0 p-0" id ="nuevo" data-toggle="tooltip" data-placement="top" title="Nuevo">
+                <img src="/img/nuevo_1.jpg" ></img>
+            </button>
+        </li>
+        <li class="nav-item">
+            <button type="button" class="btn d--none m-0 p-0" id ="guardar" data-toggle="tooltip" data-placement="top" title="Guardar">
+                <img src="/img/guardar_1.png" ></img>
+            </button>
+        </li>
+        <li class="nav-item">
+            <button type="button" class="btn d--none m-0 p-0" id ="modificar" data-toggle="tooltip" data-placement="top" title="Modificar">
+                <img src="/img/modificar_1.png" ></img>
+            </button>
+        </li>
+        <li class="nav-item">
+            <button type="button" class="btn d--none m-0 p-0" id ="eliminar" data-toggle="tooltip" data-placement="top" title="Eliminar">
+                <img src="/img/eliminar_1.png" ></img>
+            </button>
+        </li>
+        <li class="nav-item">
+            <button type="button" class="btn d--none m-0 p-0" id ="aprobar" data-toggle="tooltip" data-placement="top" title="Aprobar">
+                <img src="/img/atras_rojo_1.png" ></img>
+            </button>
+        </li>
+        <li class="nav-item">
+            <button type="button" class="btn d--none m-0 p-0" id ="desaprobar" data-toggle="tooltip" data-placement="top" title="Desaprobar">
+                <img src="/img/eliminar_1.png" ></img>
+            </button>
+        </li>
+        <li class="nav-item">
+            <button type="button" class="btn d--none m-0 p-0" id ="ver_objeto" data-toggle="tooltip" data-placement="top" title="Ver">
+                <img src="/img/busqueda_1.png" ></img>
+            </button>
+        </li>
+        <li class="nav-item">
+            <button type="button" class="btn d--none m-0 p-0" id ="imprimir" data-toggle="tooltip" data-placement="top" title="Imprimir">
+                <img src="/img/imprimir_1.png" ></img>
+            </button>
+        </li>
+        <li class="nav-item">
+            <button type="button" class="btn d--none m-0 p-0" id ="listar" data-toggle="tooltip" data-placement="top" title="Lista">
+                <img src="/img/listar_1.png" ></img>
+            </button>
+        </li>
+        <li class="nav-item">
+            <button type="button" class="btn d--none m-0 p-0" id ="exportar" data-toggle="tooltip" data-placement="top" title="Exportar">
+                <img src="/img/exportar_1.png" ></img>
+            </button>
+        </li>
+        <li class="nav-item">
+            <button type="button" class="btn d--none m-0 p-0" id ="permisos" data-toggle="tooltip" data-placement="top" title="Permisos">
+                <img src="/img/permisos_1.png" ></img>
+            </button>
+        </li>
+        <li class="nav-item">
+            <button type="button" class="btn sm py-0 titulos_erp" id ="TitleHeader" data-toggle="tooltip" data-placement="top" title="Titulo">
+            </button>
+        </li>
+     
+        </ul>
+        <div class="dropleft">
+            <a href="#" role="button" id="dropDownMenuTablas" data-toggle="dropdown" class="btn py-0" >
+                <i class="fas fa-wrench rotate-270"></i>
+            </a>
+
+            <div class="dropdown-menu min-width-110 sm">
+                <div class="row">
+                    <div class="col-tabla border-right">
+                        <a class="dropdown-item disabled" href="#">Tablas Generales</a>
+                        <a class="dropdown-item" href="/tablas/punto_venta" target="_blank">Punto de Venta</a>
+                        <a class="dropdown-item" href="/tablas/almacen" target="_blank">Almacén</a>
+                        <a class="dropdown-item" href="/tablas/empleados" target="_blank">Empleados</a>
+                        <a class="dropdown-item" href="/tablas/usuario" target="_blank">Usuarios</a>
+                    </div>
+                    <div class="col-tabla border-right">
+                        <a class="dropdown-item disabled" href="#">Tabla de Productos</a>
+                        <a class="dropdown-item" href="/tablas/familias" target="_blank">Familias</a>
+                        <a class="dropdown-item" href="/tablas/subfamilias" target="_blank">Subfamilias</a>
+                        <a class="dropdown-item" href="/tablas/productos" target="_blank">Productos y Servicios</a>
+                        <a class="dropdown-item" href="/tablas/kits" target="_blank">Ingreso de Kit</a>
+                        <a class="dropdown-item" href="/tablas/alternativos" target="_blank">Alternativos</a>
+                        <a class="dropdown-item" href="/tablas/bonificaciones" target="_blank">Bonificaciones</a>
+                        <a class="dropdown-item" href="/lista_precios/venta" target="_blank">Lista Unit de Venta</a>
+                        <a class="dropdown-item" href="/lista_precios/compra" target="_blank">Lista Unit de Compra</a>
+                        <a class="dropdown-item dropdown-submenu" href="#sidebar_conceptos" data-toggle="collapse">Conceptos</a>
+                            <ul class="collapse list-unstyled" id="sidebar_conceptos">
+                                <a class="dropdown-item" href="/tablas/concepto1" target="_blank"><span class="px-2"></span>Concepto 1</a>
+                                <a class="dropdown-item" href="/tablas/concepto2" target="_blank"><span class="px-2"></span>Concepto 2</a>
+                                <a class="dropdown-item" href="/tablas/concepto3" target="_blank"><span class="px-2"></span>Concepto 3</a>
+                                <a class="dropdown-item" href="/tablas/concepto4" target="_blank"><span class="px-2"></span>Concepto 4</a>
+                                <a class="dropdown-item" href="/tablas/concepto5" target="_blank"><span class="px-2"></span>Concepto 5</a>
+                                <a class="dropdown-item" href="/tablas/concepto6" target="_blank"><span class="px-2"></span>Concepto 6</a>
+                                <a class="dropdown-item" href="/tablas/concepto7" target="_blank"><span class="px-2"></span>Concepto 7</a>
+                            </ul>
+                    </div>
+                    <div class="col-tabla border-right">
+                        <a class="dropdown-item disabled" href="#">Tabla de Anexos</a>
+                        <a class="dropdown-item" href="/tablas/clientes" target="_blank">Clientes</a>
+                        <a class="dropdown-item" href="/tablas/proveedores" target="_blank">Proveedores</a>
+                        <a class="dropdown-item" href="/tablas/vendedor" target="_blank">Vendedores</a>
+                        <a class="dropdown-item" href="/tablas/gestor_cobranza" target="_blank">Gestor de Cobranza</a>
+                        <a class="dropdown-item" href="/tablas/cobrador" target="_blank">Cobrador</a>
+                        <a class="dropdown-item" href="/tablas/grupo_cliente" target="_blank">Grupo de Clientes</a>
+                        <a class="dropdown-item" href="/tablas/grupo_proveedor" target="_blank">Grupo de Proveedores</a>
+                    </div>
+                    <div class="col-tabla border-right">
+                        <a class="dropdown-item disabled" href="#">Tabla de Terceros</a>
+                        <a class="dropdown-item" href="/tablas/agencia_transporte" target="_blank">Agencia</a>
+                        <a class="dropdown-item" href="/tablas/transportista" target="_blank">Transportista</a>
+                        <a class="dropdown-item" href="/tablas/vehiculo" target="_blank">Vehículo</a>
+                        <a class="dropdown-item" href="/tablas/chofer" target="_blank">Chofer</a>
+                    </div>
+                    <div class="col-tabla border-right">
+                        <a class="dropdown-item disabled" href="#">Tabla de Documentos</a>
+                        <a class="dropdown-item" href="/tablas/tipo_productos" target="_blank">Tipo de Productos</a>
+                        <a class="dropdown-item" href="/tablas/tipo_documento" target="_blank">Tipo de Documentos</a>
+                        <a class="dropdown-item" href="/tablas/talonarios" target="_blank">Talonarios</a>
+                        <a class="dropdown-item" href="/tablas/motivos_tramite" target="_blank">Motivos de Trámite</a>
+                        <a class="dropdown-item" href="/tablas/forma_pago" target="_blank">Formas de Pago</a>
+                    </div>
+                    <div class="col-tabla border-right">
+                        <a class="dropdown-item disabled" href="#">Tabla de Proyectos</a>
+                        <a class="dropdown-item" href="/tablas/cencos" target="_blank">Centro de Costos</a>
+                        <a class="dropdown-item" href="/tablas/unidad_negocios" target="_blank">Unidad de Negocio</a>
+                        <a class="dropdown-item" href="/tablas/orden_trabajo" target="_blank">Orden de Trabajo</a>
+                        <a class="dropdown-item" href="/tablas/partida_gasto" target="_blank">Partida de Gasto</a>
+                        <a class="dropdown-item" href="/tablas/presupuesto" target="_blank">Partida Presupuestal</a>
+                        <a class="dropdown-item dropdown-submenu" href="#sidebar_sistemas" data-toggle="collapse">Sistemas</a>
+                            <ul class="collapse list-unstyled" id="sidebar_sistemas">
+                                <a class="dropdown-item" href="#sidebar_tablas_principales_tabla_generales"><span class="px-2"></span>Tablas Generales</a>
+                                <a class="dropdown-item" href="#sidebar_tablas_principales_tabla_productos"><span class="px-2"></span>Tabla de Productos</a>
+                                <a class="dropdown-item" href="#sidebar_tablas_principales_tabla_anexos"><span class="px-2"></span>Tabla de Anexos</a>
+                                <a class="dropdown-item" href="#sidebar_tablas_principales_tabla_terceros"><span class="px-2"></span>Tabla de Terceros</a>
+                                <a class="dropdown-item" href="#sidebar_tablas_principales_tabla_documentos"><span class="px-2"></span>Tabla de Documentos</a>
+                                <a class="dropdown-item" href="#sidebar_tablas_principales_tabla_proyectos"><span class="px-2"></span>Tabla de Proyectos</a>
+                                <a class="dropdown-item" href="#sidebar_tablas_principales_tabla_ubigeo"><span class="px-2"></span>Tabla de Ubigeos</a>
+                            </ul>
+                    </div>
+                    <div class="col-tabla ">
+                        <a class="dropdown-item disabled" href="#">Tabla de Contabilidad</a>
+                        <a class="dropdown-item" href="/tablas/plan_contable" target="_blank">Plan Contable</a>
+                        <a class="dropdown-item" href="/tablas/subvoucher" target="_blank">Sub Diarios</a>
+                        <a class="dropdown-item" href="/tablas/tipo_auxiliar" target="_blank">Tipos de Auxiliar</a>
+                        <a class="dropdown-item" href="/tablas/grupo_auxiliar" target="_blank">Grupos de Auxiliar</a>
+                        <a class="dropdown-item" href="/tablas/presupuesto" target="_blank">Anexos</a>
+                        <a class="dropdown-item" href="/tablas/asiento_patron" target="_blank">Asiento Patron</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-inline my-2 my-lg-0">
+            <a class="btn py-0" id ="config" data-toggle="tooltip" data-placement="top" title="Cofigurar" href="/configurar_tablas" target="_blank">
+                <svg class="bi bi-gear-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor">
+                <path fill-rule="evenodd" d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 0 0-5.86 2.929 2.929 0 0 0 0 5.858z"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</nav>
+
+{{/if}}
+
+
+<div class="container" >
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <div class="alert alert-success alert-dissmissible fade show d-none" role="alert" id ="container_mensaje_ajax">
+                <label id="mensaje_ajax" class="col-sm-10 col-form-label col-form-label-sm"></label>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/js/mantenimientos/header.js"></script>
+

@@ -1,0 +1,249 @@
+<div class="container-fluid px-1">
+    <div class="row">
+        <div class="col-sm-3 border pt-2 px-1 mx-0">
+            <div class="col-sm-12 pl-1">
+                <div class="form-group row my-05 py-05">
+                    <label for="tablas_plan_contable_codigo" class="col-sm-4 col-form-label col-form-label-sm">Cuenta:</label>
+                    <input type="text" id="tablas_plan_contable_codigo" class="col-sm-8 form-control form-control-sm m-0 p-1"value="{{datos.Codigo}}" placeholder="Cuenta" maxlength="50">
+                </div>
+            </div>
+            </br>
+            <div class="col-sm-12 pl-1">
+                <div class="form-group row my-05 py-05">
+                    <label for="tablas_plan_contable_cuenta_padre" class="col-sm-4 col-form-label col-form-label-sm">Cta Padre:</label>
+                    <input type="text" id="tablas_plan_contable_cuenta_padre" class="col-sm-8 form-control form-control-sm m-0 p-1"value="{{datos.Cuenta_Padre}}" placeholder="Cuenta Padre" maxlength="50">
+                </div>
+            </div>
+            <div class="col-sm-12 pl-1">
+                <div class="form-group row my-05 py-05">
+                    <label for="tablas_plan_contable_nivel" class="col-sm-4 col-form-label col-form-label-sm">Nivel:</label>
+                    <input type="number" id="tablas_plan_contable_nivel" class="col-sm-8 form-control form-control-sm m-0 p-1"value="{{datos.Nivel}}">
+                </div>
+            </div>
+            </br>
+            </br>
+            <div class="col-sm-12 pl-1">
+                <div class="form-group row my-05 py-05">
+                    <label for="tablas_plan_contable_cuenta_exterior" class="col-sm-4 col-form-label col-form-label-sm">Cta Exterior:</label>
+                    <select type="text" id="tablas_plan_contable_cuenta_exterior" class="col-sm-8 form-control form-control-sm m-0 p-1"></select>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-9 px-0">
+            <div class="row border pt-2 mx-1">
+                <div class="col-sm-12 pl-1 pr-4">
+                    <div class="form-group row my-05 py-05">
+                        <label for="tablas_plan_contable_nombre" class="col-sm-2 col-form-label col-form-label-sm">Nombre:</label>
+                        <input type="text" id="tablas_plan_contable_nombre" class="col-sm-10 form-control form-control-sm m-0 p-1"value="{{datos.Nombre}}" placeholder="Nombre" >
+                    </div>
+                </div>
+                <div class="col-sm-6 pl-1 pr-4">
+                    <div class="form-group row my-05 py-05">
+                        <label for="tablas_plan_contable_clase_cuenta" class="col-sm-4 col-form-label col-form-label-sm">Clase Cuenta:</label>
+                        <select type="text" id="tablas_plan_contable_clase_cuenta" class="col-sm-8 form-control form-control-sm m-0 p-1"></select>
+                    </div>
+                </div>
+                <div class="col-sm-6 pl-1 pr-4">
+                    <div class="form-group row my-05 py-05">
+                        <label for="tablas_plan_contable_elemento" class="col-sm-4 col-form-label col-form-label-sm">Elemento:</label>
+                        <select type="text" id="tablas_plan_contable_elemento" class="col-sm-8 form-control form-control-sm m-0 p-1"></select>
+                    </div>
+                </div>
+                <div class="col-sm-6 pl-1 pr-4">
+                    <div class="form-group row my-05 py-05">
+                        <label for="tablas_plan_contable_tipo_auxiliar" class="col-sm-4 col-form-label col-form-label-sm">Tipo Auxiliar:</label>
+                        <select type="text" id="tablas_plan_contable_tipo_auxiliar" class="col-sm-8 form-control form-control-sm m-0 p-1"></select>
+                    </div>
+                </div>
+                <div class="col-sm-6 pl-1 pr-4">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label for="tablas_plan_contable_cencos" class="col-form-label col-form-label-sm">Cencos:</label>
+                        </div>
+                        <div class="col-sm-4 px-0">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="tablas_plan_contable_cencos" id="tablas_plan_contable_cencos_si" value="S">
+                                <label class="form-check-label col-form-label-sm" for="tablas_plan_contable_cencos_si">Si</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="tablas_plan_contable_cencos" id="tablas_plan_contable_cencos_no" value="N">
+                                <label class="form-check-label col-form-label-sm" for="tablas_plan_contable_cencos_no">No</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-1 px-0">
+                            <label for="tablas_plan_contable_ot" class="col-form-label col-form-label-sm">Ot:</label>
+                        </div>
+                        <div class="col-sm-4 px-0 text-right">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="tablas_plan_contable_ot" id="tablas_plan_contable_ot_si" value="S">
+                                <label class="form-check-label col-form-label-sm" for="tablas_plan_contable_ot_si">Si</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="tablas_plan_contable_ot" id="tablas_plan_contable_ot_no" value="N">
+                                <label class="form-check-label col-form-label-sm" for="tablas_plan_contable_ot_no">No</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row border pt-2 mx-1 mt-1">
+                <div class="col-sm-4 pl-1 pr-4">
+                    <div class="form-group row my-05 py-05">
+                        <label for="tablas_plan_contable_ajuste_deudor" class="col-sm-8 col-form-label col-form-label-sm">Tipo Ajuste Deudor:</label>
+                        <select type="text" id="tablas_plan_contable_ajuste_deudor" class="col-sm-4 form-control form-control-sm m-0 p-1">
+                            <option value="VTA">Venta</option>
+                            <option value="COM">Compra</option>
+                            <option value="ESP">Especial </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-4 pl-1 pr-4">
+                    <div class="form-group row my-05 py-05">
+                        <label for="tablas_plan_contable_ajuste_acreedor" class="col-sm-8 col-form-label col-form-label-sm pr-0">Tipo Ajuste Acreedor:</label>
+                        <select type="text" id="tablas_plan_contable_ajuste_acreedor" class="col-sm-4 form-control form-control-sm m-0 p-1">
+                            <option value="VTA">Venta</option>
+                            <option value="COM">Compra</option>
+                            <option value="ESP">Especial </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-4 pl-1 pr-4">
+                    <div class="form-group row my-05 py-05">
+                        <label for="tablas_plan_contable_moneda_cierre" class="col-sm-8 col-form-label col-form-label-sm">Moneda Cierre:</label>
+                        <select type="text" id="tablas_plan_contable_moneda_cierre" class="col-sm-4 form-control form-control-sm m-0 p-1">
+                            <option value="S/">S/</option>
+                            <option value="$">$</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-12 pl-1 pr-4">
+                    <div class="row pb-1">
+                        <div class="col-sm-2 pr-0">
+                            <label for="tablas_plan_contable_diferencia_cierre" class="col-form-label col-form-label-sm">Gen. Dif. Cierre:</label>
+                        </div>
+                        <div class="col-sm-2 px-0 text-right">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="tablas_plan_contable_diferencia_cierre" id="tablas_plan_contable_diferencia_cierre_si" value="S">
+                                <label class="form-check-label col-form-label-sm" for="tablas_plan_contable_diferencia_cierre_si">Si</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="tablas_plan_contable_diferencia_cierre" id="tablas_plan_contable_diferencia_cierre_no" value="N">
+                                <label class="form-check-label col-form-label-sm" for="tablas_plan_contable_diferencia_cierre_no">No</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 pr-0">
+                            <label for="tablas_plan_contable_transferencia" class="col-form-label col-form-label-sm">Transferencia:</label>
+                        </div>
+                        <div class="col-sm-2 px-0 text-right">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="tablas_plan_contable_transferencia" id="tablas_plan_contable_transferencia_si" value="S">
+                                <label class="form-check-label col-form-label-sm" for="tablas_plan_contable_transferencia_si">Si</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="tablas_plan_contable_transferencia" id="tablas_plan_contable_transferencia_no" value="N">
+                                <label class="form-check-label col-form-label-sm" for="tablas_plan_contable_transferencia_no">No</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 pr-0">
+                            <label for="tablas_plan_contable_D_H" class="col-form-label col-form-label-sm">D_H:</label>
+                        </div>
+                        <div class="col-sm-2 px-0">
+                            <select type="text" id="tablas_plan_contable_D_H" class="form-control form-control-sm m-0 p-1">
+                                <option value="D">Deudor</option>
+                                <option value="H">Acreedor</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row border pt-2 mx-1 mt-1">
+                <div class="col-sm-4 pl-1 pr-4">
+                    <div class="row pb-1">
+                        <div class="col-sm-6 pr-0">
+                            <label for="tablas_plan_contable_daot" class="col-form-label col-form-label-sm">Daot:</label>
+                        </div>
+                        <div class="col-sm-6 px-0 text-right">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="tablas_plan_contable_daot" id="tablas_plan_contable_daot_si" value="S">
+                                <label class="form-check-label col-form-label-sm" for="tablas_plan_contable_daot_si">Si</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="tablas_plan_contable_daot" id="tablas_plan_contable_daot_no" value="N">
+                                <label class="form-check-label col-form-label-sm" for="tablas_plan_contable_daot_no">No</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-sm-4 pl-1 pr-4">
+                    <div class="form-group row my-05 py-05">
+                        <label for="tablas_plan_contable_cuenta_pdt" class="col-sm-4 col-form-label col-form-label-sm pr-0">Cta PDT:</label>
+                        <input type="text" id="tablas_plan_contable_cuenta_pdt" class="col-sm-8 form-control form-control-sm m-0 p-1"placeholder="Cuenta PDT" value="{{datos.Cuenta_Pdt}}">
+                    </div>
+                </div>
+                <div class="col-sm-4 pl-1 pr-4">
+                    <div class="form-group row my-05 py-05">
+                        <label for="tablas_plan_contable_clasificacion_bs" class="col-sm-4 col-form-label col-form-label-sm">C. B/S:</label>
+                        <select type="text" id="tablas_plan_contable_clasificacion_bs" class="col-sm-8 form-control form-control-sm m-0 p-1"></select>
+                    </div>
+                </div>
+                <div class="col-sm-4 pl-1 pr-4">
+                    <div class="row pb-1">
+                        <div class="col-sm-6 pr-0">
+                            <label for="tablas_plan_contable_presupuesto" class="col-form-label col-form-label-sm">Presupuesto:</label>
+                        </div>
+                        <div class="col-sm-6 px-0 text-right">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="tablas_plan_contable_presupuesto" id="tablas_plan_contable_presupuesto_si" value="S">
+                                <label class="form-check-label col-form-label-sm" for="tablas_plan_contable_presupuesto_si">Si</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="tablas_plan_contable_presupuesto" id="tablas_plan_contable_presupuesto_no" value="N">
+                                <label class="form-check-label col-form-label-sm" for="tablas_plan_contable_presupuesto_no">No</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-8 pl-1 pr-4">
+                    <div class="form-group row my-05 py-05">
+                        <label for="tablas_plan_contable_nombre_presupuesto" class="col-sm-4 col-form-label col-form-label-sm pr-0">Nombre Presupuesto:</label>
+                        <input type="text" id="tablas_plan_contable_nombre_presupuesto" class="col-sm-8 form-control form-control-sm m-0 p-1"placeholder="Nombre Presupuesto" value="{{datos.Nombre_Presupuesto}}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row pt-1">
+        <table id="grid_tablas_plan_contable_cuentas"></table>
+    </div>
+</div>
+
+<div class="d-none">
+    {{#if datos}}
+        <input id="tablas_plan_contable_cuenta_exterior_predeterminado" type="text" value="{{datos.Cuenta_Exterior}}">
+        <input id="tablas_plan_contable_clase_cuenta_predeterminado" type="text" value="{{datos.Clase_Cuenta}}">
+        <input id="tablas_plan_contable_elemento_predeterminado" type="text" value="{{datos.Elemento}}">
+        <input id="tablas_plan_contable_tipo_auxiliar_predeterminado" type="text" value="{{datos.Tipo_Auxiliar}}">
+        <input id="tablas_plan_contable_cencos_predeterminado" type="text" value="{{datos.Si_CenCos}}">
+        <input id="tablas_plan_contable_ot_predeterminado" type="text" value="{{datos.Si_Ot}}">
+        <input id="tablas_plan_contable_ajuste_deudor_predeterminado" type="text" value="{{datos.Ajuste_Tc}}">
+        <input id="tablas_plan_contable_ajuste_acreedor_predeterminado" type="text" value="{{datos.Ajuste_Tipo_Tc}}">
+        <input id="tablas_plan_contable_moneda_cierre_predeterminado" type="text" value="{{datos.Moneda_Cierre}}">
+        <input id="tablas_plan_contable_diferencia_cierre_predeterminado" type="text" value="{{datos.Si_Genera_Diferencia}}">
+        <input id="tablas_plan_contable_transferencia_predeterminado" type="text" value="{{datos.Si_Transferencia}}">
+        <input id="tablas_plan_contable_D_H_predeterminado" type="text" value="{{datos.D_H}}">
+        <input id="tablas_plan_contable_daot_predeterminado" type="text" value="{{datos.Daot}}">
+        <input id="tablas_plan_contable_clasificacion_bs_predeterminado" type="text" value="{{datos.Bien_Servicio_Clasificacion}}">
+        <input id="tablas_plan_contable_presupuesto_predeterminado" type="text" value="{{datos.Si_Presupuesto}}">
+    {{else}}
+        <input id="tablas_plan_contable_cuenta_exterior_predeterminado" type="text" value="00">
+        <input id="tablas_plan_contable_tipo_auxiliar_predeterminado" type="text" value="00">
+        <input id="tablas_plan_contable_cencos_predeterminado" type="text" value="N">
+        <input id="tablas_plan_contable_ot_predeterminado" type="text" value="N">
+        <input id="tablas_plan_contable_moneda_cierre_predeterminado" type="text" value="S/">
+        <input id="tablas_plan_contable_diferencia_cierre_predeterminado" type="text" value="N">
+        <input id="tablas_plan_contable_transferencia_predeterminado" type="text" value="N">
+        <input id="tablas_plan_contable_daot_predeterminado" type="text" value="N">
+        <input id="tablas_plan_contable_clasificacion_bs_predeterminado" type="text" value="00">
+        <input id="tablas_plan_contable_presupuesto_predeterminado" type="text" value="N">
+    {{/if}}
+</div>

@@ -1,0 +1,147 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-6">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_talonarios_punto_venta" class="col-sm-4 col-form-label col-form-label-sm">Punto Venta:</label>
+                            <select id="tablas_talonarios_punto_venta" class="col-sm-8 form-control form-control-sm c_mantenimientos m-0 p-0 " >
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-6">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_talonarios_tipo_documento" class="col-sm-4 col-form-label col-form-label-sm">Tipo Doc:</label>
+                            <select id="tablas_talonarios_tipo_documento" class="col-sm-8 form-control form-control-sm c_mantenimientos m-0 p-0 " >
+                            </select>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_talonarios_ruta_formato" class="col-sm-4 col-form-label col-form-label-sm">Ruta Formato:</label>
+                            <input type="text" id="tablas_talonarios_ruta_formato" class="col-sm-8 form-control form-control-sm m-0 p-0"value="{{datos.Ruta_Formato}}" placeholder="Ruta Formato" maxlength="500">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-4">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_talonarios_serie" class="col-sm-6 col-form-label col-form-label-sm">Serie:</label>
+                            <input type="text" id="tablas_talonarios_serie" class="col-sm-6 form-control form-control-sm m-0 p-0"value="{{datos.Numero_Serie}}" placeholder="Serie" maxlength="50">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-2">
+                    <div class="col-sm-6">
+
+                    </div>
+                    <div class="col-sm-6">
+                        <form class="m-0 p-0">
+                            <div class="form-check row my-05 py-05">
+                                <input class="form-check-input" type="checkbox" id="tablas_talonarios_activo" >
+                                <label class="form-check-label col-form-label-sm" for="tablas_talonarios_activo">Activo</label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_talonarios_ruta_impresora" class="col-sm-4 col-form-label col-form-label-sm">Ruta Impresora:</label>
+                            <input type="text" id="tablas_talonarios_ruta_impresora" class="col-sm-8 form-control form-control-sm m-0 p-0"value="" placeholder="Ruta Impresora" maxlength="500">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-4">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_talonarios_numero" class="col-sm-6 col-form-label col-form-label-sm">Numero:</label>
+                            <input type="text" id="tablas_talonarios_numero" class="col-sm-6 form-control form-control-sm m-0 p-0"value="{{datos.Ultimo_Grab}}" placeholder="Numero" maxlength="50">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-2">
+                    <div class="col-sm-6">
+
+                    </div>
+                    <div class="col-sm-6">
+                        <form class="m-0 p-0">
+                            <div class="form-check row my-05 py-05">
+                                <input class="form-check-input" type="checkbox" id="tablas_talonarios_predeterminado" >
+                                <label class="form-check-label col-form-label-sm" for="tablas_talonarios_predeterminado">Predeterminado</label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_talonarios_numeros_filas" class="col-sm-5 col-form-label col-form-label-sm">N° Filas:</label>
+                            <input type="number" id="tablas_talonarios_numeros_filas" class="col-sm-7 form-control form-control-sm m-0 p-0"value="{{datos.Num_Filas}}" placeholder="Numero Filas" maxlength="500">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-3">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_talonarios_ancho" class="col-sm-5 col-form-label col-form-label-sm">Ancho(cm):</label>
+                            <input type="number" id="tablas_talonarios_ancho" class="col-sm-7 form-control form-control-sm m-0 p-0"value="{{datos.Ancho}}" placeholder="Celular" maxlength="500">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-3">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_talonarios_alto" class="col-sm-5 col-form-label col-form-label-sm">Alto(cm):</label>
+                            <input type="number" id="tablas_talonarios_alto" class="col-sm-7 form-control form-control-sm m-0 p-0"value="{{datos.Alto}}" placeholder="Celular" maxlength="500">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-3">
+                    <div class="col-sm-6">
+
+                    </div>
+                    <div class="col-sm-6">
+                        <form class="m-0 p-0">
+                            <div class="form-check row my-05 py-05">
+                                <input class="form-check-input" type="checkbox" id="tablas_talonarios_a4" >
+                                <label class="form-check-label col-form-label-sm" for="tablas_talonarios_a4">A4</label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="d-none">
+    {{#if datos}}
+        <input type="text" id="tablas_talonarios_punto_venta_predeterminado" value="{{datos.Punto_Venta}}">
+        <input type="text" id="tablas_talonarios_tipo_documento_predeterminado" value="{{datos.Tipo_Documento}}">
+
+        <input type="text" id="tablas_talonarios_predeterminado_predeterminado" value="{{datos.Predeterminado}}">
+        <input type="text" id="tablas_talonarios_activo_predeterminado" value="{{datos.Activo}}">
+        <input type="text" id="tablas_talonarios_a4_predeterminado" value="{{datos.A4}}">
+        <input type="text" id="tablas_talonarios_nombre" value="Pruba">
+    {{else}}
+        <input type="text" id="tablas_talonarios_punto_venta_predeterminado" value="">
+        <input type="text" id="tablas_talonarios_tipo_documento_predeterminado" value="">
+
+        <input type="text" id="tablas_talonarios_predeterminado_predeterminado" value="N">
+        <input type="text" id="tablas_talonarios_activo_predeterminado" value="N">
+        <input type="text" id="tablas_talonarios_a4_predeterminado" value="N">
+        <input type="text" id="tablas_talonarios_nombre" value="Pruba">
+    {{/if}}
+</div>

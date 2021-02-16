@@ -1,0 +1,44 @@
+{{#if user}}
+<ul class="nav nav-tabs tabs group pl-4 d-print-none" id="myTab" role="tablist">
+  <li class="nav-item active nav-tab-rounded">
+    <a class="active my-0 py-2" data-toggle="tab" href="#generales">Datos Generales</a>
+  </li>
+  <li class="nav-item nav-tab-rounded">
+    <a class="my-0 py-2" data-toggle="tab" href="#profile">Datos Complementarios</a>
+  </li>
+</ul>
+
+<div class="tab-content mr-4 d-print-none" id="myTabContent">
+    <div class="tab-pane fade show active" id="generales" role="tabpanel" aria-labelledby="generales-tab">
+        <div class="container-fluid border">
+        </div>
+
+    </div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        
+        <div class="container-fluid border">
+        </div>
+    </div>
+</div>
+
+<div class="d-none">
+    <input id="user-Ventas_Mas_Igv" type="text" value="{{user.ventas_mas_igv}}">
+    <input id="user-Unidad_negocio" type="text" value="{{user.codigo_unidad_negocio}}">
+    <input id="user-codigo_centro_costos" type="text" value="{{user.codigo_centro_costos}}">
+    <input id="user-codigo_punto_venta" type="text" value="{{user.codigo_punto_venta}}">
+    <input id="user-codigo_ninguno" type="text" value="00">
+    <input id="user-Busqueda_Punto_Venta" type="text" value="{{user.globales_busqueda_pto_venta}}">
+    <input id="modulo_formatos" type="text" value="guia">
+    <input id="modulo_cob_pag" type="text" value="{{cob_pag}}">
+    <input id="subvoucher_predeterminado" type="text" value="{{subvoucher}}">
+</div>
+{{!-- 
+{{> mantenimientos/ventas_pendientes}}
+{{> mantenimientos/detalle_contable}}
+{{> mantenimientos/lista_mantenimientos}}
+{{> mantenimientos/documentos_listas}}
+
+<script src="/js/mantenimientos/cabecera_provisiones.js"></script>
+<script src="/js/modulos/provisiones/provisiones.js"></script> --}}
+
+{{/if}}

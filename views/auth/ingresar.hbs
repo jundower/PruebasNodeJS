@@ -1,0 +1,72 @@
+
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Acceso al Sistema ErpSoft</h5>
+                    <form action="/ingresar" method="POST">
+                        <div class="form-group">
+                            <div class="form-group row">
+                                <div class="table-responsive table-hover col-sm-12">
+                                    <table id="grid"></table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-6 col-form-label-sm">Seleccione Pto de Venta:</label>
+                            <div class="col-sm-6">
+                                <select id="select_punto_venta" class="form-control form-control-sm">
+                                    <option>Ninguno</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-6 col-form-label-sm">Seleccione Unidad de Negocio:</label>
+                            <div class="col-sm-6">
+                                <select id="select_unidad_negocio" class="form-control form-control-sm">
+                                    <option>Ninguno</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-6 col-form-label-sm">Seleccione Centro de Costo:</label>
+                            <div class="col-sm-6">
+                                <select id="select_centro_costos" class="form-control form-control-sm">
+                                    <option>Ninguno</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="d-none d-print-block">
+                            <input class="hidden" type="text" id="codigo_empresa" name="codigo_empresa" placeholder="codigo_empresa" value ="01" class="form-control">
+                            <input class="hidden" type="text" id="codigo_punto_venta" name="codigo_punto_venta" placeholder="codigo_punto_venta" value ="001" class="form-control">
+                            <input class="hidden" type="text" id="nombre_punto_venta" name="nombre_punto_venta" placeholder="nombre_punto_venta" value ="001" class="form-control">
+                            <input class="hidden" type="text" id="codigo_centro_costos" name="codigo_centro_costos" placeholder="codigo_centro_costos" value ="00" class="form-control">
+                            <input class="hidden" type="text" id="nombre_centro_costos" name="nombre_centro_costos" placeholder="nombre_centro_costos" value ="00" class="form-control">
+                            <input class="hidden" type="text" id="codigo_unidad_negocio" name="codigo_unidad_negocio" placeholder="codigo_unidad_negocio" value ="00" class="form-control">
+                            <input class="hidden" type="text" id="nombre_unidad_negocio" name="nombre_unidad_negocio" placeholder="nombre_unidad_negocio" value ="00" class="form-control">
+                        </div>
+                        <div class="form-group row">
+                             <label class="col-sm-6 col-form-label-sm">Usuario</label>
+                            <div class="col-sm-6">
+                                <input type="text" name="usuario" placeholder="Usuario" class="form-control form-control-sm" value="erpsys">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                             <label class="col-sm-6 col-form-label-sm">Password</label>
+                            <div class="col-sm-6">
+                                <input type="password" name="clave" placeholder="Clave" class="form-control form-control-sm" value="2012">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button class='btn btn-success btn-block'>
+                                Ingresar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/js/ingresar.js"></script>

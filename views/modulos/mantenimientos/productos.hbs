@@ -1,0 +1,863 @@
+<ul class="nav nav-tabs tabs group pl-1" id="myTab" role="tablist">
+  <li class="nav-item active nav-tab-rounded">
+    <a class="active my-0 py-2" data-toggle="tab" href="#ventana1">Datos del Articulo</a>
+  </li>
+  <li class="nav-item nav-tab-rounded">
+    <a class="my-0 py-2" data-toggle="tab" href="#ventana2">Presentacion del Articulo</a>
+  </li>
+  <li class="nav-item nav-tab-rounded">
+    <a class="my-0 py-2" data-toggle="tab" href="#ventana3">Nombre Presentacion</a>
+  </li>
+  <li class="nav-item nav-tab-rounded">
+    <a class="my-0 py-2" data-toggle="tab" href="#ventana4">Datos Tecnicos</a>
+  </li>
+  <li class="nav-item nav-tab-rounded">
+    <a class="my-0 py-2" data-toggle="tab" href="#ventana5">Lista de Precios de Compra</a>
+  </li>
+  <li class="nav-item nav-tab-rounded">
+    <a class="my-0 py-2" data-toggle="tab" href="#ventana6">Codigos Alternativos</a>
+  </li>
+</ul>
+
+<div class="tab-content mr-3" id="myTabContent">
+    <div class="tab-pane fade show active" id="ventana1" role="ventana1" aria-labelledby="generales-tab">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="tablas_productos_codigo" class="col-sm-3 col-form-label col-form-label-sm">Codigo:</label>
+                                    <input type="text" id="tablas_productos_codigo" class="col-sm-8 form-control form-control-sm m-0 p-0"value="{{datos.Codigo}}" placeholder="Codigo" >
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-sm-3">
+                            <form class="m-0 p-0">
+                                <div class="form-check form-check-inline m-0 p-0">
+                                    <input class="form-check-input" type="radio" name="tablas_productos_correlativo" id="tablas_productos_automatico" >
+                                    <label class="form-check-label col-form-label-sm" for="tablas_productos_automatico">Automático</label>
+                                </div>
+                                <div class="form-check form-check-inline m-0 p-0">
+                                    <input class="form-check-input" type="radio" name="tablas_productos_correlativo" id="tablas_productos_manual" >
+                                    <label class="form-check-label col-form-label-sm" for="tablas_productos_manual">Manual</label>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-sm-4">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="tablas_productos_unspsc" class="col-sm-4 col-form-label col-form-label-sm">UNSPSC:</label>
+                                    <input type="text" id="tablas_productos_unspsc" class="col-sm-8 form-control form-control-sm m-0 p-0" value="{{datos.Codigo_UNSPC}}" placeholder="UNSPSC" >
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="tablas_productos_tipo_producto" class="col-sm-4 col-form-label col-form-label-sm">Tipo Prod:</label>
+                                    <select id="tablas_productos_tipo_producto" class="col-sm-8 form-control form-control-sm m-0 p-0 " >
+                                        <option>Ninguno</option>
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-sm-4">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="tablas_productos_codigo_fabricante" class="col-sm-4 col-form-label col-form-label-sm">Cod. Fab.:</label>
+                                    <input type="text" id="tablas_productos_codigo_fabricante" class="col-sm-8 form-control form-control-sm m-0 p-0"value="{{datos.Codigo_Fabricante}}" placeholder="Codigo Fabricante" >
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-sm-4">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="tablas_productos_codigo_digemid" class="col-sm-4 col-form-label col-form-label-sm">Cod. Dig.:</label>
+                                    <input type="text" id="tablas_productos_codigo_digemid" class="col-sm-8 form-control form-control-sm m-0 p-0"value="{{datos.Codigo_Digemid}}" placeholder="Codigo Digemid" >
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="tablas_productos_familia" class="col-sm-4 col-form-label col-form-label-sm">Familia:</label>
+                                    <select id="tablas_productos_familia" class="col-sm-8 form-control form-control-sm m-0 p-0 " >
+                                        <option>Ninguno</option>
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-sm-4">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="tablas_productos_codigo_interno" class="col-sm-4 col-form-label col-form-label-sm">Cod. Int.:</label>
+                                    <input type="text" id="tablas_productos_codigo_interno" class="col-sm-8 form-control form-control-sm m-0 p-0"value="{{datos.Codigo_Interno1}}" placeholder="Codigo Interno" >
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-sm-4">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="tablas_productos_codigo_interno2" class="col-sm-4 col-form-label col-form-label-sm">Cod. Int 2:</label>
+                                    <input type="text" id="tablas_productos_codigo_interno2" class="col-sm-8 form-control form-control-sm m-0 p-0"value="{{datos.Codigo_Interno2}}" placeholder="Codigo Interno 2" >
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="tablas_productos_subfamilia" class="col-sm-4 col-form-label col-form-label-sm">SubFamilia:</label>
+                                    <select id="tablas_productos_subfamilia" class="col-sm-8 form-control form-control-sm m-0 p-0 " >
+                                        <option>Ninguno</option>
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-sm-4">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="tablas_productos_categoria" class="col-sm-4 col-form-label col-form-label-sm " >Categoria:</label>
+                                    <select id="tablas_productos_categoria" class="col-sm-8 form-control form-control-sm m-0 p-0 c_mantenimientos" tabla="categoria">
+                                        <option>Ninguno</option>
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-sm-4">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="tablas_productos_ubicacion1" class="col-sm-4 col-form-label col-form-label-sm">Ubic. 1:</label>
+                                    <input type="text" id="tablas_productos_ubicacion1" class="col-sm-8 form-control form-control-sm m-0 p-0"value="{{datos.Ubicacion1}}" placeholder="Ubicacion 1" >
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="tablas_productos_tamaño" class="col-sm-4 col-form-label col-form-label-sm">Tamaño:</label>
+                                    <select id="tablas_productos_tamaño" class="col-sm-8 form-control form-control-sm m-0 p-0 " >
+                                        <option>Ninguno</option>
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-sm-4">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="tablas_productos_dimension" class="col-sm-4 col-form-label col-form-label-sm">Dimension:</label>
+                                    <select id="tablas_productos_dimension" class="col-sm-8 form-control form-control-sm m-0 p-0 " >
+                                        <option>Ninguno</option>
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-sm-4">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="tablas_productos_ubicacion2" class="col-sm-4 col-form-label col-form-label-sm">Ubic. 2:</label>
+                                    <input type="text" id="tablas_productos_ubicacion2" class="col-sm-8 form-control form-control-sm m-0 p-0"value="{{datos.Ubicacion2}}" placeholder="Ubicacion 2" >
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="tablas_productos_marca" class="col-sm-4 col-form-label col-form-label-sm">Marca:</label>
+                                    <select id="tablas_productos_marca" class="col-sm-8 form-control form-control-sm m-0 p-0 " >
+                                        <option>Ninguno</option>
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-sm-4">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="tablas_productos_diseño" class="col-sm-4 col-form-label col-form-label-sm">Diseño:</label>
+                                    <select id="tablas_productos_diseño" class="col-sm-8 form-control form-control-sm m-0 p-0 " >
+                                        <option>Ninguno</option>
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-sm-2">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="tablas_productos_moneda" class="col-sm-6 col-form-label col-form-label-sm">Moneda:</label>
+                                    <select id="tablas_productos_moneda" class="col-sm-6 form-control form-control-sm m-0 p-0 " >
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-sm-2">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="tablas_productos_igv" class="col-sm-4 col-form-label col-form-label-sm">Igv:</label>
+                                    <input type="number" id="tablas_productos_igv" class="col-sm-8 form-control form-control-sm m-0 p-0"value="{{datos.Igv_Art}}">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="tablas_productos_color" class="col-sm-4 col-form-label col-form-label-sm">Color:</label>
+                                    <select id="tablas_productos_color" class="col-sm-8 form-control form-control-sm m-0 p-0 " >
+                                        <option>Ninguno</option>
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-sm-4">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="tablas_productos_concepto" class="col-sm-4 col-form-label col-form-label-sm">Concepto:</label>
+                                    <select id="tablas_productos_concepto" class="col-sm-8 form-control form-control-sm m-0 p-0 " >
+                                        <option>Ninguno</option>
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-sm-4">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="tablas_productos_estado" class="col-sm-4 col-form-label col-form-label-sm">Estado:</label>
+                                    <select id="tablas_productos_estado" class="col-sm-8 form-control form-control-sm m-0 p-0 " >
+                                        <option value="Activo" >Activo</option>
+                                        <option value="Inactivo">Inactivo</option>
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="tablas_productos_nombre" class="col-sm-2 col-form-label col-form-label-sm">Nombre:</label>
+                                    <input type="text" id="tablas_productos_nombre" class="col-sm-10 form-control form-control-sm m-0 p-0"value="{{datos.Nombre}}" placeholder="Nombre" >
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-sm-4">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="tablas_productos_unidad_medida" class="col-sm-4 col-form-label col-form-label-sm">Unidad:</label>
+                                    <select id="tablas_productos_unidad_medida" class="col-sm-8 form-control form-control-sm m-0 p-0 " >
+                                        <option>Ninguno</option>
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <div class="row">
+                                <div class="col-sm-5">
+                                    <form class="m-0 p-0">
+                                        <div class="form-group row my-05 py-05">
+                                            <label for="tablas_productos_contenido" class="col-sm-4 col-form-label col-form-label-sm">Contenido</label>
+                                            <input type="number" id="tablas_productos_contenido" class="col-sm-8 form-control form-control-sm m-0 p-0"value="{{datos.Cantidad_Contenido}}" >
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-sm-2">
+                                    <form class="m-0 p-0">
+                                        <div class="form-group row my-05 py-05">
+                                            <select id="tablas_productos_unidad_medida2" class="col-sm-8 form-control form-control-sm m-0 p-0 " >
+                                                <option>Ninguno</option>
+                                            </select>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-sm-5">
+                                    <form class="m-0 p-0">
+                                        <div class="form-group row my-05 py-05">
+                                            <label for="tablas_productos_categoria2" class="col-sm-4 col-form-label col-form-label-sm">Categoria:</label>
+                                            <select id="tablas_productos_categoria2" class="col-sm-8 form-control form-control-sm m-0 p-0 " >
+                                                <option value="A">A</option>
+                                                <option value="B">B</option>
+                                                <option value="C">C</option>
+                                            </select>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-5">
+                                    <form class="m-0 p-0">
+                                        <div class="form-group row my-05 py-05">
+                                            <label for="tablas_productos_stock_max" class="col-sm-5 col-form-label col-form-label-sm">Stock Max:</label>
+                                            <input type="number" id="tablas_productos_stock_max" class="col-sm-7 form-control form-control-sm m-0 p-0"value="{{datos.Stock_Max}}">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-sm-4">
+                                    <form class="m-0 p-0">
+                                        <div class="form-group row my-05 py-05">
+                                            <label for="tablas_productos_peso" class="col-sm-4 col-form-label col-form-label-sm">Peso:</label>
+                                            <input type="number" id="tablas_productos_peso" class="col-sm-8 form-control form-control-sm m-0 p-0"value="{{datos.Peso}}"  >
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-sm-3">
+                                    <form class="m-0 p-0">
+                                        <div class="form-group row my-05 py-05">
+                                            <label for="tablas_productos_descuento1" class="col-sm-5 col-form-label col-form-label-sm">Desc1.:</label>
+                                            <input type="number" id="tablas_productos_descuento1" class="col-sm-7 form-control form-control-sm m-0 p-0"value="{{datos.Descuento1}}">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-5">
+                                    <form class="m-0 p-0">
+                                        <div class="form-group row my-05 py-05">
+                                            <label for="tablas_productos_stock_minimo" class="col-sm-5 col-form-label col-form-label-sm">Stock Min:</label>
+                                            <input type="number" id="tablas_productos_stock_minimo" class="col-sm-7 form-control form-control-sm m-0 p-0"value="{{datos.Stock_Min}}">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-sm-4">
+                                    <form class="m-0 p-0">
+                                        <div class="form-group row my-05 py-05">
+                                            <label for="tablas_productos_largo" class="col-sm-4 col-form-label col-form-label-sm">Largo:</label>
+                                            <input type="number" id="tablas_productos_largo" class="col-sm-8 form-control form-control-sm m-0 p-0"value="{{datos.Largo}}" placeholder="Largo" >
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-sm-3">
+                                    <form class="m-0 p-0">
+                                        <div class="form-group row my-05 py-05">
+                                            <label for="tablas_productos_descuento2" class="col-sm-5 col-form-label col-form-label-sm">Desc2.:</label>
+                                            <input type="number" id="tablas_productos_descuento2" class="col-sm-7 form-control form-control-sm m-0 p-0"value="{{datos.Descuento2}}">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-5">
+                                    <form class="m-0 p-0">
+                                        <div class="form-group row my-05 py-05">
+                                            <label for="tablas_productos_stock_rep" class="col-sm-5 col-form-label col-form-label-sm">Stock Rep.:</label>
+                                            <input type="number" id="tablas_productos_stock_rep" class="col-sm-7 form-control form-control-sm m-0 p-0"value="{{datos.Stock_Rep}}" >
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-sm-4">
+                                    <form class="m-0 p-0">
+                                        <div class="form-group row my-05 py-05">
+                                            <label for="tablas_productos_ancho" class="col-sm-4 col-form-label col-form-label-sm">Ancho:</label>
+                                            <input type="number" id="tablas_productos_ancho" class="col-sm-8 form-control form-control-sm m-0 p-0"value="{{datos.Ancho}}">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-sm-3">
+                                    <form class="m-0 p-0">
+                                        <div class="form-group row my-05 py-05">
+                                            <label for="tablas_productos_descuento3" class="col-sm-5 col-form-label col-form-label-sm">Desc3.:</label>
+                                            <input type="number" id="tablas_productos_descuento3" class="col-sm-7 form-control form-control-sm m-0 p-0"value="{{datos.Descuento3}}">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <form class="m-0 p-0">
+                                        <div class="form-group row my-05 py-05">
+                                            <label for="tablas_productos_grupo_receta" class="col-sm-4 col-form-label col-form-label-sm">Grupo Receta:</label>
+                                            <select id="tablas_productos_grupo_receta" class="col-sm-8 form-control form-control-sm m-0 p-0 " >
+                                            </select>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <form class="m-0 p-0">
+                                        <div class="form-group row my-05 py-05">
+                                            <label for="tablas_productos_codigo_barra" class="col-sm-4 col-form-label col-form-label-sm">Cod Barra:</label>
+                                            <input type="text" id="tablas_productos_codigo_barra" class="col-sm-8 form-control form-control-sm m-0 p-0" value="{{datos.Codigo_Barra}}" placeholder="Codigo Barra">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-sm-4">
+                                    <form class="m-0 p-0">
+                                        <div class="form-check row my-05 py-05">
+                                            <input class="form-check-input" type="checkbox" id="tablas_productos_automatico_codigo">
+                                            <label class="form-check-label col-form-label-sm" for="tablas_productos_automatico_codigo">Automatico</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <form class="m-0 p-0">
+                                        <div class="form-group row my-05 py-05">
+                                            <label for="tablas_productos_partida_arranc" class="col-sm-4 col-form-label col-form-label-sm">Partida Arranc:</label>
+                                            <input type="text" id="tablas_productos_partida_arranc" class="col-sm-8 form-control form-control-sm m-0 p-0" value="{{datos.Partida_Arrancelaria}}" placeholder="Partida Arranc">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <form class="m-0 p-0">
+                                        <div class="form-group row my-05 py-05">
+                                            <label for="tablas_productos_ruta_imagen" class="col-sm-3 col-form-label col-form-label-sm">Ruta Imagen:</label>
+                                            <input type="text" id="tablas_productos_ruta_imagen" class="col-sm-9 form-control form-control-sm m-0 p-0" value="{{datos.Ruta_Imagen}}" placeholder="Ruta Imagen">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <form class="m-0 p-0">
+                                        <div class="form-group row my-05 py-05">
+                                            <label for="tablas_productos_leyenda" class="col-sm-3 col-form-label col-form-label-sm">Leyenda:</label>
+                                            <input type="text" id="tablas_productos_leyenda" class="col-sm-9 form-control form-control-sm m-0 p-0" value="{{datos.Leyenda1}}" placeholder="Leyenda">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <form class="m-0 p-0">
+                                        <div class="form-group row my-05 py-05">
+                                            <label for="tablas_productos_leyenda2" class="col-sm-3 col-form-label col-form-label-sm">Leyenda 2:</label>
+                                            <input type="text" id="tablas_productos_leyenda2" class="col-sm-9 form-control form-control-sm m-0 p-0" placeholder="Leyenda 2" value="{{datos.Leyenda2}}">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <form class="m-0 p-0">
+                                        <div class="form-group row my-05 py-05">
+                                            <label for="tablas_productos_fecha_creacion" class="col-sm-5 col-form-label col-form-label-sm">F. Creacion:</label>
+                                            <input type="date" id="tablas_productos_fecha_creacion" class="col-sm-7 form-control form-control-sm m-0 p-0" value="{{datos.Fecha_Creacion}}" disabled>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-sm-6">
+                                    <form class="m-0 p-0">
+                                        <div class="form-group row my-05 py-05">
+                                            <label for="tablas_productos_fecha_modificacion" class="col-sm-5 col-form-label col-form-label-sm">F. Modif.:</label>
+                                            <input type="date" id="tablas_productos_fecha_modificacion" class="col-sm-7 form-control form-control-sm m-0 p-0" value="{{datos.Fecha_Modificacion}}" disabled>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group row mx-0 my-05" style="background-color: #fff; border: 1px solid #ced4da; border-radius: .2rem">
+                                        <label for="tablas_productos_controla_stock" class="col-form-label col-form-label-sm mr-1">Controla Stock:</label>
+                                        <div class="form-check form-check-inline m-0">
+                                            <input class="form-check-input" type="radio" name="tablas_productos_controla_stock" id="tablas_productos_si_stock" value="S">
+                                            <label class="form-check-label col-form-label-sm mr-1" for="si">Si</label>
+                                        </div>
+                                        <div class="form-check form-check-inline m-0">
+                                            <input class="form-check-input" type="radio" name="tablas_productos_controla_stock" id="tablas_productos_no_stock" value="N">
+                                            <label class="form-check-label col-form-label-sm mr-1" for="no">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group row mx-0 my-05" style="background-color: #fff; border: 1px solid #ced4da; border-radius: .2rem">
+                                        <label for="tablas_productos_lote" class="col-form-label col-form-label-sm mr-1">Lote:</label>
+                                        <div class="form-check form-check-inline m-0">
+                                            <input class="form-check-input" type="radio" name="tablas_productos_lote" id="tablas_productos_lote_si" value="S">
+                                            <label class="form-check-label col-form-label-sm mr-1" for="tablas_productos_lote_si">Si</label>
+                                        </div>
+                                        <div class="form-check form-check-inline m-0">
+                                            <input class="form-check-input" type="radio" name="tablas_productos_lote" id="tablas_productos_lote_no" value="N">
+                                            <label class="form-check-label col-form-label-sm mr-1" for="tablas_productos_lote_no">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group row mx-0 my-05" style="background-color: #fff; border: 1px solid #ced4da; border-radius: .2rem">
+                                        <label for="tablas_productos_serie" class="col-form-label col-form-label-sm mr-1">Serie:</label>
+                                        <div class="form-check form-check-inline m-0">
+                                            <input class="form-check-input" type="radio" name="tablas_productos_serie" id="tablas_productos_serie_si" value="S">
+                                            <label class="form-check-label col-form-label-sm mr-1" for="tablas_productos_serie_si">Si</label>
+                                        </div>
+                                        <div class="form-check form-check-inline m-0">
+                                            <input class="form-check-input" type="radio" name="tablas_productos_serie" id="tablas_productos_serie_no" value="N">
+                                            <label class="form-check-label col-form-label-sm mr-1" for="tablas_productos_serie_no">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group row mx-0 my-05" style="background-color: #fff; border: 1px solid #ced4da; border-radius: .2rem">
+                                        <label for="tablas_productos_servicio" class="col-form-label col-form-label-sm mr-1">Servicio:</label>
+                                        <div class="form-check form-check-inline m-0">
+                                            <input class="form-check-input" type="radio" name="tablas_productos_servicio" id="tablas_productos_servicio_si" value="S">
+                                            <label class="form-check-label col-form-label-sm mr-1" for="tablas_productos_servicio_si">Si</label>
+                                        </div>
+                                        <div class="form-check form-check-inline m-0">
+                                            <input class="form-check-input" type="radio" name="tablas_productos_servicio" id="tablas_productos_servicio_no" value="N">
+                                            <label class="form-check-label col-form-label-sm mr-1" for="tablas_productos_servicio_no">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group row mx-0 my-05" style="background-color: #fff; border: 1px solid #ced4da; border-radius: .2rem">
+                                        <label for="tablas_productos_kits" class="col-form-label col-form-label-sm mr-1">Kits:</label>
+                                        <div class="form-check form-check-inline m-0">
+                                            <input class="form-check-input" type="radio" name="tablas_productos_kits" id="tablas_productos_kits_si" value="S">
+                                            <label class="form-check-label col-form-label-sm mr-1" for="tablas_productos_kits_si">Si</label>
+                                        </div>
+                                        <div class="form-check form-check-inline m-0">
+                                            <input class="form-check-input" type="radio" name="tablas_productos_kits" id="tablas_productos_kits_no" value="N">
+                                            <label class="form-check-label col-form-label-sm mr-1" for="tablas_productos_kits_no">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group row mx-0 my-05" style="background-color: #fff; border: 1px solid #ced4da; border-radius: .2rem">
+                                        <label for="tablas_productos_activo_fijo" class="col-form-label col-form-label-sm mr-1">Activo Fijo:</label>
+                                        <div class="form-check form-check-inline m-0">
+                                            <input class="form-check-input" type="radio" name="tablas_productos_activo_fijo" id="tablas_productos_activo_fijo_si" value="S">
+                                            <label class="form-check-label col-form-label-sm mr-1" for="tablas_productos_activo_fijo_si">Si</label>
+                                        </div>
+                                        <div class="form-check form-check-inline m-0">
+                                            <input class="form-check-input" type="radio" name="tablas_productos_activo_fijo" id="tablas_productos_activo_fijo_no" value="N">
+                                            <label class="form-check-label col-form-label-sm mr-1" for="tablas_productos_activo_fijo_no">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group row mx-0 my-05" style="background-color: #fff; border: 1px solid #ced4da; border-radius: .2rem">
+                                        <label for="tablas_productos_iqpf" class="col-form-label col-form-label-sm mr-1">I.Q.P.F.:</label>
+                                        <div class="form-check form-check-inline m-0">
+                                            <input class="form-check-input" type="radio" name="tablas_productos_iqpf" id="tablas_productos_iqpf_si" value="S">
+                                            <label class="form-check-label col-form-label-sm mr-1" for="tablas_productos_iqpf_si">Si</label>
+                                        </div>
+                                        <div class="form-check form-check-inline m-0">
+                                            <input class="form-check-input" type="radio" name="tablas_productos_iqpf" id="tablas_productos_iqpf_no" value="N">
+                                            <label class="form-check-label col-form-label-sm mr-1" for="tablas_productos_iqpf_no">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <div class="form-group row mx-0 my-05" style="background-color: #fff; border: 1px solid #ced4da; border-radius: .2rem">
+                                        <label for="tablas_productos_advalorem" class="col-form-label col-form-label-sm mr-1">Advalorem:</label>
+                                        <div class="form-check form-check-inline m-0">
+                                            <input class="form-check-input" type="radio" name="tablas_productos_advalorem" id="tablas_productos_advalorem_si" value="S">
+                                            <label class="form-check-label col-form-label-sm mr-1" for="tablas_productos_advalorem_si">Si</label>
+                                        </div>
+                                        <div class="form-check form-check-inline m-0">
+                                            <input class="form-check-input" type="radio" name="tablas_productos_advalorem" id="tablas_productos_advalorem_no" value="N">
+                                            <label class=" form-check-label col-form-label-sm mr-1" for="tablas_productos_advalorem_no">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <form class="m-0 p-0">
+                                        <div class="form-group row my-05 py-05">
+                                            <input type="number" id="tablas_productos_porcentaje_advalorem" class="col-sm-5 form-control form-control-sm m-0 p-0"value="{{datos.Porcentaje_Advalorem}}">
+                                            <label for="tablas_productos_porcentaje_advalorem" class="col-sm-4 col-form-label col-form-label-sm">%</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <div class="form-group row mx-0 my-05" style="background-color: #fff; border: 1px solid #ced4da; border-radius: .2rem">
+                                        <label for="tablas_productos_isc" class="col-form-label col-form-label-sm mr-1">ISC:</label>
+                                        <div class="form-check form-check-inline m-0">
+                                            <input class="form-check-input" type="radio" name="tablas_productos_isc" id="tablas_productos_isc_si" value="S">
+                                            <label class="form-check-label col-form-label-sm mr-1" for="tablas_productos_isc_si">Si</label>
+                                        </div>
+                                        <div class="form-check form-check-inline m-0">
+                                            <input class="form-check-input" type="radio" name="tablas_productos_isc" id="tablas_productos_isc_no" value="N">
+                                            <label class="form-check-label col-form-label-sm mr-1" for="tablas_productos_isc_no">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <form class="m-0 p-0">
+                                        <div class="form-group row my-05 py-05">
+                                            <input type="number" id="tablas_productos_porcentaje_isc" class="col-sm-5 form-control form-control-sm m-0 p-0"value="{{datos.Porcentaje_Isc}}">
+                                            <label for="tablas_productos_porcentaje_isc" class="col-sm-4 col-form-label col-form-label-sm">%</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <div class="form-group row mx-0 my-05" style="background-color: #fff; border: 1px solid #ced4da; border-radius: .2rem">
+                                        <label for="tablas_productos_percepcion" class="col-form-label col-form-label-sm mr-1">Percepcion:</label>
+                                        <div class="form-check form-check-inline m-0">
+                                            <input class="form-check-input" type="radio" name="tablas_productos_percepcion" id="tablas_productos_percepcion_si" value="S">
+                                            <label class="form-check-label col-form-label-sm mr-1" for="tablas_productos_percepcion_si">Si</label>
+                                        </div>
+                                        <div class="form-check form-check-inline m-0">
+                                            <input class="form-check-input" type="radio" name="tablas_productos_percepcion" id="tablas_productos_percepcion_no" value="N">
+                                            <label class="form-check-label col-form-label-sm mr-1" for="tablas_productos_percepcion_no">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <form class="m-0 p-0">
+                                        <div class="form-group row my-05 py-05">
+                                            <input type="number" id="tablas_productos_porcentaje_percepcion" class="col-sm-5 form-control form-control-sm m-0 p-0"value="{{datos.Porcentaje_Percepcion}}">
+                                            <label for="tablas_productos_porcentaje_percepcion" class="col-sm-4 col-form-label col-form-label-sm">%</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <div class="form-group row mx-0 my-05" style="background-color: #fff; border: 1px solid #ced4da; border-radius: .2rem">
+                                        <label for="tablas_productos_icbper" class="col-form-label col-form-label-sm mr-1">ICBPER:</label>
+                                        <div class="form-check form-check-inline m-0">
+                                            <input class="form-check-input" type="radio" name="tablas_productos_icbper" id="tablas_productos_icbper_si" value="S">
+                                            <label class="form-check-label col-form-label-sm mr-1" for="tablas_productos_icbper_si">Si</label>
+                                        </div>
+                                        <div class="form-check form-check-inline m-0">
+                                            <input class="form-check-input" type="radio" name="tablas_productos_icbper" id="tablas_productos_icbper_no" value="N">
+                                            <label class="form-check-label col-form-label-sm mr-1" for="tablas_productos_icbper_no">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <form class="m-0 p-0">
+                                        <div class="form-group row my-05 py-05">
+                                            <input type="number" id="tablas_productos_monto_icbper" class="col-sm-5 form-control form-control-sm m-0 p-0"value="{{datos.Monto_Icbper}}">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group row mx-0 my-05" style="background-color: #fff; border: 1px solid #ced4da; border-radius: .2rem">
+                                        <label for="tablas_productos_receta" class="col-form-label col-form-label-sm mr-1">Receta:</label>
+                                        <div class="form-check form-check-inline m-0">
+                                            <input class="form-check-input" type="radio" name="tablas_productos_receta" id="tablas_productos_receta_si" value="S">
+                                            <label class="form-check-label col-form-label-sm mr-1" for="tablas_productos_receta_si">Si</label>
+                                        </div>
+                                        <div class="form-check form-check-inline m-0">
+                                            <input class="form-check-input" type="radio" name="tablas_productos_receta" id="tablas_productos_receta_no" value="N">
+                                            <label class="form-check-label col-form-label-sm mr-1" for="tablas_productos_receta_no">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group row mx-0 my-05" style="background-color: #fff; border: 1px solid #ced4da; border-radius: .2rem">
+                                        <label for="tablas_productos_desc_formato" class="col-form-label col-form-label-sm mr-1">Desc. Formato:</label>
+                                        <div class="form-check form-check-inline m-0">
+                                            <input class="form-check-input" type="radio" name="tablas_productos_desc_formato" id="tablas_productos_desc_formato_si" value="S">
+                                            <label class="form-check-label col-form-label-sm mr-1" for="tablas_productos_desc_formato_si">Si</label>
+                                        </div>
+                                        <div class="form-check form-check-inline m-0">
+                                            <input class="form-check-input" type="radio" name="tablas_productos_desc_formato" id="tablas_productos_desc_formato_no" value="N">
+                                            <label class="form-check-label col-form-label-sm mr-1" for="tablas_productos_desc_formato_no">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <div class="form-group row mx-0 my-05" style="background-color: #fff; border: 1px solid #ced4da; border-radius: .2rem">
+                                        <label for="tablas_productos_comision" class="col-form-label col-form-label-sm mr-1">Comision:</label>
+                                        <div class="form-check form-check-inline m-0">
+                                            <input class="form-check-input" type="radio" name="tablas_productos_comision" id="tablas_productos_comision_si" value="S">
+                                            <label class="form-check-label col-form-label-sm mr-1" for="tablas_productos_comision_si">Si</label>
+                                        </div>
+                                        <div class="form-check form-check-inline m-0">
+                                            <input class="form-check-input" type="radio" name="tablas_productos_comision" id="tablas_productos_comision_no" value="N">
+                                            <label class="form-check-label col-form-label-sm mr-1" for="tablas_productos_comision_no">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <form class="m-0 p-0">
+                                        <div class="form-group row my-05 py-05">
+                                            <input type="number" id="tablas_productos_porcentaje_comision" class="col-sm-5 form-control form-control-sm m-0 p-0"value="{{datos.Comision_Porcentaje}}">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group row mx-0 my-05" style="background-color: #fff; border: 1px solid #ced4da; border-radius: .2rem">
+                                        <label for="tablas_productos_digemid2" class="col-form-label col-form-label-sm mr-1">Codigo Digemid:</label>
+                                        <div class="form-check form-check-inline m-0">
+                                            <input class="form-check-input" type="radio" name="tablas_productos_digemid2" id="tablas_productos_digemid2_si" value="S">
+                                            <label class="form-check-label col-form-label-sm mr-1" for="tablas_productos_digemid2_si">Si</label>
+                                        </div>
+                                        <div class="form-check form-check-inline m-0">
+                                            <input class="form-check-input" type="radio" name="tablas_productos_digemid2" id="tablas_productos_digemid2_no" value="N">
+                                            <label class="form-check-label col-form-label-sm mr-1" for="tablas_productos_digemid2_no">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="ventana2" role="ventana2" aria-labelledby="profile-tab">
+        <div class="container-fluid border">
+            <div class="row">
+                <table id="tablas_presentacion_productos"></table>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="ventana3" role="ventana3" aria-labelledby="profile-tab">
+        <div class="container-fluid border">
+            <div class="row">
+                <table id="tablas_nombre_presentacion"></table>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="ventana4" role="ventana4" aria-labelledby="profile-tab">
+        <div class="container-fluid border">
+            <div class="row">
+                <div class="col-md-10"><table id="tablas_datos_tecnicos"></table></div>
+                <div class="col-md-2">
+                    <form class="m-0 p-0">
+                        <div class="form-check row my-05 py-05">
+                            <input class="form-check-input" type="checkbox" id="tablas_productos_compra">
+                            <label class="form-check-label col-form-label-sm" for="tablas_productos_compra">Compra</label>
+                        </div>
+                    </form>
+                    <form class="m-0 p-0">
+                        <div class="form-check row my-05 py-05">
+                            <input class="form-check-input" type="checkbox" id="tablas_productos_venta">
+                            <label class="form-check-label col-form-label-sm" for="tablas_productos_venta">Venta</label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="ventana5" role="ventana5" aria-labelledby="profile-tab">
+        <div class="container-fluid border">
+            <div class="row">
+                <table id="tablas_lista_precios_compra"></table>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="ventana6" role="ventana6" aria-labelledby="profile-tab">
+        <div class="container-fluid border">
+            <div class="row">
+                <table id="tablas_codigos_alternativos"></table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="d-none">
+    {{#if datos}}
+        <input id="tablas_productos_automatico_predeterminado" type="text" value="{{datos.Automatico}}">
+        <input id="tablas_productos_tipo_producto_predeterminado" type="text" value="{{datos.Codigo_Tipo_Producto}}">
+        <input id="tablas_productos_familia_predeterminado" type="text" value="{{datos.Codigo_Familia}}">
+        <input id="tablas_productos_subfamilia_predeterminado" type="text" value="{{datos.Codigo_SubFamilia}}">
+        <input id="tablas_productos_categoria_predeterminado" type="text" value="{{datos.Codigo_Concepto1}}">
+        <input id="tablas_productos_tamaño_predeterminado" type="text" value="{{datos.Codigo_Concepto2}}">
+        <input id="tablas_productos_dimension_predeterminado" type="text" value="{{datos.Codigo_Concepto3}}">
+        <input id="tablas_productos_marca_predeterminado" type="text" value="{{datos.Codigo_Concepto4}}">
+        <input id="tablas_productos_diseño_predeterminado" type="text" value="{{datos.Codigo_Concepto5}}">
+        <input id="tablas_productos_color_predeterminado" type="text" value="{{datos.Codigo_Concepto6}}">
+        <input id="tablas_productos_concepto_predeterminado" type="text" value="{{datos.Codigo_Concepto7}}">
+        <input id="tablas_productos_grupo_receta_predeterminado" type="text" value="{{datos.Grupo_Receta}}">
+        <input id="tablas_productos_moneda_predeterminado" type="text" value="{{datos.Moneda}}">
+        <input id="tablas_productos_estado_predeterminado" type="text" value="{{datos.Estado}}">
+        <input id="tablas_productos_unidad_medida_predeterminado" type="text" value="{{datos.Unidad}}">
+        <input id="tablas_productos_unidad_medida2_predeterminado" type="text" value="{{datos.Codigo_Unidad2}}">
+        <input id="tablas_productos_categoria2_predeterminado" type="text" value="{{datos.Categoria}}">
+        <input id="tablas_productos_fecha_creacion_predeterminado" type="text" value="S">
+        <input id="tablas_productos_fecha_modificacion_predeterminado" type="text" value="S">
+
+        <input id="tablas_productos_no_stock_predeterminado" type="text" value="{{datos.Control_Stock}}">
+        <input id="tablas_productos_lote_no_predeterminado" type="text" value="{{datos.Lote_SN}}">
+        <input id="tablas_productos_serie_no_predeterminado" type="text" value="{{datos.Serie_SN}}">
+        <input id="tablas_productos_servicio_no_predeterminado" type="text" value="{{datos.Servicio}}">
+        <input id="tablas_productos_kits_no_predeterminado" type="text" value="{{datos.Kits}}">
+        <input id="tablas_productos_activo_fijo_no_predeterminado" type="text" value="{{datos.Activo_Fijo}}">
+        <input id="tablas_productos_advalorem_no_predeterminado" type="text" value="{{datos.Afecta_Advalorem}}">
+        <input id="tablas_productos_iqpf_no_predeterminado" type="text" value="{{datos.Iqpf}}">
+        <input id="tablas_productos_isc_no_predeterminado" type="text" value="{{datos.Isc}}">
+        <input id="tablas_productos_percepcion_si_predeterminado" type="text" value="{{datos.Percepcion}}">
+        <input id="tablas_productos_icbper_no_predeterminado" type="text" value="{{datos.Icbper}}">
+        <input id="tablas_productos_receta_no_predeterminado" type="text" value="{{datos.Receta}}">
+        <input id="tablas_productos_desc_formato_no_predeterminado" type="text" value="{{datos.Desc_Impresion}}">
+        <input id="tablas_productos_comision_no_predeterminado" type="text" value="{{datos.Comision}}">
+        <input id="tablas_productos_digemid2_no_predeterminado" type="text" value="{{datos.Cod_Digemid_SN}}">
+
+        <input id="tablas_productos_automatico_codigo_predeterminado" type="text" value="{{datos.Codigo_Barra_Automatico}}">
+
+    {{else}}
+        <input id="tablas_productos_automatico_predeterminado" type="text" value="A">
+        <input id="tablas_productos_tipo_producto_predeterminado" type="text" value="00">
+        <input id="tablas_productos_familia_predeterminado" type="text" value="00">
+        <input id="tablas_productos_subfamilia_predeterminado" type="text" value="00">
+        <input id="tablas_productos_categoria_predeterminado" type="text" value="00">
+        <input id="tablas_productos_tamaño_predeterminado" type="text" value="00">
+        <input id="tablas_productos_dimension_predeterminado" type="text" value="00">
+        <input id="tablas_productos_marca_predeterminado" type="text" value="00">
+        <input id="tablas_productos_diseño_predeterminado" type="text" value="00">
+        <input id="tablas_productos_color_predeterminado" type="text" value="00">
+        <input id="tablas_productos_concepto_predeterminado" type="text" value="00">
+        <input id="tablas_productos_grupo_receta_predeterminado" type="text" value="00">
+        <input id="tablas_productos_moneda_predeterminado" type="text" value="S/">
+        <input id="tablas_productos_estado_predeterminado" type="text" value="Activo">
+        <input id="tablas_productos_unidad_medida_predeterminado" type="text" value="UND">
+        <input id="tablas_productos_unidad_medida2_predeterminado" type="text" value="UND">
+        <input id="tablas_productos_fecha_creacion_predeterminado" type="text" value="N">
+        <input id="tablas_productos_fecha_modificacion_predeterminado" type="text" value="N">
+        <input id="tablas_productos_no_stock_predeterminado" type="text" value="N">
+        <input id="tablas_productos_lote_no_predeterminado" type="text" value="N">
+        <input id="tablas_productos_serie_no_predeterminado" type="text" value="N">
+        <input id="tablas_productos_servicio_no_predeterminado" type="text" value="N">
+        <input id="tablas_productos_kits_no_predeterminado" type="text" value="N">
+        <input id="tablas_productos_activo_fijo_no_predeterminado" type="text" value="N">
+        <input id="tablas_productos_advalorem_no_predeterminado" type="text" value="N">
+        <input id="tablas_productos_iqpf_no_predeterminado" type="text" value="N">
+        <input id="tablas_productos_isc_no_predeterminado" type="text" value="N">
+        <input id="tablas_productos_percepcion_si_predeterminado" type="text" value="N">
+        <input id="tablas_productos_icbper_no_predeterminado" type="text" value="N">
+        <input id="tablas_productos_receta_no_predeterminado" type="text" value="N">
+        <input id="tablas_productos_desc_formato_no_predeterminado" type="text" value="N">
+        <input id="tablas_productos_comision_no_predeterminado" type="text" value="N">
+        <input id="tablas_productos_digemid2_no_predeterminado" type="text" value="N">
+        <input id="tablas_productos_categoria2_predeterminado" type="text" value="A">
+
+        <input id="tablas_productos_automatico_codigo_predeterminado" type="text" value="A">
+    {{/if}}
+</div>

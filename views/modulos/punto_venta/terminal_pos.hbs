@@ -1,0 +1,562 @@
+
+{{#if user}}
+<ul class="nav nav-tabs tabs group pl-4 d-print-none" id="myTab" role="tablist">
+  <li class="nav-item active nav-tab-rounded">
+    <a class="active my-0 py-2" data-toggle="tab" href="#generales">Datos Generales</a>
+  </li>
+  <li class="nav-item nav-tab-rounded">
+    <a class="my-0 py-2" data-toggle="tab" href="#profile">Datos Complementarios</a>
+  </li>
+</ul>
+
+<div class="tab-content mr-3 d-print-none" id="myTabContent">
+    <div class="tab-pane fade show active" id="generales" role="tabpanel" aria-labelledby="generales-tab">
+        <div class="container-fluid border">
+            <div class="row border">
+                <div class="col-lg-5 border">
+                    <div class="row my-1">
+                        <div class="col-xl-6">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text col-form-label col-form-label-sm py-0 background-title-jqgrid" for="pto_venta">Tipo de Venta</label>
+                                </div>
+                                <select class="form-control form-control-sm" id="tipo">
+                                    <option value="VENTA DIRECTA">Venta Directa</option>
+                                    <option value="FACTURAR PEDIDO">Facturar Pedido</option>
+                                    <option value="ANTICIPO">Anticipo</option>
+                                    <option value="VENTA DIFERIDA">Venta Diferida</option>
+                                    <option value="NOTA DE DEBITO">Nota de Debito</option>
+                                    <option value="NOTA DE CREDITO DIRECTO">Nota de Credito Directo</option>
+                                    <option value="NOTA DE CREDITO POR DEVOLUCION">Nota de Credito Por Devolucion</option>
+                                    <option value="NOTA DE CREDITO POR DESCUENTO">Nota de Credito Por Descuento</option>
+                                    
+                                    <option value="VENTA DIFERIDA DE PEDIDO">Venta Diferida de Pedido</option>
+                                </select>
+                                
+                            </div>
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text col-form-label col-form-label-sm py-0 background-title-jqgrid" for="caja">Caja</label>
+                                </div>
+                                <select class="form-control form-control-sm" id="caja"  style="font-weight: 700;" disabled></select>
+                                {{!-- <input type="text" id="caja" class="form-control form-control-sm" style="font-weight: 700;" disabled> --}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row my-1">
+                        <div class="col-sm-6 input-group">
+                            <label class="input-group-text col-form-label col-form-label-sm py-0 " style="padding: 8px;">Cod Del Cliente</label>
+                            <input type="text" id="codigo_cliente" class="form-control form-control-sm  c_mantenimientos" placeholder="Código del Cliente">
+                        </div>
+                        <div class="col-sm-6 input-group">
+                                <label class="input-group-text col-form-label col-form-label-sm py-0 ">Ruc :</label>
+                                <input type="text" id="ruc_cliente" class="form-control form-control-sm " placeholder="RUC del Cliente">
+                        </div>
+                    </div>
+                    <div class="row my-1">
+                        <div class="col-sm-12 input-group">
+                            <label class="input-group-text col-form-label col-form-label-sm py-0 ">Razon Social :</label>
+                            <input type="text" id="nombre_cliente" class="form-control form-control-sm " placeholder="Nombre del Cliente">
+                        </div>
+                    </div>
+                    <div class="row my-1">
+                        <div class="col-sm-12 ">
+                            <input type="text" id="direccion_cliente" class="form-control form-control-sm " placeholder="Dirección del Cliente">
+                        </div>
+                    </div>
+                    <div class="row my-1">
+                        <div class="input-group">
+                            <div class="col-sm-5 input-group" style="padding-right: 1px; padding-left: 15px;">
+                                <label class="input-group-text col-form-label col-form-label-sm py-0 " style="padding: 13px;">Codigo Barra</label>
+                                <input type="text" id="codigo_barra" class="form-control form-control-sm  c_mantenimientos">
+                            </div>
+                            <div class="input-group-prepend" style="padding-left: 1px; margin-left: 1px;">
+                                <button type="button" class="border form-control form-control-sm btn btn-light btn-sm sm pt-0" id ="buscar_pendientes" data-toggle="tooltip" data-placement="top" title="Buscar" style="padding-left: 5px;">
+                                    <svg width="1.2em" height="1.2em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                                        <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 border">
+                    <div class="row my-1">
+                        <div class="col-sm-12">
+                            <div class="input-group ">
+                                <div class="col-4 input-group form-control-sm-erp" style="padding-left: 0px; padding-right: 19px;">
+                                    <label class="sm input-group-text py-0 border-right-0" for="fecha_doc" style="background:#e9ecef;border-top-right-radius:0px;border-bottom-right-radius:0px">Fecha:</label>
+                                    <input type="date" id = "fecha_doc" class="form-control form-control-sm no-calendar border-left-0 pl-0" style=";border-top-left-radius:0px;border-bottom-left-radius:0px">
+                                </div>
+                                <select class="form-control form-control-sm mr-3" id="tipo_documento" style="margin-right: 15px;margin-left: 15px;margin-bottom: 5px;">
+                                </select>
+                                <select class="form-control form-control-sm mr-3 form-control-sm-serie" id="serie">
+                                </select>
+                                <input type="text" id="numero_correlativo" class="form-control form-control-sm text-right px-4" placeholder="Número">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row my-1">
+                        <div class="col-sm-4">
+                            <input type="text" id = "numero_documento_referencia" class="form-control form-control-sm" placeholder="Numero Pedido">
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="input-group form-control-sm-erp ">
+                                <select class="form-control form-control-sm form-control-sm-moneda no-spin" id="moneda">
+                                </select>
+                                <select class=" form-control form-control-sm " id="tipo_cambio">
+                                </select>
+                                <input type="number" class="form-control form-control-sm text-right no-spin-number form-control-sm-tasa-cambio" id="tasa_cambio">
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <select class="form-control form-control-sm  c_mantenimientos" id="forma_pago">
+                                <option value="00">Ninguno</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row my-1">
+                        <div class="col-sm-4">
+                            <select class="form-control form-control-sm " id="vendedor1">
+                                <option value="00">Ninguno</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-4">
+                            <select class="form-control form-control-sm c_mantenimientos" id="lista_precios">
+                                <option value="01">Lista de Precios</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text form-control form-control-sm text-right" for="porc_descuento">Dsct.:</label>
+                                </div>
+                                <input type="number" id ="porc_descuento" class="form-control form-control-sm text-right" value ="0">
+                                <div class="input-group-append">
+                                    <span class="input-group-text form-control form-control-sm text-right">%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="row my-1">
+                        <div class="col-xl-4">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text col-form-label col-form-label-sm py-0 background-title-jqgrid" for="cobrador">Cobrador</label>
+                                </div>
+                                <input type="text" id="cobrador" class="form-control form-control-sm" style="font-weight: 700;" disabled>
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <input type="text" id="detalle_anulacion" class="form-control form-control-sm " placeholder="Detalle Anulacion">
+                        </div>
+                        
+                    </div>
+                    <div class="row my-1">
+                        <div class="col-sm-5" id ="motivo_operacion_div">
+                            <select class="form-control form-control-sm " id="motivo_operacion">
+                                <option value="">Ninguno</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row my-1">
+                        <div class="col-sm-12">
+                            <input type="text" id="glosa" class="form-control form-control-sm " placeholder="Glosa">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 border">
+                    <div class="row my-1">
+                        <div class="col-xl-5 form-control-sm-erp">
+                            <label for="base_calculada" class="col-form-label col-form-label-sm">Base Calc.:</label>
+                        </div>
+                        <div class="col-xl-7">
+                            <input type="text" id = "base_calculada_mask" class="form-control form-control-sm  text-right" value ="0.00" disabled>
+                        </div>
+                        <div class="col-xl-7 d-none">
+                            <input type="number" id = "base_calculada" class="form-control form-control-sm text-right">
+                        </div>
+                    </div>
+                    <div class="row my-1">
+                        <div class="col-xl-5 form-control-sm-erp">
+                            <label for="anticipos" class="col-form-label col-form-label-sm">Anticipos:</label>
+                        </div>
+                        <div class="col-xl-7">
+                            <input type="text" id = "anticipos_mask" class="form-control form-control-sm  text-right" value ="0.00" disabled>
+                        </div>
+                        <div class="col-xl-7 d-none">
+                            <input type="number" id = "anticipos" class="form-control form-control-sm  text-right">
+                        </div>
+                    </div>
+                    <div class="row my-1">
+                        <div class="col-xl-5 form-control-sm-erp">
+                            <label for="monto_descuento" class="col-form-label col-form-label-sm">Dsct.:</label>
+                        </div>
+                        <div class="col-xl-7">
+                            <input type="text" id = "monto_descuento_mask" class="form-control form-control-sm  text-right" value ="0.00" disabled>
+                        </div>
+                        <div class="col-xl-7 d-none">
+                            <input type="number" id = "monto_descuento" class="form-control form-control-sm  text-right">
+                        </div>
+                    </div>
+                    <div class="row my-1">
+                        <div class="col-xl-5 form-control-sm-erp">
+                            <label for="subtotal" class="col-form-label col-form-label-sm">Base Imp.:</label>
+                        </div>
+                        <div class="col-xl-7">
+                            <input type="text" id = "subtotal_mask" class="form-control form-control-sm  text-right" value ="0.00" disabled>
+                        </div>
+                        <div class="col-xl-7 d-none">
+                            <input type="number" id = "subtotal" class="form-control form-control-sm  text-right">
+                        </div>
+                    </div>
+                    <div class="row my-1">
+                        <div class="col-xl-5 form-control-sm-erp">
+                            <label for="igv" class="col-form-label col-form-label-sm">IGV:</label>
+                        </div>
+                        <div class="col-xl-7">
+                            <input type="text" id = "igv_mask" class="form-control form-control-sm  text-right" value ="0.00" disabled>
+                        </div>
+                        <div class="col-xl-7 d-none">
+                            <input type="number" id = "igv" class="form-control form-control-sm  text-right">
+                        </div>
+                    </div>
+                    <div class="row my-1">
+                        <div class="col-xl-5 form-control-sm-erp">
+                            <label for="icbper" class="col-form-label col-form-label-sm">ICBPER:</label>
+                        </div>
+                        <div class="col-xl-7">
+                            <input type="text" id = "icbper_mask" class="form-control form-control-sm  text-right" value ="0.00" disabled>
+                        </div>
+                        <div class="col-xl-7 d-none">
+                            <input type="number" id = "icbper" class="form-control form-control-sm  text-right">
+                        </div>
+                    </div>
+                    <div class="row my-1">
+                        <div class="col-xl-5 form-control-sm-erp">
+                            <label for="total" class="col-form-label col-form-label-sm">Total:</label>
+                        </div>
+                        <div class="col-xl-7">
+                            <input type="text" id = "total_mask" class="form-control form-control-sm  text-right" value ="0.00" disabled>
+                        </div>
+                        <div class="col-xl-7 d-none">
+                            <input type="number" id = "total" class="form-control form-control-sm  text-right">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <div class="container-fluid border">
+            <div class="row border">
+                <div class="col-sm-6 border">
+                     <div class="row my-1">
+                        <div class="col-sm-4">
+                            <select class="form-control form-control-sm c_mantenimientos" id="contacto_cliente">
+                                <option value="00">Contacto del Cliente</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-4">
+                            <input type="text" id="email_cliente" class="form-control form-control-sm " placeholder="E-mail">
+                        </div>
+                        
+                    </div>
+                    <div class="row my-1">
+                        <div class="col-sm-6">
+                            <select class="form-control form-control-sm  c_mantenimientos" id="unidad_negocio">
+                                <option value="00">Ninguno</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-6">
+                            <select class="form-control form-control-sm  c_mantenimientos" id="centro_costos">
+                                <option value="00">Ninguno</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row my-1">
+                        <div class="col-sm-6">
+                            <select class="form-control form-control-sm  c_mantenimientos" id="orden_trabajo">
+                                <option value="00">Ninguno</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-6">
+                            <select class="form-control form-control-sm  c_mantenimientos" id="presupuesto">
+                                <option value="00">Ninguno</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row d-none  my-1">
+                        <div class="col-sm-6">
+                            <select class="form-control form-control-sm  c_mantenimientos" id="agencia_cliente">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row my-1">
+                        <div class="col-sm-6">
+                            <select class="form-control form-control-sm  c_mantenimientos" id="detraccion">
+                            </select>
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="text" id="telefono_cliente" class="form-control form-control-sm " placeholder="Teléfono del Cliente">
+                        </div>
+                    </div>
+                    <div class="row my-1">
+                        <div class="col-sm-12">
+                            <input type="text" id="punto_partida" class="form-control form-control-sm " placeholder="Punto de partida">
+                        </div>
+                    </div>
+                    <div class="row my-1">
+                        <div class="col-sm-12">
+                            <input type="text" id="punto_llegada_cliente" class="form-control form-control-sm " placeholder="Punto de llegada">
+                        </div>
+                    </div>
+                    <div class="row my-1">
+                        <div class="col-sm-6">
+                            <input type="text" id = "numero_expediente1" class="form-control form-control-sm " placeholder="Numero de Expediente 1">
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="text" id = "numero_expediente2" class="form-control form-control-sm " placeholder="Numero de Expediente 2">
+                        </div>
+                    </div>
+                    <div class="row my-1">
+                        <select class="form-control form-control-sm mr-3" id="tipo_documento" style="margin-right: 15px;margin-left: 15px;margin-bottom: 5px;">
+                        </select>
+                        <div class="col-sm-4">
+                            <input type="text" id = "subvoucher_contable" class="form-control form-control-sm" placeholder="Sub Voucher">
+                        </div>
+                        <div class="col-sm-4">
+                            <input type="text" id = "numero_contable" class="form-control form-control-sm" placeholder="Numero Contable">
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text col-form-label col-form-label-sm py-0 " for="pto_venta">Punto Venta:</label>
+                                </div>
+                                <select class="form-control form-control-sm" id="pto_venta"><option value="{{user.codigo_punto_venta}}">{{user.codigo_punto_venta}} - {{user.nombre_punto_venta}}</option></select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 border">
+                    <div class="row my-1">
+                        <div class="col-sm-12">
+                            <div class="input-group form-control-sm-group-serie">
+                                <div class="form-check form-check-inline form-control-sm-erp ml-4">
+                                    <input class="form-check-input" type="radio" name="correlativo" id="automatico" value="automatico">
+                                    <label class="form-check-label col-form-label-sm" for="automatico">Automático</label>
+                                </div>
+                                <div class="form-check form-check-inline form-control-sm-erp">
+                                    <input class="form-check-input" type="radio" name="correlativo" id="manual" value="manual">
+                                    <label class="form-check-label col-form-label-sm" for="manual">Manual</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row my-1">
+                        <div class="col-12 input-group form-control-sm-erp form-control-sm-group-fechas-3">
+                            
+                            <input type="number" id = "dias_forma_pago" class="form-control form-control-sm text-right mx-2 form-control-sm-dias-forma-pago" value ="0">
+                            <label class="sm input-group-text py-0 border-right-0" for="fecha_validez" style="background:#fff;border-top-right-radius:0px;border-bottom-right-radius:0px">F. Validez:</label>
+                            <input type="date" id = "fecha_validez" class="form-control form-control-sm border-left-0 pl-0 calendar-sm" style=";border-top-left-radius:0px;border-bottom-left-radius:0px">
+                            <label class="sm input-group-text py-0 border-right-0" for="fecha_entrega" style="background:#fff;border-top-right-radius:0px;border-bottom-right-radius:0px">F. Entrega:</label>
+                            <input type="date" id = "fecha_entrega" class="form-control form-control-sm border-left-0 pl-0 calendar-sm" style=";border-top-left-radius:0px;border-bottom-left-radius:0px">
+                        </div>
+                    </div>
+                    <div class="row my-1">
+                        <div class="col-sm-5">
+                            <select class="form-control form-control-sm " id="tipo_operacion">
+                                <option value="">Ninguno</option>
+                                <option value="OPERACION GRAVADA">Operación Gravada</option>
+                                <option value="OPERACION INEFACTA">Operación Inefacta</option>
+                                <option value="OPERACION EXONERADA">Operación Exonerada</option>
+                                <option value="OPERACION GRATUITA">Operación Gratuita</option>
+                            </select>
+                        </div>
+                        <dic class="col-sm-5">
+                            <div class="form-check form-check-inline">
+                                <label class="form-check-label col-form-label-sm" for="mas_igv">Más I.G.V.:</label>
+                                <input class="form-check-input" type="checkbox" id="mas_igv">
+                            </div>
+                        </dic>
+                    </div>
+                    <div class="row my-1">
+                        <div class="col-sm-6">
+                            <select class="form-control form-control-sm  c_mantenimientos" id="vendedor3">
+                                <option value="00">Ninguno</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-6">
+                            <select class="form-control form-control-sm  c_mantenimientos" id="vendedor2">
+                                <option value="00">Ninguno</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row d-none my-1">
+                        <div class="col-sm-6">
+                            <select class="form-control form-control-sm " id="motivo_referencia">
+                                <option value="00">Ninguno</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row d-none my-1">
+                        <div class="col-sm-6">
+                            <input type="text" id = "numero_referencia" class="form-control form-control-sm ">
+                        </div>
+                    </div>
+                    <div class="row my-1">
+                        <div class="col-sm-6">
+                            <input type="text" id = "numero_orden" class="form-control form-control-sm" placeholder="Numero Orden">
+                        </div>
+                        <div class="col-sm-6">
+                            <select class="form-control form-control-sm  c_mantenimientos" id="motivo_venta">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row my-1">
+                        <div class="col-sm-6">
+                            <select class="form-control form-control-sm  c_mantenimientos" id="gestor">
+                                <option value="00">Ninguno</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-6">
+                            <select class="form-control form-control-sm  c_mantenimientos" id="transportista">
+                                <option value="00">Ninguno</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row my-1">
+                        <div class="col-sm-6">
+                            <select class="form-control form-control-sm  c_mantenimientos" id="vehiculo">
+                                <option value="00">Ninguno</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-6">
+                            <select class="form-control form-control-sm  c_mantenimientos" id="motivo_traslado">
+                                <option value="00">Ninguno</option>
+                            </select>
+                        </div>
+                    </div>
+                     <div class="row my-1">
+                        <div class="col-sm-6">
+                            <select class="form-control form-control-sm  c_mantenimientos" id="chofer">
+                                <option value="00">Ninguno</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-6">
+                            <select class="form-control form-control-sm  c_mantenimientos" id="agencia_transporte">
+                                <option value="00">Ninguno</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row my-1">
+                        <div class="col-sm-4">
+                            <select class="form-control form-control-sm  c_mantenimientos" id="tipo_documento_referencia">
+                                <option value="00">Ninguno</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-2">
+                            <input type="text" id = "serie_documento_referencia" class="form-control form-control-sm" placeholder="Serie">
+                        </div>
+                        
+                        <div class="col-sm-4">
+                            <input type="date" id = "fecha_referencia" class="form-control form-control-sm">
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="d-none">
+    <input id="user-Ventas_Mas_Igv" type="text" value="{{user.ventas_mas_igv}}">
+    <input id="user-Unidad_negocio" type="text" value="{{user.codigo_unidad_negocio}}">
+    <input id="user-codigo_centro_costos" type="text" value="{{user.codigo_centro_costos}}">
+    <input id="user-codigo_punto_venta" type="text" value="{{user.codigo_punto_venta}}">
+    <input id="user-codigo_ninguno" type="text" value="00">
+    <input id="user-predeterminado_documento" type="text" value="01">
+    <input id="user-Busqueda_Punto_Venta" type="text" value="{{user.globales_busqueda_pto_venta}}">
+    <input id="modulo_formatos" type="text" value="facturacion">
+</div>
+
+
+<div class="modal fade" id="modal_cancelacion" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" >Cancelación de Documentos</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+            <div class="row" style="border: 1px solid; border-radius: 10px; margin-bottom: 10px;">
+                <div class="col-md-3">
+                    <div style="margin-top:5px; ">
+                        <img id="" src="http://demo.erp-facturacionelectronica.com/img/PtoVta_Pago_Efectivo_01.png" class="img-fluid d-block" alt="Responsive image" ></img>
+                    </div> 
+                    <div style="margin-top:5px; ">
+                        <img id="" src="http://demo.erp-facturacionelectronica.com/img/PtoVta_Pago_Tarjeta_01.png" class="img-fluid d-block" alt="Responsive image" ></img>
+                    </div> 
+                    <div style="margin-top:5px; ">
+                        <img id="" src="http://demo.erp-facturacionelectronica.com/img/PtoVta_Pago_Otros_01.png" class="img-fluid d-block" alt="Responsive image"></img>
+                    </div> 
+                </div>
+                <div class="col-md-9">
+                    <div style="text-align: center; margin-bottom: 5px; font-weight: 700">PAGO EN EFECTIVO</div>
+                    <div class="form-group row">
+                        <label for="monto_soles" class="col-sm-5 col-form-label col-form-label-md">MONTO SOLES:</label>
+                        <div class="col-sm-7">
+                        <input type="text"  class="form-control text-right focusIn" id="monto_soles">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="monto_dolares" class="col-sm-5 col-form-label">MONTO DOLARES</label>
+                        <div class="col-sm-7">
+                        <input type="text"  class="form-control text-right focusIn" id="monto_dolares">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="text-align: center; border: 1px solid; border-radius: 10px;">
+                <div class="col-md-6" style="border-right:1px solid;  border-bottom: 1px solid; font-weight: 700;">TOTAL A COBRAR</div>
+                <div class="col-md-6" style="border-bottom: 1px solid; font-weight: 700">PAGO</div>
+                <div class="col-md-6" style="border-right:1px solid;  border-bottom: 1px solid;">S/.  <label id="total_cobrar">0.00</label></div>
+                <div class="col-md-6" style="border-bottom: 1px solid;"> <label id="pago">0.00</label></div>
+                <div class="col-md-6" style="border-right:1px solid;  border-bottom: 1px solid;">$  <label id="total_cobrar_dolares">0.00</label></div>
+                <div class="col-md-6"  style="border-bottom: 1px solid; font-weight: 700">T/C:  <label id="tc_cancelacion">0.00</label></div>
+                <div class="col-md-12" style="border-bottom: 1px solid; font-weight: 700">VUELTO</div>
+                <div class="col-md-6" style="border-right:1px solid;  border-bottom: 1px solid;">S/.  <label id="vuelto_soles">0.00</label></div>
+                <div class="col-md-6" style="border-bottom: 1px solid;">$  <label id="vuelto_dolares">0.00</label></div>
+                <div class="col-md-12" style="border-bottom: 1px solid; font-weight: 700">PAGO RESTANTE</div>
+                <div class="col-md-6" style="border-right:1px solid; ">S/.  <label id="pago_restante_soles">0.00</label></div>
+                <div class="col-md-6">$  <label id="pago_restante_dolares">0.00</label></div>
+            </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="ok_cancelacion"class="btn btn-block btn-success">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{> mantenimientos/ventas_pendientes}}
+{{> mantenimientos/lista_mantenimientos}}
+{{!-- {{> mantenimientos/detalle_punto_venta}} --}}
+{{> mantenimientos/detalle_ventas}}
+{{> mantenimientos/documentos_listas}}
+{{> mantenimientos/lista_anticipos}}
+{{> mantenimientos/formato_impresion}}
+
+<script src="/js/mantenimientos/cabecera_punto_ventas.js"></script>
+<script src="/js/modulos/punto_venta/terminal_pos.js"></script
+
+{{/if}}

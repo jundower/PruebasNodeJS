@@ -1,0 +1,45 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="row d-none">
+                <div class="col-sm-6">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_kits_codigo" class="col-sm-4 col-form-label col-form-label-sm">Código:</label>
+                            <input type="text" id="tablas_kits_codigo" class="col-sm-8 form-control form-control-sm m-0 p-0" value="{{datos.Codigo}}" placeholder="Códgo" maxlength="25">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-6">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_kits_nombre" class="col-sm-4 col-form-label col-form-label-sm">Nombre:</label>
+                            <input type="text" id="tablas_kits_nombre" class="col-sm-8 form-control form-control-sm m-0 p-0"value="{{datos.Nombre}}" placeholder="Nombre" maxlength="50">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row d-none">
+                <div class="col-sm-6">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_kits_unidad" class="col-sm-4 col-form-label col-form-label-sm">Unidad:</label>
+                            <input type="text" id="tablas_kits_unidad" class="col-sm-8 form-control form-control-sm m-0 p-0" value="{{datos.Unidad}}" placeholder="Unidad" maxlength="25">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <table id="grid_tablas_kits_articulos"></table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="d-none">
+    {{#if datos}}
+        <input type="text" id="tablas_kits_operacion_predeterminado" value="{{datos.Operacion}}">
+    {{else}}
+        <input type="text" id="tablas_kits_operacion_predeterminado" value="+">
+    {{/if}}
+</div>

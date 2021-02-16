@@ -1,0 +1,132 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-4">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_usuario_codigo" class="col-sm-6 col-form-label col-form-label-sm">Código:</label>
+                            <input type="text" id="tablas_usuario_codigo" class="col-sm-6 form-control form-control-sm m-0 p-0" value="{{datos.Codigo}}"value="{{datos.Codigo}}" placeholder="Códgo" maxlength="15">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_usuario_nombre" class="col-sm-2 col-form-label col-form-label-sm">Nombre:</label>
+                            <input type="text" id="tablas_usuario_nombre" class="col-sm-10 form-control form-control-sm m-0 p-0"value="{{datos.Nombre}}" placeholder="Nombre" maxlength="80">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                        <label for="tablas_usuario_estado" class="col-form-label col-form-label-sm">Estado:</label>
+                    </div>
+                <div class="col-sm-4 pl-0">
+                    <div class="form-check form-check-inline m-0 p-0">
+                        <input class="form-check-input" type="radio" name="tablas_usuario_estado" value="A" id="tablas_usuario_estado_activo">
+                        <label class="form-check-label col-form-label-sm" for="tablas_usuario_estado_activo">Activo</label>
+                    </div>
+                    <div class="form-check form-check-inline ml-5 pl-4">
+                        <input class="form-check-input" type="radio" name="tablas_usuario_estado" value="D" id="tablas_usuario_estado_desactivo">
+                        <label class="form-check-label col-form-label-sm" for="tablas_usuario_estado_desactivo">Inactivo</label>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-check ml-4 pl-4">
+                        <input class="form-check-input" type="checkbox" name="correlativo" id="conectado">
+                        <label class="form-check-label col-form-label-sm" for="conectado">Conectado</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_usuario_password" class="col-sm-4 col-form-label col-form-label-sm">Password:</label>
+                            <input type="password" id="tablas_usuario_password" class="col-sm-8 form-control form-control-sm m-0 p-0"value="{{datos.Password}}" placeholder="Password" disabled>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-check ml-4 pl-4">
+                        <input class="form-check-input" type="checkbox" name="cambiar_password" id="cambiar_password">
+                        <label class="form-check-label col-form-label-sm" for="cambiar_password">Cambiar Password</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_usuario_repetir_password" class="col-sm-4 col-form-label col-form-label-sm">Repetir Password:</label>
+                            <input type="password" id="tablas_usuario_repetir_password" class="col-sm-8 form-control form-control-sm m-0 p-0"value="{{datos.Password02}}" placeholder="Repetir Password" disabled>
+                        </div>
+                    </form>
+                </div>
+            </div>
+  
+            <div class="row">
+                <div class="col-2">
+                        <label for="tablas_usuario_kardex" class="col-form-label col-form-label-sm">Ver Mov. Kardex:</label>
+                    </div>
+                <div class="col-sm-4 pl-0">
+                    <div class="form-check form-check-inline m-0 p-0">
+                        <input class="form-check-input" type="radio" name="tablas_usuario_kardex" value="S" id="tablas_usuario_kardex_si">
+                        <label class="form-check-label col-form-label-sm" for="tablas_usuario_kardex_si">Si</label>
+                    </div>
+                    <div class="form-check form-check-inline ml-5 pl-4">
+                        <input class="form-check-input" type="radio" name="tablas_usuario_kardex" value="N" id="tablas_usuario_kardex_no">
+                        <label class="form-check-label col-form-label-sm" for="tablas_usuario_kardex_no">No</label>
+                    </div>
+                </div>
+                <div class="col-2">
+                        <label for="tablas_usuario_compras" class="col-form-label col-form-label-sm">Ver Mov. Compras:</label>
+                    </div>
+                <div class="col-sm-4 pl-0">
+                    <div class="form-check form-check-inline m-0 p-0">
+                        <input class="form-check-input" type="radio" name="tablas_usuario_compras" value="S" id="tablas_usuario_compras_si">
+                        <label class="form-check-label col-form-label-sm" for="tablas_usuario_compras_si">Si</label>
+                    </div>
+                    <div class="form-check form-check-inline ml-5 pl-4">
+                        <input class="form-check-input" type="radio" name="tablas_usuario_compras" value="N" id="tablas_usuario_compras_no">
+                        <label class="form-check-label col-form-label-sm" for="tablas_usuario_compras_no">No</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                        <label for="tablas_usuario_ventas" class="col-form-label col-form-label-sm">Ver Mov. Ventas:</label>
+                    </div>
+                <div class="col-sm-4 pl-0">
+                    <div class="form-check form-check-inline m-0 p-0">
+                        <input class="form-check-input" type="radio" name="tablas_usuario_ventas" value="S" id="tablas_usuario_ventas_si">
+                        <label class="form-check-label col-form-label-sm" for="tablas_usuario_ventas_si">Si</label>
+                    </div>
+                    <div class="form-check form-check-inline ml-5 pl-4">
+                        <input class="form-check-input" type="radio" name="tablas_usuario_ventas" value="N" id="tablas_usuario_ventas_no">
+                        <label class="form-check-label col-form-label-sm" for="tablas_usuario_ventas_no">No</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="d-none">
+    {{#if datos}}
+
+        <input type="text" id="tablas_usuario_estado_predeterminado" value="{{datos.Estado}}">
+        <input type="text" id="tablas_usuario_kardex_predeterminado" value="{{datos.Ver_Mov_Kardex}}">
+        <input type="text" id="tablas_usuario_compras_predeterminado" value="{{datos.Ver_Mov_Compras}}">
+        <input type="text" id="tablas_usuario_ventas_predeterminado" value="{{datos.Ver_Com_Ventas}}">
+
+    {{else}}
+        <input type="text" id="tablas_usuario_estado_predeterminado" value="A">
+        <input type="text" id="tablas_usuario_kardex_predeterminado" value="N">
+        <input type="text" id="tablas_usuario_compras_predeterminado" value="N">
+        <input type="text" id="tablas_usuario_ventas_predeterminado" value="N">
+    {{/if}}
+</div>

@@ -1,0 +1,128 @@
+{{#if user}}
+
+<div class="row d-none">
+    <div class="col" id ="modulo">{{venta_compra}}</div>
+</div>
+
+<div class="d-print-none" id = "reporte-documento-body">
+
+    <ul class="nav nav-tabs tabs group pl-4" id="myTab" role="tablist">
+    <li class="nav-item active nav-tab-rounded">
+        <a class="active my-0 py-2" data-toggle="tab" href="#generales">Filtros</a>
+    </li>
+    {{!-- <li class="nav-item nav-tab-rounded">
+        <a class="my-0 py-2" data-toggle="tab" href="#profile">Datos Complementarios</a>
+    </li> --}}
+    </ul>
+
+    <div class="tab-content mr-3" id="myTabContent">
+        <div class="tab-pane fade show active" id="generales" role="tabpanel" aria-labelledby="generales-tab">
+            <div class="container-fluid border">
+                <div class="row">
+                    <div class="col-md-6 border">
+                        <div class="row">
+                            <div class="col-10">
+                                <div class="row">
+                                    <label for="punto_venta" class="col-sm-3 col-form-label col-form-label-sm">Punto de Venta</label>
+                                    <select class="col-sm-5 form-control form-control-sm" id="punto_venta">
+                                    </select>
+                                    <button type="button" class="col-sm-4 form-control form-control-sm btn btn-primary btn-block" id ="filtrar">Filtrar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-10">
+                                <div class="row">
+                                    <label for="agrupacion1" class="col-sm-3 col-form-label col-form-label-sm">Agrupación 1</label>
+                                    <select class="col-sm-5 form-control form-control-sm" id="agrupacion1">
+                                    </select>
+                                    <input type="text" id="agrupacion1_text" class="col-sm-4 form-control form-control-sm c_mantenimientos" placeholder="Presionar F4 o Doble Click" tabla="" readonly>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="col-sm-5 form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="agrupacion1_todos" checked>
+                                    <label class="form-check-label col-form-label-sm" for="agrupacion1_todos">Todos</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-10">
+                                <div class="row">
+                                    <label for="agrupacion2" class="col-sm-3 col-form-label col-form-label-sm">Agrupación 2</label>
+                                    <select class="col-sm-5 form-control form-control-sm" id="agrupacion2">
+                                    </select>
+                                    <input type="text" id="agrupacion2_text" class="col-sm-4 form-control form-control-sm c_mantenimientos" placeholder="Presionar F4 o Doble Click" tabla="" readonly>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="col-sm-5 form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="agrupacion2_todos" checked>
+                                    <label class="form-check-label col-form-label-sm" for="agrupacion2_todos">Todos</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-10">
+                                <div class="row">
+                                    <label for="agrupacion3" class="col-sm-3 col-form-label col-form-label-sm">Agrupación 3</label>
+                                    <select class="col-sm-5 form-control form-control-sm" id="agrupacion3">
+                                    </select>
+                                    <input type="text" id="agrupacion3_text" class="col-sm-4 form-control form-control-sm c_mantenimientos" placeholder="Presionar F4 o Doble Click" tabla="" readonly>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="col-sm-5 form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="agrupacion3_todos" checked>
+                                    <label class="form-check-label col-form-label-sm" for="agrupacion3_todos">Todos</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 border">
+                        <div class="row">
+                            <label for="fecha_inicio" class="col-sm-5 col-form-label col-form-label-sm">Fecha de Inicio:</label>
+                            <input type="date" id="fecha_inicio" class="col-sm-7 form-control form-control-sm">
+                        </div>
+                        <div class="row">
+                            <label for="fecha_termino" class="col-sm-5 col-form-label col-form-label-sm">Fecha de Término:</label>
+                            <input type="date" id="fecha_termino" class="col-sm-7 form-control form-control-sm">
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-check form-check-inline" id="ver_radio_box">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="estado_atencion" id="ver_todos" value="Todos" checked>
+                                        <label class="form-check-label col-form-label-sm" for="ver_todos">Todos</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="estado_atencion" id="ver_pendientes" value="Pendiente">
+                                        <label class="form-check-label col-form-label-sm" for="ver_pendientes">Pendiente</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 border">
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{!-- <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        
+        </div> --}}
+    </div>
+
+    <table id="reporte-documentos"></table>
+    <div class="d-none">
+        <input id="user-punto_venta" type="text" value="{{user.codigo_punto_venta}}">
+    </div>
+</div>
+
+<div class="pt-2 pl-2">
+    <table id="reporte-documentos"></table>
+    <div id="reporte-documentos-pager" style="text-align:center" > </div>
+</div>
+
+<script src="/js/modulos/mantenimientos/lista_precios.js"></script>
+{{/if}}

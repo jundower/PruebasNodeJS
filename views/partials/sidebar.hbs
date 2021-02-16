@@ -1,0 +1,437 @@
+{{#if user}}
+<link href="/css/sidebar.css" rel="stylesheet">
+
+ <div id="sidebar"  class="active d-print-none">
+    <div class="row border mx-0 h-100">
+        <div class="col col-1 sidebar-bar"></div>
+        <div class="col col-10 p-0">
+            <div class="row sidebar-header">
+                <h5>Bienvenido</h5>
+            </div>
+            <div class="row w-100 m-0 pl-2">
+                <ul class="list-unstyled w-100">
+                    <li>
+                        {{#ifeq user.proceso_compra 'S'}}
+                        <a href="#sidebar_proceso_compra" data-toggle="collapse" class="dropdown-toggle collapsed p-1" id="proceso_compra">PROCESO DE COMPRA</a>
+                            <ul class="collapse list-unstyled" id="sidebar_proceso_compra">
+                                <div class="nav flex-column nav-pills" role="tablist">
+                                    <a data-toggle="collapse" class="sidebar-subelement1 p-1" href="#sidebar_proceso_compra_sistema_requerimiento" id="proceso_compra__sist_requerimiento">Sist. Requerimiento</a>
+                                        <ul class="collapse sublist-unstyled" id="sidebar_proceso_compra_sistema_requerimiento">
+                                            <div class="nav flex-column nav-pills sidebar-subelement2" role="tablist">
+                                                <a href="/compras/requerimientos" target="_blank" id="proceso_compra__sist_requerimiento__solicitud_compra">❖ Solicitud de Compra</a>
+                                                <a href="/compras/aprobaciones/requerimientos01" target="_blank" id="proceso_compra__sist_requerimiento__aprobacion_01">&#10070; Aprobación 01</a>
+                                                <a href="/compras/aprobaciones/requerimientos02" target="_blank" id="proceso_compra__sist_requerimiento__aprobacion_02">&#10070; Aprobación 02</a>
+                                                <a href="/compras/eliminar_saldos/requerimientos" target="_blank" id="proceso_compra__sist_requerimiento__eliminar_saldos">&#10070; Eliminar Saldos</a>
+                                                <a data-toggle="collapse" class="sidebar-subelement3 p-1" href="#sidebar_proceso_compra_sistema_requerimiento_reportes" id="proceso_compra__sist_requerimiento__reportes">Reportes</a>
+                                                    <ul class="collapse list-unstyled" id="sidebar_proceso_compra_sistema_requerimiento_reportes">
+                                                        <div class="nav flex-column nav-pills sidebar-subelement2" role="tablist">
+                                                            <a href="/compras/reportes/requerimientos" target="_blank" id="proceso_compra__sist_requerimiento__reportes__reporte_01">❖ Listado de Requerimientos</a>
+                                                            <a href="/compras/reportes/requerimientos_vs_oc" target="_blank" id="proceso_compra__sist_requerimiento__reportes__reporte_02">❖ Requerimiento vs. OC Detallado</a>
+                                                            <a href="#" target="_blank" id="proceso_compra__sist_requerimiento__reportes__reporte_03">❖ Reporte de Trazabilidad - Requerimientos</a>
+                                                        </div>
+                                                    </ul>
+                                            </div>
+                                        </ul>
+
+                                    <a data-toggle="collapse" class="sidebar-subelement1 p-1" href="#sidebar_proceso_compra_sistema_cuadro_comparativo" id="proceso_compra__sist_cuadro_comparativo">Sist. Cuadro Comparativo</a>
+                                        <ul class="collapse sublist-unstyled" id="sidebar_proceso_compra_sistema_cuadro_comparativo">
+                                            <div class="nav flex-column nav-pills sidebar-subelement2" role="tablist">
+                                                <a href="/compras/pre_cotizacion" target="_blank" id="proceso_compra__sist_cuadro_comparativo__pre_cotizacion">❖ Pre Cotización</a>
+                                                <a href="/compras/comparativo_precios" target="_blank" id="proceso_compra__sist_cuadro_comparativo__cuadro_comparativo">&#10070; Comparativo Precios</a>
+                                                <a href="/compras/aprobacion_comparativo_precios" target="_blank" id="proceso_compra__sist_cuadro_comparativo__aprobacion_comparativos">&#10070; Aprobación de Comparativos</a>
+                                                <a data-toggle="collapse" class="sidebar-subelement3 p-1" href="#sidebar_proceso_compra_sistema_cuadro_comparativo_reportes" id="proceso_compra__sist_cuadro_comparativo__reportes">Reportes</a>
+                                                    <ul class="collapse list-unstyled" id="sidebar_proceso_compra_sistema_cuadro_comparativo_reportes">
+                                                        <div class="nav flex-column nav-pills sidebar-subelement2" role="tablist">
+                                                            <a href="/compras/reportes/cuadro_comparativo" target="_blank" id="proceso_compra__sist_cuadro_comparativo__reportes__reporte_01">❖ Listado de Pre-Cotizaciones</a>
+                                                            <a href="#" target="_blank" id="#">❖ Reportes 02</a>
+                                                        </div>
+                                                    </ul>
+                                            </div>
+                                        </ul>
+
+                                    <a data-toggle="collapse" class="sidebar-subelement1 p-1" href="#sidebar_proceso_compra_sistema_logistica" id="proceso_compra__sist_logistica">Sist. Logistica</a>
+                                        <ul class="collapse sublist-unstyled" id="sidebar_proceso_compra_sistema_logistica">
+                                            <div class="nav flex-column nav-pills sidebar-subelement2" role="tablist">
+                                                <a href="/compras/orden_compra" target="_blank" id="proceso_compra__sist_logistica__orden_compra">❖ Orden de Compra</a>
+                                                <a href="/compras/aprobaciones/orden_compra" target="_blank" id="proceso_compra__sist_logistica__aprobacion">&#10070; Aprobación</a>
+                                                <a href="/compras/eliminar_saldos/orden_compra" target="_blank" id="proceso_compra__sist_logistica__eliminar_saldos">&#10070; Eliminar Saldos</a>
+                                                <a data-toggle="collapse" class="sidebar-subelement3 p-1" href="#sidebar_proceso_compra_sistema_logistica_reportes" id="proceso_compra__sist_logistica__reportes">Reportes</a>
+                                                    <ul class="collapse list-unstyled" id="sidebar_proceso_compra_sistema_logistica_reportes">
+                                                        <div class="nav flex-column nav-pills sidebar-subelement2" role="tablist">
+                                                            <a href="/compras/reportes/orden_compra" target="_blank" id="proceso_compra__sist_logistica__reportes__reporte_01">❖ Listado de Ordenes de Compra</a>
+                                                            <a href="/compras/reportes/orden_compra_vs_guias_entrada" target="_blank" id="proceso_compra__sist_logistica__reportes__reporte_02">❖ Orden de Compra vs. Guias de Entrada</a>
+                                                            <a href="#" target="_blank" id="proceso_compra__sist_logistica__reportes__reporte_03">❖ Reporte de Trazabilidad - Orden de Compra</a>
+
+                                                        </div>
+                                                    </ul>
+                                            </div>
+                                        </ul>
+
+                                    <a data-toggle="collapse" class="sidebar-subelement1 p-1" href="#sidebar_proceso_compra_sistema_importaciones" id="proceso_compra__sist_importaciones">Sist. Importaciones</a>
+                                    <ul class="collapse sublist-unstyled" id="sidebar_proceso_compra_sistema_importaciones">
+                                            <div class="nav flex-column nav-pills sidebar-subelement2" role="tablist">
+                                                <a href="/compras/dua" target="_blank" id="proceso_compra__sist_importaciones__dua">❖ Dua</a>
+                                                <a href="#" target="_blank" id="proceso_compra__sist_importaciones__nacionalizacion">&#10070; Nacionalización</a>
+                                                <a data-toggle="collapse" class="sidebar-subelement3 p-1" href="#sidebar_proceso_compra_sistema_importaciones_reportes" id="proceso_compra__sist_importaciones__reportes">Reportes</a>
+                                                    <ul class="collapse list-unstyled" id="sidebar_proceso_compra_sistema_importaciones_reportes">
+                                                        <div class="nav flex-column nav-pills sidebar-subelement2" role="tablist">
+                                                            <a href="#" target="_blank" id="proceso_compra__sist_importaciones__reportes__reporte_01">❖ Lista de Importaciones</a>
+                                                            <a href="#" target="_blank" id="proceso_compra__sist_importaciones__reportes__reporte_02">❖ Reportes 02</a>
+                                                        </div>
+                                                    </ul>
+                                            </div>
+                                        </ul>
+                                </div>
+                            </ul>
+                        {{/ifeq}}
+
+                        {{#ifeq user.proceso_almacen 'S'}}
+                        <a href="#sidebar_proceso_almacen" data-toggle="collapse" class="dropdown-toggle collapsed p-1 " id="proceso_almacen">PROCESO DE ALMACÉN</a>
+                            <ul class="collapse list-unstyled" id="sidebar_proceso_almacen">
+                                <div class="nav flex-column nav-pills" role="tablist">
+                                    <a data-toggle="collapse" class="sidebar-subelement1 p-1" href="#sidebar_proceso_almacen_sistema_almacen" id="proceso_almacen__sist_almacen">Sist. de Almacén</a>
+                                        <ul class="collapse sublist-unstyled" id="sidebar_proceso_almacen_sistema_almacen">
+                                            <div class="nav flex-column nav-pills sidebar-subelement2" role="tablist">
+                                                <a href="/almacen/guia_entrada" target="_blank" id="proceso_almacen__sist_almacen__sist_guia_entrada">❖ Sistema de Guia de Entrada</a>
+                                                <a href="/almacen/transaccion_almacen" target="_blank" id="proceso_almacen__sist_almacen__transaccion_almacen">&#10070; Transacciones de Almacén</a>
+                                                <a href="/almacen/ingreso_kits" target="_blank" id="proceso_almacen__sist_almacen__ingreso_kit">&#10070; Ingreso de Kit</a>
+                                                <a href="/almacen/generacion_tickets" target="_blank" id="proceso_almacen__sist_almacen__generacion_tickets">&#10070; Generación de Tickets</a>
+                                                <a data-toggle="collapse" class="sidebar-subelement3 p-1" href="#sidebar_proceso_almacen_sistema_almacen_reportes" id="proceso_almacen__sist_almacen__reportes">Reportes</a>
+                                                    <ul class="collapse list-unstyled" id="sidebar_proceso_almacen_sistema_almacen_reportes">
+                                                        <div class="nav flex-column nav-pills sidebar-subelement2" role="tablist">
+                                                            <a href="/almacen/reportes/almacen" target="_blank" id="proceso_almacen__sist_almacen__reportes__reporte_01">❖ Lista de Almacen</a>
+                                                            <a href="/almacen/kardex" target="_blank" id="proceso_almacen__sist_almacen__reportes__inventario_valorizado">❖ Detalle del Inventrio Valorizado</a>
+                                                            <a href="/almacen/kardex_lote" target="_blank" id="proceso_almacen__sist_almacen__reportes__inventario_valorizado_lote">❖ Detalle del Inventrio Valorizado - Lote</a>
+                                                            <a href="/almacen/kardex_serie" target="_blank" id="proceso_almacen__sist_almacen__reportes__inventario_valorizado_serie">❖ Detalle del Inventrio Valorizado - Serie</a>
+                                                        </div>
+                                                    </ul>
+                                            </div>
+                                        </ul>
+                                </div>
+                            </ul>
+                        {{/ifeq}}
+
+                        {{#ifeq user.proceso_ventas 'S'}}
+                        <a href="#sidebar_proceso_ventas" data-toggle="collapse" class="dropdown-toggle collapsed p-1 " id="proceso_ventas">PROCESO DE VENTAS</a>
+                            <ul class="collapse list-unstyled" id="sidebar_proceso_ventas">
+                                <div class="nav flex-column nav-pills" role="tablist">
+                                    <a data-toggle="collapse" class="sidebar-subelement1 p-1" href="#sidebar_proceso_ventas_sistema_cotizaciones" id="proceso_ventas__sist_cotizacion">Sist. de Cotizaciones</a>
+                                        <ul class="collapse sublist-unstyled" id="sidebar_proceso_ventas_sistema_cotizaciones">
+                                            <div class="nav flex-column nav-pills sidebar-subelement2" role="tablist">
+                                                <a href="/ventas/cotizacion" target="_blank" id="proceso_ventas__sist_cotizacion__solicitud_cotizacion">❖ Solicitud de Cotización</a>
+                                                <a href="/ventas/aprobaciones/cotizacion" target="_blank" id="proceso_ventas__sist_cotizacion__aprobacion">&#10070; Aprobación</a>
+                                                <a href="/ventas/eliminar_saldos/cotizacion" target="_blank" id="proceso_ventas__sist_cotizacion__eliminar_saldos">&#10070; Eliminar Saldos</a>
+                                                <a data-toggle="collapse" class="sidebar-subelement3 p-1" href="#sidebar_proceso_ventas_sistema_cotizaciones_reportes" id="proceso_ventas__sist_cotizacion__reportes">Reportes</a>
+                                                    <ul class="collapse list-unstyled" id="sidebar_proceso_ventas_sistema_cotizaciones_reportes">
+                                                        <div class="nav flex-column nav-pills sidebar-subelement2" role="tablist">
+                                                            <a href="/ventas/reportes/cotizacion" target="_blank" id="proceso_ventas__sist_cotizacion__reportes__reporte_01">❖ Lista de Cotizaciones </a>
+                                                            <a href="/ventas/reportes/cotizacion_vs_pedidos" target="_blank" id="proceso_ventas__sist_cotizacion__reportes__reporte_02">❖ Cotización vs Pedidos</a>
+                                                        </div>
+                                                    </ul>
+                                            </div>
+                                        </ul>
+                                        
+                                    <a data-toggle="collapse" class="sidebar-subelement1 p-1" href="#sidebar_proceso_ventas_sistema_pedidos" id="proceso_ventas__sist_pedidos">Sist. de Pedidos</a>
+                                        <ul class="collapse sublist-unstyled" id="sidebar_proceso_ventas_sistema_pedidos">
+                                            <div class="nav flex-column nav-pills sidebar-subelement2" role="tablist">
+                                                <a href="/ventas/pedido" target="_blank" id="proceso_ventas__sist_pedidos__solicitud_pedidos">❖ Solicitud de Pedidos</a>
+                                                <a href="/ventas/aprobaciones/pedido" target="_blank" id="proceso_ventas__sist_pedidos__aprobacion">&#10070; Aprobación</a>
+                                                <a href="/ventas/eliminar_saldos/pedido" target="_blank" id="proceso_ventas__sist_pedidos__elminar_saldos">&#10070; Eliminar Saldos</a>
+                                                <a data-toggle="collapse" class="sidebar-subelement3 p-1" href="#sidebar_proceso_ventas_sistema_pedidos_reportes" id="proceso_ventas__sist_pedidos__reportes">Reportes</a>
+                                                    <ul class="collapse list-unstyled" id="sidebar_proceso_ventas_sistema_pedidos_reportes">
+                                                        <div class="nav flex-column nav-pills sidebar-subelement2" role="tablist">
+                                                            <a href="/ventas/reportes/pedido" target="_blank" id="proceso_ventas__sist_pedidos__reportes__reporte_01">❖ Lista de Pedidos</a>
+                                                            <a href="/ventas/reportes/pedido_vs_guia" target="_blank" id="proceso_ventas__sist_pedidos__reportes__reporte_02">❖ Pedido vs Guia</a>
+                                                        </div>
+                                                    </ul>
+                                            </div>
+                                        </ul>
+                                    
+                                    <a data-toggle="collapse" class="sidebar-subelement1 p-1" href="#sidebar_proceso_ventas_sistema_facturas" id="proceso_ventas__sist_venta_facturacion">Sist. de Venta y Facturación</a>
+                                        <ul class="collapse sublist-unstyled" id="sidebar_proceso_ventas_sistema_facturas">
+                                            <div class="nav flex-column nav-pills sidebar-subelement2" role="tablist">
+                                                <a href="/ventas/guia" target="_blank" id="proceso_ventas__sist_venta_facturacion__guia_remision">❖ Guías de Remisión</a>
+                                                <a href="/ventas/eliminar_saldos/guia" target="_blank" id="proceso_ventas__sist_venta_facturacion__eliminar_saldos">&#10070; Eliminar Saldos</a>
+                                                <a href="/ventas/facturacion" target="_blank" id="proceso_ventas__sist_venta_facturacion__ventas_facturacion">&#10070; Ventas y Facturación</a>
+                                                <a data-toggle="collapse" class="sidebar-subelement3 p-1" href="#sidebar_proceso_ventas_sistema_facturas_reportes" id="proceso_ventas__sist_venta_facturacion__reportes">Reportes</a>
+                                                    <ul class="collapse list-unstyled" id="sidebar_proceso_ventas_sistema_facturas_reportes">
+                                                        <div class="nav flex-column nav-pills sidebar-subelement2" role="tablist">
+                                                            <a href="/ventas/reportes/guia" target="_blank" id="proceso_ventas__sist_venta_facturacion__reportes__reportes_guias">❖ Listado de Guías</a>
+                                                            <a href="/ventas/reportes/guia_vs_factura" target="_blank" id="proceso_ventas__sist_venta_facturacion__reportes__reportes_guias_vs_factura">❖ Guías vs Factura</a>
+                                                            <a href="/ventas/reportes/facturacion" target="_blank" id="proceso_ventas__sist_venta_facturacion__reportes__reportes_facturas">❖ Listado de Facturas</a>
+                                                        </div>
+                                                    </ul>
+                                            </div>
+                                        </ul>
+
+                                    <a data-toggle="collapse" class="sidebar-subelement1 p-1" href="#proceso_ventas__sist_facturacion_masiva" id="proceso_ventas__sist_venta_facturacion__reportes__reportes_facturas">Sist. de Facturación Masiva</a>
+                                        <ul class="collapse sublist-unstyled" id="sidebar_proceso_ventas_sistema_facturacion_masiva">
+                                            <div class="nav flex-column nav-pills sidebar-subelement2" role="tablist">
+                                                <a href="#" target="_blank" id="proceso_ventas__sist_facturacion_masiva__validacion">❖ Validación</a>
+                                                <a href="#" target="_blank" id="proceso_ventas__sist_facturacion_masiva__pre_factura">&#10070; Pre - Factura</a>
+                                                <a data-toggle="collapse" class="sidebar-subelement3 p-1" href="#sidebar_proceso_ventas_sistema_facturacion_masiva_reportes" id="proceso_ventas__sist_facturacion_masiva__reportes">Reportes</a>
+                                                    <ul class="collapse list-unstyled" id="sidebar_proceso_ventas_sistema_facturacion_masiva_reportes">
+                                                        <div class="nav flex-column nav-pills sidebar-subelement2" role="tablist">
+                                                            <a href="#" target="_blank" id="proceso_ventas__sist_facturacion_masiva__reportes__reporte_01">❖ Reportes 01</a>
+                                                            <a href="#" target="_blank" id="proceso_ventas__sist_facturacion_masiva__reportes__reporte_02">❖ Reportes 02</a>
+                                                        </div>
+                                                    </ul>
+                                            </div>
+                                        </ul>
+
+                                    <a data-toggle="collapse" class="sidebar-subelement1 p-1" href="#sidebar_proceso_ventas_sistema_despacho" id="proceso_ventas__sist_despacho">Sist. de Despacho</a>
+                                        <ul class="collapse sublist-unstyled" id="sidebar_proceso_ventas_sistema_despacho">
+                                            <div class="nav flex-column nav-pills sidebar-subelement2" role="tablist">
+                                                <a href="#" target="_blank" id="proceso_ventas__sist_despacho__consoldidado_documentos">❖ Consolidado de documentos</a>
+                                                <a data-toggle="collapse" class="sidebar-subelement3 p-1" href="#sidebar_proceso_ventas_sistema_despacho_reportes" id="proceso_ventas__sist_despacho__reportes">Reportes</a>
+                                                    <ul class="collapse list-unstyled" id="sidebar_proceso_ventas_sistema_despacho_reportes">
+                                                        <div class="nav flex-column nav-pills sidebar-subelement2" role="tablist">
+                                                            <a href="#" target="_blank" id="proceso_ventas__sist_despacho__reportes__reporte_01">❖ Lista de Despacho</a>
+                                                            <a href="#" target="_blank" id="proceso_ventas__sist_despacho__reportes__reporte_02">❖ Reportes 02</a>
+                                                        </div>
+                                                    </ul>
+                                            </div>
+                                        </ul>
+
+                                    <a data-toggle="collapse" class="sidebar-subelement1 p-1" href="#sidebar_proceso_ventas_facturacion_electronica" id="proceso_ventas__sist_fe">Sist. FE. Facturación Electrónica</a>
+                                        <ul class="collapse sublist-unstyled" id="sidebar_proceso_ventas_facturacion_electronica">
+                                            <div class="nav flex-column nav-pills sidebar-subelement2" role="tablist">
+                                                <a href="/ventas/sunat" target="_blank" id="proceso_ventas__sist_fe_facturacion_electronica">❖ Facturación Electrónica FE</a>
+                                            </div>
+                                        </ul>
+
+                                </div>
+                            </ul>
+                        {{/ifeq}}
+                        
+                        {{#ifeq user.proceso_pto_venta 'S'}}
+                        <a href="#sidebar_proceso_punto_ventas" data-toggle="collapse" class="dropdown-toggle collapsed p-1" id="proceso_pto_venta">PROCESO PTO DE VENTA</a>
+                            <ul class="collapse list-unstyled" id="sidebar_proceso_punto_ventas">
+                                <div class="nav flex-column nav-pills" role="tablist">
+                                    <a data-toggle="collapse" class="sidebar-subelement1 p-1" href="#sidebar_proceso_punto_ventas_facturacion" id="proceso_pto_venta__sist_pto_venta">Sist. de Punto de Venta</a>
+                                        <ul class="collapse sublist-unstyled" id="sidebar_proceso_punto_ventas_facturacion">
+                                            <div class="nav flex-column nav-pills sidebar-subelement2" role="tablist">
+                                                <a href="#" target="_blank" id="proceso_pto_venta__sist_pto_venta__apertura_caja">❖ Apertura de Caja</a>
+                                                <a href="/punto_venta/toma_pedidos" target="_blank" id="proceso_pto_venta__sist_pto_venta__toma_pedido">&#10070; Toma de Pedido</a>
+                                                <a href="/punto_venta/terminal_pos" target="_blank" id="proceso_pto_venta__sist_pto_venta__terminal_pos">&#10070; Terminal (POS)</a>
+                                                <a href="#" target="_blank" id="proceso_pto_venta__sist_pto_venta__cierre_caja">&#10070; Cierre de Caja</a>
+                                                <a href="/punto_venta/guia_remision" target="_blank" id="proceso_pto_venta__sist_pto_venta__guia_remision">&#10070; Guía de Remisión</a>
+                                                <a data-toggle="collapse" class="sidebar-subelement3 p-1" href="#sidebar_proceso_punto_ventas_facturacion_reportes" id="proceso_pto_venta__sist_pto_venta__reportes">Reportes</a>
+                                                    <ul class="collapse list-unstyled" id="sidebar_proceso_punto_ventas_facturacion_reportes">
+                                                        <div class="nav flex-column nav-pills sidebar-subelement2" role="tablist">
+                                                            <a href="/punto_venta/reportes/ventas_diarias" target="_blank" id="proceso_pto_venta__sist_pto_venta__reportes__reporte_venta_diarias">❖ Reporte de Ventas Diarias</a>
+                                                            <a href="/punto_venta/reportes/arqueo_cajas" target="_blank" id="proceso_pto_venta__sist_pto_venta__reportes__reporte_arqueo_cajas">❖ Reporte de Arqueo de Cajas</a>
+                                                        </div>
+                                                    </ul>
+                                            </div>
+                                        </ul>
+                                    <a data-toggle="collapse" class="sidebar-subelement1 p-1" href="#sidebar_proceso_punto_ventas_configuraciones" id="proceso_pto_venta__configuraciones">Configuraciones</a>
+                                        <ul class="collapse sublist-unstyled" id="sidebar_proceso_punto_ventas_configuraciones">
+                                            <div class="nav flex-column nav-pills sidebar-subelement2" role="tablist">
+                                                <a href="/punto_venta/configuracion_cobrador" target="_blank" id="proceso_pto_venta__configuraciones__configurar_cobrador">❖ Configurar Cobrador</a>
+                                                <a href="/punto_venta/configuracion_tarjeta" target="_blank" id="proceso_pto_venta__configuraciones__configurar_tarjetas">&#10070; Configurar Tarjetas</a>
+                                                <a href="/punto_venta/configuracion_tipo_pago" target="_blank" id="proceso_pto_venta__configuraciones__configurar_tipo_pago">&#10070; Configurar TIpo de Pago</a>
+                                            </div>
+                                        </ul>
+                                </div>
+                            </ul>
+                        {{/ifeq}}
+                            
+                        {{#ifeq user.proceso_provisiones 'S'}}
+                        <a href="#sidebar_proceso_provisiones" data-toggle="collapse" class="dropdown-toggle collapsed p-1" id="proceso_provisiones">PROCESO DE PROVISIONES</a>
+                            <ul class="collapse list-unstyled" id="sidebar_proceso_provisiones">
+                                <div class="nav flex-column nav-pills" role="tablist">
+                                    <a data-toggle="collapse" class="sidebar-subelement1 p-1" href="#sidebar_proceso_provisiones_sistema_cuentas_por_pagar" id="proceso_provisiones__sist_ctas_x_pagar">Sist. de Ctas x Pagar</a>
+                                        <ul class="collapse sublist-unstyled" id="sidebar_proceso_provisiones_sistema_cuentas_por_pagar">
+                                            <div class="nav flex-column nav-pills sidebar-subelement2" role="tablist">
+                                                <a href="/provisiones/cuentas_por_pagar" target="_blank" id="proceso_provisiones__sist_ctas_x_pagar__registro_comprbantes">❖ Registro de Comprobantes</a>
+                                                <a href="/provisiones/detracciones/cuentas_por_pagar" target="_blank" id="proceso_provisiones__sist_ctas_x_pagar__registro_detraccion">&#10070; Registro de Detracciones</a>
+                                                <a href="/provisiones/retenciones/cuentas_por_pagar" target="_blank" id="">&#10070; Registro de Retenciones</a>
+                                                <a data-toggle="collapse" class="sidebar-subelement3 p-1" href="#sidebar_proceso_provisiones_sistema_cuentas_por_pagar_reportes" id="proceso_provisiones__sist_ctas_x_pagar__reportes">Reportes</a>
+                                                    <ul class="collapse list-unstyled" id="sidebar_proceso_provisiones_sistema_cuentas_por_pagar_reportes">
+                                                        <div class="nav flex-column nav-pills sidebar-subelement2" role="tablist">
+                                                            <a href="/provisiones/programacion_vencimientos/cxp" target="_blank" id="proceso_provisiones__sist_ctas_x_pagar__reportes__programacion_vcto_CXP">❖ Programación de Vcto(CXP)</a>
+                                                            <a href="#" target="_blank" id="proceso_provisiones__sist_ctas_x_pagar__reportes__reporte_02">❖ Reportes 02</a>
+                                                        </div>
+                                                    </ul>
+                                            </div>
+                                        </ul>
+                                    <a data-toggle="collapse" class="sidebar-subelement1 p-1" href="#sidebar_proceso_provisiones_sistema_cuentas_por_cobrar" id="proceso_provisiones__sist_ctas_x_cobrar">Sist. de Ctas x Cobrar</a>
+                                        <ul class="collapse sublist-unstyled" id="sidebar_proceso_provisiones_sistema_cuentas_por_cobrar">
+                                            <div class="nav flex-column nav-pills sidebar-subelement2" role="tablist">
+                                                <a href="/provisiones/cuentas_por_cobrar" target="_blank" id="proceso_provisiones__sist_ctas_x_cobrar__registro_comprbantes">❖ Registro de Comprobantes</a>
+                                                <a href="/provisiones/detracciones/cuentas_por_cobrar" target="_blank" id="proceso_provisiones__sist_ctas_x_cobrar__registro_detraccion">&#10070; Registro de Detracciones</a>
+                                                <a href="/provisiones/retenciones/cuentas_por_cobrar" target="_blank" id=""> &#10070; Registro de Retenciones</a>
+                                                <a data-toggle="collapse" class="sidebar-subelement3 p-1" href="#sidebar_proceso_provisiones_sistema_cuentas_por_cobrar_reportes" id="proceso_provisiones__sist_ctas_x_cobrar__reportes">Reportes</a>
+                                                    <ul class="collapse list-unstyled" id="sidebar_proceso_provisiones_sistema_cuentas_por_cobrar_reportes">
+                                                        <div class="nav flex-column nav-pills sidebar-subelement2" role="tablist">
+                                                            <a href="/provisiones/programacion_vencimientos/cxc" target="_blank" id="proceso_provisiones__sist_ctas_x_cobrar__reportes__programacion_vcto_CXC">❖ Programación de Vcto(CXC)</a>
+                                                            <a href="#" target="_blank" id="proceso_provisiones__sist_ctas_x_cobrar__reportes__reporte_02">❖ Reportes 02</a>
+                                                        </div>
+                                                    </ul>
+                                            </div>
+                                        </ul>
+                                    <a data-toggle="collapse" class="sidebar-subelement1 p-1" href="#sidebar_proceso_provisiones_sistema_letras" id="proceso_provisiones__sist_letras_CXC">Sist. de Letras (CXC)</a>
+                                        <ul class="collapse sublist-unstyled" id="sidebar_proceso_provisiones_sistema_letras">
+                                            <div class="nav flex-column nav-pills sidebar-subelement2" role="tablist">
+                                                <a href="/letras/letras_cxc" target="_blank" id="proceso_provisiones__sist_letras_CXC__canje_letras_cxc">❖ Canje de Letras(CXC)</a>
+                                                <a href="/letras/situacion_letras" target="_blank" id="proceso_provisiones__sist_letras_CXC__situacion_letras">&#10070; Situación de Letras</a>
+                                                <a href="#" target="_blank" id="proceso_provisiones__sist_letras_CXC__eliminar_saldos">&#10070; Eliminar Saldos</a>
+                                                <a data-toggle="collapse" class="sidebar-subelement3 p-1" href="#sidebar_proceso_provisiones_sistema_letras_reportes" id="proceso_provisiones__sist_letras_CXC__reportes">Reportes</a>
+                                                    <ul class="collapse list-unstyled" id="sidebar_proceso_provisiones_sistema_letras_reportes">
+                                                        <div class="nav flex-column nav-pills sidebar-subelement2" role="tablist">
+                                                            <a href="#" target="_blank" id="proceso_provisiones__sist_letras_CXC__reportes__reporte_01">❖ Lista de Letras</a>
+                                                            <a href="#" target="_blank" id="proceso_provisiones__sist_letras_CXC__reportes__reporte_02">❖ Reportes 02</a>
+                                                        </div>
+                                                    </ul>
+                                            </div>
+                                        </ul>
+                                    <a data-toggle="collapse" class="sidebar-subelement1 p-1" href="#sidebar_proceso_provisiones_sistema_envios_masivos" id="proceso_provisiones___sist_envios_masivos_TXT">Sist. de Envíos Masivos (TXT)</a>
+                                        <ul class="collapse sublist-unstyled" id="sidebar_proceso_provisiones_sistema_envios_masivos">
+                                            <div class="nav flex-column nav-pills sidebar-subelement2" role="tablist">
+                                                <a href="/provisiones/programacion_masivos_cxp" target="_blank" id="proceso_provisiones___sist_envios_masivos_TXT__envios_masivos_CXP">❖ Envios Masivos (CXP)</a>
+                                            </div>
+                                        </ul>
+                                    <a data-toggle="collapse" class="sidebar-subelement1 p-1" href="#sidebar_proceso_provisiones_sistema_activo_fijo" id="proceso_provisiones__sist_activo_fijo">Sist. de Activo Fijo</a>
+                                        <ul class="collapse sublist-unstyled" id="sidebar_proceso_provisiones_sistema_activo_fijo">
+                                            <div class="nav flex-column nav-pills sidebar-subelement2" role="tablist">
+                                                <a href="#" target="_blank" id="proceso_provisiones__sist_activo_fijo__registro_activo_fijo">❖ Registro de Activo Fijo</a>
+                                                <a href="#" target="_blank" id="proceso_provisiones__sist_activo_fijo__reevaluacion_activo_fijo">❖ Reevaluación de Activo Fijo</a>
+                                                <a data-toggle="collapse" class="sidebar-subelement3 p-1" href="#proceso_provisiones__sist_activo_fijo__reportes">Reportes</a>
+                                                    <ul class="collapse list-unstyled" id="sidebar_proceso_provisiones_sistema_activo_fijo_reportes">
+                                                        <div class="nav flex-column nav-pills sidebar-subelement2" role="tablist">
+                                                            <a href="#" target="_blank" id="proceso_provisiones__sist_activo_fijo__reportes__reporte_01">❖ Lista de Reevaluación de Activo Fijo</a>
+                                                            <a href="#" target="_blank" id="proceso_provisiones__sist_activo_fijo__reportes__reporte_02">❖ Reportes 02</a>
+                                                        </div>
+                                                    </ul>
+                                            </div>
+                                        </ul>
+                                </div>
+                            </ul>
+                        {{/ifeq}}
+
+                        {{#ifeq user.proceso_financiero 'S'}}
+                        <a href="#sidebar_proceso_financiero" data-toggle="collapse" class="dropdown-toggle collapsed p-1" id="proceso_financiero">PROCESO FINANCIERO</a>
+                            <ul class="collapse list-unstyled" id="sidebar_proceso_financiero">
+                                <div class="nav flex-column nav-pills" role="tablist">
+                                    <a data-toggle="collapse" class="sidebar-subelement1 p-1" href="#sidebar_proceso_financiero_caja_bancos" id="proceso_financiero__sist_caja_bancos">Sist. de Caja y Bancos</a>
+                                        <ul class="collapse sublist-unstyled" id="sidebar_proceso_financiero_caja_bancos">
+                                            <div class="nav flex-column nav-pills sidebar-subelement2" role="tablist">
+                                                <a href="/cancelacion/cancelacion" target="_blank" id="proceso_financiero__sist_caja_bancos__cancelacion_cobros">❖ Cancelación y/o Cobros</a>
+                                                <a href="/cancelacion/cheque_voucher" target="_blank" id="proceso_financiero__sist_caja_bancos__cheque_vauchers">❖ Cheque vouchers</a>
+                                                <a data-toggle="collapse" class="sidebar-subelement3 p-1" href="#sidebar_proceso_financiero_caja_bancos_reportes" id="proceso_financiero__sist_caja_bancos__reportes">Reportes</a>
+                                                    <ul class="collapse list-unstyled" id="sidebar_proceso_financiero_caja_bancos_reportes">
+                                                        <div class="nav flex-column nav-pills sidebar-subelement2" role="tablist">
+                                                            <a href="#" target="_blank" id="proceso_financiero__sist_caja_bancos__reportes__reporte_01">❖ Lista de Caja y Bancos</a>
+                                                            <a href="#" target="_blank" id="proceso_financiero__sist_caja_bancos__reportes__reporte_02">❖ Reportes 02</a>
+                                                        </div>
+                                                    </ul>
+                                            </div>
+                                        </ul>
+                                    <a data-toggle="collapse" class="sidebar-subelement1 p-1" href="#sidebar_proceso_financiero_fondos_fijos" id="">Sist. de Fondo Fijos</a>
+                                        <ul class="collapse sublist-unstyled" id="sidebar_proceso_financiero_fondos_fijos">
+                                            <div class="nav flex-column nav-pills sidebar-subelement2" role="tablist">
+                                                <a href="" target="_blank" id="">❖ Ingresos de Gastos</a>
+                                                <a href="" target="_blank" id="">❖ Cierre de Caja</a>
+                                                <a href="" target="_blank" id="">❖ Reporte de Rendimientos</a>
+                                                <a href="" target="_blank" id="">❖ Configuracion Rsponsable</a>
+                                                <a data-toggle="collapse" class="sidebar-subelement3 p-1" href="#sidebar_proceso_financiero_fondos_fijos_reportes" id="">Reportes</a>
+                                                    <ul class="collapse list-unstyled" id="sidebar_proceso_financiero_fondos_fijos_reportes">
+                                                        <div class="nav flex-column nav-pills sidebar-subelement2" role="tablist">
+                                                            <a href="#" target="_blank" id="">❖ Listado de Fondos Fijos</a>
+                                                            <a href="#" target="_blank" id="">❖ Reportes 02</a>
+                                                        </div>
+                                                    </ul>
+                                            </div>
+                                        </ul>
+                                </div>
+                            </ul>
+                        {{/ifeq}}
+                        
+                        {{#ifeq user.proceso_contabilidad 'S'}}
+                        <a href="#sidebar_proceso_contable" data-toggle="collapse" class="dropdown-toggle collapsed p-1" id="proceso_contabilidad">PROCESO DE CONTABILIDAD</a>
+                            <ul class="collapse list-unstyled" id="sidebar_proceso_contable">
+                                <div class="nav flex-column nav-pills" role="tablist">
+                                    <a data-toggle="collapse" class="sidebar-subelement1 p-1" href="#sidebar_proceso_contable_sistema_contabilidad" id="proceso_contabilidad__sist_contabilidad">Sist. de Contabilidad</a>
+                                        <ul class="collapse sublist-unstyled" id="sidebar_proceso_contable_sistema_contabilidad">
+                                            <div class="nav flex-column nav-pills sidebar-subelement2" role="tablist">
+                                                <a href="/contabilidad/movimientos_contables" target="_blank" id="proceso_contabilidad__sist_contabilidad__movimientos_contables">&#10070; Movimientos Contables</a>
+                                                <a data-toggle="collapse" class="sidebar-subelement3 p-1" href="#sidebar_proceso_contable_sistema_contabilidad_reportes" id="proceso_contabilidad__sist_contabilidad__reportes">Reportes</a>
+                                                    <ul class="collapse list-unstyled" id="sidebar_proceso_contable_sistema_contabilidad_reportes">
+                                                        <div class="nav flex-column nav-pills sidebar-subelement2" role="tablist">
+                                                            <a href="/contabilidad/reporte_anexos" target="_blank" id="proceso_contabilidad__sist_contabilidad__reportes__reporte_01">❖ Reporte de Anexos</a>
+                                                            <a href="#" target="_blank" id="proceso_contabilidad__sist_contabilidad__reportes__reporte_02">❖ Reportes 02</a>
+                                                        </div>
+                                                    </ul>
+                                            </div>
+                                        </ul>
+                                </div>
+                            </ul>
+                        {{/ifeq}}
+
+                        {{#ifeq user.proceso_costos_proyectos 'S'}}
+                        <a href="#sidebar_proceso_cencos_proyectos" data-toggle="collapse" class="dropdown-toggle collapsed p-1"  id="cencos_proyectos">CENTRO DE COSTOS / PROYECTOS</a>
+                            <ul class="collapse list-unstyled" id="sidebar_proceso_cencos_proyectos">
+                                <div class="nav flex-column nav-pills" role="tablist">
+                                    <a data-toggle="collapse" class="sidebar-subelement1 p-1" href="#sidebar_proceso_cencos_proyectos_proyectos"  id="cencos_proyectos__sist_proyectos">Sist. de Proyectos</a>
+                                        <ul class="collapse sublist-unstyled" id="sidebar_proceso_cencos_proyectos_proyectos">
+                                            <div class="nav flex-column nav-pills sidebar-subelement2" role="tablist">
+                                                <a href="#" target="_blank"  id="cencos_proyectos__sist_proyectos__gastos_x_proyectos_cencos">❖ Gastos por Proyectos / Cencos</a>
+                                                <a href="#" target="_blank"  id="cencos_proyectos__sist_proyectos__consumo_proyectos_cencos">❖ Consumo Proyectos / Cencos</a>
+                                                <a href="#" target="_blank"  id="cencos_proyectos__sist_proyectos__movimientos_proyectos_cencos">❖ Movimientos Proyectos / Cencos</a>
+                                                <a href="#" target="_blank" id="cencos_proyectos__sist_proyectos__estado_financiero_proyectos">❖ Estado Financiero Proyectos</a>
+                                            </div>
+                                        </ul>
+                                    <a data-toggle="collapse" class="sidebar-subelement1 p-1" href="#sidebar_proceso_cencos_proyectos_presupuestos" id="cencos_proyectos__sist_presupuesto">Sist. de Presupuesto</a>
+                                        <ul class="collapse sublist-unstyled" id="sidebar_proceso_cencos_proyectos_presupuestos">
+                                            <div class="nav flex-column nav-pills sidebar-subelement2" role="tablist">
+                                                <a href="#" target="_blank" id="cencos_proyectos__sist_presupuesto__planificacion_cencos">❖ Planificación / Cencos</a>
+                                                <a href="#" target="_blank" id="cencos_proyectos__sist_presupuesto__planificacion_item">❖ Planificación / Item</a>
+                                                <a href="#" target="_blank" id="cencos_proyectos__sist_presupuesto__flujo_caja">❖ Flujo de Caja</a>
+                                                <a data-toggle="collapse" class="sidebar-subelement3 p-1" href="#sidebar_proceso_cencos_proyectos_presupuestos_reportes" id="cencos_proyectos__sist_presupuesto__reportes">Reportes</a>
+                                                    <ul class="collapse list-unstyled" id="sidebar_proceso_cencos_proyectos_presupuestos_reportes">
+                                                        <div class="nav flex-column nav-pills sidebar-subelement2" role="tablist">
+                                                            <a href="#" target="_blank" id="cencos_proyectos__sist_presupuesto__reportes__reporte_01">❖ Reportes 01</a>
+                                                            <a href="#" target="_blank" id="cencos_proyectos__sist_presupuesto__reportes__reporte_02">❖ Reportes 02</a>
+                                                        </div>
+                                                    </ul>
+                                            </div>
+                                        </ul>
+                                </div>
+                            </ul>
+                        {{/ifeq}}
+
+                        {{#ifeq user.proceso_planillas 'S'}}
+                        <a href="#sidebar_proceso_planillas" data-toggle="collapse" class="dropdown-toggle collapsed p-1" id="proceso_planillas">PROCESO DE PLANILLAS</a>
+                            <ul class="collapse list-unstyled" id="sidebar_proceso_planillas">
+                                <div class="nav flex-column nav-pills" role="tablist">
+                                </div>
+                            </ul>
+                        {{/ifeq}}
+
+                        {{#ifeq user.proceso_sistema_gerencial 'S'}}
+                        <a href="#sidebar_proceso_gerencial" data-toggle="collapse" class="dropdown-toggle collapsed p-1" id="sig_gerencial">SIG. GERENCIAL</a>
+                            <ul class="collapse list-unstyled" id="sidebar_proceso_gerencial">
+                                <div class="nav flex-column nav-pills" role="tablist">
+                                </div>
+                            </ul>
+                        {{/ifeq}}
+
+                        {{#ifeq user.proceso_otros 'S'}}
+                        <a href="#sidebar_proceso_otros" data-toggle="collapse" class="dropdown-toggle collapsed p-1" id="otros">OTROS</a>
+                            <ul class="collapse list-unstyled" id="sidebar_proceso_otros">
+                                <div class="nav flex-column nav-pills" role="tablist">
+                                </div>
+                            </ul>
+                        {{/ifeq}}
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="/js/sidebar.js"></script>
+{{/if}}

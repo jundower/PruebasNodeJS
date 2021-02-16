@@ -1,0 +1,190 @@
+
+{{#if user}}
+<div class="row d-print-none" style="height: 540px; width: 100%;">
+<div class="col-md-4" style="height: 100%;">
+    <div class="col-md-12 pt-4">
+        <table id="lista_pre_cotizaciones"></table>
+        <div id="p_pre_cotizaciones"></div>
+    </div>
+</div>
+<div class="col-md-8" style="height: 100%;">
+<ul class="nav nav-tabs tabs group pl-4" id="myTab" role="tablist">
+  <li class="nav-item active nav-tab-rounded">
+    <a class="active my-0 py-2" data-toggle="tab" href="#generales">Datos Generales</a>
+  </li>
+  <li class="nav-item nav-tab-rounded">
+    <a class="my-0 py-2" data-toggle="tab" href="#profile">Datos Complementarios</a>
+  </li>
+</ul>
+
+<div class="tab-content mr-3" id="myTabContent">
+    <div class="tab-pane fade show active" id="generales" role="tabpanel" aria-labelledby="generales-tab">
+        <div class="container-fluid border">
+            <div class="row border pb-2">
+                <div class="col-md-7 border">
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="codigo_proveedor" class="col-sm-4 col-form-label col-form-label-sm">Código:</label>
+                                    <input type="text" id="codigo_proveedor" class="col-sm-8 form-control form-control-sm m-0 p-0 c_mantenimientos" placeholder="Código del Proveedor">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-sm-3 form-check form-check-inline m-0 p-0">
+                            <label for="moneda" class="col-sm-8 col-form-label col-form-label-sm">Moneda:</label>
+                            <select class="col-sm-4 form-control form-control-sm m-0 p-0" id="moneda">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="nombre_proveedor" class="col-sm-3 col-form-label col-form-label-sm">Nombre:</label>
+                                    <input type="text" id="nombre_proveedor" class="col-sm-9 form-control form-control-sm m-0 p-0" placeholder="Nombre del Proveedor">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-7">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="forma_pago" class="col-sm-5 col-form-label col-form-label-sm">For. Pago.:</label>
+                                    <select class="col-sm-7 form-control form-control-sm m-0 p-0 c_mantenimientos forma_pago" id="forma_pago">
+                                        <option value="00">Ninguno</option>
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-sm-5">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="dias_forma_pago" class="col-sm-7 col-form-label col-form-label-sm">Días Entrega:</label>
+                                    <input type="number" id = "dias_forma_pago" class="col-sm-5 form-control form-control-sm m-0 p-0 text-right" value ="0">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="observacion" class="col-sm-3 col-form-label col-form-label-sm">Observacion:</label>
+                                    <input type="text" id="observacion" class="col-sm-9 form-control form-control-sm m-0 p-0" placeholder="Observacion">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 border">
+                    <div class="row">
+                        <div class="form-inline my-2 my-lg-0">
+                            <a class="btn" id ="left" data-toggle="tooltip" data-placement="top" title="Left" target="_blank">
+                                <svg class="bi bi-arrow-left-circle-fill" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16 8A8 8 0 110 8a8 8 0 0116 0zm-4.5.5a.5.5 0 000-1H5.707l2.147-2.146a.5.5 0 10-.708-.708l-3 3a.5.5 0 000 .708l3 3a.5.5 0 00.708-.708L5.707 8.5H11.5z">/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="form-inline my-2 my-lg-0">
+                            <a class="btn" id ="rigth" data-toggle="tooltip" data-placement="top" title="Rigth" target="_blank">
+                                <svg class="bi bi-arrow-right-circle-fill" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16 8A8 8 0 110 8a8 8 0 0116 0zm-11.5.5a.5.5 0 010-1h5.793L8.146 5.354a.5.5 0 11.708-.708l3 3a.5.5 0 010 .708l-3 3a.5.5 0 01-.708-.708L10.293 8.5H4.5z">/>
+                                </svg>
+                            </a>
+                        </div> 
+                    </div>                  
+                </div>
+                {{!-- <div class="col-md-2 border d-none">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="base_calculada" class="col-sm-5 col-form-label col-form-label-sm">Base Calc.:</label>
+                                    <input type="number" id = "base_calculada" class="col-sm-7 form-control form-control-sm m-0 p-0 text-right">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="monto_descuento" class="col-sm-5 col-form-label col-form-label-sm">Dsct.:</label>
+                                    <input type="number" id = "monto_descuento" class="col-sm-7 form-control form-control-sm m-0 p-0 text-right">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="subtotal" class="col-sm-5 col-form-label col-form-label-sm">Base Imp.:</label>
+                                    <input type="number" id = "subtotal" class="col-sm-7 form-control form-control-sm m-0 p-0 text-right">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="igv" class="col-sm-5 col-form-label col-form-label-sm">IGV:</label>
+                                    <input type="number" id = "igv" class="col-sm-7 form-control form-control-sm m-0 p-0 text-right">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="total" class="col-sm-5 col-form-label col-form-label-sm">Total:</label>
+                                    <input type="number" id = "total" class="col-sm-7 form-control form-control-sm m-0 p-0 text-right">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div> --}}
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <div class="container-fluid border">
+            <div class="row border">
+                <div class="col-sm-6 border">
+                </div>
+                <div class="col-sm-6 border">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="d-none">
+    <input id="user-Ventas_Mas_Igv" type="text" value="{{user.ventas_mas_igv}}">
+    <input id="user-Unidad_negocio" type="text" value="{{user.codigo_unidad_negocio}}">
+    <input id="user-codigo_centro_costos" type="text" value="{{user.codigo_centro_costos}}">
+    <input id="user-codigo_punto_venta" type="text" value="{{user.codigo_punto_venta}}">
+    <input id="user-codigo_ninguno" type="text" value="00">
+    <input id="user-Busqueda_Punto_Venta" type="text" value="{{user.globales_busqueda_pto_venta}}">
+    <input id="modulo_formatos" type="text" value="orden_compra">
+    
+</div>
+        <table id="detalle_comparativo_precios"></table>
+        <div id="p_comparativo_precios"></div>
+{{!-- {{> mantenimientos/detalle_ventas}} --}}
+</div>
+</div>
+{{> mantenimientos/ventas_pendientes}}
+{{> mantenimientos/lista_mantenimientos}}
+
+{{> mantenimientos/documentos_listas}}
+{{> mantenimientos/formato_impresion}}
+
+<script src="/js/mantenimientos/cabecera_ventas.js"></script>
+<script src="/js/modulos/compras/comparativo_precios.js"></script>
+{{/if}}

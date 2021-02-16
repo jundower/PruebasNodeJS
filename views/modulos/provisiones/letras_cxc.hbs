@@ -1,0 +1,282 @@
+{{#if user}}<ul class="nav nav-tabs tabs group pl-4 d-print-none" id="myTab" role="tablist">
+  <li class="nav-item active nav-tab-rounded">
+    <a class="active my-0 py-2" data-toggle="tab" href="#generales">Datos Generales</a>
+  </li>
+  <li class="nav-item nav-tab-rounded">
+    <a class="my-0 py-2" data-toggle="tab" href="#profile">Datos Complementarios</a>
+  </li>
+</ul>
+
+<div class="tab-content d-print-none" id="myTabContent">
+    <div class="tab-pane fade show active" id="generales" role="tabpanel" aria-labelledby="generales-tab">
+        <div class="container-fluid border">
+            <div class="row border my-1">
+                <div class="col-lg-3">
+                    <div class="row my-1">
+                        <div class="col-sm-12">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="subvoucher" class="col-sm-4 col-form-label col-form-label-sm">S. Voucher:</label>
+                                    <select class="col-sm-8 form-control form-control-sm m-0 p-0 c_mantenimientos" id="subvoucher" disabled>
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-sm-12">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="tipo_letra" class="col-sm-4 col-form-label col-form-label-sm">Tipo Letra:</label>
+                                    <select class="col-sm-8 form-control form-control-sm m-0 p-0 c_mantenimientos" id="tipo_letra">
+                                        <option value="CANJE">Canje de Letra</option>
+                                        <option value="RENOVACION">Renovación de Letra</option>
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="row my-1">
+                        <div class="col-sm-3">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="fecha_registro" class="col-sm-5 col-form-label col-form-label-sm">Fecha Reg:</label>
+                                    <input type="date" id="fecha_registro" class="col-sm-7 form-control form-control-sm m-0 p-0 text-center">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-sm-3">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="ejercicio" class="col-sm-4 col-form-label col-form-label-sm" >Ejercicio:</label>
+                                    <select class="col-sm-8 form-control form-control-sm m-0 p-0 text-center" id="ejercicio" disabled>
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-sm-3">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="periodo" class="col-sm-5 col-form-label col-form-label-sm">Periodo:</label>
+                                    <select class="col-sm-7 form-control form-control-sm m-0 p-0 text-center" id="periodo" disabled>
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-sm-3">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="numero_documento" class="col-sm-5 col-form-label col-form-label-sm">Nº Contable:</label>
+                                    <input type = "text" id="numero_documento" class="col-sm-7 form-control form-control-sm m-0 p-0 text-right" disabled>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-sm-3">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="tipo_anexo" class="col-sm-5 col-form-label col-form-label-sm">Tipo Anexo:</label>
+                                    <select class="col-sm-7 form-control form-control-sm m-0 p-0 c_mantenimientos" id="tipo_anexo">
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-sm-3">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="codigo_anexo" class="col-sm-4 col-form-label col-form-label-sm">Anexo:</label>
+                                    <input type="text" id = "codigo_anexo" class="col-sm-8 form-control form-control-sm m-0 p-0 text-let c_mantenimientos">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-sm-6">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <input type="text" id = "nombre_anexo" class="col-sm-12 form-control form-control-sm m-0 p-0 text-left" disabled>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row border my-1">
+                <div class="col-lg-12">
+                    <div class="row my-1">
+                        <div class="col-lg-2">
+                            <div class="input-group form-control-sm-erp form-control-sm-group-moneda">
+                                <select class="form-control form-control-sm form-control-sm-moneda no-spin" id="moneda"><option value="S/">S/</option><option value="$">$</option></select>
+                                <select class=" form-control form-control-sm " id="tipo_cambio"><option value="VTA">Venta</option><option value="COM">Compra</option><option value="ESP">Especial </option></select>
+                                <input type="number" class="form-control form-control-sm text-right no-spin-number form-control-sm-tasa-cambio" id="tasa_cambio" disabled="">
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="fecha_canje" class="col-sm-4 col-form-label col-form-label-sm">Fecha Canje:</label>
+                                    <input type="date" id = "fecha_canje" class="col-sm-8 form-control form-control-sm m-0 p-0 text-right" disabled>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-lg-3">
+                             <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="fecha_emision" class="col-sm-4 col-form-label col-form-label-sm">F. Acep.:</label>
+                                    <input type="date" id = "fecha_emision" class="col-sm-8 form-control form-control-sm m-0 p-0 text-right" disabled>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-lg-2">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="dias" class="col-sm-5 col-form-label col-form-label-sm">Nro. Dias:</label>
+                                    <input type="number" id = "dias" class="col-sm-7 form-control form-control-sm m-0 p-0 text-center" disabled>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-lg-2">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="fecha_vencimiento" class="col-sm-4 col-form-label col-form-label-sm">F. Venc.:</label>
+                                    <input type="date" id = "fecha_vencimiento" class="col-sm-8 form-control form-control-sm m-0 p-0 text-right" disabled>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="row my-1">
+                        <div class="col-lg-3">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <label for="tipo_documento_referencia" class="input-group-text form-control form-control-sm form-control-sm-ref-text" >Tipo Ref:</label>
+                                </div>
+                                <select class="form-control form-control-sm c_mantenimientos" id="tipo_documento_referencia" disabled></select>
+                                <input type="text" id="serie_referencia" class="form-control form-control-sm form-control-sm-ref-serie" placeholder="Serie" disabled>
+                                <input type="text" id="numero_referencia" class="form-control form-control-sm form-control-sm-ref-numero" placeholder="Número" disabled>
+                            </div>
+                        </div>
+                        <div class="col-lg-7"></div>
+                        <div class="col-lg-2">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="importe" class="col-sm-4 col-form-label col-form-label-sm">Importe:</label>
+                                    <input type="number" id = "importe" class="col-sm-8 form-control form-control-sm m-0 p-0 text-right focusIn" disabled>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="row my-1">
+                        <div class="col-lg-3">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <label for="tipo_documento" class="input-group-text form-control form-control-sm form-control-sm-ref-text">Tipo:</label>
+                                </div>
+                                <select class="form-control form-control-sm c_mantenimientos" id="tipo_documento" disabled></select>
+                                <input type="text" id="serie" class="form-control form-control-sm form-control-sm-ref-serie" placeholder="Serie" disabled>
+                                <input type="text" id="numero" class="form-control form-control-sm form-control-sm-ref-numero" placeholder="Número" disabled>
+                            </div>
+                        </div>
+                        <div class="col-lg-9">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="glosa" class="col-sm-2 col-form-label col-form-label-sm">Glosa:</label>
+                                    <input type="text" id = "glosa" class="col-sm-10 form-control form-control-sm m-0 p-0 text-left">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row border my-1">
+                <div class="col-lg-12">
+                    <div class="row my-1">
+                        <div class="col-sm-3">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="aval" class="col-sm-4 col-form-label col-form-label-sm">Aval:</label>
+                                    <select class="col-sm-8 form-control form-control-sm m-0 p-0 " id="aval">
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-sm-3">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="situacion_letra" class="col-sm-4 col-form-label col-form-label-sm">Situacion Letra:</label>
+                                    <select class="col-sm-8 form-control form-control-sm m-0 p-0 " id="situacion_letra" disabled>
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-sm-3">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="banco" class="col-sm-4 col-form-label col-form-label-sm">Banco:</label>
+                                    <select class="col-sm-8 form-control form-control-sm m-0 p-0 " id="banco" disabled>
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-sm-3">
+                            <form class="m-0 p-0">
+                                <div class="form-group row my-05 py-05">
+                                    <label for="numero_unico" class="col-sm-4 col-form-label col-form-label-sm">Nro Unico:</label>
+                                    <select class="col-sm-8 form-control form-control-sm m-0 p-0 " id="numero_unico" disabled>
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        
+        <div class="container-fluid border">
+            <div class="row border">
+                <div class="col-sm-6 border">
+                    
+                </div>
+                <div class="col-sm-6 border">
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="d-none">
+    <input id="user-Ventas_Mas_Igv" type="text" value="{{user.ventas_mas_igv}}">
+    <input id="user-Unidad_negocio" type="text" value="{{user.codigo_unidad_negocio}}">
+    <input id="user-codigo_centro_costos" type="text" value="{{user.codigo_centro_costos}}">
+    <input id="user-codigo_punto_venta" type="text" value="{{user.codigo_punto_venta}}">
+    <input id="user-codigo_ninguno" type="text" value="00">
+    <input id="user-Busqueda_Punto_Venta" type="text" value="{{user.globales_busqueda_pto_venta}}">
+    <input id="modulo_formatos" type="text" value="guia">
+    <input id="subvoucher_predeterminado" type="text" value="{{subvoucher}}">
+</div>
+
+{{!-- {{> mantenimientos/ventas_pendientes}} --}}
+
+<div class="d-print-none">
+<table id="grid_detalle_letras"></table>
+<div id="grid_detalle_letras_pager"></div>
+</div>
+{{!-- detalle de contable --}}
+
+<table id="grid_detalle_letras"></table>
+<div id="grid_detalle_letras_pager"></div>
+
+{{> mantenimientos/lista_mantenimientos}}
+{{> mantenimientos/documentos_listas}}
+{{> mantenimientos/documentos_pendientes_contable}}
+{{> mantenimientos/creacion_letras}}
+{{> mantenimientos/formato_impresion}}
+
+<script src="/js/mantenimientos/cabecera_provisiones.js"></script>
+<script src="/js/modulos/provisiones/letras_cxc.js"></script>
+
+{{/if}}

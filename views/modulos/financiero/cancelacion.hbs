@@ -1,0 +1,336 @@
+{{#if user}}
+<ul class="nav nav-tabs tabs group pl-4 d-print-none" id="myTab" role="tablist">
+  <li class="nav-item active nav-tab-rounded">
+    <a class="active my-0 py-2" data-toggle="tab" href="#generales">Datos Generales</a>
+  </li>
+  <li class="nav-item nav-tab-rounded">
+    <a class="my-0 py-2" data-toggle="tab" href="#profile">Datos Complementarios</a>
+  </li>
+</ul>
+
+<div class="tab-content mr-3 d-print-none" id="myTabContent">
+    <div class="tab-pane fade show active" id="generales" role="tabpanel" aria-labelledby="generales-tab">
+        <div class="container-fluid border">
+            <div class="row border my-1">
+                <div class="col-lg-12">
+                    <div class="row my-1">
+                        <div class="col-lg-3">
+                            <div class="row">
+                                <div class="col-lg-6 pr-0">
+                                    <input type="text" class="form-control form-control-sm" placeholder="Ingresos / Egresos" disabled>
+                                </div>
+                                <div class="col-lg-6 pl-0">
+                                    <select class="form-control form-control-sm" id="ingresos_egresos">
+                                        <option value="ING">Ingresos</option>
+                                        <option value="EGR">Egresos</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="row">
+                                <div class="col-lg-6 pr-0">
+                                    <input type="text" class="form-control form-control-sm" placeholder="Vouch. Contable" disabled>
+                                </div>
+                                <div class="col-lg-6 pl-0">
+                                    <select class="form-control form-control-sm" id="subvoucher">
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="row">
+                                <div class="col-lg-6 pr-0">
+                                    <input type="text" class="form-control form-control-sm" placeholder="Fech. Regist." disabled>
+                                </div>
+                                <div class="col-lg-6 pl-0">
+                                    <input type="date" id="fecha_emision" class="form-control form-control-sm" disabled>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-check form-check-inline mx-0">
+                                        <input class="form-check-input" type="radio" name="correlativo" id="automatico" value="automatico" checked>
+                                        <label class="form-check-label col-form-label-sm" for="automatico">Automático</label>
+                                    </div>
+                                    <div class="form-check form-check-inline mx-0">
+                                        <input class="form-check-input" type="radio" name="correlativo" id="manual" value="manual">
+                                        <label class="form-check-label col-form-label-sm" for="manual">Manual</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 pl-0">
+                                    <input type="text" id="numero_correlativo" class="form-control form-control-sm text-right" placeholder="Número">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row my-1">
+                        <div class="col-lg-3">
+                            <div class="row">
+                                <div class="col-lg-6 pr-0">
+                                    <input type="text" class="form-control form-control-sm" placeholder="CAJ / BANCO" disabled>
+                                </div>
+                                <div class="col-lg-6 pl-0">
+                                    <select class="form-control form-control-sm  c_mantenimientos" id="codigo_caja_banco" tabla="cuentas_corrientes">
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="row">
+                                <div class="col-md-11 pr-0">
+                                    <input type="text" class="form-control form-control-sm" id="nombre_banco" placeholder="Nombre del banco" disabled>
+                                </div>
+                                <div class="col-md-1 pl-0">
+                                    <button type="button" class="btn btn-light btn-sm sm" id ="buscar_pendientes" data-toggle="tooltip" data-placement="top" title="Buscar">
+                                            <svg width="1em" height="2em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                                            <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                                            </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="row">
+                                <div class="col-lg-6 pr-0">
+                                    <input type="text" class="form-control form-control-sm " placeholder="Saldo Contable" disabled>
+                                </div>
+                                <div class="col-lg-6 pl-0">
+                                    <input type="text" id="saldo_caja" class="form-control form-control-sm" placeholder="Saldo" disabled>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row border my-1">
+                <div class="col-lg-3">
+                    <div class="row">
+                        <div class="col-lg-6 pr-0">
+                            <input type="text" class="form-control form-control-sm" placeholder="Diferido" disabled>
+                        </div>
+                        <div class="col-lg-0" style="margin-right: 20px;">
+                            <input class="form-check-input ml-1" type="radio" name="diferido" id="diferido" >
+                        </div>
+                        <div class="col-lg-5 px-0 d-none">
+                            <input type="date" id = "fecha_diferido" class="form-control form-control-sm">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="row d-none">
+                        <div class="col-lg-6 pr-0">
+                            <input type="text" class="form-control form-control-sm" placeholder="B. Origen" disabled>
+                        </div>
+                        <div class="col-lg-6 pl-0">
+                            <select class="form-control form-control-sm" id="banco_origen">
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="row">
+                        <div class="col-lg-6 pr-0">
+                            <input type="text" class="form-control form-control-sm " placeholder="Cobrador" disabled>
+                        </div>
+                        <div class="col-lg-6 pl-0">
+                            <select class="form-control form-control-sm  c_mantenimientos" id="codigo_cobrador" tabla="cobrador">
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="row">
+                        <div class="col-lg-6 pr-0">
+                            <input type="text" class="form-control form-control-sm " placeholder="Importe" disabled>
+                        </div>
+                        <div class="col-lg-6 pl-0">
+                            <input type="text" id="importe" class="form-control form-control-sm " placeholder="Importe" >
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row border my-1 py-1">
+                <div class="col-lg-3">
+                    <div class="input-group">
+                        <select class="col-lg-2 form-control form-control-sm no-spin" id="moneda" disabled>
+                        </select>
+                        <select class=" form-control form-control-sm " id="tipo_cambio">
+                        </select>
+                        <input type="number" class="form-control form-control-sm text-right no-spin-number " id="tasa_cambio">
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="row">
+                        <div class="col-lg-6 pr-0">
+                            <input type="text"  class="form-control form-control-sm " placeholder="Tipo Anexo" disabled>
+                        </div>
+                        <div class="col-lg-6 pl-0">
+                            <select class="form-control form-control-sm" id="tipo_anexo">
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-lg-3 pr-0">
+                            <input type="text" id="codigo_anexo" class="form-control form-control-sm c_mantenimientos" placeholder="Código de Anexo" tabla ="codigo_anexo">
+                        </div>
+                        <div class="col-lg-9 pl-0">
+                            <div class="row">
+                                <div class="col-lg-8 pr-0">
+                                    <input type="text" id="nombre_anexo" class="form-control form-control-sm " placeholder="Nombre de Anexo">
+                                </div>
+                                <div class="col-lg-1 pl-0">
+                                    <button class="form-control form-control-sm   btn btn-primary" id="buscar_pendientes_cancelacion">...</button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="row">
+                    </div>
+                </div>
+            </div>
+            <div class="row border my-1">
+                <div class="col-lg-12">
+                    <div class="row my-1">
+                        <div class="col-lg-3">
+                            <div class="row">
+                                <div class="col-lg-3 pr-0">
+                                    <input type="text" class="form-control form-control-sm" placeholder="Ref 1:" disabled>
+                                </div>
+                                <div class="col-lg-9">
+                                    <div class="row">
+                                        <div class="col-lg-6 px-0">
+                                            <select class="form-control form-control-sm c_mantenimientos" id="tipo_referencia1" tabla="tipo_documento">
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-6 pl-0">
+                                            <input type="date" id = "fecha_referencia1" class="form-control form-control-sm">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="row">
+                                <div class="col-lg-4 pr-0">
+                                    <input type="text" id = "serie_referencia1" class="form-control form-control-sm c_mayus" placeholder="Serie">
+                                </div>
+                                <div class="col-lg-4 px-0">
+                                    <input type="text" id = "numero_referencia1" class="form-control form-control-sm" placeholder="Número">
+                                </div>
+                                <div class="col-lg-4 pl-0">
+                                    <input type="text" id="numero_operacion" class="form-control form-control-sm " placeholder="N° Operación">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="row">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row my-1">
+                        <div class="col-lg-3">
+                            <div class="row">
+                                <div class="col-lg-3 pr-0">
+                                    <input type="text" class="form-control form-control-sm" placeholder="Ref 2:" disabled>
+                                </div>
+                                <div class="col-lg-9">
+                                    <div class="row">
+                                        <div class="col-lg-6 px-0">
+                                            <select class="form-control form-control-sm c_mantenimientos" id="tipo_referencia2" tabla="tipo_documento">
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-6 pl-0">
+                                            <input type="date" id = "fecha_referencia2" class="form-control form-control-sm">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="row">
+                                <div class="col-lg-4 pr-0">
+                                    <input type="text" id = "serie_referencia2" class="form-control form-control-sm c_mayus" placeholder="Serie">
+                                </div>
+                                <div class="col-lg-4 px-0">
+                                    <input type="text" id = "numero_referencia2" class="form-control form-control-sm" placeholder="Número">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row border my-1">
+                <div class="col-md-12">
+                    <div class="row my-1">
+                        <div class="col-md-6">
+                            <input type="text" id="glosa" class="form-control form-control-sm " placeholder="Glosa">
+                        </div>
+                        <div class="col-md-5"></div>
+                        <div class="col-md-1">
+                            <div class="row">
+                                <div class="col-md-6"></div>
+                                <div class="col-md-6">
+                                    <button class="form-control form-control-sm btn btn-primary" id="agregar_documentos">...</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        
+        <div class="container-fluid ">
+            <div class="row ">
+                <div class="col-md-6">
+                    
+                </div>
+                <div class="col-md-6 ">
+                  
+                </div>
+                <div class="col-md-3">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="d-none">
+    <input id="tipo_caja_banco" type="text" value="">
+    
+    <input id="user-Ventas_Mas_Igv" type="text" value="{{user.ventas_mas_igv}}">
+    <input id="user-Unidad_negocio" type="text" value="{{user.codigo_unidad_negocio}}">
+    <input id="user-codigo_centro_costos" type="text" value="{{user.codigo_centro_costos}}">
+    <input id="user-codigo_punto_venta" type="text" value="{{user.codigo_punto_venta}}">
+    <input id="user-codigo_ninguno" type="text" value="00">
+    <input id="user-Busqueda_Punto_Venta" type="text" value="{{user.globales_busqueda_pto_venta}}">
+    <input id="modulo_formatos" type="text" value="guia">
+    <input id="modulo_cob_pag" type="text" value="{{cob_pag}}">
+    <input id="subvoucher_predeterminado" type="text" value="{{subvoucher}}">
+</div>
+
+{{> mantenimientos/ventas_pendientes}}
+{{> mantenimientos/detalle_contable}}
+{{> mantenimientos/lista_mantenimientos}}
+{{> mantenimientos/documentos_listas}}
+{{> mantenimientos/documentos_pendientes_contable}}
+{{> mantenimientos/formato_impresion}}
+
+<script src="/js/mantenimientos/cabecera_provisiones.js"></script>
+<script src="/js/modulos/financiero/cancelacion.js"></script>
+
+{{/if}}

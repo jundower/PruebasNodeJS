@@ -1,0 +1,207 @@
+<div class="row m-2 d-print-none" id ="myTab">
+    <div class="col-5 border border-black mx-1">
+        <div class="row my-1">
+            <div class="col-10">
+                <div class="row">
+                    <label for="codigo_caja_banco" class="col-sm-3 col-form-label col-form-label-sm">Banco</label>
+                    <select class="col-sm-5 form-control form-control-sm c_mantenimientos" id="codigo_caja_banco">
+                    </select>
+                    <button type="button" class="col-sm-4 form-control form-control-sm btn btn-primary btn-block" id ="filtrar">Filtrar</button>
+                </div>
+                <div class="row">
+                    <label for="codigo_tipo_anexo" class="col-sm-3 col-form-label col-form-label-sm">Tipo Anexo</label>
+                    <select class="col-sm-5 form-control form-control-sm c_mantenimientos" id="codigo_tipo_anexo">
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row my-1">
+            <div class="col-10">
+                <div class="row">
+                    <label for="agrupacion1" class="col-sm-3 col-form-label col-form-label-sm">Agrupación 1</label>
+                    <select class="col-sm-5 form-control form-control-sm" id="agrupacion1">
+                    </select>
+                    <input type="text" id="agrupacion1_text" class="col-sm-4 form-control form-control-sm c_mantenimientos" placeholder="Presionar F4 o Doble Click" tabla="" readonly>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="col-sm-5 form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="agrupacion1_todos" checked>
+                    <label class="form-check-label col-form-label-sm" for="agrupacion1_todos">Todos</label>
+                </div>
+            </div>
+        </div>
+        <div class="row my-1">
+            <div class="col-10">
+                <div class="row">
+                    <label for="agrupacion2" class="col-sm-3 col-form-label col-form-label-sm">Agrupación 2</label>
+                    <select class="col-sm-5 form-control form-control-sm" id="agrupacion2">
+                    </select>
+                    <input type="text" id="agrupacion2_text" class="col-sm-4 form-control form-control-sm c_mantenimientos" placeholder="Presionar F4 o Doble Click" tabla="" readonly>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="col-sm-5 form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="agrupacion2_todos" checked>
+                    <label class="form-check-label col-form-label-sm" for="agrupacion2_todos">Todos</label>
+                </div>
+            </div>
+        </div>
+        <div class="row my-1">
+            <div class="col-10">
+                <div class="row">
+                    <label for="agrupacion3" class="col-sm-3 col-form-label col-form-label-sm">Agrupación 3</label>
+                    <select class="col-sm-5 form-control form-control-sm" id="agrupacion3">
+                    </select>
+                    <input type="text" id="agrupacion3_text" class="col-sm-4 form-control form-control-sm c_mantenimientos" placeholder="Presionar F4 o Doble Click" tabla="" readonly>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="col-sm-5 form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="agrupacion3_todos" checked>
+                    <label class="form-check-label col-form-label-sm" for="agrupacion3_todos">Todos</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-1 border border-black mx-1 pt-4">
+        <div class="row">
+            <div class="col-12">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="filtrar_tipo_estado" value ="Todos" id="filtrar_tipo_estado_todos">
+                    <label class="form-check-label col-form-label-sm" for="filtrar_tipo_estado_todos">Todos</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio"  name="filtrar_tipo_estado" value="Pendientes"  id="filtrar_tipo_estado_pendientes" checked>
+                    <label class="form-check-label col-form-label-sm" for="filtrar_tipo_estado_pendientes">Pendientes</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="filtrar_tipo_estado" value ="Pagados" id="filtrar_tipo_estado_pagados">
+                    <label class="form-check-label col-form-label-sm" for="filtrar_tipo_estado_pagados">Pagados</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="form-check form-check-inline">
+                    <button type="button" class="form-control form-control-sm btn btn-primary btn-block" id ="generar_tc">Generar TC</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-5 mx-1">
+        <div class="row border border-black py-1 pr-1">
+            <label for="fecha_inicio" class="col-sm-3 col-form-label col-form-label-sm">Fecha Inicio:</label>
+            <input type="date" id="fecha_inicio" class="col-sm-3 form-control form-control-sm">
+            <label for="fecha_termino" class="col-sm-3 col-form-label col-form-label-sm">Fecha Final:</label>
+            <input type="date" id="fecha_termino" class="col-sm-3 form-control form-control-sm">
+        </div>
+        <div class="row border border-black my-2">
+            <div class="col-4">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="filtrar_tipo_fecha" value ="R" id="filtrar_tipo_fecha_registro">
+                    <label class="form-check-label col-form-label-sm" for="filtrar_tipo_fecha_registro">Fecha Registro</label>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio"  name="filtrar_tipo_fecha" value="E" id="filtrar_tipo_fecha_emision" checked>
+                    <label class="form-check-label col-form-label-sm" for="filtrar_tipo_fecha_emision">Fecha Emisión</label>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="filtrar_tipo_fecha" value ="V" id="filtrar_tipo_fecha_vencimiento">
+                    <label class="form-check-label col-form-label-sm" for="filtrar_tipo_fecha_vencimiento">Fecha Vencimiento</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-7 border border-black py-1">
+                <div class="row">
+                    <div class="col-8">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="filtrar_tipo_moneda" value ="O" id="filtrar_tipo_moneda_origen" checked>
+                                    <label class="form-check-label col-form-label-sm" for="filtrar_tipo_moneda_origen">Moneda Origen</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="filtrar_tipo_moneda" value ="A" id="filtrar_tipo_moneda_ambas">
+                                    <label class="form-check-label col-form-label-sm" for="filtrar_tipo_moneda_ambas">Ambas Monedas</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <select class="form-control form-control-sm" id="moneda">
+                            <option value="S/">S/</option>
+                            <option value="$">$</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-5 border border-black py-1">
+                <div class="form-group row">
+                    <label for="tasa_cambio" class="col-sm-5 col-form-label  col-form-label-sm">Tipo Cambio</label>
+                    <div class="col-sm-7">
+                        <input type="number" class="form-control form-control-sm text-right no-spin-number " id="tasa_cambio" placeholder="0.00">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="m-4 d-none d-print-block">
+    <div class="row">
+        <div class="col-4">
+            <label for="">RUC</label>
+            <label for="" id="ruc_empresa">000000000000</label>
+        </div>
+        <div class="col-4">
+            <label for="">Empresa</label>
+            <label for="">Razón Social S.A.C</label>
+        </div>
+        <div class="col-4 text-right">
+            <label for="">Fecha</label>
+            <label for="">00/00/00</label>
+        </div>
+    </div>
+    <div class="row"  id ="printable">
+
+    </div>
+    {{!-- <div class="row">
+        <div class="col-4 offset-8 text-right">
+            <label for="">Página</label>
+            <label for="">1</label>
+        </div>
+    </div> --}}
+</div>
+<div class="row mx-1 d-print-none">
+    <div class="col-12">
+        <table id="grid_reporte"></table>
+        <div id="grid_reporte-pager"></div>
+    </div>
+</div>
+
+<div class="d-none">
+    <input id="user-punto_venta" type="text" value="{{user.codigo_punto_venta}}">
+</div>
+
+{{!-- <iframe id="txtArea1" style="display:none"></iframe>
+<button id="btnExport" onclick="fnExcelReport();"> EXPORT </button> --}}
+
+{{> mantenimientos/documentos_listas}}
+{{> mantenimientos/lista_mantenimientos}}
+<script src="/js/modulos/provisiones/programacion_masivos_cxp.js"></script>
+

@@ -1,0 +1,186 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-4">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_vendedor_codigo" class="col-sm-6 col-form-label col-form-label-sm">Código:</label>
+                            <input type="text" id="tablas_vendedor_codigo" class="col-sm-6 form-control form-control-sm m-0 p-0" value="{{datos.Codigo}}"value="{{datos.Codigo}}" placeholder="Códgo" maxlength="15">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-4">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_vendedor_abreviatura" class="col-sm-6 col-form-label col-form-label-sm">Abr:</label>
+                            <input type="text" id="tablas_vendedor_abreviatura" class="col-sm-6 form-control form-control-sm m-0 p-0"value="{{datos.Abreviatura}}" placeholder="Abreviatura" maxlength="5">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-4">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_vendedor_comision" class="col-sm-6 col-form-label col-form-label-sm">%Com:</label>
+                            <input onkeypress="return isNumeric(event)" oninput="maxLengthCheck(this)" type = "number" maxlength = "9" min = "1" max = "999" id="tablas_vendedor_comision" class="col-sm-6 form-control form-control-sm m-0 p-0" value="{{datos.Porcentaje_Comision}}" placeholder="Comision">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_vendedor_nombre" class="col-sm-2 col-form-label col-form-label-sm">Nombre:</label>
+                            <input type="text" id="tablas_vendedor_nombre" class="col-sm-10 form-control form-control-sm m-0 p-0"value="{{datos.Nombre}}" placeholder="Nombre" maxlength="80">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_vendedor_email" class="col-sm-4 col-form-label col-form-label-sm">Email:</label>
+                            <input type="text" id="tablas_vendedor_email" class="col-sm-8 form-control form-control-sm m-0 p-0"value="{{datos.Email}}" placeholder="E-mail" maxlength="70">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-6">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_vendedor_telefono5" class="col-sm-4 col-form-label col-form-label-sm">Telefono:</label>
+                            <input type="text" id="tablas_vendedor_telefono5" class="col-sm-8 form-control form-control-sm m-0 p-0"value="{{datos.telefono}}" placeholder="Telefono Fijo" maxlength="15">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_vendedor_zona" class="col-sm-2 col-form-label col-form-label-sm">Zona:</label>
+                            <select class="col-sm-10 form-control form-control-sm m-0 p-0 c_mantenimientos" id="tablas_vendedor_zona" tabla="zona">
+                                <option value="00">Ninguno</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            {{!-- <div class="row">
+                <div class="col-sm-6">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_vendedor_password" class="col-sm-4 col-form-label col-form-label-sm">Password:</label>
+                            <input type="password" id="tablas_vendedor_password" class="col-sm-8 form-control form-control-sm m-0 p-0"value="{{datos.Password}}" placeholder="Password">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-6">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_vendedor_password_confirmar" class="col-sm-4 col-form-label col-form-label-sm">Conf. Password:</label>
+                            <input type="password" id="tablas_vendedor_password_confirmar" class="col-sm-8 form-control form-control-sm m-0 p-0"value="{{datos.Password}}" placeholder="Password">
+                        </div>
+                    </form>
+                </div>
+            </div> --}}
+            <div class="row">
+                <div class="col-sm-6">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_vendedor_telefono1" class="col-sm-4 col-form-label col-form-label-sm">telefono 1:</label>
+                            <input type="text" id="tablas_vendedor_telefono1" class="col-sm-8 form-control form-control-sm m-0 p-0"value="{{datos.Telefono1}}" placeholder="telefono 1" maxlength="20">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-6">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_vendedor_telefono2" class="col-sm-4 col-form-label col-form-label-sm">telefono 2:</label>
+                            <input type="text" id="tablas_vendedor_telefono2" class="col-sm-8 form-control form-control-sm m-0 p-0"value="{{datos.Telefono2}}" placeholder="telefono 2" maxlength="20">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_vendedor_telefono3" class="col-sm-4 col-form-label col-form-label-sm">telefono 3:</label>
+                            <input type="text" id="tablas_vendedor_telefono3" class="col-sm-8 form-control form-control-sm m-0 p-0"value="{{datos.Telefono3}}" placeholder="telefono 3" maxlength="20">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-6">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_vendedor_telefono4" class="col-sm-4 col-form-label col-form-label-sm">telefono 4:</label>
+                            <input type="text" id="tablas_vendedor_telefono4" class="col-sm-8 form-control form-control-sm m-0 p-0"value="{{datos.Telefono4}}" placeholder="telefono 4" maxlength="20">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_vendedor_cargo" class="col-sm-2 col-form-label col-form-label-sm">Cargo:</label>
+                            <input type="text" id="tablas_vendedor_cargo" class="col-sm-10 form-control form-control-sm m-0 p-0"value="{{datos.Cargo}}" placeholder="Cargo" maxlength="50">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_vendedor_firma" class="col-sm-2 col-form-label col-form-label-sm">Firma:</label>
+                            <input type="text" id="tablas_vendedor_firma" class="col-sm-10 form-control form-control-sm m-0 p-0"value="{{datos.Firma}}" placeholder="Firma" maxlength="150">
+                        </div>
+                    </form>
+                </div>
+            </div>  
+            <div class="row">
+                <div class="col-sm-2">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_vendedor_lista_precios" class="col-sm-12 col-form-label col-form-label-sm">Lista Precios:</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-10">
+                    <form class="m-0 p-0 sm" id ="group_listas_precios">
+                        <div class="form-check m-0 p-0">
+                            <input class="form-check-input" type="checkbox" name="correlativo" id="lista1" value="lista1">
+                            <label class="form-check-label col-form-label-sm" for="lista1">Lista 01</label>
+                        </div>
+                        <div class="form-check m-0 p-0">
+                            <input class="form-check-input" type="checkbox" name="correlativo" id="lista2" value="lista2">
+                            <label class="form-check-label col-form-label-sm" for="lista2">Lista 02</label>
+                        </div>
+                        <div class="form-check m-0 p-0">
+                            <input class="form-check-input" type="checkbox" name="correlativo" id="lista3" value="lista3">
+                            <label class="form-check-label col-form-label-sm" for="lista3">Lista 03</label>
+                        </div>
+                        <div class="form-check m-0 p-0">
+                            <input class="form-check-input" type="checkbox" name="correlativo" id="lista4" value="lista4">
+                            <label class="form-check-label col-form-label-sm" for="lista4">Lista 04</label>
+                        </div>
+                        <div class="form-check m-0 p-0">
+                            <input class="form-check-input" type="checkbox" name="correlativo" id="lista5" value="lista5">
+                            <label class="form-check-label col-form-label-sm" for="lista5">Lista 05</label>
+                        </div>
+                    </form>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div>
+<div class="d-none">
+    <input type="text" id="tablas_vendedor_zona_predeterminado" value="{{datos.Codigo_Zona}}">
+        
+    {{#each lista}}
+        <input type="text" id="tablas_vendedor_lista_precios_{{Lista_Precios_Codigo}}_predeterminado" value="{{Lista_Precios_Activo}}">
+    {{/each}}
+</div>

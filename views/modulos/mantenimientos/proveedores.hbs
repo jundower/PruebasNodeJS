@@ -1,0 +1,597 @@
+
+<ul class="nav nav-tabs tabs group pl-1" id="tab_proveedores">
+  <li class="nav-item active nav-tab-rounded">
+    <a class="active my-0 py-2" data-toggle="tab" href="#tab_proveedores_1">Datos Personales</a>
+  </li>
+  <li class="nav-item nav-tab-rounded">
+    <a class="my-0 py-2" data-toggle="tab" href="#tab_proveedores_2">Forma de Pago</a>
+  </li>
+  <li class="nav-item nav-tab-rounded">
+    <a class="my-0 py-2" data-toggle="tab" href="#tab_proveedores_3">Persona de Contacto</a>
+  </li>
+  <li class="nav-item nav-tab-rounded">
+    <a class="my-0 py-2" data-toggle="tab" href="#tab_proveedores_4">Detracciones</a>
+  </li>
+  <li class="nav-item nav-tab-rounded">
+    <a class="my-0 py-2" data-toggle="tab" href="#tab_proveedores_5">Agencias</a>
+  </li>
+  <li class="nav-item nav-tab-rounded">
+    <a class="my-0 py-2" data-toggle="tab" href="#tab_proveedores_6">Historial</a>
+  </li>
+  <li class="nav-item nav-tab-rounded">
+    <a class="my-0 py-2" data-toggle="tab" href="#tab_proveedores_7">Retencion No Domic</a>
+  </li>
+  <li class="nav-item nav-tab-rounded">
+    <a class="my-0 py-2" data-toggle="tab" href="#tab_proveedores_8">Ctas Corrientes</a>
+  </li>
+  <li class="nav-item nav-tab-rounded">
+    <a class="my-0 py-2" data-toggle="tab" href="#tab_proveedores_9">Codigos Alternativos</a>
+  </li>
+</ul>
+
+<div class="tab-content mr-3">
+
+    <div class="tab-pane fade show active" id="tab_proveedores_1">
+
+        <div class="row">
+            <div class="col-4">
+                <div class="row">
+                    <div class="col-6">
+                        <label for="tablas_proveedores_codigo" class="col-form-label col-form-label-sm">Codigo:</label>
+                    </div>
+                    <div class="col-6">
+                        <input type="text" id="tablas_proveedores_codigo" class="form-control form-control-sm" value="{{datos.Codigo}}" placeholder="Codigo" maxlength="50">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <label for="tablas_proveedores_grupo_proveedores" class="col-form-label col-form-label-sm">Grupo Proveedor:</label>
+                    </div>
+                    <div class="col-6">
+                        <select type="text" id="tablas_proveedores_grupo_proveedores" class="form-control form-control-sm">
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="row">
+                    <div class="col-4">
+                        <label for="tablas_proveedores_tipo_documento_identidad" class="col-form-label col-form-label-sm">Tipo Doc:</label>
+                    </div>
+                    <div class="col-8">
+                        <select type="text" id="tablas_proveedores_tipo_documento_identidad" class="form-control form-control-sm">
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <label for="tablas_proveedores_numero_ruc" class="col-form-label col-form-label-sm">Ruc:</label>
+                    </div>
+                    <div class="col-8">
+                        <div class="input-group">
+                            <input type="text" class="form-control form-control-sm" placeholder="RUC" id="tablas_proveedores_numero_ruc" value="{{datos.Numero_Ruc}}">
+                            <div class="input-group-append">
+                                <button type="button" class="btn btn-light btn-sm sm border"  data-toggle="tooltip" data-placement="top" title="Buscar">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                                    <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="row">
+                    <div class="col-6">
+                        <label for="tablas_proveedores_numero_documento" class="col-form-label col-form-label-sm">Número Doc:</label>
+                    </div>
+                    <div class="col-6">
+                        <input type="text" id="tablas_proveedores_numero_documento" class="form-control form-control-sm" value="{{datos.Numero_Doc}}" placeholder="Número Documento" maxlength="50">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <label for="tablas_proveedores_numero_dni" class="col-form-label col-form-label-sm">D.N.I.:</label>
+                    </div>
+                    <div class="col-6">
+                        <input type="text" id="tablas_proveedores_numero_dni" class="form-control form-control-sm" value="{{datos.Numero_DNI}}" placeholder="DNI" maxlength="50">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <label for="tablas_proveedores_no_domiciliado" class="col-form-label col-form-label-sm">No Domiciliado:</label>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-check form-check-inline m-0 p-0">
+                            <input class="form-check-input" type="radio" name="tablas_proveedores_no_domiciliado" value="S" id="tablas_proveedores_no_domiciliado_si">
+                            <label class="form-check-label col-form-label-sm" for="tablas_proveedores_no_domiciliado_si">Si</label>
+                        </div>
+                        <div class="form-check form-check-inline m-0 p-0">
+                            <input class="form-check-input" type="radio" name="tablas_proveedores_no_domiciliado" value="N" id="tablas_proveedores_no_domiciliado_no">
+                            <label class="form-check-label col-form-label-sm" for="tablas_proveedores_no_domiciliado_no">No</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-2">
+                        <label for="tablas_proveedores_nombre" class="col-form-label col-form-label-sm">Nombre:</label>
+                    </div>
+                    <div class="col-10">
+                        <input type="text" id="tablas_proveedores_nombre" class="form-control form-control-sm" value="{{datos.Nombre}}" placeholder="Nombre" maxlength="50">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-2">
+                        <label for="tablas_proveedores_direccion" class="col-form-label col-form-label-sm">Dirección:</label>
+                    </div>
+                    <div class="col-10">
+                        <input type="text" id="tablas_proveedores_direccion" class="form-control form-control-sm" value="{{datos.Direccion}}" placeholder="Dirección" maxlength="50">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-2">
+                        <label for="tablas_proveedores_estado_contribuyente" class="col-form-label col-form-label-sm">Estado:</label>
+                    </div>
+                    <div class="col-4">
+                        <input type="text" id="tablas_proveedores_estado_contribuyente" class="form-control form-control-sm" value="{{datos.Estado_Contribuyente}}" placeholder="Estado" maxlength="50">
+                    </div>
+                    <div class="col-2">
+                        <label for="tablas_proveedores_condicion" class="col-form-label col-form-label-sm">Condición:</label>
+                    </div>
+                    <div class="col-4">
+                        <input type="text" id="tablas_proveedores_condicion" class="form-control form-control-sm" value="{{datos.Condicion_Contribuyente}}" placeholder="Condición" maxlength="50">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-2">
+                        <label for="tablas_proveedores_telefono1" class="col-form-label col-form-label-sm">Teléfono:</label>
+                    </div>
+                    <div class="col-4">
+                        <input type="text" id="tablas_proveedores_telefono1" class="form-control form-control-sm" value="{{datos.Telefono1}}" placeholder="Teléfono" maxlength="50">
+                    </div>
+                    <div class="col-2">
+                        <label for="tablas_proveedores_telefono2" class="col-form-label col-form-label-sm">Teléfono 2:</label>
+                    </div>
+                    <div class="col-4">
+                        <input type="text" id="tablas_proveedores_telefono2" class="form-control form-control-sm" value="{{datos.Telefono2}}" placeholder="Teléfono 2" maxlength="50">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-2">
+                        <label for="tablas_proveedores_correo" class="col-form-label col-form-label-sm">Email:</label>
+                    </div>
+                    <div class="col-4">
+                        <input type="text" id="tablas_proveedores_correo" class="form-control form-control-sm" value="{{datos.Correo}}" placeholder="E-mail" maxlength="50">
+                    </div>
+                    <div class="col-2">
+                        <label for="tablas_proveedores_fax" class="col-form-label col-form-label-sm">Fax:</label>
+                    </div>
+                    <div class="col-4">
+                        <input type="text" id="tablas_proveedores_fax" class="form-control form-control-sm" value="{{datos.Fax}}" placeholder="Fax" maxlength="50">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-2">
+                        <label for="tablas_proveedores_pais" class="col-form-label col-form-label-sm">País:</label>
+                    </div>
+                    <div class="col-4">
+                        <select type="text" id="tablas_proveedores_pais" class="form-control form-control-sm">
+                        </select>
+                    </div>
+                    <div class="col-2">
+                        <label for="tablas_proveedores_celular" class="col-form-label col-form-label-sm">Celular:</label>
+                    </div>
+                    <div class="col-4">
+                        <input type="text" id="tablas_proveedores_celular" class="form-control form-control-sm" value="{{datos.Celular}}" placeholder="Celular" maxlength="50">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-2">
+                        <label for="tablas_proveedores_zona1" class="col-form-label col-form-label-sm">Zona 1:</label>
+                    </div>
+                    <div class="col-4">
+                        <select type="text" id="tablas_proveedores_zona1" class="form-control form-control-sm">
+                        </select>
+                    </div>
+                    <div class="col-2">
+                        <label for="tablas_proveedores_zona2" class="col-form-label col-form-label-sm">Zona 2:</label>
+                    </div>
+                    <div class="col-4">
+                        <select type="text" id="tablas_proveedores_zona2" class="form-control form-control-sm">
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-2">
+                        <label for="tablas_proveedores_situacion1" class="col-form-label col-form-label-sm">Situación 1:</label>
+                    </div>
+                    <div class="col-4">
+                        <select type="text" id="tablas_proveedores_situacion1" class="form-control form-control-sm">
+                        </select>
+                    </div>
+                    <div class="col-2 pr-0">
+                        <label for="tablas_proveedores_afecto_bonificacion" class="col-form-label col-form-label-sm">Afecto a Bonificación:</label>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-check form-check-inline m-0 p-0">
+                            <input class="form-check-input" type="radio" name="tablas_proveedores_bonificacion" value="S" id ="tablas_proveedores_bonificacion_si">
+                            <label class="form-check-label col-form-label-sm" for="tablas_proveedores_bonificacion_si">Si</label>
+                        </div>
+                        <div class="form-check form-check-inline m-0 p-0">
+                            <input class="form-check-input" type="radio" name="tablas_proveedores_bonificacion" value="N" id ="tablas_proveedores_bonificacion_no">
+                            <label class="form-check-label col-form-label-sm" for="tablas_proveedores_bonificacion_no">No</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-2">
+                        <label for="tablas_proveedores_situacion2" class="col-form-label col-form-label-sm">Situación 2:</label>
+                    </div>
+                    <div class="col-4">
+                        <select type="text" id="tablas_proveedores_situacion2" class="form-control form-control-sm">
+                        </select>
+                    </div>
+                    <div class="col-2">
+                        <label for="tablas_proveedores_percepcion" class="col-form-label col-form-label-sm">Percepción:</label>
+                    </div>
+                    <div class="col-2">
+                        <div class="form-check form-check-inline m-0 p-0">
+                            <input class="form-check-input" type="radio" name="tablas_proveedores_percepcion" value="S" id="tablas_proveedores_percepcion_si">
+                            <label class="form-check-label col-form-label-sm" for="tablas_proveedores_percepcion_si">Si</label>
+                        </div>
+                        <div class="form-check form-check-inline m-0 p-0">
+                            <input class="form-check-input" type="radio" name="tablas_proveedores_percepcion" value="N" id="tablas_proveedores_percepcion_no">
+                            <label class="form-check-label col-form-label-sm" for="tablas_proveedores_percepcion_no">No</label>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="input-group">
+                            <input type="number" id ="tablas_proveedores_percepcion_porcentaje" class="form-control form-control-sm text-right" value ="{{datos.Percepcion_Porcentaje}}">
+                            <div class="input-group-append">
+                                <span class="input-group-text form-control form-control-sm text-right">%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-2">
+                        <label for="tablas_proveedores_direccion_postal" class="col-form-label col-form-label-sm">Direccion Postal:</label>
+                    </div>
+                    <div class="col-4">
+                        <input type="text" id="tablas_proveedores_direccion_postal" class="form-control form-control-sm" value="{{datos.Direccion_Postal}}" placeholder="Direccion Postal" maxlength="50">
+                    </div>
+                    <div class="col-2">
+                        <label for="tablas_proveedores_retencion" class="col-form-label col-form-label-sm">Retención:</label>
+                    </div>
+                    <div class="col-2">
+                        <div class="form-check form-check-inline m-0 p-0">
+                            <input class="form-check-input" type="radio" name="tablas_proveedores_retencion" value="S" id="tablas_proveedores_retencion_si">
+                            <label class="form-check-label col-form-label-sm" for="tablas_proveedores_retencion_si">Si</label>
+                        </div>
+                        <div class="form-check form-check-inline m-0 p-0">
+                            <input class="form-check-input" type="radio" name="tablas_proveedores_retencion" value="N" id="tablas_proveedores_retencion_no">
+                            <label class="form-check-label col-form-label-sm" for="tablas_proveedores_retencion_no">No</label>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="input-group">
+                            <input type="number" id ="tablas_proveedores_retencion_porcentaje" class="form-control form-control-sm text-right" value ="{{datos.Retencion_Porcentaje}}">
+                            <div class="input-group-append">
+                                <span class="input-group-text form-control form-control-sm text-right">%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-2">
+                        <label for="tablas_proveedores_telefono_postal" class="col-form-label col-form-label-sm">Telefono Postal:</label>
+                    </div>
+                    <div class="col-4">
+                        <input type="text" id ="tablas_proveedores_telefono_postal" class="form-control form-control-sm" value ="{{datos.Telefono_Postal}}" placeholder="Telefono Postal">
+                    </div>
+                    <div class="col-2">
+                        <label for="tablas_proveedores_buen_contribuyente" class="col-form-label col-form-label-sm">Buen Contribuyente:</label>
+                    </div>
+                    <div class="col-2">
+                        <div class="form-check form-check-inline m-0 p-0">
+                            <input class="form-check-input" type="radio" name="tablas_proveedores_buen_contribuyente" value="S" id="tablas_proveedores_buen_contribuyente_si">
+                            <label class="form-check-label col-form-label-sm" for="tablas_proveedores_buen_contribuyente_no">Si</label>
+                        </div>
+                        <div class="form-check form-check-inline m-0 p-0">
+                            <input class="form-check-input" type="radio" name="tablas_proveedores_buen_contribuyente" value="N" id="tablas_proveedores_buen_contribuyente_no">
+                            <label class="form-check-label col-form-label-sm" for="tablas_proveedores_buen_contribuyente_no">No</label>
+                        </div>
+                    </div>
+                    <div class="col-2 pr-0">
+                        <div class="form-check form-check-inline m-0 p-0">
+                            <input class="form-check-input" type="checkbox" id="tablas_proveedores_excluye_percepcion">
+                            <label class="form-check-label col-form-label-sm" for="tablas_proveedores_excluye_percepcion">Excluye Percepción</label>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-2">
+                        <label for="tablas_proveedores_celular_postal" class="col-form-label col-form-label-sm">Celular Postal:</label>
+                    </div>
+                    <div class="col-4">
+                        <input type="text" id ="tablas_proveedores_celular_postal" class="form-control form-control-sm" value ="{{datos.Celular_Postal}}" placeholder="Celular Postal">
+                    </div>
+                    <div class="col-2">
+                        <label for="tablas_proveedores_percepcion_documento" class="col-form-label col-form-label-sm">Percep. en Doc.:</label>
+                    </div>
+                    <div class="col-2">
+                        <div class="form-check form-check-inline m-0 p-0">
+                            <input class="form-check-input" type="radio" name="tablas_proveedores_percepcion_documento" value="S" id="tablas_proveedores_percepcion_documento_si">
+                            <label class="form-check-label col-form-label-sm" for="tablas_proveedores_percepcion_documento_si">Si</label>
+                        </div>
+                        <div class="form-check form-check-inline m-0 p-0">
+                            <input class="form-check-input" type="radio" name="tablas_proveedores_percepcion_documento" value="N" id="tablas_proveedores_percepcion_documento_no">
+                            <label class="form-check-label col-form-label-sm" for="tablas_proveedores_percepcion_documento_no">No</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-2">
+                        <label for="tablas_proveedores_email_postal" class="col-form-label col-form-label-sm">Email Postal:</label>
+                    </div>
+                    <div class="col-4">
+                        <input type="text" id ="tablas_proveedores_email_postal" class="form-control form-control-sm" value ="{{datos.Email_Postal}}" placeholder="Email Postal">
+                    </div>
+                    <div class="col-2">
+                        <label for="tablas_proveedores_detraccion" class="col-form-label col-form-label-sm">Detraccion:</label>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-check form-check-inline m-0 p-0">
+                            <input class="form-check-input" type="radio" name="tablas_proveedores_detraccion" value="S" id="tablas_proveedores_detraccion_si">
+                            <label class="form-check-label col-form-label-sm" for="tablas_proveedores_detraccion_si">Si</label>
+                        </div>
+                        <div class="form-check form-check-inline m-0 p-0">
+                            <input class="form-check-input" type="radio" name="tablas_proveedores_detraccion" value="N" id="tablas_proveedores_detraccion_no">
+                            <label class="form-check-label col-form-label-sm" for="tablas_proveedores_detraccion_no">No</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-2">
+                        <label for="tablas_proveedores_nextel_postal" class="col-form-label col-form-label-sm">Nextel Postal:</label>
+                    </div>
+                    <div class="col-4">
+                        <input type="text" id ="tablas_proveedores_nextel_postal" class="form-control form-control-sm" value ="{{datos.Nextel_Postal}}" placeholder="Nextel Postal">
+                    </div>
+                    <div class="col-2">
+                        <label for="tablas_proveedores_fax_postal" class="col-form-label col-form-label-sm">Fax Postal:</label>
+                    </div>
+                    <div class="col-4">
+                        <input type="text" id ="tablas_proveedores_fax_postal" class="form-control form-control-sm" value ="{{datos.Fax_Postal}}" placeholder="Fax Postal">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-2">
+                        <label for="tablas_proveedores_web" class="col-form-label col-form-label-sm">Web:</label>
+                    </div>
+                    <div class="col-4">
+                        <input type="text" id ="tablas_proveedores_web" class="form-control form-control-sm" value ="{{datos.Web}}" placeholder="Web">
+                    </div>
+                    <div class="col-2">
+                        <label for="tablas_proveedores_contacto" class="col-form-label col-form-label-sm">Contacto:</label>
+                    </div>
+                    <div class="col-4">
+                        <input type="text" id ="tablas_proveedores_contacto" class="form-control form-control-sm" value ="{{datos.Contacto}}" placeholder="Contacto">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-2">
+                        <label for="tablas_proveedores_leyenda1" class="col-form-label col-form-label-sm">Leyenda 01:</label>
+                    </div>
+                    <div class="col-4">
+                        <textarea class="form-control form-control-sm" id="tablas_proveedores_leyenda1" rows="3" placeholder="Leyenda 1">{{datos.Observacion1}}</textarea>
+                    </div>
+                    <div class="col-2">
+                        <label for="tablas_proveedores_leyenda2" class="col-form-label col-form-label-sm">Leyenda 02:</label>
+                    </div>
+                    <div class="col-4">
+                        <textarea class="form-control form-control-sm" id="tablas_proveedores_leyenda2" rows="3" placeholder="Leyenda 2">{{datos.Observacion2}}</textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-2">
+                        <label for="tablas_proveedores_fecha_creacion" class="col-form-label col-form-label-sm">F. Creación:</label>
+                    </div>
+                    <div class="col-4">
+                        <input type="date" id = "tablas_proveedores_fecha_creacion" class="form-control form-control-sm" value="{{datos.Fecha_Creacion}}" disabled>
+                    </div>
+                    <div class="col-2">
+                        <label for="tablas_proveedores_fecha_modificacion" class="col-form-label col-form-label-sm">F. Modificación:</label>
+                    </div>
+                    <div class="col-4">
+                        <input type="date" id = "tablas_proveedores_fecha_modificacion" class="form-control form-control-sm" value="{{datos.Fecha_Modificacion}}" disabled>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="tab-pane fade" id="tab_proveedores_2">
+        <div class="row">
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <table id="grid_tablas_proveedores_forma_pago_elegidos"></table>
+            </div>
+            <div class="col-6">
+                <table id="grid_tablas_proveedores_forma_pago_lista"></table>
+            </div>
+        </div>
+    </div>
+
+    <div class="tab-pane fade" id="tab_proveedores_3">
+        <table id="grid_tablas_proveedores_persona_contacto"></table>
+    </div>
+
+    <div class="tab-pane fade" id="tab_proveedores_4">
+        <div class="row">
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <table id="grid_tablas_proveedores_detracciones_elegidos"></table>
+            </div>
+            <div class="col-6">
+                <table id="grid_tablas_proveedores_detracciones_lista"></table>
+            </div>
+        </div>
+    </div>
+
+    <div class="tab-pane fade" id="tab_proveedores_5">
+        <table id="grid_tablas_proveedores_agencias"></table>
+    </div>
+
+    <div class="tab-pane fade" id="tab_proveedores_6">
+        <table id="grid_tablas_proveedores_historial"></table>
+    </div>
+
+    <div class="tab-pane fade" id="tab_proveedores_7">
+        <div class="row">
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <table id="grid_tablas_proveedores_retenciones_no_domiciliados_elegidos"></table>
+            </div>
+            <div class="col-6">
+                <table id="grid_tablas_proveedores_retenciones_no_domiciliados_lista"></table>
+            </div>
+        </div>
+    </div>
+
+    <div class="tab-pane fade" id="tab_proveedores_8">
+        <table id="grid_tablas_proveedores_cuentas_corrientes"></table>
+    </div>
+
+    <div class="tab-pane fade" id="tab_proveedores_9">
+        <table id="grid_tablas_proveedores_codigos_alternativos"></table>
+    </div>
+
+</div>
+
+<div class="d-none">
+    {{#if datos}}
+        <input type="text" id="tablas_proveedores_tipo_documento_identidad_predeterminado" value="{{datos.Tipo_Documento_Sunat}}">
+        <input type="text" id="tablas_proveedores_grupo_proveedores_predeterminado" value="{{datos.Grupo_Proveedor}}">
+        <input type="text" id="tablas_proveedores_pais_predeterminado" value="{{datos.Codigo_Pais}}">
+        <input type="text" id="tablas_proveedores_zona1_predeterminado" value="{{datos.Codigo_Zona1}}">
+        <input type="text" id="tablas_proveedores_zona2_predeterminado" value="{{datos.Codigo_Zona2}}">
+        <input type="text" id="tablas_proveedores_situacion1_predeterminado" value="{{datos.Codigo_Situacion1}}">
+        <input type="text" id="tablas_proveedores_situacion2_predeterminado" value="{{datos.Codigo_Situacion2}}">
+
+        <input type="text" id="tablas_proveedores_excluye_percepcion_predeterminado" value="{{datos.Excluye_Percepcion_Si_No}}">
+        
+        <input type="text" id="tablas_proveedores_no_domiciliado_predeterminado" value="{{datos.No_Domiciliado_Si_No}}">
+        <input type="text" id="tablas_proveedores_bonificacion_predeterminado" value="{{datos.Bonificacion_Si_No}}">
+        <input type="text" id="tablas_proveedores_percepcion_predeterminado" value="{{datos.Percepcion_Si_No}}">
+        <input type="text" id="tablas_proveedores_retencion_predeterminado" value="{{datos.Retencion_Si_No}}">
+        <input type="text" id="tablas_proveedores_buen_contribuyente_predeterminado" value="{{datos.Buen_Contribuyente_Si_No}}">
+        <input type="text" id="tablas_proveedores_percepcion_documento_predeterminado" value="{{datos.Percepcion_Documento_Si_No}}">
+        <input type="text" id="tablas_proveedores_detraccion_predeterminado" value="{{datos.Detraccion_Si_No}}">
+
+        <input type="text" id="tablas_proveedores_fecha_creacion_predeterminado" value="S">
+        <input type="text" id="tablas_proveedores_fecha_modificacion_predeterminado" value="S">
+    {{else}}
+        <input type="text" id="tablas_proveedores_tipo_documento_identidad_predeterminado" value="06">
+        <input type="text" id="tablas_proveedores_grupo_proveedores_predeterminado" value="42">
+        <input type="text" id="tablas_proveedores_pais_predeterminado" value="001">
+        <input type="text" id="tablas_proveedores_zona1_predeterminado" value="00">
+        <input type="text" id="tablas_proveedores_zona2_predeterminado" value="00">
+        <input type="text" id="tablas_proveedores_situacion1_predeterminado" value="00">
+        <input type="text" id="tablas_proveedores_situacion2_predeterminado" value="00">
+
+        
+    {{/if}}
+</div>

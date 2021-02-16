@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=gb18030">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulario de contacto</title>
+    
+    <link rel="stylesheet" href="/css/home/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <link rel="stylesheet" href="/css/home/estilos.css">
+    <link rel="stylesheet" href="/css/home/font-awesome.css">
+
+    <script src="/js/home/jquery-3.2.1.js"></script>
+    <script src="/js/home/validar.js"></script>
+</head>
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+body, html {
+    height: 100%;
+    line-height: 1.8;
+}
+/* Full height image header */
+.bgimg-1 {
+    
+    background-size: cover;
+    background-image: url("/img/home/Imagenerp.jpg");
+    min-height: 85%;
+}
+.w3-bar .w3-button {
+    padding: 16px;
+}
+</style>
+
+<body>
+    
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="/home" class="w3-bar-item w3-button w3-wide"><img src="/img/home/logoprincipalerp.png"></a>
+      {{!-- <a href="actaserp.php"  style="color:#FFF">.....</a> --}}
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="/home/productos" class="w3-bar-item w3-button"><i class="fa fa-th"></i>PRODUCTOS</a>
+      <!--<a href="" class="w3-bar-item w3-button"><i class="fa fa-user"></i> NOSOTROS</a>-->
+<!--      <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> PRODUCTOS</a>-->
+<!--      <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> SERVICIOS</a>-->
+      <a href="/home/enviodemensaje" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACTO</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+     <!--Cabecera----------------------------------------------------------------------------->
+<div class="container-fluid zonaazul2" style="padding-top: 60px;"><div class="container zonaazul2">
+<div class="row text-center padv40"><div class="col-md-12">
+<h3 class="txz35r lineh14 marginv20"><strong>Estás a un paso de <span class="txc-amar">potenciar tu empresa.</span></strong></h3>
+<h4 class="lineh15 txz20"><b>Pide tu cotización ahora.</b></h4></div></div>
+</div></div>
+
+    <section class="form_wrap">
+
+        <section class="cantact_info">
+            <section class="info_title">
+                <span class="fa fa-user-circle"></span>
+                <h2>INFORMACION<br>DE CONTACTO</h2>
+            </section>
+            <section class="info_items">
+                <p><span class="fa fa-envelope"></span> ventas@erp-solutionsperu.com</p>
+                <p><span class="fa fa-mobile"></span>Celular : 984 207 192 </p>
+                
+          <p>Telefono : (01) 717-8740 </p>
+                
+            </section>
+        </section>
+
+        <form action="/home/enviarmensaje" method="post" class="form_contact" onsubmit="return validar()">
+            <h2>Envia un mensaje</h2>
+            <div class="user_info">
+                <label for="names">Nombres *</label>
+                <input type="text" id="names" name="nombre">
+                
+                <label for="asunto">Asunto *</label>
+                <input type="text" id="asunto" name="asunto">
+                
+                <label for="empresa">Empresa *</label>
+                <input type="text" id="empresa" name="empresa">
+                
+                 <label for="ruc">R.U.C</label>
+                <input type="text" id="ruc" name="ruc" placeholder="Solo d&iacute;gitos" onsubmit="comprobarRuc()">
+
+                <label for="phone">Telefono / Celular</label>
+                <input type="text" id="phone" name="telefono" placeholder="Solo d&iacute;gitos">
+
+                <label for="email">Correo electronico *</label>
+                <input type="text" id="email" name="correo">
+                
+                <label for="erp">Seleccione su version ERP *</label>
+                <br>
+                <select name="erp"  id="erp"  class="w3-select">
+
+                <option>ERPSOFT Version Integral </option>
+                
+                <option>ERPSOFT Version PYME</option>
+                
+                <option>ERPSOFT Version MYPE</option>
+                
+                <option>ERPSOFT Version Emprendedora</option>
+                
+                </select>
+                <br>
+                      
+                <label for="mensaje">Mensaje *</label>
+                <textarea id="mensaje" name="mensaje"></textarea>
+                <input type="submit" value="Enviar Mensaje" id="btnSend" >
+            </div>
+        </form>
+
+    </section>
+    
+    
+     <div class="w3-container w3-light-grey" style="padding:30px 16px" id="contact">
+    
+        <h2 class="w3-center">CONT&Aacute;CTENOS</h2>
+
+  <div class="w3-row-padding" style="margin-top:20px">
+      
+    <div class="w3-half">
+        &nbsp&nbsp&nbsp&nbsp&nbsp<img src="/img/home/logoprincipalerp.png">
+        <br>
+      <p style="margin-top: 5px;margin-bottom: 5px;"><i style="width:10%;height:5%;"  class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i>Calle. Porta 170 Oficina 609 Lima - Lima - Miraflores</p>
+      <p style="margin-top: 5px;margin-bottom: 5px;"><i style="width:10%;height:5%;" class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i>Informes y Ventas Central : (01) 717-8740 </p>
+      <p style="margin-top: 5px;margin-bottom: 5px;"><i style="width:10%;height:5%;" class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i>Celular : 984 207 192</p>
+      <p style="margin-top: 5px;margin-bottom: 5px;"><i style="width:10%;height:5%;" class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i>EMAIL: ventas@erp-solutionsperu.com </p>
+      <br>
+
+    </div>
+<div class="w3-half" style="width:50%;height:350px;">
+
+        <iframe style="width:80%;height:90%;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.8933591840514!2d-77.03223288518673!3d-12.119448491418941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c819d14724bd%3A0xfa0381458bbb71db!2sINT.506%2C+Calle+M%C3%A1rtir+Jos%C3%A9+Olaya+129%2C+Miraflores+Lima+18!5e0!3m2!1ses!2spe!4v1533330821088" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    
+</div>
+  </div>
+        <center><a href="/home" class="w3-button w3-black ">Regresar a la pagina de Inicio</a></center>
+
+</div>
+
+</body>
+</html>

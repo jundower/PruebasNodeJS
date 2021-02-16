@@ -1,0 +1,88 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-6">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_motivos_tramite_codigo" class="col-sm-4 col-form-label col-form-label-sm">Código:</label>
+                            <input type="text" id="tablas_motivos_tramite_codigo" class="col-sm-8 form-control form-control-sm m-0 p-0" value="{{datos.Codigo}}"value="{{datos.Codigo}}" placeholder="Códgo" maxlength="3">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-4">
+                </div>
+                <div class="col-sm-2">
+                    <form class="m-0 p-0">
+                        <div class="form-check row my-05 py-05">
+                            <input class="form-check-input" type="checkbox" id="tablas_motivos_tramite_predeterminado" checked>
+                            <label class="form-check-label col-form-label-sm" for="tablas_motivos_tramite_predeterminado">Predeterminado</label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_motivos_tramite_nombre" class="col-sm-4 col-form-label col-form-label-sm">Nombre:</label>
+                            <input type="text" id="tablas_motivos_tramite_nombre" class="col-sm-8 form-control form-control-sm m-0 p-0"value="{{datos.Nombre}}" placeholder="Nombre" maxlength="50">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-6">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_motivos_tramite_tipo_documento" class="col-sm-4 col-form-label col-form-label-sm">Tipo Doc:</label>
+                            <select id="tablas_motivos_tramite_tipo_documento" class="col-sm-8 form-control form-control-sm c_mantenimientos m-0 p-0 " >
+                            </select>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_motivos_tramite_ruta_formato" class="col-sm-2 col-form-label col-form-label-sm">Ruta Formato:</label>
+                            <input type="text" id="tablas_motivos_tramite_ruta_formato" class="col-sm-10 form-control form-control-sm m-0 p-0"value="{{datos.Formato}}" placeholder="Ruta Formato" maxlength="500">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_motivos_tramite_ruta_impresora" class="col-sm-2 col-form-label col-form-label-sm">Ruta Impresora:</label>
+                            <input type="text" id="tablas_motivos_tramite_ruta_impresora" class="col-sm-10 form-control form-control-sm m-0 p-0"value="{{datos.Ruta_Impresora}}" placeholder="Ruta Impresora" maxlength="15">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <table id="grid_tablas_motivos_tramite_series"></table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="d-none">
+    {{#if datos}}
+        <input type="text" id="tablas_motivos_tramite_punto_venta_predeterminado" value="{{datos.Punto_Venta}}">
+        <input type="text" id="tablas_motivos_tramite_tipo_documento_predeterminado" value="{{datos.Tipo_Documento}}">
+
+        <input type="text" id="tablas_motivos_tramite_predeterminado_predeterminado" value="{{datos.Predeterminado}}">
+        <input type="text" id="tablas_motivos_tramite_activo_predeterminado" value="{{datos.Activo}}">
+        <input type="text" id="tablas_motivos_tramite_a4_predeterminado" value="{{datos.A4}}">
+        <input type="text" id="tablas_motivos_tramite_nombre" value="Pruba">
+    {{else}}
+        <input type="text" id="tablas_motivos_tramite_punto_venta_predeterminado" value="">
+        <input type="text" id="tablas_motivos_tramite_tipo_documento_predeterminado" value="">
+
+        <input type="text" id="tablas_motivos_tramite_predeterminado_predeterminado" value="N">
+        <input type="text" id="tablas_motivos_tramite_activo_predeterminado" value="N">
+        <input type="text" id="tablas_motivos_tramite_a4_predeterminado" value="N">
+        <input type="text" id="tablas_motivos_tramite_nombre" value="Pruba">
+    {{/if}}
+</div>

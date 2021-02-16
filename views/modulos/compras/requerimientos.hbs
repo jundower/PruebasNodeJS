@@ -1,0 +1,259 @@
+
+{{#if user}}
+<ul class="nav nav-tabs tabs group pl-4 d-print-none" id="myTab" role="tablist">
+  <li class="nav-item active nav-tab-rounded">
+    <a class="active my-0 py-2" data-toggle="tab" href="#generales">Datos Generales</a>
+  </li>
+  <li class="nav-item nav-tab-rounded">
+    <a class="my-0 py-2" data-toggle="tab" href="#profile">Datos Complementarios</a>
+  </li>
+</ul>
+
+<div class="tab-content mr-3 d-print-none" id="myTabContent">
+    <div class="tab-pane fade show active" id="generales" role="tabpanel" aria-labelledby="generales-tab">
+        <div class="container-fluid border">
+            <div class="row border">
+                <div class="col-lg-4 border">
+                    <div class="row my-1">
+                        <div class="col-xl-12">
+                            <div class="input-group form-control-sm-erp">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text col-form-label col-form-label-sm py-0 background-title-jqgrid" for="pto_venta">Punto:Venta</label>
+                                </div>
+                                <select class="form-control form-control-sm" id="pto_venta"><option value="{{user.codigo_punto_venta}}">{{user.codigo_punto_venta}} - {{user.nombre_punto_venta}}</option></select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row my-1">
+                        <div class="col-xl-6">
+                            <select class="form-control form-control-sm c_mantenimientos form-control-sm-erp" id="unidad_negocio">
+                            </select>
+                        </div>
+                        <div class="col-xl-6">
+                            <select class="form-control form-control-sm c_mantenimientos form-control-sm-erp" id="centro_costos">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row my-1">
+                        <div class="col-xl-6">
+                            <select class="form-control form-control-sm c_mantenimientos form-control-sm-erp" id="orden_trabajo">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row my-1">
+                        <div class="col-xl-12">
+                            <select class="form-control form-control-sm c_mantenimientos form-control-sm-erp" id="responsable">
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 border">
+                    <div class="row my-1">
+
+                        <div class="col-xl-12">
+                            <div class="input-group form-control-sm-group-motivo">
+                                <div class="input-group-prepend form-control-sm-erp">
+                                    <label class="input-group-text col-form-label col-form-label-sm py-0 background-title-jqgrid" for="motivo" >Motivo</label>
+                                </div>
+                                <select class="form-control form-control-sm form-control-sm-erp form-control-sm-motivo" id="motivo"></select>
+                                <div class="form-check form-check-inline form-control-sm-erp pl-3">
+                                    <input class="form-check-input" type="radio" name="correlativo" id="automatico" value="automatico">
+                                    <label class="form-check-label col-form-label-sm" for="automatico">Automático</label>
+                                </div>
+                                <div class="form-check form-check-inline form-control-sm-erp">
+                                    <input class="form-check-input" type="radio" name="correlativo" id="manual" value="manual">
+                                    <label class="form-check-label col-form-label-sm" for="manual">Manual</label>
+                                </div>
+                                <input type="text" id="numero_correlativo" class="col-sm-12 form-control form-control-sm text-right" placeholder="Número">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row my-1">
+                        <div class="col-xl-5">
+                            
+                            <div class="input-group form-control-sm-erp">
+                                <label class="input-group-text sm py-0 border-right-0" style="border-top-right-radius:0px;border-bottom-right-radius:0px; background: #fff">Prioridad:</label>
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text py-0 pl-0 border-left-0" style="background: #fff;">
+                                        <input type="radio" name="prioridad" id="alta" value="A">
+                                        <label class="form-check-label col-form-label-sm ml-1" for="alta">Alta</label>
+                                    </div>
+                                </div>                                
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text py-0 pl-0 border-left-0" style="background: #fff;">
+                                        <input type="radio" name="prioridad" id="media" value="M">
+                                        <label class="form-check-label col-form-label-sm ml-1" for="media">Media</label>
+                                    </div>
+                                </div>
+                                                                
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text py-0 pl-0 border-left-0 rounded-right" style="background: #fff;">
+                                        <input type="radio" name="prioridad" id="baja" value="B">
+                                        <label class="form-check-label col-form-label-sm ml-1" for="baja">Baja</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-7">
+                            <div class="row">
+                                <div class="col-12 input-group form-control-sm-erp form-control-sm-group-fechas">
+                                    <label class="sm input-group-text py-0 border-right-0" for="fecha_doc" style="background:#e9ecef;border-top-right-radius:0px;border-bottom-right-radius:0px">Fecha:</label>
+                                    <input type="date" id = "fecha_doc" class="form-control form-control-sm no-calendar border-left-0 pl-0" style=";border-top-left-radius:0px;border-bottom-left-radius:0px">
+                                    <input type="number" id = "dias_forma_pago" class="form-control form-control-sm text-right mx-2 form-control-sm-dias-forma-pago" value ="0">
+                                    <label class="sm input-group-text py-0 border-right-0" for="fecha_limite" style="background:#fff;border-top-right-radius:0px;border-bottom-right-radius:0px">F. Lmt.:</label>
+                                    <input type="date" id = "fecha_limite" class="form-control form-control-sm  border-left-0 pl-0 calendar-sm" style=";border-top-left-radius:0px;border-bottom-left-radius:0px">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row my-1">
+                        <div class="col-xl-3">
+                            <input type="text" id="numero_exp" class="col-sm-12 form-control form-control-sm form-control-sm-erp" placeholder="Referencia - Expediente 1" autocomplete="off">
+                        </div>
+                        <div class="col-xl-3">
+                            <input type="text" id="numero_exp_2" class="col-sm-12 form-control form-control-sm form-control-sm-erp" placeholder="Referencia - Expediente 2" autocomplete="off">
+                        </div>
+                        <div class="col-xl-4">
+                            <div class="input-group form-control-sm-erp form-control-sm-group-moneda">
+                                <select class="form-control form-control-sm form-control-sm-moneda no-spin" id="moneda">
+                                </select>
+                                <select class=" form-control form-control-sm " id="tipo_cambio">
+                                </select>
+                                <input type="number" class="form-control form-control-sm text-right no-spin-number form-control-sm-tasa-cambio" id="tasa_cambio">
+                            </div>
+                        </div>
+                        <div class="col-xl-2 form-control-sm-erp">
+                            <div class="form-check form-check-inline">
+                                <label class="form-check-label col-form-label-sm" for="mas_igv">Más I.G.V.:</label>
+                                <input class="form-check-input" type="checkbox" id="mas_igv">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row my-1">
+                        <div class="col-sm-12">
+                            <input type="text" id="glosa" class="form-control form-control-sm form-control-sm-erp" placeholder="Glosa">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 border">
+                    <div class="row my-1">
+                        <div class="col-xl-5 form-control-sm-erp">
+                            <label for="base_calculada" class="col-form-label col-form-label-sm">Base Calc.:</label>
+                        </div>
+                        <div class="col-xl-7">
+                            <input type="text" id = "base_calculada_mask" class="form-control form-control-sm  text-right" value ="0.00" disabled>
+                        </div>
+                        <div class="col-xl-7 d-none">
+                            <input type="number" id = "base_calculada" class="form-control form-control-sm text-right">
+                        </div>
+                    </div>
+                    <div class="row my-1">
+                        <div class="col-xl-5 form-control-sm-erp">
+                            <label for="monto_descuento" class="col-form-label col-form-label-sm">Dsct.:</label>
+                        </div>
+                        <div class="col-xl-7">
+                            <input type="text" id = "monto_descuento_mask" class="form-control form-control-sm  text-right" value ="0.00" disabled>
+                        </div>
+                        <div class="col-xl-7 d-none">
+                            <input type="number" id = "monto_descuento" class="form-control form-control-sm  text-right">
+                        </div>
+                    </div>
+                    <div class="row my-1">
+                        <div class="col-xl-5 form-control-sm-erp">
+                            <label for="subtotal" class="col-form-label col-form-label-sm">Base Imp.:</label>
+                        </div>
+                        <div class="col-xl-7">
+                            <input type="text" id = "subtotal_mask" class="form-control form-control-sm  text-right" value ="0.00" disabled>
+                        </div>
+                        <div class="col-xl-7 d-none">
+                            <input type="number" id = "subtotal" class="form-control form-control-sm  text-right">
+                        </div>
+                    </div>
+                    <div class="row my-1">
+                        <div class="col-xl-5 form-control-sm-erp">
+                            <label for="igv" class="col-form-label col-form-label-sm">IGV:</label>
+                        </div>
+                        <div class="col-xl-7">
+                            <input type="text" id = "igv_mask" class="form-control form-control-sm  text-right" value ="0.00" disabled>
+                        </div>
+                        <div class="col-xl-7 d-none">
+                            <input type="number" id = "igv" class="form-control form-control-sm  text-right">
+                        </div>
+                    </div>
+                    <div class="row my-1">
+                        <div class="col-xl-5 form-control-sm-erp">
+                            <label for="total" class="col-form-label col-form-label-sm">Total:</label>
+                        </div>
+                        <div class="col-xl-7">
+                            <input type="text" id = "total_mask" class="form-control form-control-sm  text-right" value ="0.00" disabled>
+                        </div>
+                        <div class="col-xl-7 d-none">
+                            <input type="number" id = "total" class="form-control form-control-sm  text-right">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        
+        <div class="container-fluid border">
+            <div class="row border">
+                <div class="col-xl-6 border">
+                    <div class="row">
+                        <div class="col-lg-2 form-control-sm-erp">
+                            <label for="tipo_documento_referencia" class="col-form-label col-form-label-sm">T Ref:</label>
+                        </div>
+                        <div class="col-lg-4 form-control-sm-erp">
+                            <select class="form-control form-control-sm c_mantenimientos" id="tipo_documento_referencia">
+                                <option value="00">Ninguno</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-3 form-control-sm-erp">
+                            <input type="text" id = "serie_documento_referencia" class="form-control form-control-sm c_mayus">
+                        </div>
+                        <div class="col-lg-3 form-control-sm-erp">
+                            <input type="text" id = "numero_documento_referencia" class="form-control form-control-sm">
+                        </div>
+                    </div>
+                               
+                </div>
+                <div class="col-sm-6 border">
+                    <div class="input-group d-none">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text form-control form-control-sm text-right" for="porc_descuento">Dsct.:</label>
+                        </div>
+                        <input type="number" id ="porc_descuento" class="form-control form-control-sm text-right" value ="0">
+                        <div class="input-group-append">
+                            <span class="input-group-text form-control form-control-sm text-right">%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="d-none">
+    <input id="user-Ventas_Mas_Igv" type="text" value="{{user.ventas_mas_igv}}">
+    <input id="user-Unidad_negocio" type="text" value="{{user.codigo_unidad_negocio}}">
+    <input id="user-codigo_centro_costos" type="text" value="{{user.codigo_centro_costos}}">
+    <input id="user-codigo_punto_venta" type="text" value="{{user.codigo_punto_venta}}">
+    <input id="user-codigo_ninguno" type="text" value="00">
+    <input id="user-predeterminado_documento" type="text" value="01">
+    <input id="user-Busqueda_Punto_Venta" type="text" value="{{user.globales_busqueda_pto_venta}}">
+    <input id="modulo_formatos" type="text" value="requerimientos">
+</div>
+
+{{!--{{> mantenimientos/ventas_pendientes}}--}}
+{{> mantenimientos/lista_mantenimientos}}
+{{> mantenimientos/detalle_ventas}}
+{{> mantenimientos/documentos_listas}}
+{{> mantenimientos/formato_impresion}}
+
+<script src="/js/mantenimientos/cabecera_ventas.js"></script>
+<script src="/js/modulos/compras/requerimientos.js"></script>
+{{/if}}

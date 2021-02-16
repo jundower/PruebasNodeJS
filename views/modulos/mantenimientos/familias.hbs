@@ -1,0 +1,234 @@
+<div class="container-fluid pl-0">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_familias_codigo" class="col-sm-2 col-form-label col-form-label-sm">Codigo:</label>
+                            <input type="text" id="tablas_familias_codigo" class="col-sm-10 form-control form-control-sm m-0 p-0"value="{{datos.Codigo}}" placeholder="Codigo" maxlength="50">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_familias_abreviatura" class="col-sm-3 col-form-label col-form-label-sm">Abreviatura:</label>
+                            <input type="text" id="tablas_familias_abreviatura" class="col-sm-9 form-control form-control-sm m-0 p-0"value="{{datos.Abreviatura}}" placeholder="Abreviatura" maxlength="5">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_familias_nombre" class="col-sm-1 col-form-label col-form-label-sm">Nombre:</label>
+                            <input type="text" id="tablas_familias_nombre" class="col-sm-11 form-control form-control-sm m-0 p-0"value="{{datos.Nombre}}" placeholder="Nombre" >
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 pr-0">
+                    <label for="tablas_familias_afecta_aberviatura_si" class="col-form-label col-form-label-sm">La Abreviatura afecta al Nombre del articulo:</label>
+                </div>
+                <div class="col-sm-8 pl-0">
+                    <div class="form-check form-check-inline m-0 p-0">
+                        <input class="form-check-input" type="radio" name="tablas_familias_afecta_aberviatura" value="S" id ="tablas_familias_afecta_aberviatura_si">
+                        <label class="form-check-label col-form-label-sm" for="tablas_familias_afecta_aberviatura_si">Si</label>
+                    </div>
+                    <div class="form-check form-check-inline m-0 p-0">
+                        <input class="form-check-input" type="radio" name="tablas_familias_afecta_aberviatura" value="N" id ="tablas_familias_afecta_aberviatura_no">
+                        <label class="form-check-label col-form-label-sm" for="tablas_familias_afecta_aberviatura_no">No</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_familias_tipo_cta_debe_pagar" class="col-sm-3 col-form-label col-form-label-sm pr-0 ">Cta Debe:</label>
+                            <select type="text" id="tablas_familias_tipo_cta_debe_pagar" class="col-sm-6 form-control form-control-sm m-0 p-0 tablas_familias_cuenta c_mantenimientos" tabla="plan_contable"></select>
+                            <label class="col-sm-3 col-form-label col-form-label-sm pr-0">para ctas x pagar</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_familias_cta_ne_debe" class="col-sm-3 col-form-label col-form-label-sm pr-0">NE Debe:</label>
+                            <select type="text" id="tablas_familias_cta_ne_debe" class="col-sm-6 form-control form-control-sm m-0 p-0 tablas_familias_cuenta c_mantenimientos" tabla="plan_contable" ></select>
+                            <label  class="col-sm-3 col-form-label col-form-label-sm pr-0">para almacen</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_familias_cta_haber_ventas" class="col-sm-3 col-form-label col-form-label-sm pr-0">Cta Haber:</label>
+                            <select type="text" id="tablas_familias_cta_haber_ventas" class="col-sm-6 form-control form-control-sm m-0 p-0 tablas_familias_cuenta c_mantenimientos" tabla="plan_contable"></select>
+                            <label  class="col-sm-3 col-form-label col-form-label-sm pr-0">para ventas</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_familias_cta_ne_haber" class="col-sm-3 col-form-label col-form-label-sm pr-0">NE Haber:</label>
+                            <select type="text" id="tablas_familias_cta_ne_haber" class="col-sm-6 form-control form-control-sm m-0 p-0 tablas_familias_cuenta c_mantenimientos" tabla="plan_contable" ></select>
+                            <label class="col-sm-3 col-form-label col-form-label-sm pr-0">para almacen</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_familias_cta_nc_dev" class="col-sm-3 col-form-label col-form-label-sm pr-0">Cta NC Dev:</label>
+                            <select type="text" id="tablas_familias_cta_nc_dev" class="col-sm-6 form-control form-control-sm m-0 p-0 tablas_familias_cuenta c_mantenimientos" tabla="plan_contable"></select>
+                            <label class="col-sm-3 col-form-label col-form-label-sm pr-0">para ventas</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_familias_cta_ns_debe" class="col-sm-3 col-form-label col-form-label-sm pr-0">NS Debe:</label>
+                            <select type="text" id="tablas_familias_cta_ns_debe" class="col-sm-6 form-control form-control-sm m-0 p-0 tablas_familias_cuenta c_mantenimientos" tabla="plan_contable" ></select>
+                            <label  class="col-sm-3 col-form-label col-form-label-sm pr-0">para almacen</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_familias_cta_diferida" class="col-sm-3 col-form-label col-form-label-sm pr-0">Cta Diferida:</label>
+                            <select type="text" id="tablas_familias_cta_diferida" class="col-sm-6 form-control form-control-sm m-0 p-0 tablas_familias_cuenta c_mantenimientos" tabla="plan_contable" ></select>
+                            <label class="col-sm-3 col-form-label col-form-label-sm pr-0">para ventas</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_familias_cta_ns_haber" class="col-sm-3 col-form-label col-form-label-sm pr-0">NS Haber:</label>
+                            <select type="text" id="tablas_familias_cta_ns_haber" class="col-sm-6 form-control form-control-sm m-0 p-0 tablas_familias_cuenta c_mantenimientos" tabla="plan_contable" ></select>
+                            <label class="col-sm-3 col-form-label col-form-label-sm pr-0">para almacen</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_familias_cta_costo_debe" class="col-sm-3 col-form-label col-form-label-sm pr-0">Cta Costo Debe:</label>
+                            <select type="text" id="tablas_familias_cta_costo_debe" class="col-sm-6 form-control form-control-sm m-0 p-0 tablas_familias_cuenta c_mantenimientos" tabla="plan_contable" ></select>
+                            <label class="col-sm-3 col-form-label col-form-label-sm pr-0">para ventas</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_familias_cta_debe_importacion" class="col-sm-3 col-form-label col-form-label-sm pr-0">Cta Debe:</label>
+                            <select type="text" id="tablas_familias_cta_debe_importacion" class="col-sm-6 form-control form-control-sm m-0 p-0 tablas_familias_cuenta c_mantenimientos" tabla="plan_contable" ></select>
+                            <label  class="col-sm-3 col-form-label col-form-label-sm pr-0">para import</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_familias_cta_costo_haber" class="col-sm-3 col-form-label col-form-label-sm pr-0">Cta Costo Haber:</label>
+                            <select type="text" id="tablas_familias_cta_costo_haber" class="col-sm-6 form-control form-control-sm m-0 p-0 tablas_familias_cuenta c_mantenimientos" tabla="plan_contable"></select>
+                            <label  class="col-sm-3 col-form-label col-form-label-sm pr-0">para ventas</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_familias_cta_costo_debe_produccion" class="col-sm-3 col-form-label col-form-label-sm pr-0">Cta Costo Debe:</label>
+                            <select type="text" id="tablas_familias_cta_costo_debe_produccion" class="col-sm-6 form-control form-control-sm m-0 p-0 tablas_familias_cuenta c_mantenimientos" tabla="plan_contable"></select>
+                            <label  class="col-sm-3 col-form-label col-form-label-sm pr-0">para produccion</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_familias_cta_costo_haber_produccion" class="col-sm-3 col-form-label col-form-label-sm pr-0">Cta Costo Haber:</label>
+                            <select type="text" id="tablas_familias_cta_costo_haber_produccion" class="col-sm-6 form-control form-control-sm m-0 p-0 tablas_familias_cuenta c_mantenimientos" tabla="plan_contable"></select>
+                            <label class="col-sm-3 col-form-label col-form-label-sm pr-0">para produccion</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group row my-05 py-05">
+                        <label for="tablas_familias_costo_diario" class="col-sm-5 col-form-label col-form-label-sm pr-0">Costo Diario:</label>
+                        <input type="number" id="tablas_familias_costo_diario" class="col-sm-7 form-control form-control-sm m-0 p-0 text-right" value="{{datos.Costo_Dia}}">
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group row my-05 py-05">
+                        <label for="tablas_familias_costo_x_hora" class="col-sm-5 col-form-label col-form-label-sm pr-0">Costo x Hora:</label>
+                        <input type="number" id="tablas_familias_costo_x_hora" class="col-sm-7 form-control form-control-sm m-0 p-0 text-right" value="{{datos.Costo_Hora}}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="d-none">
+    {{#if datos}}
+        <input id="tablas_familias_tipo_cta_debe_pagar_predeterminado" type="text" value="{{datos.Cta_Debe}}">
+        <input id="tablas_familias_cta_ne_debe_predeterminado" type="text" value="{{datos.Alm_NE_Debe}}">
+        <input id="tablas_familias_cta_haber_ventas_predeterminado" type="text" value="{{datos.Cta_Haber}}">
+        <input id="tablas_familias_cta_ne_haber_predeterminado" type="text" value="{{datos.Alm_NE_Haber}}">
+        <input id="tablas_familias_cta_nc_dev_predeterminado" type="text" value="{{datos.Cta_Nc_Dev}}">
+        <input id="tablas_familias_cta_ns_debe_predeterminado" type="text" value="{{datos.Alm_NS_Debe}}">
+        <input id="tablas_familias_cta_diferida_predeterminado" type="text" value="{{datos.Cta_Diferencia}}">
+        <input id="tablas_familias_cta_ns_haber_predeterminado" type="text" value="{{datos.Alm_NS_Haber}}">
+        <input id="tablas_familias_cta_costo_debe_predeterminado" type="text" value="{{datos.Cta_Costo_Debe}}">
+        <input id="tablas_familias_cta_debe_importacion_predeterminado" type="text" value="{{datos.Cta_Imprtacion}}">
+        <input id="tablas_familias_cta_costo_haber_predeterminado" type="text" value="{{datos.Cta_Costo_Haber}}">
+        <input id="tablas_familias_cta_costo_debe_produccion_predeterminado" type="text" value="{{datos.Cta_Produccion_Debe}}">
+        <input id="tablas_familias_cta_costo_haber_produccion_predeterminado" type="text" value="{{datos.Cta_Produccion_Haber}}">
+
+        <input type="text" id="tablas_familias_afecta_aberviatura_predeterminado" value="{{datos.Afecta_Nombre}}">
+    {{else}}
+        <input id="tablas_familias_tipo_cta_debe_pagar_predeterminado" type="text" value="00">
+        <input id="tablas_familias_cta_ne_debe_predeterminado" type="text" value="00">
+        <input id="tablas_familias_cta_haber_ventas_predeterminado" type="text" value="00">
+        <input id="tablas_familias_cta_ne_haber_predeterminado" type="text" value="00">
+        <input id="tablas_familias_cta_nc_dev_predeterminado" type="text" value="00">
+        <input id="tablas_familias_cta_ns_debe_predeterminado" type="text" value="00">
+        <input id="tablas_familias_cta_diferida_predeterminado" type="text" value="00">
+        <input id="tablas_familias_cta_ns_haber_predeterminado" type="text" value="00">
+        <input id="tablas_familias_cta_costo_debe_predeterminado" type="text" value="00">
+        <input id="tablas_familias_cta_debe_importacion_predeterminado" type="text" value="00">
+        <input id="tablas_familias_cta_costo_haber_predeterminado" type="text" value="00">
+        <input id="tablas_familias_cta_costo_debe_produccion_predeterminado" type="text" value="00">
+        <input id="tablas_familias_cta_costo_haber_produccion_predeterminado" type="text" value="00">
+
+        <input type="text" id="tablas_familias_afecta_aberviatura_predeterminado" value="{{datos.Afecta_Nombre}}">
+    {{/if}}
+</div>

@@ -1,0 +1,324 @@
+{{#if user}}
+<div class="d-print-none" id = "reporte-documento-body">
+    <div class="row  d-none">
+            <div class="col" id ="modulo">{{modulo}}</div>
+            <input id="modulo_reportes" type="text" value="{{modulo}}">
+        </div>
+    <ul class="nav nav-tabs tabs group pl-4" id="myTab" role="tablist">
+    <li class="nav-item active nav-tab-rounded">
+        <a class="active my-0 py-2" data-toggle="tab" href="#generales">Filtros</a>
+    </li>
+    {{!-- <li class="nav-item nav-tab-rounded">
+        <a class="my-0 py-2" data-toggle="tab" href="#profile">Datos Complementarios</a>
+    </li> --}}
+    </ul>
+
+    <div class="tab-content mr-3" id="myTabContent">
+        <div class="tab-pane fade show active" id="generales" role="tabpanel" aria-labelledby="generales-tab">
+            <div class="container-fluid border">
+                <div class="row">
+                    <div class="col-md-12 border">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="row">
+                                    <label for="punto_venta" class="col-md-2 col-form-label col-form-label-sm">Punto de Venta</label>
+                                    <select class="col-md-4 form-control form-control-sm" id="punto_venta">
+                                    </select>
+                                    <label for="almacen" class="col-md-2 col-form-label col-form-label-sm">Almacén</label>
+                                    <select class="col-md-4 form-control form-control-sm" id="almacen">
+                                    </select>
+                                    <label for="tipo_producto" class="col-md-2 col-form-label col-form-label-sm">Tipo de Productos</label>
+                                    <select class="col-md-4 form-control form-control-sm" id="tipo_producto">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="row">
+                                    <label for="tipo_stock" class="col-md-2 col-form-label col-form-label-sm">Ver Stock</label>
+                                    <select class="col-md-4 form-control form-control-sm" id="tipo_stock">
+                                        <option value="(TODOS)">Todos</option>
+                                        <option value="sin">Sin Stock</option>
+                                        <option value="con">Con Stock</option>
+                                    </select>
+                                    <label for="moneda" class="col-md-2 col-form-label col-form-label-sm">Moneda</label>
+                                    <select class="col-md-4 form-control form-control-sm" id="moneda">
+                                        <option value="S/">S/</option>
+                                        <option value="$">$</option>
+                                    </select>
+                                    <button type="button" class="col-md-6 form-control form-control-sm btn btn-primary btn-block" id ="filtrar">Filtrar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <table id="table_grid"></table>
+    
+    <div class="d-none">
+        <input id="user-punto_venta" type="text" value="{{user.codigo_punto_venta}}">
+        <input id="user-almacen" type="text" value="{{user.almacen_relacionado}}">
+    </div>
+</div>
+<div id = "reporte_print" class="d-none d-print-block ">
+
+</div>
+
+<div class="modal-print-backdrop print_container d---none d-print-none"></div>
+
+<div id ="contenedor_impresion" class="print_container d---none" tabindex="0" >
+    <div id ="formato_impresion" class="mx-auto" style="width: 1060px;">
+        <div id = "print_page" style="font-size:10px">
+                <div class="print_header" style="height: 185px; font-weight:700;">
+                    <div class="row" style="margin-top:5px">
+                        <div style="width: 150px; margin-left:15px; text-align:center;"></div>
+                        <div style="width: 700px; text-align:center;font-size:14px; color:maroon;"><u>REGISTRO DE INVENTARIO PERMANENTE VALORIZADO</u></div>
+                        <div style="width: 150px; text-align:right;" id="print_paginacion">print_header_paginacion</div>
+                    </div>
+                    <div class="row">
+                        <div style="width: 150px; margin-left:15px; text-align:center;"></div>
+                        <div style="width: 700px; text-align:center;font-size:14px; color:maroon;"><u>DETALLE DEL INVENTARIO VALORIZADO</u></div>
+                        <div style="width: 150px; text-align:right;">print_header_fecha_pagina</div>
+                    </div>
+                    <div class="row" style="padding-bottom:5px">
+                        <div style="width: 150px; margin-left:15px; text-align:center;"></div>
+                        <div style="width: 700px; text-align:center;font-size:14px; color:maroon;" class="print_header_fecha_intervalo">
+                        </div>
+                        <div style="width: 150px; text-align:right;"></div>
+                    </div>
+                    <div class="row" style="color: dodgerblue; font-size:11px;">
+                        <div style="width: 200px; text-align:right; margin-left:15px;">PERIODO:</div>
+                        <div style="width: 500px; margin-left:5px; text-align:left;" class="print_header_periodo"></div>
+                        <div style="width: 200px; text-align:right;">PTO. DE VENTA:</div>
+                        <div style="width: 150px; margin-left:5px; text-align:left;" class="print_header_punto_venta"></div>
+                    </div>
+                    <div class="row" style="color: dodgerblue; font-size:11px;">
+                        <div style="width: 200px; text-align:right; margin-left:15px;">R.U.C.:</div>
+                        <div style="width: 500px; margin-left:5px; text-align:left;" class="print_header_ruc"></div>
+                        <div style="width: 200px; Text-align:right;">ALMACÉN:</div>
+                        <div style="width: 150px; margin-left:5px; text-align:left;" class="print_header_almacen"></div>
+                    </div>
+                    <div class="row" style="color: dodgerblue; font-size:11px;">
+                        <div style="width: 200px; text-align:right; margin-left:15px;">RAZON SOCIAL:</div>
+                        <div style="width: 500px; margin-left:5px; text-align:left;" class="print_header_razon_social"></div>
+                    </div>
+                    <div class="row" style="color: dodgerblue; font-size:11px;">
+                        <div style="width: 200px; text-align:right; margin-left:15px;">ESTABLECIMIENTO:</div>
+                        <div style="width: 500px; margin-left:5px; text-align:left;" class="print_header_direccion"></div>
+                    </div>
+                    <div class="row" style="color: dodgerblue; font-size:11px;">
+                        <div style="width: 200px; text-align:right; margin-left:15px;">MÉTODO DE EVALUACIÓN:</div>
+                        <div style="width: 500px; margin-left:5px; text-align:left;">PROMEDIO PONDERADO</div>
+                    </div>
+                    <div class="row align-items-center" style="text-align:center">
+                        <div style="width: 250px; margin-left:15px; border:1px solid black;">DOCUMENTO DE TRASLADO COMPROBANTE</div>
+                        <div style="width: 50px; border:1px solid black; border-bottom:1px solid white">TIPO</div>
+                        <div style="width: 250px; border:1px solid black;">ENTRADAS</div>
+                        <div style="width: 250px; border:1px solid black;">SALIDAS</div>
+                        <div style="width: 250px; border:1px solid black;">SALDOS</div>
+                    </div>
+                    <div class="row align-items-center" style="text-align:center">
+                        <div style="width: 80px; margin-left:15px; border:1px solid black;">FECHA</div>
+                        <div style="width: 50px; border:1px solid black">TIPO</div>
+                        <div style="width: 120px; border:1px solid black;">DOCUMENTO</div>
+                        <div style="width: 50px; border:1px solid black; border-top:1px solid white">OPER.</div>
+                        <div style="width: 80px; border:1px solid black;">CANTIDAD</div>
+                        <div style="width: 90px; border:1px solid black">COSTO UNITARIO</div>
+                        <div style="width: 80px; border:1px solid black;">COSTO TOTAL</div>
+                        <div style="width: 80px; border:1px solid black;">CANTIDAD</div>
+                        <div style="width: 90px; border:1px solid black">COSTO UNITARIO</div>
+                        <div style="width: 80px; border:1px solid black;">COSTO TOTAL</div>
+                        <div style="width: 80px; border:1px solid black;">CANTIDAD</div>
+                        <div style="width: 90px; border:1px solid black">COSTO UNITARIO</div>
+                        <div style="width: 80px; border:1px solid black;">COSTO TOTAL</div>
+                    </div>
+                </div>
+
+                <div class="print_body">
+                    <div id="print_body_fila_detalle_1">
+                        <div id ="fila_1" class="print_body_filas_id row">
+                            
+                            <div id ="print_body_agrupacion" class="row align-items-center" style="margin-left: 15px; margin-right: 15px; border-bottom: 2px solid black; margin-top:10px; padding-bottom:10px; color: dodgerblue;  font-weight:700;">
+                                <div style="width: 285px; margin-left:15px; text-align:left;">
+                                    <div class="row">
+                                        <div style="width: 285px; margin-left:15px;">print_body_codigo</div>
+                                    </div>
+                                </div>
+                                <div style="width: 350px; text-align:left;">
+                                    <div class="row">
+                                        <div style="width: 250px; margin-left:15px;">print_body_descripcion</div>
+                                    </div>
+                                </div>
+                                <div style="width: 150px; text-align:left;">
+                                    <div class="row">
+                                        <div style="width: 250px; margin-left:15px;">print_body_unidad</div>
+                                    </div>
+                                </div>
+                                <div style="width: 250px; text-align:left;">
+                                    <div class="row">
+                                        <div style="width: 250px; margin-left:15px;">print_body_familia</div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row align-items-center" style="margin-left: 0px; magin-top:5px; margin-bottom:5px">
+                                <div style="width: 250px; margin-left:15px; text-align:center;">
+                                    <div class="row">
+                                        <div style="width: 80px; margin-left:15px;">Documento_Fecha</div>
+                                        <div style="width: 50px;">Documento_Tipo</div>
+                                        <div style="width: 120px;">Documento_Numero</div>
+                                    </div>
+                                </div>
+                                <div style="width: 50px; text-align:center;" id="print_detalle_documento_operacion0"></div>
+                                <div style="width: 250px; text-align:right;">
+                                    <div class="row">
+                                        <div style="width: 80px; margin-left:15px; visibility: hidden">Producto_Entrada_Cantidad</div>
+                                        <div style="width: 90px; visibility: hidden">Producto_Entrada_Costo_Unitario</div>
+                                        <div style="width: 80px; visibility: hidden">Producto_Entrada_Costo_Total</div>
+                                    </div>
+                                </div>
+                                <div style="width: 250px; text-align:right;">
+                                    <div class="row">
+                                        <div style="width: 80px; margin-left:15px; visibility: hidden">Producto_Salida_Cantidad</div>
+                                        <div style="width: 90px; visibility: hidden">Producto_Salida_Costo_Unitario</div>
+                                        <div style="width: 80px; visibility: hidden">Producto_Salida_Costo_Total</div>
+                                    </div>
+                                </div>
+                                <div style="width: 250px; text-align:right;">
+                                    <div class="row">
+                                        <div style="width: 80px; margin-left:15px;">Producto_Saldo_Cantidad</div>
+                                        <div style="width: 90px;">Producto_Saldo_Costo_Unitario</div>
+                                        <div style="width: 80px;">Producto_Saldo_Costo_Total</div>
+                                    </div>
+                                </div>
+                            </div>
+                                
+                            <div id ="print_body_totales" class="row align-items-center" style="margin-left: 15px; margin-right: 15px; border-bottom: 2px solid black; color: maroon">
+                                <div style="width: 285px; margin-left:15px; text-align:right;">
+                                    <div class="row">
+                                        <div style="width: 285px; margin-left:15px;">Producto_Total_Agrupacion</div>
+                                    </div>
+                                </div>
+                                <div style="width: 250px; text-align:right;">
+                                    <div class="row">
+                                        <div style="width: 80px; margin-left:15px;">Producto_Entrada_Cantidad_Sumatoria</div>
+                                        <div style="width: 90px; visibility: hidden">Producto_Entrada_Costo_Unitario_Sumatoria</div>
+                                        <div style="width: 80px;">Producto_Entrada_Costo_Total_Sumatoria</div>
+                                    </div>
+                                </div>
+                                <div style="width: 250px; text-align:right;">
+                                    <div class="row">
+                                        <div style="width: 80px; margin-left:15px;">Producto_Salida_Cantidad_Sumatoria</div>
+                                        <div style="width: 90px; visibility: hidden">Producto_Salida_Costo_Unitario_Sumatoria</div>
+                                        <div style="width: 80px;">Producto_Salida_Costo_Total_Sumatoria</div>
+                                    </div>
+                                </div>
+                                <div style="width: 250px; text-align:right;">
+                                    <div class="row">
+                                        <div style="width: 80px; margin-left:15px; visibility: hidden">Producto_Saldo_Cantidad_Sumatoria</div>
+                                        <div style="width: 90px; visibility: hidden">Producto_Saldo_Costo_Unitario_Sumatoria</div>
+                                        <div style="width: 80px; visibility: hidden">Producto_Saldo_Costo_Total_Sumatoria</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="print_footer" style="height: 50px;">
+                    
+                        
+                    <div class="row align-items-center" style="margin-left: 0px; margin-right: 0px; border-top: 0.5px solid black; color: maroon; font-weight:700">
+                        <div style="width: 285px; margin-left:15px; text-align:right;">
+                            <div class="row">
+                                <div style="width: 285px; margin-left:15px;">Total ---------></div>
+                            </div>
+                        </div>
+                        <div style="width: 250px; text-align:right;">
+                            <div class="row">
+                                <div id="Producto_Entrada_Cantidad_Total" style="width: 80px; margin-left:15px;"></div>
+                                <div id="Producto_Entrada_Costo_Unitario_Total" style="width: 90px;"></div>
+                                <div id="Producto_Entrada_Costo_Total_Total" style="width: 80px;"></div>
+                            </div>
+                        </div>
+                        <div style="width: 250px; text-align:right;">
+                            <div class="row">
+                                <div id="Producto_Salida_Cantidad_Total" style="width: 80px; margin-left:15px;"></div>
+                                <div id="Producto_Salida_Costo_Unitario_Total" style="width: 90px;"></div>
+                                <div id="Producto_Salida_Costo_Total_Total" style="width: 80px;"></div>
+                            </div>
+                        </div>
+                        {{!-- <div style="width: 250px; text-align:right;">
+                            <div class="row">
+                                <div id="Producto_Saldo_Cantidad_Total" style="width: 80px; margin-left:15px;"></div>
+                                <div id="Producto_Saldo_Costo_Unitario_Total" style="width: 90px;"></div>
+                                <div id="Producto_Saldo_Costo_Total_Total" style="width: 80px;"></div>
+                            </div>
+                        </div> --}}
+                        <div style="width: 250px; text-align:right;">
+                            <div class="row">
+                                <div id="Producto_Saldo_Cantidad_Total" style="width: 250px; margin-left:15px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="breaker d-print-none">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id ="print_botones_top" class="print_container d---none d-print-none" ></div>
+
+<div id ="print_botones" class="print_container d---none d-print-none">
+  <a class="print_botones_onedrive" role="button">
+      <svg class="svg-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19.479 10.092c-.212-3.951-3.473-7.092-7.479-7.092-4.005 0-7.267 3.141-7.479 7.092-2.57.463-4.521 2.706-4.521 5.408 0 3.037 2.463 5.5 5.5 5.5h13c3.037 0 5.5-2.463 5.5-5.5 0-2.702-1.951-4.945-4.521-5.408zm-7.479-1.092l4 4h-3v4h-2v-4h-3l4-4z"/></svg>
+  </a>
+  <a class="print_botones_imprimir" role="button">
+      <svg class="svg-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M14 20h-6v-1h6v1zm10-15v13h-4v6h-16v-6h-4v-13h4v-5h16v5h4zm-6 10h-12v7h12v-7zm0-13h-12v3h12v-3zm4 5.5c0-.276-.224-.5-.5-.5s-.5.224-.5.5.224.5.5.5.5-.224.5-.5zm-6 9.5h-8v1h8v-1z"/></svg>
+  </a>
+  {{!-- <a class="print_botones_excel" role="button">
+      <svg class="svg-white" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 512 512"><path d="M496,80.011H288v-48c0-4.768-2.112-9.28-5.792-12.32c-3.648-3.04-8.544-4.352-13.152-3.392l-256,48    C5.472,65.707,0,72.299,0,80.011v352c0,7.68,5.472,14.304,13.056,15.712l256,48c0.96,0.192,1.952,0.288,2.944,0.288    c3.712,0,7.328-1.28,10.208-3.68c3.68-3.04,5.792-7.584,5.792-12.32v-48h208c8.832,0,16-7.168,16-16v-320    C512,87.179,504.832,80.011,496,80.011z M220.032,309.483c5.824,6.624,5.152,16.736-1.504,22.56    c-3.04,2.656-6.784,3.968-10.528,3.968c-4.448,0-8.864-1.856-12.032-5.472l-46.528-53.152l-40.8,52.48    c-3.168,4.032-7.904,6.144-12.64,6.144c-3.424,0-6.88-1.088-9.824-3.36c-6.976-5.44-8.224-15.488-2.816-22.464l44.608-57.344    l-44-50.304c-5.824-6.624-5.152-16.736,1.504-22.56c6.624-5.824,16.704-5.184,22.592,1.504L148,227.115l47.392-60.928    c5.44-6.944,15.488-8.224,22.464-2.784c6.976,5.408,8.224,15.456,2.784,22.464l-51.2,65.792L220.032,309.483z M480,400.011H288    v-32h48c8.832,0,16-7.168,16-16c0-8.832-7.168-16-16-16h-48v-32h48c8.832,0,16-7.168,16-16c0-8.832-7.168-16-16-16h-48v-32h48    c8.832,0,16-7.168,16-16c0-8.832-7.168-16-16-16h-48v-32h48c8.832,0,16-7.168,16-16c0-8.832-7.168-16-16-16h-48v-32h192V400.011z"/></svg>
+  </a> --}}
+  <a class="print_botones_descargar" role="button">
+      <svg class="svg-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 21l-8-9h6v-12h4v12h6l-8 9zm9-1v2h-18v-2h-2v4h22v-4h-2z"/></svg>
+  </a>
+</div>
+
+<div id ="print_botones2" class="print_container d---none d-print-none">
+  <a class="print_botones_atras" role="button">
+      <svg class="svg-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 12l9-8v6h15v4h-15v6z"/></svg>
+  </a>
+</div>
+
+<div id ="print_rango_fechas" class="print_container d---none d-print-none">
+    <div class="form-group row my-05 py-05" style="margin-left: 15px; margin-right:15px;">
+        <label for="kardex_fecha_inicial" class="col-sm-5 col-form-label col-form-label-sm">Fecha Inicial:</label>
+        <input type="date" id="kardex_fecha_inicial" class="col-sm-7 form-control form-control-sm m-0 p-0">
+    </div>
+    <div class="form-group row my-05 py-05" style="margin-left: 15px; margin-right:15px;">
+        <label for="kardex_fecha_final" class="col-sm-5 col-form-label col-form-label-sm">Fecha Final:</label>
+        <input type="date" id="kardex_fecha_final" class="col-sm-7 form-control form-control-sm m-0 p-0">
+    </div>
+</div>
+
+<div id="print_moneda" class="col-sm-7 form-check form-check-inline print_container d---none d-print-none">
+    <label for="print_moneda_select" class="col-sm-8 col-form-label col-form-label-sm">Moneda:</label>
+    <select class="col-sm-4 form-control form-control-sm m-0 p-0" id="print_moneda_select"><option value="S/">S/</option><option value="$">$</option></select>
+</div>
+{{!-- <script src="/js/mantenimientos/formato_impresion.js"></script> --}}
+
+
+{{!-- {{> mantenimientos/lista_mantenimientos}} --}}
+<script src="/js/modulos/almacen/kardex.js"></script>
+<script src="/plugins/kinzi-print/kinzi.print.min.js"></script>
+
+{{/if}}
+
+

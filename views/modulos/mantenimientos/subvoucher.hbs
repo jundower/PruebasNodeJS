@@ -1,0 +1,165 @@
+<div class="container-fluid pl-0">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_subvoucher_codigo" class="col-sm-2 col-form-label col-form-label-sm">Codigo:</label>
+                            <input type="text" id="tablas_subvoucher_codigo" class="col-sm-10 form-control form-control-sm m-0 p-0"value="{{datos.Codigo}}" placeholder="Codigo" maxlength="50">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_subvoucher_abreviatura" class="col-sm-3 col-form-label col-form-label-sm">Abreviatura:</label>
+                            <input type="text" id="tablas_subvoucher_abreviatura" class="col-sm-9 form-control form-control-sm m-0 p-0"value="{{datos.Abreviatura}}" placeholder="Abreviatura" maxlength="5">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_subvoucher_nombre" class="col-sm-1 col-form-label col-form-label-sm">Nombre:</label>
+                            <input type="text" id="tablas_subvoucher_nombre" class="col-sm-11 form-control form-control-sm m-0 p-0"value="{{datos.Nombre}}" placeholder="Nombre" >
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2 pr-0">
+                    <label for="tablas_subvoucher_genera_transferencia_si" class="col-form-label col-form-label-sm">Genera  Tranf.:</label>
+                </div>
+                <div class="col-sm-2 pl-0">
+                    <div class="form-check form-check-inline m-0 p-0">
+                        <input class="form-check-input" type="radio" name="tablas_subvoucher_genera_transferencia" value="S" id ="tablas_subvoucher_genera_transferencia_si">
+                        <label class="form-check-label col-form-label-sm" for="tablas_subvoucher_genera_transferencia_si">Si</label>
+                    </div>
+                    <div class="form-check form-check-inline m-0 p-0">
+                        <input class="form-check-input" type="radio" name="tablas_subvoucher_genera_transferencia" value="N" id ="tablas_subvoucher_genera_transferencia_no">
+                        <label class="form-check-label col-form-label-sm" for="tablas_subvoucher_genera_transferencia_no">No</label>
+                    </div>
+                </div>
+                <div class="col-sm-2 pr-0">
+                    <label for="tablas_subvoucher_genera_diferencia_si" class="col-form-label col-form-label-sm">Genera  Diferencia:</label>
+                </div>
+                <div class="col-sm-2 pl-0">
+                    <div class="form-check form-check-inline m-0 p-0">
+                        <input class="form-check-input" type="radio" name="tablas_subvoucher_genera_diferencia" value="S" id ="tablas_subvoucher_genera_diferencia_si">
+                        <label class="form-check-label col-form-label-sm" for="tablas_subvoucher_genera_diferencia_si">Si</label>
+                    </div>
+                    <div class="form-check form-check-inline m-0 p-0">
+                        <input class="form-check-input" type="radio" name="tablas_subvoucher_genera_diferencia" value="N" id ="tablas_subvoucher_genera_diferencia_no">
+                        <label class="form-check-label col-form-label-sm" for="tablas_subvoucher_genera_diferencia_no">No</label>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_subvoucher_tipo_cambio" class="col-sm-6 col-form-label col-form-label-sm pr-0">Tipo Cambio:</label>
+                            <select type="text" id="tablas_subvoucher_tipo_cambio" class="col-sm-6 form-control form-control-sm m-0 p-0">
+                                <option value="VTA">Venta</option>
+                                <option value="COM">Compra</option>
+                                <option value="ESP">Especial </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2 pr-0">
+                    <label for="tablas_subvoucher_calcula_mn_me_si" class="col-form-label col-form-label-sm">Calcula MN, Me:</label>
+                </div>
+                <div class="col-sm-2 pl-0">
+                    <div class="form-check form-check-inline m-0 p-0">
+                        <input class="form-check-input" type="radio" name="tablas_subvoucher_calcula_mn_me" value="S" id ="tablas_subvoucher_calcula_mn_me_si">
+                        <label class="form-check-label col-form-label-sm" for="tablas_subvoucher_afecta_aberviatura_si">Si</label>
+                    </div>
+                    <div class="form-check form-check-inline m-0 p-0">
+                        <input class="form-check-input" type="radio" name="tablas_subvoucher_calcula_mn_me" value="N" id ="tablas_subvoucher_calcula_mn_me_no">
+                        <label class="form-check-label col-form-label-sm" for="tablas_subvoucher_calcula_mn_me_no">No</label>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_subvoucher_caracteres" class="col-sm-6 col-form-label col-form-label-sm pr-0">N Caracteres:</label>
+                            <input type="number" id="tablas_subvoucher_caracteres" class="col-sm-6 form-control form-control-sm m-0 p-0 text-center" value="{{datos.Caracteres}}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_subvoucher_nombre" class="col-sm-2 col-form-label col-form-label-sm">Modulos:</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="m-0 p-0">
+                        <div class="form-check row my-05 py-05">
+                            <input class="form-check-input" type="checkbox" id="tablas_subvoucher_compras">
+                            <label class="form-check-label col-form-label-sm" for="tablas_subvoucher_compras">Compras</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="m-0 p-0">
+                        <div class="form-check row my-05 py-05">
+                            <input class="form-check-input" type="checkbox" id="tablas_subvoucher_ventas">
+                            <label class="form-check-label col-form-label-sm" for="tablas_subvoucher_ventas">Ventas</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="m-0 p-0">
+                        <div class="form-check row my-05 py-05">
+                            <input class="form-check-input" type="checkbox" id="tablas_subvoucher_contabilidad">
+                            <label class="form-check-label col-form-label-sm" for="tablas_subvoucher_contabilidad">Contabilidad</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="m-0 p-0">
+                        <div class="form-check row my-05 py-05">
+                            <input class="form-check-input" type="checkbox" id="tablas_subvoucher_cancelacion">
+                            <label class="form-check-label col-form-label-sm" for="tablas_subvoucher_cancelacion">Cancelacion</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <table id="grid_tablas_subvoucher_cuentas_subvoucher"></table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="d-none">
+    {{#if datos}}
+        <input id="tablas_subvoucher_genera_transferencia_predeterminado" type="text" value="{{datos.Si_Transferencia}}">
+        <input id="tablas_subvoucher_genera_diferencia_predeterminado" type="text" value="{{datos.Si_Diferencia}}">
+        <input id="tablas_subvoucher_tipo_cambio_predeterminado" type="text" value="{{datos.Tipo_Cambio}}">
+        <input id="tablas_subvoucher_calcula_mn_me_predeterminado" type="text" value="{{datos.Si_CalculaMonedas}}">
+        <input id="tablas_subvoucher_compras_predeterminado" type="text" value="{{datos.Si_Compras}}">
+        <input id="tablas_subvoucher_ventas_predeterminado" type="text" value="{{datos.Si_Ventas}}">
+        <input id="tablas_subvoucher_contabilidad_predeterminado" type="text" value="{{datos.Si_Contable}}">
+        <input id="tablas_subvoucher_cancelacion_predeterminado" type="text" value="{{datos.Si_Cancelacion}}">
+    {{else}}
+        <input id="tablas_subvoucher_genera_transferencia_predeterminado" type="text" value="N">
+        <input id="tablas_subvoucher_genera_diferencia_predeterminado" type="text" value="N">
+        <input id="tablas_subvoucher_tipo_cambio_predeterminado" type="text" value="00">
+        <input id="tablas_subvoucher_calcula_mn_me_predeterminado" type="text" value="N">
+        <input id="tablas_subvoucher_compras_predeterminado" type="text" value="N">
+        <input id="tablas_subvoucher_ventas_predeterminado" type="text" value="N">
+        <input id="tablas_subvoucher_contabilidad_predeterminado" type="text" value="N">
+        <input id="tablas_subvoucher_cancelacion_predeterminado" type="text" value="N">
+    {{/if}}
+</div>

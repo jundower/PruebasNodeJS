@@ -1,0 +1,195 @@
+{{!-- detalle de ventas --}}
+<div class="d-print-none">
+  
+  <table id="grid_detalle_ventas"></table>
+  <div id="grid_detalle_ventas_pager"></div>
+
+  <div id="comentario_box">
+    <div class="form-check form-check-inline comentario_normal" style="padding-left: 29px; ">
+        <input class="form-check-input" type="checkbox" id="comentario_normal" value="comentario_normal">
+        <label class="form-check-label form-control-sm" for="comentario_normal">Comentario</label>
+      </div>
+    <div class="form-check form-check-inline comentario_normal_02 d-none" style="padding-left: 29px; ">
+      <input class="form-check-input" type="checkbox" id="comentario_normal_02" value="comentario_normal_02">
+      <label class="form-check-label form-control-sm" for="comentario_normal_02">Comentario</label>
+    </div>
+    <div class="form-check form-check-inline comentario_detallado d-none">
+      <input class="form-check-input" type="checkbox" id="comentario_detallado" value="comentario_detallado">
+      <label class="form-check-label form-control-sm" for="comentario_detallado">Comentario Detallado</label>
+    </div>
+  </div>
+</div>
+{{!-- detalle de ventas --}}
+
+{{!-- Lista de productos --}}
+<div class="modal fade" tabindex="-1" role="dialog" id="modal_productos">
+  <div class="modal-dialog-full-width modal-dialog">
+    <div class="modal-content-full-width modal-content">
+
+      <div class="modal-header-full-width modal-header" style="padding: 5px 10px 0px 18px">
+        <h4 class="modal-title titulos_erp">Lista de Productos</h4>
+        
+        <a type="button" class="close" data-toggle="tooltip" data-placement="top" title="Cofigurar" href="/configurar_tablas" target="_blank">
+          <span><svg class="bi bi-gear-fill" width=".7em" height=".7em" viewBox="0 0 16 16" fill="currentColor">
+                <path fill-rule="evenodd" d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 0 0-5.86 2.929 2.929 0 0 0 0 5.858z"/>
+                </svg></span>
+        </a>
+        <button type="button" class="close ml-0" data-dismiss="modal">
+          <span>&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body" id="modal_parent_lista_productos_content" style="padding: 5px 15px 30px 15px;">
+        <div class="row">
+          <div class="col-10" id="parent_lista_productos">
+            <table id="lista_productos"></table>
+            <div id="lista_productos_pager" style="text-align:center" > </div>
+          </div>
+          <div class="col-2 pl-1">
+            <div class="row align-items-center">
+              <div class="col-12  pl-1 col-align-items-center">
+                <button type="button" class="btn btn-light btn-image-lt">&lt;</button>
+                <img src="" codigo="{{user.codigo_empresa}}" class="img-thumbnail" id ="lista_productos_imagen">
+                <button type="button" class="btn btn-light btn-image-gt">&gt;</button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-5">
+                <label class="sm">Leyenda 1:</label>
+              </div>
+              <div class="col-7">
+                <label class="sm" id ="lista_productos_leyenda1"></label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row pt-2" id ="modal_productos_footer">
+          <div class="col-3" id="parent_lista_producto_punto_venta">
+            <table id="lista_productos_punto_venta"></table>
+          </div>
+          <div class="col-3" id="parent_lista_productos_unidades">
+              <table id="lista_productos_unidades"></table>
+          </div>
+          <div class="col-4" id="parent_lista_productos_almacenes">
+              <table id="lista_productos_almacenes"></table>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer-full-width modal-footer">
+        <button id="lista_productos_nuevo" type="button" class="btn btn-success" data-dismiss="modal">Nuevo</button>
+        <button id="lista_productos_modificar" type="button" class="btn btn-warning" data-dismiss="modal">Modificar</button>
+
+        <button id="lista_productos_enviar" type="button" class="btn btn-primary" data-dismiss="modal">Enviar</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+
+    </div>
+  </div>
+</div> 
+{{!-- Lista de productos --}}
+
+
+{{!-- Detalle del producto --}}
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" id="modal_productos_detalle">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      
+      <div class="modal-header">
+        <h4 class="modal-title titulos_erp">Presentación de Articulos</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="form-group row">
+            <label class="col-sm-1 col-form-label-sm">Almacen:</label>
+            <div class="col-sm-4">
+                <select id="productos_detalle_almacenes" class="form-control form-control-sm">
+                    <option>Ninguno</option>
+                </select>
+            </div>
+        </div>
+        <h6 id="producto_titulo_detalle"></h6>
+        <div class="table-responsive">
+          <table id="lista_productos_detalle"></table>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+      </div>
+
+    </div>
+  </div>
+</div> 
+{{!-- Detalle del producto --}}
+
+{{!-- Series y Lote del producto --}}
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" id="modal_serie_lote">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      
+      <div class="modal-header">
+        <button type="button" class="btn btn-danger sm mx-2" id ="enviar_serie_lote" data-toggle="tooltip" data-placement="top" title="Enviar"><i class="fa fa-reply"></i></button>
+        <h4 class="modal-title titulos_erp" id ="modal_title_serie_lote">Titulo</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="form-group row">
+            <label class="col-sm-1 col-form-label-sm">Almacen:</label>
+            <div class="col-sm-4">
+                <select id="serie_lote_almacenes" class="form-control form-control-sm">
+                    <option>Ninguno</option>
+                </select>
+            </div>
+        </div>
+        <h6 id="serie_lote_titulo_detalle"></h6>
+        <div class="table-responsive">
+          <table id="lista_serie_lote"></table>
+          <div id="lista_serie_lote_pager" style="text-align:center" > </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+      </div>
+
+    </div>
+  </div>
+</div> 
+{{!-- Detalle del producto --}}
+
+{{!-- Modal Comentario Normal --}}
+<div class="modal fade" id="m_comentario_normal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="top: 61%; z-index: auto; width: 40%;">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div>
+          {{!-- <textarea class="col-md-12" name="" id="comentario" rows="5"></textarea> --}}
+          <table id="grid_comentario_normal"></table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="m_comentario_normal_02" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="top: 61%; z-index: auto; width: 40%;">
+  <div class="modal-dialog" role="document">
+    <textarea class="col-md-12" name="" id="text_comentario" rows="5"></textarea>
+  </div>
+</div>
+
+<script src="/js/mantenimientos/detalle_ventas.js"></script>
+
+{{!-- {{#ifeq user.globales_busqueda_pto_venta  "S"}}
+<script src="/js/mantenimientos/detalle_ventas_productos.js"></script>
+{{/ifeq}}
+{{#ifeq user.globales_busqueda_pto_venta  "N"}}
+<script src="/js/mantenimientos/detalle_ventas_productos_pto_venta.js"></script>
+{{/ifeq}} --}}
+{{!-- <script src="/js/mantenimientos/detalle_ventas_productos_pto_venta.js"></script> --}}
+<script src="/js/mantenimientos/detalle_ventas_productos.js"></script>
+<script src="/js/mantenimientos/detalle_ventas_productos_detalle.js"></script>

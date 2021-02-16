@@ -1,0 +1,50 @@
+<div class="row " style="height: 540px; width: 100%;">
+    <div class="col-md-4" style="height: 100%;">
+        <div class="col-md-12 pt-4">
+            <table id="lista_pre_cotizaciones"></table>
+            <div id="p_pre_cotizaciones"></div>
+        </div>
+    </div>
+    <div class="col-md-8" style="height: 100%;">
+        <div class="container-fluid border mt-2 pt-2">
+            <div class="row  d-none">
+                <div class="col" id ="modulo">{{modulo}}</div>
+                <input id="modulo_formatos" type="text" value="{{modulo}}">
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-sm-6">
+                        <form class="m-0 p-0">
+                            <div class="form-group row my-05 py-05">
+                                <label for="estado" class="col-sm-6 col-form-label col-form-label-sm">Estado:</label>
+                                <select class="col-sm-6 form-control form-control-sm m-0 p-0" id="estado">
+                                    <option value="Sin Aprobacion">Sin Aprobación</option>
+                                    <option value="Aprobado">Aprobado</option>
+                                    <option value="Desaprobado">Desaprobado</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                    <table id="cabezera_comparativo_precios"></table>
+                    <div id="c_comparativo_precios"></div>
+                    <br>
+                    <table id="detalle_comparativo_precios"></table>
+                    <div id="p_comparativo_precios"></div>
+            </div>
+            <div class="row" id ="contenedor_formato_impresion">
+                <div class="col-8">
+                    <button type="button" class="btn btn-close-modal" id="close_print">
+                        <p class="btn-close-modal-text">x</p>
+                    </button>
+                    {{> mantenimientos/formato_impresion}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+
+{{!-- {{> mantenimientos/lista_mantenimientos}} --}}
+<script src="/js/modulos/compras/aprobaciones_comparativo_precios.js"></script>

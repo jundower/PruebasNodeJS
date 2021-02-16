@@ -1,0 +1,98 @@
+
+{{> mantenimientos/modal_tablas}}
+ <!-- Modal Lista -->
+<div class="modal fade" tabindex="-1" role="dialog" id="modal_mantenimientos">
+  <div class="modal-dialog-full-width modal-dialog">
+    <div class="modal-content-full-width modal-content">
+      <div class="modal-header-full-width modal-header">
+        <div class="row" >
+          <ul class="list-group list-group-horizontal-sm px-4">
+            <li class="list-group ">
+                <button type="button" class="btn m-0 p-0" id ="enviar_mantenimientos" data-toggle="tooltip" data-placement="top" title="Enviar">
+                  <img src="/img/atras_rojo_1.png" ></img>
+                </button>
+            </li>
+            <li class="list-group">
+                <button type="button" class="btn m-0 p-0" id ="nuevo_mantenimientos" data-toggle="tooltip" data-placement="top" title="Nuevo">
+                  <img src="/img/nuevo_1.jpg" ></img>
+                </button>
+            </li>
+            <li class="list-group">
+                <button type="button" class="btn m-0 p-0" id ="modificar_mantenimientos" data-toggle="tooltip" data-placement="top" title="Modificar">
+                  <img src="/img/modificar_1.png" ></img>
+                </button>
+            </li>
+            <li class="list-group">
+                <button type="button" class="btn m-0 p-0" id ="eliminar_mantenimientos" data-toggle="tooltip" data-placement="top" title="Eliminar">
+                  <img src="/img/eliminar_1.png" ></img>
+                </button>
+            </li>
+            <li class="list-group">
+                <button type="button" class="btn m-0 p-0" id ="anular_mantenimientos" data-toggle="tooltip" data-placement="top" title="Anular">
+                  <img src="/img/anular_1.png" ></img>
+                </button>
+            </li>
+            <li class="list-group">
+                <button type="button" class="btn m-0 p-0" id ="consultar_mantenimientos" data-toggle="tooltip" data-placement="top" title="Consultar">
+                  <img src="/img/consultar_1.png" ></img>
+                </button>
+            </li>
+            <li class="list-group">
+                <button type="button" class="btn m-0 p-0" id ="duplicar_mantenimientos" data-toggle="tooltip" data-placement="top" title="Duplicar">
+                  <img src="/img/duplicar_1.png" ></img>
+                </button>
+            </li>
+            <li class="list-group">
+                <button type="button" class="btn m-0 p-0" id ="exportar_excel_mantenimientos" data-toggle="tooltip" data-placement="top" title="Exportar a Excel">
+                  <img src="/img/exportar_1.png" ></img>
+                </button>
+            </li>
+            <li class="list-group px-4">
+              <h4 class="modal-title titulos_erp" id ="modal_title_mantenimientos">Titulo</h4>
+            </li>
+          </ul>
+        </div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-auto">
+          <table id="lista_mantenimientos"></table>
+          <div id="lista_mantenimientos_pager" style="text-align:center"></div>
+      </div>
+      <div class="modal-footer-full-width modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div> 
+
+<div class="modal fade" tabindex="-1" role="dialog" id="modal_edit_mantenimientos">
+  <div class="modal-dialog-full-width modal-dialog">
+    <div class="modal-content-full-width modal-content">
+      <div class="modal-header-full-width modal-header">
+        <div class="row" >
+          <ul class="list-group list-group-horizontal-sm">
+            <li class="list-group px-4">
+              <h4 class="modal-title titulos_erp" id ="modal_edit_title_mantenimientos">Titulo</h4>
+            </li>
+          </ul>
+        </div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-4">
+        <div id ="body_edit_mantenimientos"></div>
+      </div>
+      <div class="modal-footer-full-width modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div> 
+
+
+<script src="/js/mantenimientos/lista_mantenimientos.js"></script>
+
+{{> mantenimientos/lista_permisos}}

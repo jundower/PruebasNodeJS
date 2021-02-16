@@ -1,0 +1,66 @@
+<div class="modal fade" tabindex="-1" role="dialog" id="modal_pendientes">
+  <div class="modal-dialog-full-width modal-dialog">
+    <div class="modal-content-full-width modal-content">
+      <div class="modal-header-full-width modal-header">
+{{!--         
+        <button type="button" class="btn btn-danger sm mx-2" id ="enviar_pendientes" data-toggle="tooltip" data-placement="top" title="Enviar"><i class="fa fa-reply"></i></button>
+         --}}
+                <button type="button" class="btn m-0 p-0" id ="enviar_pendientes" data-toggle="tooltip" data-placement="top" title="Enviar">
+                  <img src="/img/atras_rojo_1.png" ></img>
+                </button>
+                <button type="button" class="btn m-0 p-0" id ="actualizar_pendientes" data-toggle="tooltip" data-placement="top" title="Actualizar">
+                  <img src="/img/actualizar_1.png" ></img>
+                </button>
+                <button type="button" class="btn m-0 p-0" id ="exportar_pendientes" data-toggle="tooltip" data-placement="top" title="Exportar">
+                  <img src="/img/exportar_1.png" ></img>
+                </button>
+
+
+        <h5 class="modal-title titulos_erp" id="modal_pendientes_titulo">Titulo:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-check" id ="mostrar_todos_pendientes_div">
+                <input type="checkbox" class="form-check-input" id="mostrar_todos_pendientes">
+                <label class="form-check-label" for="mostrar_todos_pendientes">Mostrar Todos</label>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <table id="lista_documentos_pendientes"></table>
+              <div id="lista_documentos_pendientes_pager"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="seleccionar_todos_pendientes">
+                <label class="form-check-label" for="seleccionar_todos_pendientes">Seleccionado Todos</label>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <table id="detalle_documentos_pendientes"></table>    
+            </div>
+            <div class="col-md-6">
+              <table id="detalle_documentos_pendientes_seleccionados"></table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer-full-width modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div> 
+
+
+<script src="/js/mantenimientos/ventas_pendientes.js"></script>

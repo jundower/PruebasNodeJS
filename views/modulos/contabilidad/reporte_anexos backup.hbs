@@ -1,0 +1,218 @@
+<div class="row m-2 d-print-none" id ="myTab">
+    <div class="col-6 border">
+        <div class="row my-1">
+            <div class="col-12">
+                <div class="row">
+                    <label for="codigo_tipo_anexo" class="col-sm-3 col-form-label col-form-label-sm">Tipo Anexo</label>
+                    <select class="col-sm-5 form-control form-control-sm c_mantenimientos" id="codigo_tipo_anexo">
+                    </select>
+                    <div class="col-4 pr-0">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="agrupar_cuentas" checked>
+                            <label class="form-check-label col-form-label-sm" for="agrupar_cuentas">Mostrar Agrupaciones por Cuentas</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row my-1">
+            <div class="col-12">
+                <div class="row">
+                    <label for="agrupacion1" class="col-sm-3 col-form-label col-form-label-sm">Filtrar x Cuenta</label>
+                    <input type="text" id="agrupacion1_text" class="col-sm-5 form-control form-control-sm c_mantenimientos" placeholder="Presionar F4 o Doble Click" tabla="cuentas" readonly>
+                    <div class="col-4">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="filtrar_cuentas" checked>
+                            <label class="form-check-label col-form-label-sm" for="filtrar_cuentas">Mostrar Todos</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row my-1">
+            <div class="col-12">
+                <div class="row">
+                    <label for="agrupacion2" class="col-sm-3 col-form-label col-form-label-sm">Filtrar x Anexo</label>
+                    <input type="text" id="agrupacion2_text" class="col-sm-5 form-control form-control-sm c_mantenimientos" placeholder="Presionar F4 o Doble Click" tabla="anexos" readonly>
+                    <div class="col-4">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="filtrar_anexos" checked>
+                            <label class="form-check-label col-form-label-sm" for="filtrar_anexos">Mostrar Todos</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 border">
+        <div class="row my-1">
+            <div class="col-4">
+                <div class="row">
+                    <label for="ejercicio" class="col-sm-6 col-form-label col-form-label-sm">Ejercicio</label>
+                    <select id="ejercicio" class="col-sm-6 form-control form-control-sm text-center"></select>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="row">
+                    <label for="periodo_inicio" class="col-sm-6 col-form-label col-form-label-sm">Fecha Inicio</label>
+                    <select id="periodo_inicio" class="col-sm-6 form-control form-control-sm text-center"></select>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="row">
+                    <label for="periodo_final" class="col-sm-6 col-form-label col-form-label-sm">Fecha Final</label>
+                    <select id="periodo_final" class="col-sm-6 form-control form-control-sm text-center"></select>
+                </div>
+            </div>
+        </div>
+        <div class="row my-1">
+            <div class="col-6"></div>
+            <div class="col-6 text-right">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="documentos_pendientes" checked>
+                    <label class="form-check-label col-form-label-sm" for="documentos_pendientes">Mostrar solo Documentos Pendientes</label>
+                </div>
+            </div>
+        </div>
+        <div class="row my-1">
+            <div class="col-4"></div>
+            <div class="col-4"></div>
+            <div class="col-4">
+                <button type="button" class="form-control form-control-sm btn btn-primary btn-block" id ="filtrar">Filtrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mx-1">
+    <div class="col-12">
+        <div id ="contenedor_impresion" class="print_container" style="margin-top: 0px;">
+            <div id ="formato_impresion" class="mx-auto" style="width: 1060px; background: #f3f3f3;">
+                <div id = "print_page" style="font-size:10px">
+                    <div class="print_header" style="height: 80px; font-weight:700;">
+                        <div class="row" style="margin-top:5px">
+                            <div style="width: 90px; margin-left: 15px;">RAZON SOCIAL:</div>
+                            <div style="width: 300px; margin-left:5px; text-align:left;" class="print_header_razon_social"></div>
+                            <div style="width: 220px; text-align:center;font-size:14px; color:maroon;"><u>REPORTE POR ANEXOS</u></div>
+                            <div style="width: 430px; text-align:right;" id="print_paginacion">print_header_paginacion</div>
+                        </div>
+                        <div class="row">
+                            <div style="width: 90px; margin-left: 15px;">R.U.C.:</div>
+                            <div style="width: 300px; margin-left:5px; text-align:left;" class="print_header_ruc"></div>
+                            <div style="width: 220px; text-align:center;font-size:14px; color:maroon;"></div>
+                            <div style="width: 430px; text-align:right;">print_header_fecha_pagina</div>
+                        </div>
+                        <div class="row" style="padding-bottom:5px">
+                            <div style="width: 150px; margin-left:15px; text-align:center;"></div>
+                            <div style="width: 700px; text-align:center;font-size:14px; color:maroon;" class="print_header_fecha_intervalo">
+                            </div>
+                            <div style="width: 150px; text-align:right;"></div>
+                        </div>
+                        <div class="row align-items-center" style="text-align:center">
+                            <div style="width: 320px; margin-left:15px; text-align:left" class="print_header_anexo">ANEXO: </div>
+                            <div style="width: 50px; "></div>
+                            <div style="width: 50px; "></div>
+                            <div style="width: 148px;"></div>
+                            <div style="width: 240PX; border:1px solid black;">MONEDA NACIONAL</div>
+                            <div style="width: 240PX; border:1px solid black;">MONEDA EXTRANJERA</div>
+                        </div>
+                        <div class="row align-items-center" style="text-align:center">
+                            <div style="width: 80px; margin-left:15px; border:1px solid black;">VOUCHER</div>
+                            <div style="width: 80px; border:1px solid black;">F. REGISTRO</div>
+                            <div style="width: 80px; border:1px solid black;">F. EMISION</div>
+                            <div style="width: 80px; border:1px solid black;">NUMERO</div>
+                            <div style="width: 50px; border:1px solid black;">MO</div>
+                            <div style="width: 50px; border:1px solid black;">TC</div>
+                            <div style="width: 148px; border:1px solid black;">GLOSA</div>
+                            <div style="width: 80px; border:1px solid black;">DEBE</div>
+                            <div style="width: 80px; border:1px solid black;">HABER</div>
+                            <div style="width: 80px; border:1px solid black;">SALDO</div>
+                            <div style="width: 80px; border:1px solid black;">DEBE</div>
+                            <div style="width: 80px; border:1px solid black;">HABER</div>
+                            <div style="width: 80px; border:1px solid black;">SALDO</div>
+                        </div>
+                    </div>
+                    
+                    <div class="print_body">
+                        <div id="print_body_fila_detalle_1">
+                            <div id ="print_body_agrupacion_id">
+                                <div style="width: 320px; margin-left:15px;">agrupacion1_cuenta</div>
+                                <div style="width: 320px; margin-left:15px;">agrupacion1_anexo</div>
+                                <div style="width: 320px; margin-left:15px;">agrupacion2_documento</div>
+                            </div>
+
+                            <div id ="fila_1" class="print_body_filas_id row" style="margin-left:15px;">
+                                <div class="row">
+                                    <div style="width: 80px;">print_body_voucher</div>
+                                    <div style="width: 80px;">FECHA_REGISTRO</div>
+                                    <div style="width: 80px;">FECHA_EMISION</div>
+                                    <div style="width: 80px;">NUMERO</div>
+                                    <div style="width: 50px;">MONEDA</div>
+                                    <div style="width: 50px;">TC</div>
+                                    <div style="width: 148px;">GLOSA</div>
+                                    <div style="width: 80px;">DEBE_MN</div>
+                                    <div style="width: 80px;">HABER_MN</div>
+                                    <div style="width: 80px;">SALDO_MN</div>
+                                    <div style="width: 80px;">DEBE_ME</div>
+                                    <div style="width: 80px;">HABER_ME</div>
+                                    <div style="width: 80px;">SALDO_ME</div>
+                                </div>
+                            </div>
+
+                            
+                            <div id ="print_body_totales" class="row align-items-center" style="margin-left: 15px; margin-right: 15px; border-bottom: 2px solid black; color: maroon">
+                                <div class="row">
+                                    <div style="width: 80px;"></div>
+                                    <div style="width: 80px;"></div>
+                                    <div style="width: 80px;"></div>
+                                    <div style="width: 80px;"></div>
+                                    <div style="width: 50px;"></div>
+                                    <div style="width: 50px;"></div>
+                                    <div style="width: 148px;">Total General ----></div>
+                                    <div style="width: 80px;">DEBE_MN</div>
+                                    <div style="width: 80px;">HABER_MN</div>
+                                    <div style="width: 80px;">SALDO_MN</div>
+                                    <div style="width: 80px;">DEBE_ME</div>
+                                    <div style="width: 80px;">HABER_ME</div>
+                                    <div style="width: 80px;">SALDO_ME</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="print_footer" style="height: 50px; margin-left:15px;">
+                        <div class="row">
+                            <div style="width: 80px;"></div>
+                            <div style="width: 80px;"></div>
+                            <div style="width: 80px;"></div>
+                            <div style="width: 80px;"></div>
+                            <div style="width: 50px;"></div>
+                            <div style="width: 50px;"></div>
+                            <div style="width: 148px;">Total General ----></div>
+                            <div style="width: 80px;">DEBE_MN</div>
+                            <div style="width: 80px;">HABER_MN</div>
+                            <div style="width: 80px;">SALDO_MN</div>
+                            <div style="width: 80px;">DEBE_ME</div>
+                            <div style="width: 80px;">HABER_ME</div>
+                            <div style="width: 80px;">SALDO_ME</div>
+                        </div>
+                    </div>
+                    {{!-- <div class="breaker d-print-none">
+
+                    </div> --}}
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="d-none">
+    <input id="user-punto_venta" type="text" value="{{user.codigo_punto_venta}}">
+    <input id="tipo_modulo" type="text" value="{{tipo}}">
+</div>
+
+{{> mantenimientos/documentos_listas}}
+{{> mantenimientos/lista_mantenimientos}}
+<script src="/js/modulos/contabilidad/reporte_anexos.js"></script>
+

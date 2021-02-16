@@ -1,0 +1,48 @@
+<div class="container-fluid">
+    <div class="form-row  align-items-center p-2" id="myTab">
+        <div class="col-2 sm">
+            <div class="input-group sm">
+                <div class="input-group-prepend">
+                    <label class="input-group-text sm" for="estado_sunat">Estado Sunat</label>
+                </div>
+                <select class="custom-select sm filtrar" id="estado_sunat">
+                <option>Pendientes</option>
+                <option>Enviados</option>
+                <option>Aceptados</option>
+                <option>Rechazados</option>
+                <option>Observados</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-2 sm">
+            <div class="form-check form-check-inline">
+                <input type="radio" id="todo" name="fecha_tipo" class="form-check-input" value="Todo" checked>
+                <label class="form-check-label" for="todo">Todo</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="radio" id="intervalo" name="fecha_tipo" class="form-check-input" value="intervalo">
+                <label class="form-check-label" for="intervalo">Intervalo de Fechas</label>
+            </div>
+        </div>
+        <div class="col-3" id ="seleccion_fechas" hidden>
+            <div class="input-group">
+                <label class="sm input-group-text py-0 border-right-0 " for="fecha_inicio" style="background:#fff;border-top-right-radius:0px;border-bottom-right-radius:0px">F. Inicio:</label>
+                <input type="date" id = "fecha_inicio" class="form-control form-control-sm border-left-0 pl-0 calendar-sm filtrar" style=";border-top-left-radius:0px;border-bottom-left-radius:0px">
+                <label class="sm input-group-text py-0 border-right-0" for="fecha_final" style="background:#fff;border-top-right-radius:0px;border-bottom-right-radius:0px">F. Final:</label>
+                <input type="date" id = "fecha_final" class="form-control form-control-sm border-left-0 pl-0 calendar-sm filtrar" style=";border-top-left-radius:0px;border-bottom-left-radius:0px">
+            </div>
+        </div>
+        <div class="col-2">
+            <input type="buton" class="btn btn-success btn-sm" value ="Filtrar" id="filtrar"/>
+        </div>
+        {{!-- <div class="col-2">
+            <input type="buton" class="btn btn-success btn-sm" value ="Enviar Todo" id="enviar_todo"/>
+        </div> --}}
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <table id="grid_sunat"></table>
+        </div>
+    </div>
+</div>
+<script src="/js/modulos/ventas/sunat.js"></script>

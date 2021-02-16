@@ -1,0 +1,32 @@
+
+{{#if user}}
+
+<ul class="nav nav-tabs tabs group" id="tab_modulos" role="tablist">
+</ul>
+
+<div class="tab-content " id="tab_campos">
+</div>
+<div class="container">
+    <div class="row mt-2">
+        <div class="col-sm-6">
+            <div class="row justify-content-md-center">
+                <div class="col-sm-auto ">
+                    <button type="button" class="btn btn-info" id ="guardar_detalle_venta" data-toggle="tooltip" data-placement="top" title="Guardar">Guardar</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="row justify-content-md-center">
+                <div class="col-sm-auto ">
+                    <button type="button" class="btn btn-danger" id ="restablecer_detalle_venta" data-toggle="tooltip" data-placement="top" title="Restablecer">Restablecer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="d-none">
+    <div id ="tipo_configuracion">{{tipo}}</div>
+</div>
+<script src="/js/mantenimientos/configurar_tablas.js"></script>
+
+{{/if}}

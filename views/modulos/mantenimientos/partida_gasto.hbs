@@ -1,0 +1,66 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-6">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_partida_gasto_codigo" class="col-sm-4 col-form-label col-form-label-sm">Código:</label>
+                            <input type="text" id="tablas_partida_gasto_codigo" class="col-sm-8 form-control form-control-sm m-0 p-0" value="{{datos.Codigo}}" placeholder="Códgo" maxlength="3">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-6">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_partida_gasto_codigo_sunat" class="col-sm-4 col-form-label col-form-label-sm">Código Sunat:</label>
+                            <input type="text" id="tablas_partida_gasto_codigo_sunat" class="col-sm-8 form-control form-control-sm m-0 p-0" value="{{datos.Codigo_Sunat}}" placeholder="Códgo Sunat" maxlength="3">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_partida_gasto_nombre" class="col-sm-2 col-form-label col-form-label-sm">Nombre:</label>
+                            <input type="text" id="tablas_partida_gasto_nombre" class="col-sm-10 form-control form-control-sm m-0 p-0"value="{{datos.Nombre}}" placeholder="Nombre" maxlength="50">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_partida_gasto_abreviatura" class="col-sm-4 col-form-label col-form-label-sm">Abreviatura:</label>
+                            <input type="text" id="tablas_partida_gasto_abreviatura" class="col-sm-8 form-control form-control-sm m-0 p-0" value="{{datos.Abreviatura}}" placeholder="Abreviatura" >
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-6">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_partida_gasto_operacion" class="col-sm-4 col-form-label col-form-label-sm">Operacion:</label>
+                            <select id="tablas_partida_gasto_operacion" class="col-sm-8 form-control form-control-sm m-0 p-0 " >
+                                <option value="+">+</option>
+                                <option value="-">-</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <table id="grid_tablas_partida_gasto_cuentas"></table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="d-none">
+    {{#if datos}}
+        <input type="text" id="tablas_partida_gasto_operacion_predeterminado" value="{{datos.Operacion}}">
+    {{else}}
+        <input type="text" id="tablas_partida_gasto_operacion_predeterminado" value="+">
+    {{/if}}
+</div>

@@ -1,0 +1,258 @@
+<div id = "print_page">
+    
+    <div id ="print_page_1">
+        <div class="print_header" style="height: 164px;">
+            <div id = "print_header_1">
+                <div class="row" style="width: 100%; margin: 5px 0px 0px 0px;">
+                    <div style=" width: 65%;">
+                        <div style="margin-top:5px; padding-bottom:5px; padding-left: 5px; padding-top: 22px;">
+                            <img id="print_header_empresa_logo_small" src="" class="img-fluid d-block" alt="Responsive image" style="width: 285px;"></img>
+                        </div>  
+                    </div>
+                    <div  style="text-align: center; width: 35%; font-size: 10px; font-family: calibri; padding: 20px 15px 20px 15px;">
+                        <div style="display: inline;" id="print_header_empresa_direccion"></div>
+                        <div>
+                            <div>RUC: <div style="display: inline;" id="print_header_empresa_ruc"></div> </div>
+                        </div>
+                        <div style="display: inline;" id="print_header_empresa_web"></div>
+                    </div>
+                </div>
+                <div style="text-align: left; font-family: Calibri; font-size: 15px; font-weight: 600;">
+                    <div style="text-align: center; margin: 0px 5px 0px 5px; padding: 0px 5px 0px 0px;  background: #eaf4fc; border: 1px solid;">
+                        <div id="print_header_documento_nombre" style="display: inline;"></div>
+                        <div id="print_header_documento_numero" style="display: inline;"></div>
+                    </div>
+                </div>
+                {{!-- <div>
+                    <div id="print_header_cliente_contacto_cargo"></div>
+                </div> --}}
+                <div class="row align-items-center"  style="margin: 0px 5px 0px 5px; font-family: Calibri; font-size: 11px;">
+                    <div style="width: 80px; height: 50px; line-height: 50px; text-align:center; border-left: 1px solid; border-right: 1px solid; border-bottom: 1px solid; background: #eaf4fc;">CODIGO</div>
+                    <div style="width: 295px; height: 50px;  line-height: 50px; text-align:center; border-right: 1px solid; border-bottom: 1px solid; background: #eaf4fc;">DESCRIPCION</div>
+                    <div style="width: 50px; height: 50px; line-height: 50px;  text-align:center; border-right: 1px solid; border-bottom: 1px solid; background: #eaf4fc;">UNIDAD</div>
+                     <div style="width: 50px; height: 50px; line-height: 50px; text-align:center; border-right: 1px solid; border-bottom: 1px solid; background: #eaf4fc;">CANTIDAD</div>
+                    <div style="width: 160px; height: 50px; text-align:center;border-right: 1px solid; border-bottom: 1px solid; background: #eaf4fc;">
+                        <div class="" style="height: 33px;  margin: 0px 0px 0px 0px; padding: 0px 5px 0px 5px; border-bottom: 1px solid;" id="print_header_proveedor1">Proveedor1</div>
+                        <div class="row" style="margin: 0px 0px 0px 0px;">
+                            <div style="width: 50%; border-right: 1px solid;">c/unit</div>
+                            <div style="width: 50%;">c/total</div>
+                        </div>
+                    </div>
+                    <div style="width: 160px; height: 50px; text-align:center;border-right: 1px solid; border-bottom: 1px solid; background: #eaf4fc;">
+                        <div class="" style="height: 33px;  margin: 0px 0px 0px 0px; padding: 0px 5px 0px 5px; border-bottom: 1px solid;" id="print_header_proveedor2">Proveedor2</div>
+                        <div class="row" style="margin: 0px 0px 0px 0px;">
+                            <div style="width: 50%; border-right: 1px solid;">c/unit</div>
+                            <div style="width: 50%;">c/total</div>
+                        </div>
+                    </div>
+                    <div style="width: 160px; height: 50px; text-align:center;border-right: 1px solid; border-bottom: 1px solid; background: #eaf4fc;">
+                        <div class="" style="height: 33px;  margin: 0px 0px 0px 0px; padding: 0px 5px 0px 5px; border-bottom: 1px solid;" id="print_header_proveedor3" >Proveedor3</div>
+                        <div class="row" style="margin: 0px 0px 0px 0px;">
+                            <div style="width: 50%; border-right: 1px solid;">c/unit</div>
+                            <div style="width: 50%;">c/total</div>
+                        </div>
+                    </div>
+                    <div style="width: 160px; height: 50px; text-align:center;border-right: 1px solid; border-bottom: 1px solid; background: #eaf4fc;">
+                        <div class="" style="height: 33px;  margin: 0px 0px 0px 0px; padding: 0px 5px 0px 5px; border-bottom: 1px solid;" id="print_header_proveedor4">Proveedor4</div>
+                        <div class="row" style="margin: 0px 0px 0px 0px;">
+                            <div style="width: 50%; border-right: 1px solid;">c/unit</div>
+                            <div style="width: 50%;">c/total</div>
+                        </div>
+                    </div>
+                    
+                    {{!-- <div style="width: 80px; text-align:center; border-right: 1px solid; border-bottom: 1px solid; background: #eaf4fc;">PRECIO</div> --}}
+                    {{!--
+                    <div style="width: 60px; text-align:center; border-right: 1px solid; border-bottom: 1px solid; background: #eaf4fc;">IGV</div>
+                    <div style="width: 80px; text-align:center; border-right: 1px solid; border-bottom: 1px solid; background: #eaf4fc;">TOTAL</div> --}}
+                </div>
+            </div>
+        </div>
+
+        <div class="print_body" style="margin: 0px 5px 0px 5px; border-left: 1px solid; border-bottom: 1px solid; border-right: 1px solid;">
+            <div id="print_body_fila_detalle_1" style="font-size: 11px; font-family: Calibri; margin: 0px 0px 0px 0px;">
+                <div id ="fila_1" class="print_body_filas_id row"  style="margin: 0px 0px -5px 0px;">
+                    
+                    {{!-- <div style="width: 40px; text-align:right;  padding-right:5px" id="print_detalle_nitem0">Producto_Nitem</div> --}}
+                    <div style="width: 80px; text-align:left;    padding-left:5px;padding-right:5px" id="print_detalle_codigo0">Producto_Codigo</div>
+                    <div style="width: 295px; text-align:left;   padding-left:5px;padding-right:5px" id="print_detalle_nombre0">Producto_Nombre</div>
+                    <div style="width: 50px; text-align:center; "  id="print_detalle_unidad0">Producto_UND</div>
+                    <div style="width: 50px; text-align:center; "  id="print_detalle_cantidad0">Producto_Cantidad</div>
+                    <div style="width: 80px; text-align:right;   padding-left:5px;padding-right:5px" id="print_detalle_precio10">Product_Precio1</div>
+                    <div style="width: 80px; text-align:right;   padding-left:5px;padding-right:5px" id="print_detalle_total10">Product_Total1</div>
+                    <div style="width: 80px; text-align:right;   padding-left:5px;padding-right:5px" id="print_detalle_precio20">Product_Precio2</div>
+                    <div style="width: 80px; text-align:right;   padding-left:5px;padding-right:5px" id="print_detalle_total20">Product_Total2</div>
+                    <div style="width: 80px; text-align:right;   padding-left:5px;padding-right:5px" id="print_detalle_precio30">Product_Precio3</div>
+                    <div style="width: 80px; text-align:right;   padding-left:5px;padding-right:5px" id="print_detalle_total30">Product_Total3</div>
+                    <div style="width: 80px; text-align:right;   padding-left:5px;padding-right:5px" id="print_detalle_precio40">Product_Precio4</div>
+                    <div style="width: 78px; text-align:right;   padding-left:5px;padding-right:5px" id="print_detalle_total40">Product_Total4</div>
+                    {{!-- <div style="width: 80px; text-align:right;   padding-left:5px;padding-right:5px" id="print_detalle_precio0">Producto_Precio</div>
+                   
+                    <div style="width: 60px; text-align:right;   padding-left:5px;padding-right:5px" id="print_detalle_igv0">Producto_Igv</div>
+                    <div style="width: 78px; text-align:right;   padding-left:5px;padding-right:5px" id="print_detalle_total0">Producto_Total</div> --}}
+                </div>
+            </div>
+        </div>
+
+        <div class="print_footer" style="height: 270px; font-family: Calibri; font-size: 11px;">
+            <div class="row" style="margin: 0px 5px 0px 5px; border-left: 1px solid; border-bottom: 1px solid; border-right: 1px solid; text-align: right; background: #eaf4fc;">
+                <div style="width: 424px; padding: 0px 5px 0px 5px; border-right: 1px solid;">Totales:</div>
+                <div style="width: 50px; padding: 0px 5px 0px 5px; border-right: 1px solid;" id="print_footer_total_productos">Totales:</div>
+                <div style="width: 80px; padding: 0px 5px 0px 5px; border-right: 1px solid;" id="print_footer_total_precio1">Totales:</div>
+                <div style="width: 80px; padding: 0px 5px 0px 5px; border-right: 1px solid;" id="print_footer_total_1">Totales:</div>
+                <div style="width: 80px; padding: 0px 5px 0px 5px; border-right: 1px solid;" id="print_footer_total_precio2">Totales:</div>
+                <div style="width: 80px; padding: 0px 5px 0px 5px; border-right: 1px solid;" id="print_footer_total_2">Totales:</div>
+                <div style="width: 80px; padding: 0px 5px 0px 5px; border-right: 1px solid;" id="print_footer_total_precio3">Totales:</div>
+                <div style="width: 80px; padding: 0px 5px 0px 5px; border-right: 1px solid;" id="print_footer_total_3">Totales:</div>
+                <div style="width: 80px; padding: 0px 5px 0px 5px; border-right: 1px solid;" id="print_footer_total_precio4">Totales:</div>
+                <div style="width: 78px; padding: 0px 5px 0px 5px;" id="print_footer_total_4">Totales:</div>
+            </div>
+            <div class="row" style="height: 54px; margin: 0px 5px 0px 5px; border-left: 1px solid; border-bottom: 1px solid; border-right: 1px solid; text-align: left; background: #eaf4fc;">
+                <div style="width: 474px; padding: 0px 5px 0px 5px; border-right: 1px solid;">Observaciones:</div>
+                <div style="width: 160px; padding: 0px 5px 0px 5px; border-right: 1px solid;" id="print_footer_total_observaciones1"></div>
+                <div style="width: 160px; padding: 0px 5px 0px 5px; border-right: 1px solid;" id="print_footer_total_observaciones2"></div>
+                <div style="width: 160px; padding: 0px 5px 0px 5px; border-right: 1px solid;" id="print_footer_total_observaciones3"></div>
+                <div style="width: 158px; padding: 0px 5px 0px 5px;" id="print_footer_total_observaciones4"></div>
+            </div>
+            <div class="row" style="margin: 0px 5px 0px 5px; border-right: 1px solid; text-align: left;">
+                <div style="width: 475px; padding: 0px 5px 0px 5px; border-right: 1px solid;"></div>
+                <div style="width: 160px; padding: 0px 5px 0px 5px; border-right: 1px solid; border-bottom: 1px solid; background: #eaf4fc;" >
+                    <div class="row" style="margin: 0;">
+                        <div style="width: 45px;">F. Pago</div>
+                        <div id="print_footer_forma_pago1" style="width: 104px;"></div>
+                    </div>
+                    <div class="row" style="margin: 0;">
+                        <div style="width: 45px;">Entrega</div>
+                        <div id="print_footer_entrega1" style="width: 104px;"></div>
+                    </div>
+                    <div class="row" style="margin: 0;">
+                        <div style="width: 45px;">Contacto</div>
+                        <div id="print_footer_contacto1" style="width: 104px;"></div>
+                    </div>
+                    <div class="row" style="margin: 0;">
+                        <div style="width: 45px;">Telefono</div>
+                        <div id="print_footer_telefono1" style="width: 104px;"></div>
+                    </div>
+                </div>
+                <div style="width: 160px; padding: 0px 5px 0px 5px; border-right: 1px solid; border-bottom: 1px solid; background: #eaf4fc;" id="print_footer_total_observaciones2">
+                    <div class="row" style="margin: 0;">
+                        <div style="width: 45px;">F. Pago</div>
+                        <div id="print_footer_forma_pago2" style="width: 104px;"></div>
+                    </div>
+                    <div class="row" style="margin: 0;">
+                        <div style="width: 45px;">Entrega</div>
+                        <div id="print_footer_entrega2" style="width: 104px;"></div>
+                    </div>
+                    <div class="row" style="margin: 0;">
+                        <div style="width: 45px;">Contacto</div>
+                        <div id="print_footer_contacto2" style="width: 104px;"></div>
+                    </div>
+                    <div class="row" style="margin: 0;">
+                        <div style="width: 45px;">Telefono</div>
+                        <div id="print_footer_telefono2" style="width: 104px;"></div>
+                    </div>
+                </div>
+                <div style="width: 160px; padding: 0px 5px 0px 5px; border-right: 1px solid; border-bottom: 1px solid; background: #eaf4fc;" id="print_footer_total_observaciones3">
+                    <div class="row" style="margin: 0;">
+                        <div style="width: 45px;">F. Pago</div>
+                        <div id="print_footer_forma_pago3" style="width: 104px;"></div>
+                    </div>
+                    <div class="row" style="margin: 0;">
+                        <div style="width: 45px;">Entrega</div>
+                        <div id="print_footer_entrega3" style="width: 104px;"></div>
+                    </div>
+                    <div class="row" style="margin: 0;">
+                        <div style="width: 45px;">Contacto</div>
+                        <div id="print_footer_contacto3" style="width: 104px;"></div>
+                    </div>
+                    <div class="row" style="margin: 0;">
+                        <div style="width: 45px;">Telefono</div>
+                        <div id="print_footer_telefono3" style="width: 104px;"></div>
+                    </div>
+                </div>
+                <div style="width: 158px; padding: 0px 5px 0px 5px; border-bottom: 1px solid; background: #eaf4fc;" id="print_footer_total_observaciones4">
+                    <div class="row" style="margin: 0;">
+                        <div style="width: 45px;">F. Pago</div>
+                        <div id="print_footer_forma_pago4" style="width: 103px;"></div>
+                    </div>
+                    <div class="row" style="margin: 0;">
+                        <div style="width: 45px;">Entrega</div>
+                        <div id="print_footer_entrega4" style="width: 103px;"></div>
+                    </div>
+                    <div class="row" style="margin: 0;">
+                        <div style="width: 45px;">Contacto</div>
+                        <div id="print_footer_contacto4" style="width: 103px;"></div>
+                    </div>
+                    <div class="row" style="margin: 0;">
+                        <div style="width: 45px;">Telefono</div>
+                        <div id="print_footer_telefono4" style="width: 103px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin: 0px 5px 0px 5px;  border-right: 1px solid; text-align: left;">
+                <div style="width: 475px; padding: 0px 5px 0px 5px; border-right: 1px solid;"></div>
+                <div style="width: 160px; padding: 0px 5px 0px 5px; border-bottom: 1px solid; border-right: 1px solid; background: #eaf4fc;" >
+                    <div class="row" style="margin: 0;">
+                        <div style="width: 45px;">Historial</div>
+                        <div id="print_footer_historial1" style="width: 104px;"></div>
+                    </div>
+                    <div class="row" style="margin: 0;">
+                        <div style="width: 45px;">Fecha</div>
+                        <div id="print_footer_fecha1" style="width: 104px;"></div>
+                    </div>
+                </div>
+                <div style="width: 160px; padding: 0px 5px 0px 5px; border-bottom: 1px solid; border-right: 1px solid; background: #eaf4fc;" id="print_footer_total_observaciones2">
+                    <div class="row" style="margin: 0;">
+                        <div style="width: 45px;">Historial</div>
+                        <div id="print_footer_historial2" style="width: 104px;"></div>
+                    </div>
+                    <div class="row" style="margin: 0;">
+                        <div style="width: 45px;">Fecha</div>
+                        <div id="print_footer_fecha2" style="width: 104px;"></div>
+                    </div>
+                </div>
+                <div style="width: 160px; padding: 0px 5px 0px 5px; border-bottom: 1px solid; border-right: 1px solid; background: #eaf4fc;" id="print_footer_total_observaciones3">
+                    <div class="row" style="margin: 0;">
+                        <div style="width: 45px;">Historial</div>
+                        <div id="print_footer_historial3" style="width: 104px;"></div>
+                    </div>
+                    <div class="row" style="margin: 0;">
+                        <div style="width: 45px;">Fecha</div>
+                        <div id="print_footer_fecha3" style="width: 104px;"></div>
+                    </div>
+                </div>
+                <div style="width: 158px; padding: 0px 5px 0px 5px; border-bottom: 1px solid; background: #eaf4fc;" id="print_footer_total_observaciones4">
+                    <div class="row" style="margin: 0;">
+                        <div style="width: 45px;">Historial</div>
+                        <div id="print_footer_historial4" style="width: 103px;"></div>
+                    </div>
+                    <div class="row" style="margin: 0;">
+                        <div style="width: 45px;">Fecha</div>
+                        <div id="print_footer_fecha4" style="width: 103px;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="height: 50px;"></div>
+
+            <div class="row" style="margin: 0px 5px 0px 5px; border-bottom: 2px solid black;"></div>
+            <div class="row" style="margin: 0px 5px 0px 5px; ffont-size: 11px; font-family: calibri; font-weight: 700;">
+                <div style="width: 50%;">
+                </div>
+                <div style="width: 20%;">
+                    <label style="width: 35%; margin: 0px 0px 0px 0px;">Fecha: </label>
+                    <div id="print_footer_fecha_impresion" style="display: inline;"></div>
+                </div>
+                <div style="width: 20%;">
+                    <label style="width: 35%; margin: 0px 0px 0px 0px;">Hora: </label>
+                    <div id="print_footer_hora_impresion" style="display: inline;"></div>
+                </div>
+                <div style="width: 10%;">
+                    <div class="print_footer_number_page" style="text-align: right; padding-right:10px">PageNumber</div>
+                </div>
+            </div>
+        </div>
+        <div class="breaker d-print-none">
+
+        </div>
+    </div>
+</div>

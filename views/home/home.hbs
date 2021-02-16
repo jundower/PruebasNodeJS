@@ -1,0 +1,400 @@
+
+<!DOCTYPE html>
+<html>
+<title>ERP Systems & Solutions S.A.C</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/css/home/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel='stylesheet' href="/plugins/bootstrap/dist/css/bootstrap.min.css">
+
+
+<link rel='stylesheet' href="/plugins/jquery-ui-dist/jquery-ui.css">
+<link rel='stylesheet' href="/plugins/ms-Dropdown-master/css/msdropdown/dd.css">
+<link rel='stylesheet' href="/plugins/ms-Dropdown-master/css/msdropdown/sprite.css">
+<link rel='stylesheet' href="/plugins/ms-Dropdown-master/css/msdropdown/flags.css">
+
+<script src="js/home/carrusel.js" type="text/javascript"></script>
+
+<script src='/plugins/jquery-ui-dist/external/jquery/jquery.js'></script>
+<script src='/plugins/jquery-ui-dist/jquery-ui.js'></script>
+
+  
+{{!-- <script src='/plugins/jquery-ui-dist/external/jquery/jquery.js'></script> --}}
+<script src='/plugins/bootstrap/dist/js/bootstrap.min.js'></script>
+<script src='/plugins/ms-Dropdown-master/js/msdropdown/jquery.dd.js'></script>
+
+<link rel="icon" href="/img/home/favicon-16x16.png" type="image/png" />
+<style>
+body,h1,h2,h3,h4,h6 {font-family: "Raleway", sans-serif}
+body, html {
+    height: 100%;
+    line-height: 1.8;
+}
+/* Full height image header */
+.bgimg-1 {
+    
+    background-size: cover;
+    background-image: url("/img/home/Imagenerp.jpg");
+    min-height: 85%;
+}
+.w3-bar .w3-button {
+    padding: 16px;
+}
+
+
+
+.vodiapicker{
+  display: none; 
+}
+
+#a{
+  padding-left: 0px;
+}
+
+#a img, .btn-select img{
+  width: 12px;
+  
+}
+
+#a li{
+  list-style: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#a li:hover{
+ background-color: #F4F3F3;
+}
+
+#a li img{
+  margin: 5px;
+}
+
+#a li span, .btn-select li span{
+  margin-left: 30px;
+}
+
+/* item list */
+
+.b{
+  display: none;
+  width: 100%;
+  max-width: 350px;
+  box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 5px;
+  
+}
+
+.open{
+  display: show !important;
+}
+
+.btn-select{
+  margin-top: 10px;
+  width: 100%;
+  max-width: 350px;
+  height: 34px;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+ 
+}
+.btn-select li{
+  list-style: none;
+  float: left;
+  padding-bottom: 0px;
+}
+
+.btn-select:hover li{
+  margin-left: 0px;
+}
+
+.btn-select:hover{
+  background-color: #F4F3F3;
+  border: 1px solid transparent;
+  box-shadow: inset 0 0px 0px 1px #ccc;
+  
+  
+}
+
+.btn-select:focus{
+   outline:none;
+}
+
+.lang-select{
+  margin-left: 50px;
+}
+
+ 
+    /* select with CSS avatar icons */
+    option.avatar {
+      background-repeat: no-repeat !important;
+      padding-left: 20px;
+    }
+    .avatar .ui-icon {
+      background-position: left top;
+    }
+    .ui-selectmenu-menu, .ui-front, .ui-selectmenu-open { z-index:1100; }
+    .ui-selectmenu-button, .ui-button, .ui-widget, .ui-selectmenu-button-open, .ui-corner-top { max-width:132px; }
+    #countries_child{
+      min-height: 206px
+    }
+    .ddTitle, .borderRadiusTp, .ddTitleText,dd, .ddcommon, .borderRadius, .divider {
+      background: white!important;
+      padding: 0!important; 
+      border-color: white!important;
+    }
+</style>
+
+<body>
+<!--ARCHIVO ORIGINAL-------->
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="/home" class="w3-bar-item w3-button w3-wide"><img src="/img/home/logoprincipalerp.png"></a>
+    <div class="w3-right w3-hide-small">
+      <a class="w3-bar-item w3-button" data-toggle="modal" data-target="#loginModal"><i class="fa fa-users"></i> CLIENTES</a>
+      <a href="/home/productos" class="w3-bar-item w3-button"><i class="fa fa-th"></i>PRODUCTOS</a>
+      <a href="/home/enviodemensaje" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACTO</a>
+    </div>
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home"><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <div class="w3-display-left w3-text-BLACK" style="padding:48px">
+    <span class="w3-jumbo w3-hide-small" style="font-family: arial black; font-size: 51px!important;">ERP-SOFT <span style="font-family: arial;">100% WEB</span></span><br>
+
+    <span class="w3-large"><font color="black"><strong>Nuestro sistema esta diseñado para todo tipo de Empresa.</strong></font></span>
+    <p><a href="#about" class="w3-button w3-blue w3-padding-large w3-large w3-margin-top  ">Ver Productos</a></p>
+  </div> 
+  <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</header>
+
+<!-- About Section -->
+<div class="w3-container" style="padding:80px 16px" id="about">
+  <h2 class="w3-center">NUESTROS PRODUCTOS</h2>
+  <p class="w3-center w3-large">Nuestro software ERP esta diseñado para ajustarse a cualquier tipo o tamaño de empresa simplificando todos los procesos que necesitas para
+    tu empresa gracias a un software completo.</p>
+  <div class="w3-row-padding w3-center" style="margin-top:64px">
+    <div class="w3-quarter">
+        <img src="/img/home/vintegral.jpg" alt="Boss" style="width:50%" >
+        <font color="339CFF"><p class="w3-large">VERSION INTEGRAL</p></FONT>
+      <font color="black"><p>Software de Gestión Integral para grandes empresas, esta diseñado con avanzados conceptos de ingeniería y herramientas de alta tecnología, 
+       empleando un potente motor de base de datos SQL SERVER,&nbsp &nbsp &nbsp RE-ingeniería, optimización de procesos, centralización de la contabilidad permitiendo
+       la generación de gran &nbsp volumen de información en tiempo real.</p></FONT>
+    </div>
+    <div class="w3-quarter">
+      <img src="/img/home/versionpyme.jpg" alt="Boss" style="width:50%" >
+      <font color="339CFF"><p class="w3-large">VERSION PYME</p></FONT>
+      <font color="black"><p>Software de Gestión Integral para medianas empresas, esta diseñado con avanzados conceptos de ingeniería y herramientas de alta tecnología,
+      empleando un potente motor de base de datos SQL SERVER,&nbsp &nbsp &nbsp RE-ingeniería, optimización de procesos, centralización de la contabilidad permitiendo la generación de
+      gran volumen de información en tiempo real.</p></FONT>
+    </div>
+    <div class="w3-quarter">
+      <img src="/img/home/versionmype.jpg" alt="Boss" style="width:50%" >
+      <font color="339CFF"><p class="w3-large">VERSION MYPE</p></FONT>
+      <font color="black"><p>Software de Gestión Integrado para pequeñas empresas, esta diseñado para simplificar temas administrativos y optimizar
+          los procesos de su organización,enviando información en forma oportuna centralizando el área contable y obteniendo información en tiempo real.</p></FONT>
+    </div>
+    <div class="w3-quarter">
+       <img src="/img/home/versionemprendedora.jpg" alt="Boss" style="width:50%" >
+       <font color="339CFF"><p class="w3-large">VERSION EMPRENDEDORA</p></FONT>
+      <font color="black"><p>Software de Gestión Integrado para pequeñas empresas, esta diseñado para simplificar temas administrativos y optimizar los procesos de su organización, 
+          enviando información en forma oportuna centralizando el área contable y obteniendo información en tiempo real.</p></FONT>
+    </div>
+      
+  </div>
+  <center><a href="/home/productos" ><button class="w3-button w3-black"> Ver Detalles </button></a></center>
+</div>
+
+<!-- Promo Section - "We know design" -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px">
+  <div class="w3-row-padding">
+    <div class="w3-col m6">
+      <h3>NUESTRA EXPERIENCIA</h3>
+      <p>Nuestra empresa cuenta con profesionales que tienen años de experiencia en investigación, desarrollo e implementación de soluciones comerciales comprometidos en ofrecer
+          servicios de primera calidad a nuestros clientes. La tecnología utilizada en nuestros productos es de última generación, lo cual hace que nuestro personal este constantemente
+          capacitado en los últimos avances tecnológicos.</p>
+      <p><a href="#work" class="w3-button w3-black"><i class="fa fa-th"> </i> Nuestros Clientes</a></p>
+    </div>
+    <div class="w3-col m6">
+        <img class="w3-image w3-round-large" src="/img/home/experiencia.png" alt="Buildings" width="700" height="394">
+    </div>
+  </div>
+</div>
+<div class="w3-container" style="padding:128px 16px" id="work">
+  <h3 class="w3-center">NUESTROS CLIENTES</h3>
+  <p class="w3-center w3-large">Para ERP SOFT los clientes son la gran apuesta de valor, el verdadero aval de la compañía y la mayor garantía de continuidad. Por este motivo, les agradecemos la confianza que nos han brindado durante toda nuestra trayectoria, un apoyo que ha permitido que seamos una empresa consolidada y con gran proyección de futuro </p>
+  <center></center><!--<div id="contenedor-slider"> </div>-->
+  <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1000px; height: 100px; overflow: hidden; visibility: hidden;"><!-- Loading Screen -->
+    <div style="position: absolute; top: 0px; left: 0px;" data-u="loading"> </div>
+    <div style="cursor: default; position: relative; top: 0px; left: 0px; width: 1000px; height: 100px; overflow: hidden;" data-u="slides">
+      <div style="display: none;"><img src="/img/home/clientes/cliadgavi.PNG" alt="" data-u="image" /></div>
+      <div style="display: none;"><img src="/img/home/clientes/cliafines.PNG" alt="" data-u="image" /></div>
+      <div style="display: none;"><img src="/img/home/clientes/cliameru.jpg" alt="" data-u="image" /></div>
+      <div style="display: none;"><img src="/img/home/clientes/cliandiamo.PNG" alt="" data-u="image" /></div>
+      <div style="display: none;"><img src="/img/home/clientes/cliascbanc.JPG" alt="" data-u="image" /></div>
+      <div style="display: none;"><img src="/img/home/clientes/clibiosym.jpg" alt="" data-u="image" /></div>
+      <div style="display: none;"><img src="/img/home/clientes/clicarpinorte.jpg" alt="" data-u="image" /></div>
+      <div style="display: none;"><img src="/img/home/clientes/cliceragem.jpg" alt="" data-u="image" /></div>
+      <div style="display: none;"><img src="/img/home/clientes/cliconstructora.PNG" alt="" data-u="image" /></div>
+      <div style="display: none;"><img src="/img/home/clientes/clicorporacion.PNG" alt="" data-u="image" /></div>
+      <div style="display: none;"><img src="/img/home/clientes/clidestapa.JPG" alt="" data-u="image" /></div>
+      <div style="display: none;"><img src="/img/home/clientes/clielectromecanica.JPG" alt="" data-u="image" /></div>
+      <div style="display: none;"><img src="/img/home/clientes/cliexplomin.PNG" alt="" data-u="image" /></div>
+      <div style="display: none;"><img src="/img/home/clientes/clifixa.PNG" alt="" data-u="image" /></div>
+      <div style="display: none;"><img src="/img/home/clientes/cliformularios.jpg" alt="" data-u="image" /></div>
+      <div style="display: none;"><img src="/img/home/clientes/cligch.PNG" alt="" data-u="image" /></div>
+      <div style="display: none;"><img src="/img/home/clientes/cligercor.jpg" alt="" data-u="image" /></div>
+      <div style="display: none;"><img src="/img/home/clientes/cligramsa.PNG" alt="" data-u="image" /></div>
+      <div style="display: none;"><img src="/img/home/clientes/cligrupomaster.jpg" alt="" data-u="image" /></div>
+      <div style="display: none;"><img src="/img/home/clientes/cligrupoventura.jpg" alt="" data-u="image" /></div>
+      <div style="display: none;"><img src="/img/home/clientes/clihabitat.PNG" alt="" data-u="image" /></div>
+      <div style="display: none;"><img src="/img/home/clientes/clihidromaq.jpg" alt="" data-u="image" /></div>
+      <div style="display: none;"><img src="/img/home/clientes/cliimportaciones.PNG" alt="" data-u="image" /></div>
+      <div style="display: none;"><img src="/img/home/clientes/cliingeomin.jpg" alt="" data-u="image" /></div>
+      <div style="display: none;"><img src="/img/home/clientes/clilab.jpg" alt="" data-u="image" /></div>
+      <div style="display: none;"><img src="/img/home/clientes/clilaensenada.jpg" alt="" data-u="image" /></div>
+      <div style="display: none;"><img src="/img/home/clientes/climaderera.jpg" alt="" data-u="image" /></div>
+      <div style="display: none;"><img src="/img/home/clientes/climilde.PNG" alt="" data-u="image" /></div>
+      <div style="display: none;"><img src="/img/home/clientes/climor.png" alt="" data-u="image" /></div>
+      <div style="display: none;"><img src="/img/home/clientes/climundobebe.jpg" alt="" data-u="image" /></div>
+      <div style="display: none;"><img src="/img/home/clientes/clipertel.PNG" alt="" data-u="image" /></div>
+      <div style="display: none;"><img src="/img/home/clientes/cliprovenser.PNG" alt="" data-u="image" /></div>
+      <div style="display: none;"><img src="/img/home/clientes/cliriaza.PNG" alt="" data-u="image" /></div>
+      <div style="display: none;"><img src="/img/home/clientes/clisemi.PNG" alt="" data-u="image" /></div>
+      <div style="display: none;"><img src="/img/home/clientes/clisergemi.PNG" alt="" data-u="image" /></div>
+      <div style="display: none;"><img src="/img/home/clientes/clisiba.jpg" alt="" data-u="image" /></div>
+      <div style="display: none;"><img src="/img/home/clientes/clisolutra.jpg" alt="" data-u="image" /></div>
+      <div style="display: none;"><img src="/img/home/clientes/clispena.png" alt="" data-u="image" /></div>
+      <div style="display: none;"><img src="/img/home/clientes/clispraying.PNG" alt="" data-u="image" /></div>
+      <div style="display: none;"><img src="/img/home/clientes/clistronger.PNG" alt="" data-u="image" /></div>
+      <div style="display: none;"><img src="/img/home/clientes/cliulmen.PNG" alt="" data-u="image" /></div>
+      <div style="display: none;"><img src="/img/home/clientes/cliviatel.PNG" alt="" data-u="image" /></div>
+      <div style="display: none;"><img src="/img/home/clientes/nisoang.PNG" alt="" data-u="image" /></div>
+    </div>
+  </div>
+</div>
+
+<!-- Contact Section -->
+<div class="w3-container w3-light-grey" style="padding:115px 16px" id="contact">
+    
+  <h2 class="w3-center">CONTÁCTENOS</h2>
+
+  <div class="w3-row-padding" style="margin-top:20px">
+      
+    <div class="w3-half">
+        &nbsp&nbsp&nbsp&nbsp&nbsp<img src="/img/home/logoprincipalerp.png">
+        <br>
+      <p style="margin-top: 5px;margin-bottom: 5px;"><i style="width:10%;height:5%;"  class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i>Calle. Porta 170 Oficina 609 Lima - Lima - Miraflores</p>
+      <p style="margin-top: 5px;margin-bottom: 5px;"><i style="width:10%;height:5%;" class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i>Informes y Ventas Central : (01) 717-8740 </p>
+      <p style="margin-top: 5px;margin-bottom: 5px;"><i style="width:10%;height:5%;" class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i>Celular: 984 207 192</p>
+      <p style="margin-top: 5px;margin-bottom: 5px;"><i style="width:10%;height:5%;" class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i>EMAIL: ventas@erp-solutionsperu.com </p>
+      <br>
+    </div>
+<div class="w3-half" style="width:50%;height:350px;">
+      <iframe style="width:80%;height:90%;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.8933591840514!2d-77.03223288518673!3d-12.119448491418941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c819d14724bd%3A0xfa0381458bbb71db!2sINT.506%2C+Calle+M%C3%A1rtir+Jos%C3%A9+Olaya+129%2C+Miraflores+Lima+18!5e0!3m2!1ses!2spe!4v1533330821088" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    
+</div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Hacia arriba</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+  <p>© 2019 ERP SYSTEMS & SOLUTIONS S.A.C</p>
+</footer>
+
+
+<!-- Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document" style="max-width: 350px; margin-top:100px">
+    <div class="modal-content pl-2">
+      {{!-- <div class="modal-header">
+        <label class="modal-title" style="font-weight: normal;">.</label>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div> --}}
+      <div class="modal-body">
+        <div class="row align-items-center">
+          <div class="col-5 pr-0"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm7.753 18.305c-.261-.586-.789-.991-1.871-1.241-2.293-.529-4.428-.993-3.393-2.945 3.145-5.942.833-9.119-2.489-9.119-3.388 0-5.644 3.299-2.489 9.119 1.066 1.964-1.148 2.427-3.393 2.945-1.084.25-1.608.658-1.867 1.246-1.405-1.723-2.251-3.919-2.251-6.31 0-5.514 4.486-10 10-10s10 4.486 10 10c0 2.389-.845 4.583-2.247 6.305z"/></svg><label class="pl-1" style="font-size: 0.8rem;">Iniciar Sesión</label></div>
+          
+          <div class="col-7 pl-4">
+            <select name="countries" id="countries" style="width:55px;">
+                <option value="calendar" data-image="/img/home/peru32.png"></option>
+                <option value="calendar" data-image="/img/home/colombia32.png"></option>
+                <option value="calendar" data-image="/img/home/uruguay32.png"></option>
+                <option value="calendar" data-image="/img/home/argentina32.png"></option>
+                <option value="calendar" data-image="/img/home/chile32.png"></option>
+            </select>
+          </div>
+        </div>
+        <div class="row align-items-center mt-4">
+          <div class="col-5 pr-0" style="font-weight: normal; font-size:1.2rem">Mi Cuenta</div>
+          <div class="col-7 pl-4"><img src="/img/minilogo_empresa.png" class="img-fluid" alt="Responsive image"></div>
+        </div>
+        <div class="row my-3">
+          <div class="col-12">
+            <div class="form-group">
+              <label for="codigo_empresa" class="col-form-label" style="font-weight: normal;">Código:</label>
+              <input type="text" class="form-control" id="codigo_empresa">
+            </div>
+          </div>
+        </div>
+        <div class="row my-3">
+          <div class="col-12">
+            <button type="button" class="btn btn-primary btn-block" id="ingresar_erp" style="background-color: #fd821a; font-weight:bold; border-color: #fd821a">INICIAR SESIÓN</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="form-group">
+              <label id="label_mensaje" class="col-form-label" style="font-weight: normal;"></label>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="customCheck1">
+              <label class="custom-control-label" for="customCheck1">Recordarme</label>
+            </div>            
+          </div>
+        </div>
+        <div class="row my-3">
+          <div class="col-2"><img src="/img/google-logo.png" class="img-thumbnail" alt="Responsive image"></div>
+        </div>
+      </div>
+      {{!-- <div class="modal-footer">
+      </div> --}}
+    </div>
+  </div>
+</div>
+
+</body>
+<script src="/js/home/ingresar_erp.js"></script>
+
+</html>

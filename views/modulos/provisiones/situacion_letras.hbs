@@ -1,0 +1,56 @@
+<div class="container-fluid border mt-2 pt-2">
+    {{!-- <div class="row  d-none">
+        <div class="col" id ="modulo">{{modulo}}</div>
+        <input id="modulo_formatos" type="text" value="{{modulo}}">
+    </div> --}}
+    <div class="col-lg-2 d-none">
+        <div class="input-group form-control-sm-erp form-control-sm-group-moneda">
+            <select class="form-control form-control-sm form-control-sm-moneda no-spin" id="moneda"><option value="S/">S/</option><option value="$">$</option></select>
+            <select class=" form-control form-control-sm " id="tipo_cambio"><option value="VTA">Venta</option><option value="COM">Compra</option><option value="ESP">Especial </option></select>
+            <input type="number" class="form-control form-control-sm text-right no-spin-number form-control-sm-tasa-cambio" id="tasa_cambio" disabled="">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-sm-6">
+                <form class="m-0 p-0">
+                    <div class="form-group row my-05 py-05">
+                        <label for="estado" class="col-sm-6 col-form-label col-form-label-sm">Estado:</label>
+                        <select class="col-sm-6 form-control form-control-sm m-0 p-0" id="estado">
+                            <option value="N">No Aceptadas</option>
+                            <option value="S">Aceptadas</option>
+                            <option value="(Todos)">Todos</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="row p-2">
+        <div class="col-md-12 ">
+            <table id="lista_letras_pendientes"></table>
+        </div>
+    </div>
+
+
+    <div class="row" id ="contenedor_formato_impresion"  style="background: white;">
+        <div class="col-8">
+            <div style="text-align: right;">
+            <button type="button" class="btn btn-close-modal" id="close_print" style="float: none;">
+                <p class="btn-close-modal-text">x</p>
+            </button>
+            </div>
+            <div id="aprobaciones_contenedor_formato_impresion">
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<input type="text" class="d-none"  id="situacion_letra_mn">
+<input type="text" class="d-none"  id="situacion_letra_me">
+{{!-- {{> mantenimientos/formato_impresion}}
+{{> mantenimientos/lista_mantenimientos}} --}}
+<script src="/js/modulos/provisiones/situacion_letras.js"></script>

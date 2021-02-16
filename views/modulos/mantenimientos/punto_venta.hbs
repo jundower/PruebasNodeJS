@@ -1,0 +1,65 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-4">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_punto_venta_codigo" class="col-sm-6 col-form-label col-form-label-sm">Código:</label>
+                            <input type="text" id="tablas_punto_venta_codigo" class="col-sm-6 form-control form-control-sm m-0 p-0" value="{{datos.Codigo}}"value="{{datos.Codigo}}" placeholder="Códgo" maxlength="3">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-4">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_punto_venta_abreviatura" class="col-sm-6 col-form-label col-form-label-sm">Abreviatura:</label>
+                            <input type="text" id="tablas_punto_venta_abreviatura" class="col-sm-6 form-control form-control-sm m-0 p-0"value="{{datos.Abreviatura}}" placeholder="Abreviatura" maxlength="5">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-2">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_punto_venta_nombre" class="col-sm-2 col-form-label col-form-label-sm">Nombre:</label>
+                            <input type="text" id="tablas_punto_venta_nombre" class="col-sm-10 form-control form-control-sm m-0 p-0"value="{{datos.Nombre}}" placeholder="Nombre" maxlength="50">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_punto_venta_direccion" class="col-sm-2 col-form-label col-form-label-sm">Dirección:</label>
+                            <input type="text" id="tablas_punto_venta_direccion" class="col-sm-10 form-control form-control-sm m-0 p-0"value="{{datos.Direccion}}" placeholder="Dirección" maxlength="500">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label class="col-sm-2 col-form-label col-form-label-sm">Alm. Relacionado:</label>
+                            <select id="tablas_punto_venta_almacen" class="col-sm-10 form-control form-control-sm m-0 p-0 c_mantenimientos" tabla="almacen">
+                                <option>Ninguno</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <table id="tablas_punto_venta_tipo_producto_almacen"></table>
+    </div>
+</div>
+
+<div class="d-none">
+    <input type="text" id="tablas_punto_venta_almacen_predeterminado" value="{{datos.Almacen_Codigo}}">
+</div>

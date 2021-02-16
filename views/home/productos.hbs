@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+    <title>PRODUCTOS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/home/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+        body, html {
+            height: 100%;
+            line-height: 1.8;
+        }
+        /* Full height image header */
+        .bgimg-1 {
+
+            background-size: cover;
+            background-image: url("/img/home/Imagenerp.jpg");
+            min-height: 110%;
+        }
+        .w3-bar .w3-button {
+            padding: 16px;
+        }
+    </style>
+    <style>
+        
+        * {
+            font-family: 'Raleway', 'sans-serif';
+        }
+        
+        .columns {
+            float: left;
+            width: 16%;
+            padding: 0px;
+        }
+
+        .price {
+            font-family:arial, verdana, sans-serif;
+            list-style-type: none;
+            border:#eee;
+            margin: 0;
+            padding: 0;
+            -webkit-transition: 0.3s;
+            transition: 0.3s;
+            -webkit-border-radius: 10px 10px 0px 20px;
+        }
+
+        .price:hover {
+            box-shadow: 0 16px 20px 0 rgba(0,0,0,10)
+        }
+        .price .header01 {
+            background-color: #5d8aa5;
+            -webkit-border-radius: 10px 10px 0px 0px;
+            color: white;
+            font-family:arial, verdana, sans-serif;
+            font-size: 13px;
+            height: 60px;
+        }
+        .price .header02 {
+            background-color:#F1C40F;
+            -webkit-border-radius: 10px 10px 0px 0px;
+            color: white;
+            font-family:arial, verdana, sans-serif;
+            font-size: 13px;
+            height: 60px;
+        }
+
+        .price .header03 {
+            background-color:#5DADE2;
+            -webkit-border-radius: 10px 10px 0px 0px;
+            color: white;
+            font-family:arial, verdana, sans-serif;
+            font-size: 13px;
+            height: 60px;
+        }
+
+        .price .header04 {
+            background-color:#27AE60;
+            -webkit-border-radius: 10px 10px 0px 0px;
+            color: white;
+            font-family:arial, verdana, sans-serif;
+            font-size: 13px;
+            height:60px;
+        }
+
+        .price .header05 {
+            background-color:#D68910;
+            -webkit-border-radius: 10px 10px 0px 0px;
+            color: white;
+            font-family:arial, verdana, sans-serif;
+            font-size: 13px;
+            height: 60px;
+        }
+
+
+        .price li {
+            font-family:arial, verdana, sans-serif;
+            border-bottom:#eee;
+            padding: 1px;
+            text-align:left;
+        }
+
+        .price .grey {
+            background-color: #eee;
+            font-family: arial, verdana, sans-serif;
+            font-size: 15px;
+        }
+        .price .grey01 {
+            background-color: #fff;
+            font-family:arial, verdana, sans-serif;
+            font-size: 15px;
+        }
+        .price .grey02 {
+            background-color: #fff;
+            font-family: arial, verdana, sans-serif;
+            font-style: #fff;
+            font-size: 15px;
+        }
+        #ancho{
+            width: 350px;
+        }
+        .button1 {
+            -webkit-border-radius: 10px 10px 10px 10px;
+            background-color:#F1C40F;
+            border: none;
+            color: white;
+            padding: 10px 35px;
+            overflow:hidden;
+            text-align: center;
+            text-decoration: none;
+            font-family: arial, verdana, sans-serif;;
+            font-size: 15px;
+        }
+        .buttonx{
+            -webkit-border-radius: 10px 10px 10px 10px;
+            padding: 10px 35px;
+            overflow:hidden;
+        }
+
+        .buttonx:before {
+            -webkit-border-radius: 10px 10px 10px 10px;
+            font-family: FontAwesome;
+            content:"\f07a";
+            position: absolute;
+            top: 11px;
+            left: -30px;
+            transition: all 400ms ease;
+        }
+        .buttonx:hover:before {
+            -webkit-border-radius: 10px 10px 10px 10px;
+            left: 7px;
+        }
+        .button2 {
+            -webkit-border-radius: 10px 10px 10px 10px;
+            background-color:#5DADE2;
+            border: none;
+            color: white;
+            padding: 10px 35px;
+            overflow:hidden;
+            text-align: center;
+            text-decoration: none;
+            font-family: arial, verdana, sans-serif;;
+            font-size: 15px;
+        }
+        .button3 {
+            -webkit-border-radius: 10px 10px 10px 10px;
+            background-color:#27AE60;
+            border: none;
+            color: white;
+            padding: 10px 35px;
+            overflow:hidden;
+            text-align: center;
+            text-decoration: none;
+            font-family: arial, verdana, sans-serif;;
+            font-size: 15px;
+        }
+        .button4 {
+            -webkit-border-radius: 10px 10px 10px 10px;
+            background-color:#D68910;
+            border: none;
+            color: white;
+            padding: 10px 35px;
+            overflow:hidden;
+            text-align: center;
+            text-decoration: none;
+            font-family: arial, verdana, sans-serif;;
+            font-size: 15px;
+        }
+        @media only screen and (max-width: 100px) {
+            .columns {
+                width: 100%;
+            }
+        }
+
+    </style>
+    <body>
+
+        <!-- Navbar (sit on top) -->
+        <div class="w3-bar w3-white w3-card" id="myNavbar">
+            <a href="/home" class="w3-bar-item w3-button w3-wide"><img src="/img/home/logoprincipalerp.png"></a>
+            <!-- Right-sided navbar links -->
+            <div class="w3-right w3-hide-small">
+                <a href="/home" class="w3-bar-item w3-button"><i class="fa fa-home"></i>INICIO</a>
+               
+                <a href="/home/enviodemensaje" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACTO</a>
+            </div>
+            <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+
+
+
+
+    
+   
+<footer class="w3-center w3-white w3-padding-40" id="work">
+    <h1 style="text-align:center">NUESTRAS VERSIONES</h1>
+</footer>
+
+    <div class="w3-container" style="margin-left: 70px;padding:20px 16px"  >
+        <div id="ancho" class="columns">
+            <ul class="price">
+                <!--<li class="header01"><center style="padding-top: 7px;">ELIJE TU VERSIÓN<p></p><img src="/img/home/flechaazul.png" width="14" height="14">&nbsp;INCLUYE&nbsp;&nbsp;&nbsp;&nbsp;<img src="/img/home/equizroja.png" width="14" height="14">&nbsp;NO INCLUYE&nbsp;</center></li>-->
+                <li class="header01"><center >ELIJE TU VERSIÓN<p></p><img src="/img/home/flechaazul.png" width="14" height="14">&nbsp;INCLUYE&nbsp;&nbsp;&nbsp;&nbsp;<img src="/img/home/equizroja.png" width="14" height="14">&nbsp;NO INCLUYE&nbsp;</center></li>
+            <li class="grey02">Cantidad de Personas </li>
+                <li class="grey">Sistema de Logística</li>
+                <li class="grey01">Sistema de cuadro comparativo</li>
+                <li class="grey">Sistema de Importaciones</li>
+                <li class="grey01">Sistema Control de Calidad (Aseguramiento)</li>
+                <li class="grey">Sistema de Inventario y Valorización</li>
+                <li class="grey01">Sistema de Cotizaciones</li>
+                <li class="grey">Sistema de Pedidos</li>
+                <li class="grey01">Sistema de Aprobaciones Pedidos</li>
+                <li class="grey">Sistema de Ventas y Facturación</li>
+                <li class="grey01">Sistema de Punto de Ventas (POS)</li>
+                <li class="grey">Sistema de Emisión de Letras</li>
+                <li class="grey01">Sistema de Cuentas por Pagar</li>
+                <li class="grey">Sistema de Cuentas por Cobrar</li>
+                <li class="grey01">Sistema de Caja y Bancos</li>
+                <li class="grey">Sistema de Fondos Fijos</li>
+                <li class="grey01">Sistema de Cheque Voucher’s</li>
+                <li class="grey">Sistema de Planillas</li>
+                <li class="grey01">Sistema de Control Patrimonial (Activo Fijo)</li>
+                <li class="grey">Sistema de Proyectos  (Proyecto / obras)</li>
+                <li class="grey01">Sistema de Presupuestos (General / obra)</li>
+                <li class="grey">Sistema de Flujo de Caja</li>
+                <li class="grey01">Sistema de Contabilidad</li>
+                <li class="grey">SIG. Sistema de Información Gerencial</li>
+                <li class="grey01">Sistema de contratos</li>
+                <li class="grey">Sistema de Servicio</li>
+                <li class="grey01">Sistema de Producción</li>
+                <li class="grey">&nbsp&nbsp&nbsp&nbsp&nbsp</li>
+            </ul>
+        </div>
+
+        <div class="columns" style="border: none;">
+            <ul class="price">
+                <!--<li class="header02"><center style="padding-top: 7px;">ERP SOFT <p></p> VERSION INTEGRAL</center></li>-->
+                <li class="header02"><center>ERP SOFT <p></p> VERSION INTEGRAL</center></li>
+                <li class="grey01"><center><img src="/img/home/usuario.png" width="14" height="14">&nbsp;15 - mas</img></center></li>
+                <li class="grey"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/equizroja.png" width="14" height="14"></img></center></li>
+                <li class="grey"><center><img src="/img/home/equizroja.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/equizroja.png" width="14" height="14"></img></center></li>
+       
+                 <li class="grey" style="padding-left: 0px;"><center><a href="/home/enviodemensaje" class="button1" style="padding-right: 72px;padding-left: 50px;" >COTIZAR</a></center></li>
+            </ul>
+        </div>
+
+        <div class="columns">
+            <ul class="price">
+                <li class="header03"><center >ERP SOFT <p></p> VERSION PYME</center></li>
+                <li class="grey01"><center><img src="/img/home/usuario.png" width="14" height="15">&nbsp;10 - 15</img></center></li>
+                <li class="grey"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/equizroja.png" width="14" height="14"></img></center></li>
+                <li class="grey"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/equizroja.png" width="14" height="14"></img></center></li>
+                <li class="grey"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey"><center><img src="/img/home/equizroja.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/equizroja.png" width="14" height="14"></img></center></li>
+                <li class="grey"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey"><center><img src="/img/home/equizroja.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/equizroja.png" width="14" height="14"></img></center></li>
+                <li class="grey"><center><img src="/img/home/equizroja.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/equizroja.png" width="14" height="14"></img></center></li>
+        
+                <li class="grey" style="padding-left: 0px;"><center><a href="enviodemensajep.php" class="button2" style="padding-right: 72px;padding-left: 50px;">COTIZAR</a></center></li>
+            </ul>
+        </div>
+
+        <div class="columns">
+            <ul class="price">
+                <li class="header04"><center >ERP SOFT <p></p> VERSION MYPE</center></li>
+                <li class="grey01"><center><img src="/img/home/usuario.png" width="14" height="15">&nbsp;05 - 10</img></center></li>
+                <li class="grey"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/equizroja.png" width="14" height="14"></img></center></li>
+                <li class="grey"><center><img src="/img/home/equizroja.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/equizroja.png" width="14" height="14"></img></center></li>
+                <li class="grey"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/equizroja.png" width="14" height="14"></img></center></li>
+                <li class="grey"><center><img src="/img/home/equizroja.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey"><center><img src="/img/home/equizroja.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/equizroja.png" width="14" height="14"></img></center></li>
+                <li class="grey"><center><img src="/img/home/equizroja.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/equizroja.png" width="14" height="14"></img></center></li>
+                <li class="grey"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/equizroja.png" width="14" height="14"></img></center></li>
+                <li class="grey"><center><img src="/img/home/equizroja.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey"><center><img src="/img/home/equizroja.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/equizroja.png" width="14" height="14"></img></center></li>
+                <li class="grey"><center><img src="/img/home/equizroja.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/equizroja.png" width="14" height="14"></img></center></li>
+      
+        
+                 <li class="grey" style="padding-left: 0px;"><center><a href="enviodemensajem.php" class="button3" style="padding-right: 72px;padding-left: 50px;">COTIZAR</a></center></li>
+            </ul>
+        </div>
+
+        <div class="columns">
+            <ul class="price">
+                <li class="header05"><center >ERP SOFT <p></p> VERSION EMPRENDEDORA</center></li>
+                <li class="grey01"><center><img src="/img/home/usuario.png" width="14" height="15">&nbsp;01 - 05</img></center></li>
+                <li class="grey"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/equizroja.png" width="14" height="14"></img></center></li>
+                <li class="grey"><center><img src="/img/home/equizroja.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/equizroja.png" width="14" height="14"></img></center></li>
+                <li class="grey"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/equizroja.png" width="14" height="14"></img></center></li>
+                <li class="grey"><center><img src="/img/home/equizroja.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey"><center><img src="/img/home/equizroja.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/equizroja.png" width="14" height="14"></img></center></li>
+                <li class="grey"><center><img src="/img/home/equizroja.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/equizroja.png" width="14" height="14"></img></center></li>
+                <li class="grey"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/equizroja.png" width="14" height="14"></img></center></li>
+                <li class="grey"><center><img src="/img/home/equizroja.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/flechaazul.png" width="14" height="14"></img></center></li>
+                <li class="grey"><center><img src="/img/home/equizroja.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/equizroja.png" width="14" height="14"></img></center></li>
+                <li class="grey"><center><img src="/img/home/equizroja.png" width="14" height="14"></img></center></li>
+                <li class="grey01"><center><img src="/img/home/equizroja.png" width="14" height="14"></img></center></li>
+      
+                 <li class="grey" style="padding-left: 0px;"><center><a href="/home/enviodemensaje" class="button4" style="padding-right: 72px;padding-left: 50px;">COTIZAR</a></center></li>
+            </ul>
+        </div>
+        
+    </div>
+   
+
+    <!-- Contact Section -->
+    <div class="w3-container w3-light-grey" style="padding:115px 16px" id="contact">
+
+        <h2 class="w3-center">CONTÁCTENOS</h2>
+
+        <div class="w3-row-padding" style="margin-top:20px">
+
+            <div class="w3-half">
+                &nbsp&nbsp&nbsp&nbsp&nbsp<img src="/img/home/logoprincipalerp.png">
+                <br>
+                <p style="margin-top: 5px;margin-bottom: 5px;"><i style="width:10%;height:5%;"  class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i>Calle. Porta 170 Oficina 609 Lima - Lima - Miraflores</p>
+                <p style="margin-top: 5px;margin-bottom: 5px;"><i style="width:10%;height:5%;" class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i>Informes y Ventas Central : (01) 717-8740 </p>
+                <p style="margin-top: 5px;margin-bottom: 5px;"><i style="width:10%;height:5%;" class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i>Celular: 984 207 192</p>
+                <p style="margin-top: 5px;margin-bottom: 5px;"><i style="width:10%;height:5%;" class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i>EMAIL: ventas@erp-solutionsperu.com </p>
+                <br>
+            </div>
+            <div class="w3-half" style="width:50%;height:350px;">
+                <iframe style="width:80%;height:90%;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.8933591840514!2d-77.03223288518673!3d-12.119448491418941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c819d14724bd%3A0xfa0381458bbb71db!2sINT.506%2C+Calle+M%C3%A1rtir+Jos%C3%A9+Olaya+129%2C+Miraflores+Lima+18!5e0!3m2!1ses!2spe!4v1533330821088" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-64">
+        <a href="#work" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Hacia arriba</a>
+        <div class="w3-xlarge w3-section">
+            <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            <i class="fa fa-instagram w3-hover-opacity"></i>
+            <i class="fa fa-snapchat w3-hover-opacity"></i>
+            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+            <i class="fa fa-twitter w3-hover-opacity"></i>
+            <i class="fa fa-linkedin w3-hover-opacity"></i>
+        </div>
+        <p>© 2018 ERP SYSTEMS & SOLUTIONS S.A.C</p>
+    </footer>
+</body>
+</html>

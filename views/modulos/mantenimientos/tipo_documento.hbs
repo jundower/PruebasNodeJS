@@ -1,0 +1,252 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-6">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_tipo_documento_codigo" class="col-sm-4 col-form-label col-form-label-sm">Código:</label>
+                            <input type="text" id="tablas_tipo_documento_codigo" class="col-sm-8 form-control form-control-sm m-0 p-0" value="{{datos.Codigo}}" placeholder="Códgo" maxlength="5">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-6">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_tipo_documento_codigo_sunat" class="col-sm-4 col-form-label col-form-label-sm">Código Sunat:</label>
+                            <input type="text" id="tablas_tipo_documento_codigo_sunat" class="col-sm-8 form-control form-control-sm m-0 p-0" value="{{datos.Codigo_Sunat}}"placeholder="Códgo Sunat" maxlength="5">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_tipo_documento_nombre" class="col-sm-2 col-form-label col-form-label-sm">Nombre:</label>
+                            <input type="text" id="tablas_tipo_documento_nombre" class="col-sm-10 form-control form-control-sm m-0 p-0"value="{{datos.Nombre}}" placeholder="Nombre" maxlength="50">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_tipo_documento_nombre" class="col-sm-2 col-form-label col-form-label-sm">Modulos:</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-2">
+                    <form class="m-0 p-0">
+                        <div class="form-check row my-05 py-05">
+                            <input class="form-check-input" type="checkbox" id="tablas_tipo_documento_compras" >
+                            <label class="form-check-label col-form-label-sm" for="tablas_tipo_documento_compras">Compras</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-2">
+                    <form class="m-0 p-0">
+                        <div class="form-check row my-05 py-05">
+                            <input class="form-check-input" type="checkbox" id="tablas_tipo_documento_ventas" >
+                            <label class="form-check-label col-form-label-sm" for="tablas_tipo_documento_ventas">Ventas</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-2">
+                    <form class="m-0 p-0">
+                        <div class="form-check row my-05 py-05">
+                            <input class="form-check-input" type="checkbox" id="tablas_tipo_documento_contabilidad" >
+                            <label class="form-check-label col-form-label-sm" for="tablas_tipo_documento_contabilidad">Contabilidad</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-2">
+                    <form class="m-0 p-0">
+                        <div class="form-check row my-05 py-05">
+                            <input class="form-check-input" type="checkbox" id="tablas_tipo_documento_almacen" >
+                            <label class="form-check-label col-form-label-sm" for="tablas_tipo_documento_almacen">Almacen</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-1">
+                    <form class="m-0 p-0">
+                        <div class="form-check row my-05 py-05">
+                            <input class="form-check-input" type="checkbox" id="tablas_tipo_documento_caja" >
+                            <label class="form-check-label col-form-label-sm" for="tablas_tipo_documento_caja">Caja</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-1">
+                    <form class="m-0 p-0">
+                        <div class="form-check row my-05 py-05">
+                            <input class="form-check-input" type="checkbox" id="tablas_tipo_documento_punto_venta" >
+                            <label class="form-check-label col-form-label-sm" for="tablas_tipo_documento_punto_venta">PtoVta</label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                        <label for="tablas_tipo_documento_csigno" class="col-form-label col-form-label-sm">Csigno:</label>
+                    </div>
+                <div class="col-sm-4">
+                    <div class="form-check form-check-inline m-0 p-0">
+                        <input class="form-check-input" type="radio" name="tablas_tipo_documento_csigno" value="S" id="tablas_tipo_documento_csigno_suma">
+                        <label class="form-check-label col-form-label-sm" for="tablas_tipo_documento_csigno_suma">Suma</label>
+                    </div>
+                    <div class="form-check form-check-inline m-0 p-0">
+                        <input class="form-check-input" type="radio" name="tablas_tipo_documento_csigno" value="R" id="tablas_tipo_documento_csigno_resta">
+                        <label class="form-check-label col-form-label-sm" for="tablas_tipo_documento_csigno_resta">Resta</label>
+                    </div>
+                </div>
+                <div class="col-sm-6">       
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_tipo_documento_cantidad_caracteres" class="col-sm-4 col-form-label col-form-label-sm">Cant. Caracteres:</label>
+                            <input type="number" id="tablas_tipo_documento_cantidad_caracteres" class="col-sm-8 form-control form-control-sm m-0 p-0" value="{{datos.Cantidad_Caracteres}}" placeholder="Cantidad Caracteres" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                        <label for="tablas_tipo_documento_aplica_percepcion" class="col-form-label col-form-label-sm">Aplica Percepcion:</label>
+                    </div>
+                <div class="col-sm-4">
+                    <div class="form-check form-check-inline m-0 p-0">
+                        <input class="form-check-input" type="radio" name="tablas_tipo_documento_aplica_percepcion" value="S" id="tablas_tipo_documento_aplica_percepcion_si">
+                        <label class="form-check-label col-form-label-sm" for="tablas_tipo_documento_aplica_percepcion_si">Si</label>
+                    </div>
+                    <div class="form-check form-check-inline m-0 p-0">
+                        <input class="form-check-input" type="radio" name="tablas_tipo_documento_aplica_percepcion" value="N" id="tablas_tipo_documento_aplica_percepcion_no">
+                        <label class="form-check-label col-form-label-sm" for="tablas_tipo_documento_aplica_percepcion_no">No</label>
+                    </div>
+                </div>
+                <div class="col-sm-6">       
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_tipo_documento_minimo_percepcion" class="col-sm-4 col-form-label col-form-label-sm">Min. A Perc:</label>
+                            <input type="number" id="tablas_tipo_documento_minimo_percepcion" class="col-sm-8 form-control form-control-sm m-0 p-0" value="{{datos.Min_A_Prc}}" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                        <label for="tablas_tipo_documento_genera_credifis" class="col-form-label col-form-label-sm">Gen. Credifisc:</label>
+                    </div>
+                <div class="col-sm-4">
+                    <div class="form-check form-check-inline m-0 p-0">
+                        <input class="form-check-input" type="radio" name="tablas_tipo_documento_genera_credifis" value="S" id="tablas_tipo_documento_genera_credifis_si">
+                        <label class="form-check-label col-form-label-sm" for="tablas_tipo_documento_genera_credifis_si">Si</label>
+                    </div>
+                    <div class="form-check form-check-inline m-0 p-0">
+                        <input class="form-check-input" type="radio" name="tablas_tipo_documento_genera_credifis" value="N" id="tablas_tipo_documento_genera_credifis_no">
+                        <label class="form-check-label col-form-label-sm" for="tablas_tipo_documento_genera_credifis_no">No</label>
+                    </div>
+                </div>
+                <div class="col-sm-6">       
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_tipo_documento_porcentaje_igv" class="col-sm-4 col-form-label col-form-label-sm">Porc. Igv:</label>
+                            <input type="number" id="tablas_tipo_documento_porcentaje_igv" class="col-sm-8 form-control form-control-sm m-0 p-0" value="{{datos.Porcentaje_Igv}}" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                        <label for="tablas_tipo_documento_renta_cuarta" class="col-form-label col-form-label-sm">Renta Cuarta:</label>
+                    </div>
+                <div class="col-sm-4">
+                    <div class="form-check form-check-inline m-0 p-0">
+                        <input class="form-check-input" type="radio" name="tablas_tipo_documento_renta_cuarta" value="S" id="tablas_tipo_documento_renta_cuarta_si">
+                        <label class="form-check-label col-form-label-sm" for="tablas_tipo_documento_renta_cuarta_si">Si</label>
+                    </div>
+                    <div class="form-check form-check-inline m-0 p-0">
+                        <input class="form-check-input" type="radio" name="tablas_tipo_documento_renta_cuarta" value="N" id="tablas_tipo_documento_renta_cuarta_no">
+                        <label class="form-check-label col-form-label-sm" for="tablas_tipo_documento_renta_cuarta_no">No</label>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_tipo_documento_fecha_tipo_cambio" class="col-sm-4 col-form-label col-form-label-sm">Fecha Tc:</label>
+                            <select id="tablas_tipo_documento_fecha_tipo_cambio" class="col-sm-8 form-control form-control-sm c_mantenimientos m-0 p-0 " >
+                                <option value="FECHA DE EMISION">FECHA DE EMISION</option>
+                                <option value="FECHA DE VENCIMIENTO">FECHA DE VENCIMIENTO</option>
+                                <option value="FECHA DE REFERENCIA">FECHA DE REFERENCIA</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_tipo_documento_ruta_impresora" class="col-sm-2 col-form-label col-form-label-sm">Ruta Impresora:</label>
+                            <input type="text" id="tablas_tipo_documento_ruta_impresora" class="col-sm-10 form-control form-control-sm m-0 p-0" value="" placeholder="Ruta Impresora"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_tipo_documento_ruta_formato" class="col-sm-2 col-form-label col-form-label-sm">Ruta Formato:</label>
+                            <input type="text" id="tablas_tipo_documento_ruta_formato" class="col-sm-10 form-control form-control-sm m-0 p-0" value="{{datos.Ruta_Formato}}" placeholder="Ruta Formato"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_tipo_documento_tipo_formato" class="col-sm-4 col-form-label col-form-label-sm">Tipo Formato:</label>
+                            <select id="tablas_tipo_documento_tipo_formato" class="col-sm-8 form-control form-control-sm c_mantenimientos m-0 p-0 " >
+                                <option value="Normal">Normal</option>
+                                <option value="Composite">Composite</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="d-none">
+    {{#if datos}}
+        <input type="text" id="tablas_tipo_documento_compras_predeterminado" value="{{datos.Compras}}">
+        <input type="text" id="tablas_tipo_documento_ventas_predeterminado" value="{{datos.Ventas}}">
+        <input type="text" id="tablas_tipo_documento_contabilidad_predeterminado" value="{{datos.Contabilidad}}">
+        <input type="text" id="tablas_tipo_documento_almacen_predeterminado" value="{{datos.Almacen}}">
+        <input type="text" id="tablas_tipo_documento_caja_predeterminado" value="{{datos.Caja}}">
+        <input type="text" id="tablas_tipo_documento_punto_venta_predeterminado" value="{{datos.Punto_Venta}}">
+
+        <input type="text" id="tablas_tipo_documento_csigno_predeterminado" value="{{datos.Csigno}}">
+        <input type="text" id="tablas_tipo_documento_aplica_percepcion_predeterminado" value="{{datos.Aplica_Prc}}">
+        <input type="text" id="tablas_tipo_documento_genera_credifis_predeterminado" value="{{datos.Genera_Credfis}}">
+        <input type="text" id="tablas_tipo_documento_renta_cuarta_predeterminado" value="{{datos.Renta_Cuarta}}">
+
+        <input type="text" id="tablas_tipo_documento_fecha_tipo_cambio_predeterminado" value="{{datos.Fecha_Tc}}">
+        <input type="text" id="tablas_tipo_documento_tipo_formato_predeterminado" value="{{datos.Tipo_Formato}}">
+
+    {{else}}
+        <input type="text" id="tablas_tipo_documento_compras_predeterminado" value="N">
+        <input type="text" id="tablas_tipo_documento_ventas_predeterminado" value="N">
+        <input type="text" id="tablas_tipo_documento_contabilidad_predeterminado" value="N">
+        <input type="text" id="tablas_tipo_documento_almacen_predeterminado" value="N">
+        <input type="text" id="tablas_tipo_documento_caja_predeterminado" value="N">
+        <input type="text" id="tablas_tipo_documento_punto_venta_predeterminado" value="N">
+
+        <input type="text" id="tablas_tipo_documento_csigno_predeterminado" value="N">
+        <input type="text" id="tablas_tipo_documento_aplica_percepcion_predeterminado" value="N">
+        <input type="text" id="tablas_tipo_documento_genera_credifis_predeterminado" value="N">
+        <input type="text" id="tablas_tipo_documento_renta_cuarta_predeterminado" value="N">
+    {{/if}}
+</div>

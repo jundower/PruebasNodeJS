@@ -1,0 +1,94 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-6">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_cobrador_codigo" class="col-sm-4 col-form-label col-form-label-sm">Código:</label>
+                            <input type="text" id="tablas_cobrador_codigo" class="col-sm-8 form-control form-control-sm m-0 p-0" value="{{datos.Codigo}}"value="{{datos.Codigo}}" placeholder="Códgo" maxlength="3">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-4">
+                </div>
+                <div class="col-sm-2">
+                    <form class="m-0 p-0">
+                        <div class="form-check row my-05 py-05">
+                            <input class="form-check-input" type="checkbox" id="tablas_cobrador_predeterminado">
+                            <label class="form-check-label col-form-label-sm" for="tablas_cobrador_predeterminado">Predeterminado</label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_cobrador_nombre" class="col-sm-2 col-form-label col-form-label-sm">Nombre:</label>
+                            <input type="text" id="tablas_cobrador_nombre" class="col-sm-10 form-control form-control-sm m-0 p-0"value="{{datos.Nombre}}" placeholder="Nombre" maxlength="50">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_cobrador_email" class="col-sm-2 col-form-label col-form-label-sm">Email:</label>
+                            <input type="text" id="tablas_cobrador_email" class="col-sm-10 form-control form-control-sm m-0 p-0"value="{{datos.Email}}" placeholder="E-mail" maxlength="500">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_cobrador_telefono1" class="col-sm-4 col-form-label col-form-label-sm">Telefono 1:</label>
+                            <input type="text" id="tablas_cobrador_telefono1" class="col-sm-8 form-control form-control-sm m-0 p-0"value="{{datos.Telefono1}}" placeholder="Telefono 1" maxlength="15">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-6">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_cobrador_telefono2" class="col-sm-4 col-form-label col-form-label-sm">Telefono 2:</label>
+                            <input type="text" id="tablas_cobrador_telefono2" class="col-sm-8 form-control form-control-sm m-0 p-0"value="{{datos.Telefono2}}" placeholder="Telefono 2" maxlength="15">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_cobrador_usuario" class="col-sm-4 col-form-label col-form-label-sm">Usuario:</label>
+                            <select id="tablas_cobrador_usuario" class="col-sm-8 form-control form-control-sm c_mantenimientos m-0 p-0 " >
+                                <option>Ninguno</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-6">
+                    <form class="m-0 p-0">
+                        <div class="form-group row my-05 py-05">
+                            <label for="tablas_cobrador_password" class="col-sm-4 col-form-label col-form-label-sm">Password:</label>
+                            <input type="password" id="tablas_cobrador_password" class="col-sm-8 form-control form-control-sm m-0 p-0"value="{{datos.Password}}" placeholder="Password" maxlength="15">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="d-none">
+    {{#if datos}}
+        <input type="text" id="tablas_cobrador_usuario_predeterminado" value="{{datos.Usuario}}">
+        <input type="text" id="tablas_cobrador_predeterminado_predeterminado" value="{{datos.Predeterminado}}">
+    {{else}}
+        <input type="text" id="tablas_cobrador_usuario_predeterminado" value="">
+        <input type="text" id="tablas_cobrador_predeterminado_predeterminado" value="0">
+    {{/if}}
+</div>
