@@ -71,6 +71,32 @@ app.use('/clientes',require('./routes/mantenimientos/clientes.js'));
 app.use('/unidades',require('./routes/mantenimientos/unidades.js'));
 app.use('/talonarios',require('./routes/mantenimientos/talonarios.js'));
 app.use('/forma_pago',require('./routes/mantenimientos/forma_pago.js'));
+app.use('/lista_precios',require('./routes/mantenimientos/lista_precios.js'));
+app.use('/tipo_cambio',require('./routes/mantenimientos/tipo_cambio.js'));
+app.use('/vendedor',require('./routes/mantenimientos/vendedor.js'));
+app.use('/gestor_cobranza',require('./routes/mantenimientos/gestor_cobranza.js'));
+app.use('/configurar_tablas',require('./routes/mantenimientos/configurar_tablas.js'));
+app.use('/usuario',require('./routes/mantenimientos/usuario.js'));
+app.use('/tipo_documento',require('./routes/mantenimientos/tipo_documento.js'))
+app.use('/chofer',require('./routes/mantenimientos/chofer.js'));
+app.use('/agencia_transporte',require('./routes/mantenimientos/agencia_transporte.js'));
+app.use('/detracciones',require('./routes/mantenimientos/detraccciones.js'));
+app.use('/proveedores',require('./routes/mantenimientos/proveedores.js'));
+app.use('/incoterm',require('./routes/mantenimientos/incoterm.js'));
+app.use('/definicion_transacciones',require('./routes/mantenimientos/definicion_transacciones.js'));
+app.use('/zona',require('./routes/mantenimientos/zona.js'));
+app.use('/tipo_productos',require('./routes/mantenimientos/tipo_productos.js'));
+app.use('/empleados',require('./routes/mantenimientos/empleados.js'));
+app.use('/paises',require('./routes/mantenimientos/paises.js'));
+app.use('/tipo_documento_identidad',require('./routes/mantenimientos/tipo_documento_identidad.js'));
+app.use('/plan_contable',require('./routes/mantenimientos/plan_contable.js'))
+app.use('/subvoucher',require('./routes/mantenimientos/subvoucher.js'));
+app.use('/anexos',require('./routes/mantenimientos/anexos.js'));
+app.use('/tipo_auxiliar',require('./routes/mantenimientos/tipo_auxiliar.js'));
+app.use('/clasificacion_bien_servicios',require('./routes/mantenimientos/clasificacion_bien_servicios.js'));
+app.use('/periodo_contable',require('./routes/mantenimientos/periodo_contable.js'));
+app.use('/retencion_no_domiciliado',require('./routes/mantenimientos/retencion_no_domiciliados.js'));
+app.use('/cuentas_corrientes',require('./routes/mantenimientos/cuentas_corrientes.js'));
 
 // Public
 app.use(express.static(path.join(__dirname, 'public')));
