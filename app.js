@@ -24,8 +24,32 @@ app.engine('.hbs', exphbs({
 app.set('view engine', '.hbs');
 
 app.get('/', function(req,res){
-    res.send("Cuarta Prueba")
+    res.send("Sexta Prueba")
 })
+
+// Middlewares
+app.use(session({
+    secret: 'ERP',
+    resave: false,
+    saveUninitialized: false, 
+    store: new TediousStore(options),
+    // cookie: { maxAge: 10000, expires : new Date(Date.now() + 10000)}
+    // cookie: { maxAge: 3600000}
+  }));
+  app.use(morgan('dev'));
+  app.use(express.urlencoded({limit: '50mb',extended:false}));
+  app.use(express.json({limit: '50mb',extended: true,}));
+  app.use(passport.initialize());
+  app.use(passport.session());
+  app.use(favicon(path.join(__dirname, 'public', 'img', 'erpsoft.ico')))
+
+// Routes
+app.use(require('./routes/index'));
+app.use(require('./routes/authentication'));
+  
+
+// Public
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Starting
 app.listen(app.get('port'), () => {
