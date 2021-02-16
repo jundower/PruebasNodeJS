@@ -138,12 +138,7 @@ app.use('/detraccion',require('./routes/modulos/provisiones/detraccion.js'));
 app.use('/retencion',require('./routes/modulos/provisiones/retencion.js'));
 
 app.use('/ventas',require('./routes/modulos/ventas/ventas.js'));
-app.use('/cotizacion',require('./routes/modulos/ventas/cotizacion.js'));
-app.use('/pedido',require('./routes/modulos/ventas/pedido.js'));
-app.use('/guia',require('./routes/modulos/ventas/guia.js'));
-app.use('/facturacion',require('./routes/modulos/ventas/facturacion.js'));
-app.use('/sunat',require('./routes/modulos/ventas/sunat.js'));
-app.use('/reportes_ventas',require('./routes/modulos/ventas/reportes_ventas.js'));
+
 
 // Public
 app.use(express.static(path.join(__dirname, 'public')));
