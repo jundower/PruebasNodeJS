@@ -126,6 +126,17 @@ app.use('/grupo_auxiliar',require('./routes/mantenimientos/grupo_auxiliar.js'));
 app.use('/asiento_patron',require('./routes/mantenimientos/asiento_patron.js'));
 
 
+app.use('/configuraciones',require('./routes/modulos/configuraciones/configuraciones.js'));
+app.use('/cancelacion',require('./routes/modulos/financiero/cancelacion.js'));
+
+app.use('/contabilidad',require('./routes/modulos/contabilidad/contabilidad.js'));
+app.use('/reporte_anexos',require('./routes/modulos/contabilidad/reporte_anexos.js'));
+
+app.use('/provisiones',require('./routes/modulos/provisiones/provisiones.js'));
+app.use('/letras',require('./routes/modulos/provisiones/letras_cxc.js'));
+app.use('/detraccion',require('./routes/modulos/provisiones/detraccion.js'));
+app.use('/retencion',require('./routes/modulos/provisiones/retencion.js'));
+
 // Public
 app.use(express.static(path.join(__dirname, 'public')));
 
