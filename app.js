@@ -7,7 +7,10 @@ const passport = require ('passport');
 var favicon = require('serve-favicon');
 const {options,database} = require('./keys');
 var TediousStore = require('connect-tedious')(session);
+
+// Intializations
 const app = express();
+require('./lib/passport');
 
 
 // Settings
@@ -23,9 +26,9 @@ app.engine('.hbs', exphbs({
 }))
 app.set('view engine', '.hbs');
 
-app.get('/', function(req,res){
-    res.send("Sexta Prueba")
-})
+// app.get('/', function(req,res){
+//     res.send("Sexta Prueba")
+// })
 
 // Middlewares
 app.use(session({
