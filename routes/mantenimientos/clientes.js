@@ -4,7 +4,7 @@ const {poolPromise, mssql} = require ('../../database');
 
 router.get('/lista', async (req, res) => {
   try {
-      const codigo_empresa = req.user.codigo_empresa
+    const codigo_empresa = '0000000001';
       const pool = await poolPromise
 
       const lista = await pool
