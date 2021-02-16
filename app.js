@@ -143,7 +143,7 @@ app.use('/retencion',require('./routes/modulos/provisiones/retencion.js'));
 // app.use('/pedido',require('./routes/modulos/ventas/pedido.js'));
 // app.use('/guia',require('./routes/modulos/ventas/guia.js'));
 // app.use('/facturacion',require('./routes/modulos/ventas/facturacion.js'));
-// app.use('/sunat',require('./routes/modulos/ventas/sunat.js'));
+app.use('/sunat',require('./routes/modulos/ventas/sunat.js'));
 // app.use('/reportes_ventas',require('./routes/modulos/ventas/reportes_ventas.js'));
 // app.use('/punto_venta',require('./routes/modulos/punto_venta/punto_venta.js'));
 // app.use('/toma_pedidos',require('./routes/modulos/punto_venta/toma_pedidos.js'));
@@ -164,7 +164,7 @@ app.use('/retencion',require('./routes/modulos/provisiones/retencion.js'));
 // app.use('/almacen',require('./routes/modulos/almacen/almacen.js'));
 // app.use('/guia_entrada',require('./routes/modulos/almacen/guia_entrada.js'));
 // app.use('/transaccion_almacen',require('./routes/modulos/almacen/transaccion_almacen.js'));
-app.use('/reportes_almacen',require('./routes/modulos/almacen/reportes_almacen.js'));
+// app.use('/reportes_almacen',require('./routes/modulos/almacen/reportes_almacen.js'));
 
 app.use('/tablas',require('./routes/modulos/mantenimientos/tablas.js'));
 
