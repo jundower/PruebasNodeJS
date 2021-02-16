@@ -97,6 +97,34 @@ app.use('/clasificacion_bien_servicios',require('./routes/mantenimientos/clasifi
 app.use('/periodo_contable',require('./routes/mantenimientos/periodo_contable.js'));
 app.use('/retencion_no_domiciliado',require('./routes/mantenimientos/retencion_no_domiciliados.js'));
 app.use('/cuentas_corrientes',require('./routes/mantenimientos/cuentas_corrientes.js'));
+app.use('/cobrador',require('./routes/mantenimientos/cobrador.js'));
+app.use('/familias',require('./routes/mantenimientos/familias.js'));
+app.use('/subfamilias',require('./routes/mantenimientos/subfamilias.js'));
+app.use('/conceptos',require('./routes/mantenimientos/conceptos.js'));
+app.use('/moneda',require('./routes/mantenimientos/moneda.js'));
+app.use('/grupo_cliente',require('./routes/mantenimientos/grupo_cliente.js'));
+app.use('/grupo_proveedor',require('./routes/mantenimientos/grupo_proveedor.js'));
+app.use('/departamentos',require('./routes/mantenimientos/departamentos.js'));
+app.use('/distritos',require('./routes/mantenimientos/distritos.js'));
+app.use('/ciudad',require('./routes/mantenimientos/ciudad.js'));
+app.use('/situacion',require('./routes/mantenimientos/situacion.js'));
+app.use('/rubro',require('./routes/mantenimientos/rubro.js'));
+app.use('/bancos',require('./routes/mantenimientos/bancos.js'));
+app.use('/tipo_agencia',require('./routes/mantenimientos/tipo_agencia.js'));
+app.use('/motivos_tramite',require('./routes/mantenimientos/motivos_tramite.js'));
+app.use('/partida_gasto',require('./routes/mantenimientos/partida_gasto.js'));
+app.use('/kits',require('./routes/mantenimientos/kits.js'));
+app.use('/situacion_letra',require('./routes/mantenimientos/situacion_letra.js'));
+app.use('/concepto1',require('./routes/mantenimientos/concepto1.js'));
+app.use('/concepto2',require('./routes/mantenimientos/concepto2.js'));
+app.use('/concepto3',require('./routes/mantenimientos/concepto3.js'));
+app.use('/concepto4',require('./routes/mantenimientos/concepto4.js'));
+app.use('/concepto5',require('./routes/mantenimientos/concepto5.js'));
+app.use('/concepto6',require('./routes/mantenimientos/concepto6.js'));
+app.use('/concepto7',require('./routes/mantenimientos/concepto7.js'));
+app.use('/grupo_auxiliar',require('./routes/mantenimientos/grupo_auxiliar.js'));
+app.use('/asiento_patron',require('./routes/mantenimientos/asiento_patron.js'));
+
 
 // Public
 app.use(express.static(path.join(__dirname, 'public')));
