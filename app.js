@@ -138,6 +138,20 @@ app.use('/detraccion',require('./routes/modulos/provisiones/detraccion.js'));
 app.use('/retencion',require('./routes/modulos/provisiones/retencion.js'));
 
 
+app.use('/compras',require('./routes/modulos/compras/compras.js'));
+app.use('/requerimientos',require('./routes/modulos/compras/requerimientos.js'));
+app.use('/orden_compra',require('./routes/modulos/compras/orden_compra.js'));
+app.use('/pre_cotizacion',require('./routes/modulos/compras/pre_cotizacion.js'));
+app.use('/comparativo_precios',require('./routes/modulos/compras/comparativo_precios.js'));
+app.use('/reportes_compras',require('./routes/modulos/compras/reportes_compras.js'));
+app.use('/dua',require('./routes/modulos/compras/dua.js'));
+
+app.use('/almacen',require('./routes/modulos/almacen/almacen.js'));
+app.use('/guia_entrada',require('./routes/modulos/almacen/guia_entrada.js'));
+app.use('/transaccion_almacen',require('./routes/modulos/almacen/transaccion_almacen.js'));
+app.use('/reportes_almacen',require('./routes/modulos/almacen/reportes_almacen.js'));
+
+app.use('/tablas',require('./routes/modulos/mantenimientos/tablas.js'));
 // Public
 app.use(express.static(path.join(__dirname, 'public')));
 
