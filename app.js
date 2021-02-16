@@ -57,6 +57,20 @@ app.use(require('./routes/index'));
 app.use(require('./routes/authentication'));
 
 app.use('/empresas',require('./routes/mantenimientos/empresas.js'));
+app.use('/productos',require('./routes/mantenimientos/productos'));
+app.use('/cencos',require('./routes/mantenimientos/cencos.js'));
+app.use('/punto_venta',require('./routes/mantenimientos/punto_venta.js'));
+app.use('/unidad_negocios',require('./routes/mantenimientos/unidad_negocios.js'));
+app.use('/motivo_traslado',require('./routes/mantenimientos/motivo_traslado.js'));
+app.use('/transportista',require('./routes/mantenimientos/transportista.js'));
+app.use('/vehiculo',require('./routes/mantenimientos/vehiculo.js'));
+app.use('/orden_trabajo',require('./routes/mantenimientos/orden_trabajo.js'));
+app.use('/presupuesto',require('./routes/mantenimientos/presupuesto.js'));
+app.use('/almacen',require('./routes/mantenimientos/almacen.js'));
+app.use('/clientes',require('./routes/mantenimientos/clientes.js'));
+app.use('/unidades',require('./routes/mantenimientos/unidades.js'));
+app.use('/talonarios',require('./routes/mantenimientos/talonarios.js'));
+app.use('/forma_pago',require('./routes/mantenimientos/forma_pago.js'));
 
 // Public
 app.use(express.static(path.join(__dirname, 'public')));
