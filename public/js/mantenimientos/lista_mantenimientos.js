@@ -55,15 +55,6 @@ $(document).ready(function() {
         createExcelFromGrid(lista_mantenimientos,jq_modal_title_mantenimientos.text(),cabecera_mantenimientos)
     });
     
-    // $('#nuevo_mantenimientos').click(function (){
-    //     $.ajax({
-    //         url: '/ventas/prueba',
-    //         success: function (result){
-    //             $("#modal_edit_mantenimientos").modal("show");
-    //             $("#body_edit_mantenimientos").html(result);
-    //         }
-    //     });
-    // });
     jq_enviar_mantenimientos.click(function () {
         enviar_datos_lista_mantenimientos()
     });
