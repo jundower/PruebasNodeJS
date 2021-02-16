@@ -137,8 +137,6 @@ app.use('/letras',require('./routes/modulos/provisiones/letras_cxc.js'));
 app.use('/detraccion',require('./routes/modulos/provisiones/detraccion.js'));
 app.use('/retencion',require('./routes/modulos/provisiones/retencion.js'));
 
-app.use('/ventas',require('./routes/modulos/ventas/ventas.js'));
-
 
 // Public
 app.use(express.static(path.join(__dirname, 'public')));
