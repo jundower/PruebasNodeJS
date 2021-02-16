@@ -132,11 +132,10 @@ function rellenarFormato(data){
     }
     
     
-    $("#print_header_empresa_logo").attr("src",'http://demo.erp-facturacionelectronica.com/erp/'+data[0].empresa_codigo+'/img/'+data[0].empresa_logo);
-    //$("#print_header_empresa_logo_small").attr("src",'http://demo.erp-facturacionelectronica.com/erp/'+data[0].empresa_codigo+'/img/small_'+data[0].empresa_logo);
-    $("#print_header_empresa_logo_small").attr("src",'http://demo.erp-facturacionelectronica.com/erp/'+data[0].empresa_codigo+'/img/small_'+data[0].empresa_logo);
-    $("#print_detalle_letra_final").attr("src",'http://demo.erp-facturacionelectronica.com/erp/'+data[0].empresa_codigo+'/img/letra final.PNG');
-    $("#print_detalle_firma_final").attr("src",'http://demo.erp-facturacionelectronica.com/erp/'+data[0].empresa_codigo+'/img/firma final.PNG');
+    $("#print_header_empresa_logo").attr("src",'/erp/'+data[0].empresa_codigo+'/img/'+data[0].empresa_logo);
+    $("#print_header_empresa_logo_small").attr("src",'/erp/'+data[0].empresa_codigo+'/img/small_'+data[0].empresa_logo);
+    $("#print_detalle_letra_final").attr("src",'/erp/'+data[0].empresa_codigo+'/img/letra final.PNG');
+    $("#print_detalle_firma_final").attr("src",'/erp/'+data[0].empresa_codigo+'/img/firma final.PNG');
 
     $("#print_header_empresa_nombre").text(data[0].empresa_razon_social);
     $("#print_header_empresa_direccion").text(data[0].empresa_direccion);
@@ -356,9 +355,7 @@ function rellenarFormato(data){
     $("#print_footer_fecha_impresion").text(getShortDateFormat(fecha, "dd-mm-yyyy"));
     $("#print_footer_hora_impresion").text(getHora(fecha));
 
-    data[0].documento_aprobado == 'Aprobado' ? $("#print_footer_empresa_aprobado").attr("src",'http://demo.erp-facturacionelectronica.com/erp/'+data[0].empresa_codigo+'/img/aprobado.png') : $("#print_footer_empresa_aprobado").hide();
-    //$("#print_imagen_qr").attr("src",'http://demo.erp-facturacionelectronica.com/erp/'+data[0].empresa_codigo+'/qr/'+data[0].documento_qr);
-    // $("#print_imagen_qr").attr("src",'http://demo.erp-facturacionelectronica.com/erp/'+data[0].empresa_codigo+'/qr/'+data[0].documento_qr);
+    data[0].documento_aprobado == 'Aprobado' ? $("#print_footer_empresa_aprobado").attr("src",'/erp/'+data[0].empresa_codigo+'/img/aprobado.png') : $("#print_footer_empresa_aprobado").hide();
     $("#print_imagen_qr").attr("src",'/erp/'+data[0].empresa_codigo+'/qr/'+data[0].documento_qr);
 
     var header_height = $(".print_header").css("height").replace("px","") * 1;

@@ -180,7 +180,7 @@ function cargar_jq_grid_lista_productos(configuraciones){
             $("#lista_productos_leyenda1").text(jq_grid.getRowData(rowid).Leyenda1);
             var codigo=$("#lista_productos_imagen").attr("codigo");
             if(jq_grid.getRowData(rowid).Imagen!=""){
-                $("#lista_productos_imagen").attr("src", "http://demo.erp-facturacionelectronica.com/erp/"+codigo+"/img/"+jq_grid.getRowData(rowid).Imagen);
+                $("#lista_productos_imagen").attr("src", "/erp/"+codigo+"/img/"+jq_grid.getRowData(rowid).Imagen);
             }else{
                 $("#lista_productos_imagen").removeAttr("src");
             }
