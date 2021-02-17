@@ -1,0 +1,42 @@
+{
+  "_from": "jquery-ui-themes",
+  "_id": "jquery-ui-themes@1.12.0",
+  "_inBundle": false,
+  "_integrity": "sha1-pXugrZaADYRSL+dok//L3mcIHVE=",
+  "_location": "/jquery-ui-themes",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "jquery-ui-themes",
+    "name": "jquery-ui-themes",
+    "escapedName": "jquery-ui-themes",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/jquery-ui-themes/-/jquery-ui-themes-1.12.0.tgz",
+  "_shasum": "a57ba0ad96800d84522fe76893ffcbde67081d51",
+  "_spec": "jquery-ui-themes",
+  "_where": "C:\\Users\\Yiwo\\Documents\\Pruebas\\backup\\NodeMySQL",
+  "author": {
+    "name": "The jQuery Foundation"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "jQuery UI 1.12.0 Themes",
+  "keywords": [
+    "jquery-ui-themes"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "jquery-ui-themes",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.12.0"
+}
