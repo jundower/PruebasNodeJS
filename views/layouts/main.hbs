@@ -5,13 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title id="titulo_ventana">Cargando...</title>
+    
     <link rel='stylesheet' href="https://code.jquery.com/ui/1.12.1/themes/redmond/jquery-ui.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel='stylesheet' href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
     <link rel='stylesheet' href="https://cdn.jsdelivr.net/npm/free-jqgrid@4.15.5/dist/css/ui.jqgrid.min.css">
-    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/free-jqgrid@4.15.5/dist/plugins/css/ui.multiselect.min.css'>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/free-jqgrid@4.15.5/plugins/css/ui.multiselect.min.css'>
+
+
 
     <link href="/css/styles.css" rel="stylesheet">
-    <script src='https://code.jquery.com/jquery-3.5.1.slim.min.js'></script>
+
+    <script src='https://cdn.jsdelivr.net/npm/jquery-ui-dist@1.12.1/external/jquery/jquery.js'></script>
+    <script src="/js/mensaje.js"></script>
 </head>
 <body id ="body">
     
@@ -28,23 +33,21 @@
 </body>
 </html>
 
-<script href="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-<script href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
-<script href="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
+<script src='https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/jquery-ui-dist@1.12.1/jquery-ui.js'></script>
 <script src='https://cdn.jsdelivr.net/npm/free-jqgrid@4.15.5/dist/i18n/grid.locale-es.js'></script>
 <script src='https://cdn.jsdelivr.net/npm/free-jqgrid@4.15.5/dist/jquery.jqgrid.min.js'></script>
-<script src='https://cdn.jsdelivr.net/npm/free-jqgrid@4.15.5/dist/plugins/ui.multiselect.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/free-jqgrid@4.15.5/plugins/ui.multiselect.js'></script>
 
 
 <script src="/js/utilitarios/fechas.js"></script>
-<script src="/js/mensaje.js"></script>
 {{#if user}}
 <script type="text/javascript" src="http://www.ok-soft-gmbh.com/jqGrid/globalize/globalize.js"></script>
-{{!-- <script type="text/javascript" src="http://www.ok-soft-gmbh.com/jqGrid/globalize/cultures/globalize.cultures.js"></script> --}}
-{{!-- Fonts Awesome --}}
+
 <script src="https://kit.fontawesome.com/c6f1e55cf2.js" crossorigin="anonymous"></script>
-{{!-- <script type="text/javascript" language="javascript" src="//cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script> --}}
+
 <script src="/js/utilitarios/validaciones.js"></script>
 <script src="/js/utilitarios/jquerytemplates.js"></script>
 <script src="/js/utilitarios/printThis.js"></script>
@@ -52,7 +55,6 @@
 <script src="/js/utilitarios/calculos.js"></script>
 <script src="/plugins/exportar/exportExcel.js"></script>
 <script src="/plugins/exportar/exportFormat.js"></script>
-{{!-- <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script> --}}
 <script src="/js/utilitarios/exportar_excel.js"></script>
 
 <script src="/plugins/exportar/FileSaver.min.js"></script>
