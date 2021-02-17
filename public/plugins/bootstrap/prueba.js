@@ -1,0 +1,2 @@
+const valor="";
+valor = "Prueba";
