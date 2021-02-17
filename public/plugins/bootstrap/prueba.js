@@ -1,0 +1,2 @@
+const prueba="";
+prueba="Prueba";
