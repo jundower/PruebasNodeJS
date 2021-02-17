@@ -697,6 +697,32 @@ function cargar_configuracion(){
             ]
             modal_tablas_titulo = "Grupo de Auxiliar";
         break;
+        case "anexos":
+            columnas=[   
+                {name: 'Codigo', width: 100, template: textTemplate},
+                {name: 'Nombre', width: 200, template: textTemplate},
+                {name: 'Tipo_Documento', width: 200, template: textTemplate},
+                {name: 'Ruc', width: 100, template: textTemplate},
+                {name: 'Tipo_Auxiliar', width: 150, template: textTemplate},
+                {name: 'Direccion', width: 150, template: textTemplate},
+                {name: 'Telefono', width: 100, template: textTemplate},
+                {name: 'Fax', width: 100, template: textTemplate},
+                {name: 'Correo', width: 100, template: textTemplate},
+                {name: 'Contacto', width: 100, template: textTemplate},
+                {name: 'Pais', width: 100, template: textTemplate},
+                {name: 'Excluye_Percepcion', width: 100, template: textTemplate},
+                {name: 'Si_Percepcion', width: 100, template: textTemplate},
+                {name: 'Documento_Percepcion', width: 100, template: textTemplate},
+                {name: 'Si_Retencion', width: 100, template: textTemplate},
+                {name: 'Porc_Retencion', width: 100, template: textTemplate},
+                {name: 'Porc_Percepcion', width: 100, template: textTemplate},
+                {name: 'Si_Detraccion', width: 100, template: textTemplate},
+                {name: 'Grupo_Anexo', width: 100, template: textTemplate},
+                {name: 'Buen_Contribuyente', width: 100, template: textTemplate},
+                {name: 'Observacion', width: 100, template: textTemplate},
+            ]
+            modal_tablas_titulo = "Anexos";
+        break;
         case "asiento_patron":
             columnas=[
                 {name: 'Codigo', width: 80, template: textTemplate},
@@ -4684,13 +4710,12 @@ async function guardar_tablas(modulo_tablas){
                 Codigo: $("#tablas_"+modulo_tablas+"_codigo").val(),
                 Nombre: $("#tablas_"+modulo_tablas+"_nombre").val(),
                 Abreviatura: $("#tablas_"+modulo_tablas+"_abreviatura").val(),
-                Provision: $("#tablas_"+modulo_tablas+"_abreviatura").val(),
-                Cuenta_Soles: $("#tablas_"+modulo_tablas+"_abreviatura").val(),
-                Tipo_Documento: $("#tablas_"+modulo_tablas+"_abreviatura").val(),
-                Cuenta_Dolares: $("#tablas_"+modulo_tablas+"_abreviatura").val(),
-                Abreviatura: $("#tablas_"+modulo_tablas+"_abreviatura").val(),
-                Abreviatura: $("#tablas_"+modulo_tablas+"_abreviatura").val(),
-                Abreviatura: $("#tablas_"+modulo_tablas+"_abreviatura").val(),
+                Provision: $("#tablas_"+modulo_tablas+"_provision").is(':checked') ? 'S' :'N',
+                Cuenta_Soles: $("#tablas_"+modulo_tablas+"_cuenta_soles").val(),
+                Tipo_Documento: $("#tablas_"+modulo_tablas+"_tipo_documento").val(),
+                Cuenta_Dolares: $("#tablas_"+modulo_tablas+"_cuenta_dolares").val(),
+                Cuenta_Provisiones_Soles: $("#tablas_"+modulo_tablas+"_cuenta_prov_soles").val(),
+                Cuenta_Provisiones_Dolares: $("#tablas_"+modulo_tablas+"_cuenta_prov_dolares").val(),
             }
         break;
     }

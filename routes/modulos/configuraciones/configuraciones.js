@@ -166,6 +166,7 @@ router.post('/formato_impresion',isLoggedin,async (req, res) => {
         var tipo_documento = req.body.tipo_documento;
         var motivo_serie_documento = req.body.motivo_serie_documento;
         
+        // res.render("modulos/configuraciones/pruebas", {layout: false});
         const pool = await poolPromise;
         var lista;
         if(tipo_formato=="talonarios"){
@@ -209,6 +210,7 @@ router.post('/formato_impresion',isLoggedin,async (req, res) => {
         res.render('formatos/'+ruc_empresa+'/'+modulo+'/'+ruta_nombre, {layout: false});
     } catch (err) {
         res.send(err.message);
+        // res.render("modulos/configuraciones/pruebas", {layout: false});
     }
 });
 

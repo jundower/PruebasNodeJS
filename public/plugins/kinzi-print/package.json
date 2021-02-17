@@ -1,0 +1,39 @@
+{
+  "_from": "kinzi-print",
+  "_id": "kinzi-print@1.3.1",
+  "_inBundle": false,
+  "_integrity": "sha512-ZFx4FFkxTo19jYDRhrRa3KJJm0/zw2SerBIJLsCv8QWns/pdfyqZgTyPFaa5Q4VLRx1CzvvEXtsZFfCPQaFsWg==",
+  "_location": "/kinzi-print",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "kinzi-print",
+    "name": "kinzi-print",
+    "escapedName": "kinzi-print",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/kinzi-print/-/kinzi-print-1.3.1.tgz",
+  "_shasum": "69e6e7274e506cd6f01de0024b4d23620b37b1e4",
+  "_spec": "kinzi-print",
+  "_where": "C:\\Users\\JCusimayta\\Desktop\\Pruebas\\NodeMSSQL",
+  "author": {
+    "name": "Mousa Alsheikh"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "JQuery Printing Plugin, Print specific HTML element with Header and Footer on every page",
+  "license": "MIT",
+  "main": "kinzi.print.min.js",
+  "name": "kinzi-print",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.3.1"
+}

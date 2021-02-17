@@ -56,4 +56,8 @@ router.post('/exportar_html',isLoggedin,async (req, res) => {
     }
 });
 
+router.get('/prueba',async (req, res) => {
+    res.render("modulos/ventas/prueba");
+});
+
 module.exports = router;

@@ -1,5 +1,5 @@
 
-var logo ='<img src="/erp/01/img/logo_empresa.png" class="img-fluid mx-auto d-block" alt="Responsive image"></img>';
+var logo ='<img src="http://demo.erp-facturacionelectronica.com/erp/01/img/logo_empresa.png" class="img-fluid mx-auto d-block" alt="Responsive image"></img>';
 
 var campos=[
     //Empresa

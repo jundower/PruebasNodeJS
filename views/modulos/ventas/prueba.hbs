@@ -1,0 +1,60 @@
+
+<div class="modal-print-backdrop print_container d---none"></div>
+<div id ="contenedor_impresion" class="print_container d---none" tabindex="0" >
+                
+        <div id="my_pdf_viewer" >
+            <div class="mx-auto" style="width: fit-content;">
+            <canvas id="pdf_renderer" ></canvas>
+            </div>
+            <div id="navigation_controls">
+                <button id="go_previous">Previous</button>
+                <input id="current_page" value="1" type="number"/>
+                <button id="go_next">Next</button>
+            </div>
+            <div id="zoom_controls">  
+                <button id="zoom_in">+</button>
+                <button id="zoom_out">-</button>
+            </div>
+				<button onclick="convert_HTML_To_PDF();">Convert HTML to PDF</button>
+				
+				<!-- HTML content for PDF creation -->
+				<div id="contnet" style="color: red;">
+                    <div class="row">
+    					<h1>What is Lorem Ipsum?</h1>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+					        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        </div>
+                        <div class="col-6">
+					        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        </div>
+                    </div>
+				</div>
+				<div id="elementH"></div>
+        </div>
+</div>
+<div id ="print_botones" class="print_container d---none">
+  <a class="print_botones_onedrive" role="button" title="Subir a la nube">
+      <svg class="svg-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path d="M19.479 10.092c-.212-3.951-3.473-7.092-7.479-7.092-4.005 0-7.267 3.141-7.479 7.092-2.57.463-4.521 2.706-4.521 5.408 0 3.037 2.463 5.5 5.5 5.5h13c3.037 0 5.5-2.463 5.5-5.5 0-2.702-1.951-4.945-4.521-5.408zm-7.479-1.092l4 4h-3v4h-2v-4h-3l4-4z"/></svg>
+  </a>
+  <a class="print_botones_imprimir" role="button" title="Imprimir">
+      <svg class="svg-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path d="M14 20h-6v-1h6v1zm10-15v13h-4v6h-16v-6h-4v-13h4v-5h16v5h4zm-6 10h-12v7h12v-7zm0-13h-12v3h12v-3zm4 5.5c0-.276-.224-.5-.5-.5s-.5.224-.5.5.224.5.5.5.5-.224.5-.5zm-6 9.5h-8v1h8v-1z"/></svg>
+  </a>
+  <a class="print_botones_descargar" role="button" title="Descargar">
+      <svg class="svg-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path d="M12 21l-8-9h6v-12h4v12h6l-8 9zm9-1v2h-18v-2h-2v4h22v-4h-2z"/></svg>
+  </a>
+</div>
+
+<div id ="print_botones2" class="print_container d---none">
+  <a class="print_botones_atras" role="button" title="Atrás">
+      <svg class="svg-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path d="M0 12l9-8v6h15v4h-15v6z"/></svg>
+  </a>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0.943/pdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+<script src="/plugins/html2canvas.js"></script>
+<script src="/js/modulos/ventas/prueba.js"></script>
+

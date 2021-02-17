@@ -16,11 +16,11 @@ router.post('/lista', async (req, res) => {
         "isnull(Hpartidagast.abrev,'') as Abreviatura, \n"+
         "HPartidagast.operacion as Operacion,  \n"+
         "isnull(Hpartidagast.erp_codsunat,'') as Sunat, \n"+
-        "isnull((select erp_ccuenta from HDetpartidagast where ccod_empresa = '01' and ccod_partgast = Hpartidagast.ccod_partgast and erp_item=1),'') as Cuenta1, \n"+   
-        "isnull((select erp_ccuenta from HDetpartidagast where ccod_empresa = '01' and ccod_partgast = Hpartidagast.ccod_partgast and erp_item=2),'') as Cuenta2, \n"+   
-        "isnull((select erp_ccuenta from HDetpartidagast where ccod_empresa = '01' and ccod_partgast = Hpartidagast.ccod_partgast and erp_item=3),'') as Cuenta3, \n"+   
-        "isnull((select erp_ccuenta from HDetpartidagast where ccod_empresa = '01' and ccod_partgast = Hpartidagast.ccod_partgast and erp_item=4),'') as Cuenta4, \n"+   
-        "isnull((select erp_ccuenta from HDetpartidagast where ccod_empresa = '01' and ccod_partgast = Hpartidagast.ccod_partgast and erp_item=5),'') as Cuenta5, \n"+   
+        "isnull((select erp_ccuenta from HDetpartidagast where ccod_empresa = @codigo_empresa and ccod_partgast = Hpartidagast.ccod_partgast and erp_item=1),'') as Cuenta1, \n"+   
+        "isnull((select erp_ccuenta from HDetpartidagast where ccod_empresa = @codigo_empresa and ccod_partgast = Hpartidagast.ccod_partgast and erp_item=2),'') as Cuenta2, \n"+   
+        "isnull((select erp_ccuenta from HDetpartidagast where ccod_empresa = @codigo_empresa and ccod_partgast = Hpartidagast.ccod_partgast and erp_item=3),'') as Cuenta3, \n"+   
+        "isnull((select erp_ccuenta from HDetpartidagast where ccod_empresa = @codigo_empresa and ccod_partgast = Hpartidagast.ccod_partgast and erp_item=4),'') as Cuenta4, \n"+   
+        "isnull((select erp_ccuenta from HDetpartidagast where ccod_empresa = @codigo_empresa and ccod_partgast = Hpartidagast.ccod_partgast and erp_item=5),'') as Cuenta5, \n"+   
         "isnull(Hpartidagast.usuario,'') as Usuario, \n"+
         "isnull(Hpartidagast.pc_user,'') as Pc_User, \n"+
         "CONVERT(VARCHAR,Hpartidagast.fecha,103) as Fecha,  \n"+

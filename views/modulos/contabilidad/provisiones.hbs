@@ -1,0 +1,412 @@
+{{#if user}}
+<ul class="nav nav-tabs tabs group pl-4 d-print-none" id="myTab" role="tablist">
+  <li class="nav-item active pt-1 nav-tab-rounded">
+    <a class="active my-0 py-2" data-toggle="tab" href="#generales">Datos Generales</a>
+  </li>
+  <li class="nav-item pt-1 nav-tab-rounded">
+    <a class="my-0 py-2" data-toggle="tab" href="#profile">Datos Complementarios</a>
+  </li>
+</ul>
+
+<div class="tab-content mr-3 d-print-none" id="myTabContent">
+    <div class="tab-pane fade show active" id="generales" role="tabpanel" aria-labelledby="generales-tab">
+        <div class="container-fluid border">
+            <div class="row border my-1">
+                <div class="col-lg-2">
+                    <div class="row my-1">
+                        <div class="col-10">
+                            <select class="form-control form-control-sm c_mantenimientos" id="subvoucher">
+                            </select>
+                        </div>
+                        <button type="button" class="col-1 btn btn-light btn-sm sm" id ="buscar_pendientes" data-toggle="tooltip" data-placement="top" title="Buscar">
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                            <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                            </svg>
+                        </button>
+                        <button type="button" class="col-1 btn btn-light btn-sm sm" id ="configurar_pendientes" data-toggle="tooltip" data-placement="top" title="Buscar">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" style="fill:#007bff"><path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z"/></svg>
+                        </button>
+                    </div>
+                    <div class="row my-1 d-none">
+                        <label for="guia_entrada" class="col-xl-5 col-form-label col-form-label-sm">G. Entrada:</label>
+                        <input type="text" id="guia_entrada" class="col-xl-7 form-control form-control-sm" placeholder="Guia Entrada">
+                    </div>
+                    <div class="row my-1">
+                        <div class="col-12">
+                            <select class="form-control form-control-sm  c_mantenimientos" id="tipo_anexo">
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="row my-1">
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <label for="fecha_registro" class="col-xl-5 col-form-label col-form-label-sm">Fecha Reg:</label>
+                                <input type="date" id="fecha_registro" class="col-xl-7 form-control form-control-sm no-calendar">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-xl-6">
+                                    <label class="form-check-label col-form-label-sm">Reg. Compra: </label>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="registro_compra" id="registro_compra_si" value="S">
+                                        <label class="form-check-label col-form-label-sm">Si</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="registro_compra" id="registro_compra_no" value="N">
+                                        <label class="form-check-label col-form-label-sm">No </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row my-1">
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <label for="codigo_anexo" class="col-xl-5 col-form-label col-form-label-sm">Anexo:</label>
+                                <input type="text" id = "codigo_anexo" class="col-xl-7 form-control form-control-sm  text-let c_mantenimientos">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <input type="text" id = "nombre_anexo" class="col-lg-12 form-control form-control-sm  text-left">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row my-1">
+                        <div class="col-lg-3">
+                            <div class="row">
+                                <label for="ejercicio" class="col-xl-5 col-form-label col-form-label-sm">Ejercicio:</label>
+                                <input type="text" id="ejercicio" class="col-xl-7 form-control form-control-sm  text-center">
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="row">
+                                <label for="periodo" class="col-xl-5 col-form-label col-form-label-sm">Periodo:</label>
+                                <input type="text" id="periodo" class="col-xl-7 form-control form-control-sm  text-center">
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="form-check form-check-inline ">
+                                <input class="form-check-input" type="radio" name="forma" id="automatico" value="A">
+                                <label class="form-check-label col-form-label-sm" for="automatico">Automatico: </label>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="form-check form-check-inline ">
+                                <input class="form-check-input" type="radio" name="forma" id="manual" value="M">
+                                <label class="form-check-label col-form-label-sm" for="manual">Manual: </label>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <input type="text" id="numero_documento" class="form-control form-control-sm text-right">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row border my-1">
+                <div class="col-lg-12">
+                    <div class="row my-1">
+                        <div class="col-lg-2">
+                            <div class="input-group form-control-sm-erp form-control-sm-group-moneda">
+                                <select class="form-control form-control-sm form-control-sm-moneda no-spin" id="moneda">
+                                </select>
+                                <select class=" form-control form-control-sm " id="tipo_cambio">
+                                </select>
+                                <input type="number" class="form-control form-control-sm text-right no-spin-number form-control-sm-tasa-cambio" id="tasa_cambio">
+                            </div>
+                        </div>
+                        <div class="col-4">
+
+                            <div class="input-group form-control-sm-erp form-control-sm-group-fechas">
+                                <label class="sm input-group-text py-0 border-right-0" for="fecha_emision" style="background:#e9ecef;border-top-right-radius:0px;border-bottom-right-radius:0px">Emisión:</label>
+                                <input type="date" id = "fecha_emision" class="form-control form-control-sm border-left-0 pl-0 calendar-sm" style=";border-top-left-radius:0px;border-bottom-left-radius:0px">
+                                <input type="number" id = "dias" class="form-control form-control-sm text-right mx-2 form-control-sm-dias-forma-pago" value ="0">
+                                <label class="sm input-group-text py-0 border-right-0" for="fecha_vencimiento" style="background:#e9ecef;border-top-right-radius:0px;border-bottom-right-radius:0px">Venc.:</label>
+                                <input type="date" id = "fecha_vencimiento" class="form-control form-control-sm border-left-0 pl-0 calendar-sm" style=";border-top-left-radius:0px;border-bottom-left-radius:0px">
+                            </div>
+                        </div>
+
+                        <div class="col-5">
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <label for="forma_pago" class="col-form-label col-form-label-sm">Forma Pago:</label>
+                                </div>
+                                <div class="col-lg-10">
+                                    <select class="form-control form-control-sm  c_mantenimientos" id="forma_pago">
+                                        <option value="00">Forma de Pago</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="row my-1">
+                        <div class="col-lg-3">
+                            <div class="input-group">
+                                <div class="input-group-pretend">
+                                    <label for="tipo_documento_referencia" class="input-group-text form-control form-control-sm form-control-sm-ref-text">Tipo Ref:</label>
+                                </div>
+                                <select class="form-control form-control-sm c_mantenimientos form-control-sm-ref-tipo" id="tipo_documento_referencia">
+                                </select>
+                                <input type="text" id = "serie_referencia" class="form-control form-control-sm form-control-sm-ref-serie" placeholder="Serie">
+                                <input type="text" id = "numero_referencia" class="form-control form-control-sm form-control-sm-ref-numero" placeholder="Número">
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                        </div>
+                        <div class="col-lg-1">
+                            <label for="destino_operacion" class="col-form-label col-form-label-sm">Dest Operacion:</label>
+                        </div>
+                        <div class="col-lg-2">
+                            <select class="form-control form-control-sm " id="destino_operacion">
+                                <option value="001">Grabada</option>
+                                <option value="004">No Grabada</option>
+                                <option value="005">Mixta</option>
+                                <option value="007">Fact. Exportacion</option>
+                                <option value="008">No Domiciliada</option>
+                                <option value="009">Dua</option>
+                                <option value="010">Op. Grav. Dest. No Grav.</option>
+                                <option value="011">Op. Mixta Dest No Grav</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="row my-1">
+                        <div class="col-lg-3">
+                            <div class="input-group">
+                                <div class="input-group-pretend">
+                                    <label for="tipo_documento" class="input-group-text form-control form-control-sm form-control-sm-ref-text">Tipo:</label>
+                                </div>
+                                <select class="form-control form-control-sm c_mantenimientos form-control-sm-ref-tipo" id="tipo_documento">
+                                </select>
+                                <input type="text" id = "serie" class="form-control form-control-sm form-control-sm-ref-serie" placeholder="Serie">
+                                <input type="text" id = "numero" class="form-control form-control-sm form-control-sm-ref-numero" placeholder="Número">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row border">
+                
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="row my-1">
+                                        <label for="subtotal" class="col-lg-5 col-form-label col-form-label-sm">Subtotal:</label>
+                                        <input onkeypress="return isNumeric(event)" oninput="maxLengthCheck(this)" type = "number" maxlength = "9" min = "1" max = "999" id="subtotal" class="col-lg-7 form-control form-control-sm  text-right focusIn" >
+                                    </div>
+                                    <div class="row">
+                                        <label for="detraccion_provisiones" class="col-lg-5 col-form-label col-form-label-sm">Detraccion:</label>
+                                        <select class="col-lg-7 form-control form-control-sm  c_mantenimientos focusIn" id="detraccion_provisiones">
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="row">
+                                        <div class="col-5">
+                                            <div class="row my-1">
+                                                <label for="mixta" class="col-lg-5 col-form-label col-form-label-sm">Mix:</label>
+                                                <input type="number" id = "mixta" class="col-lg-7 form-control form-control-sm  text-right focusIn">
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="row my-1">
+                                                <label for="porcentaje_impuesto" class="col-lg-4 col-form-label col-form-label-sm">% Imp.:</label>
+                                                <input type="number" id = "porcentaje_impuesto" class="col-lg-6 form-control form-control-sm  text-right">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        
+                                        <div class="col-5">
+                                            <div class="row">
+                                                <input class="col-lg-5 align-self-center" type="checkbox" id="detraccion_check" >
+                                                <input type="number" id = "porcentaje_detraccion" class="col-lg-7 form-control form-control-sm  text-right focusIn">
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="row">
+                                                <label for="porcentaje_detraccion" class="col-lg-4 col-form-label col-form-label-sm">%</label>
+                                                <input type="number" id = "monto_detraccion" class="col-lg-6 form-control form-control-sm  text-right focusIn">
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="row my-1">
+                                <label for="impuesto" class="col-lg-2 col-form-label col-form-label-sm">Impuesto:</label>
+                                <input type="number" id = "impuesto" class="col-lg-2 form-control form-control-sm  text-right focusIn">
+
+                                <label for="icbper" class="col-lg-2 col-form-label col-form-label-sm">Icbper:</label>
+                                <input type="number" id = "icbper" class="col-lg-2 form-control form-control-sm  text-right focusIn">
+
+                                <label for="importe" class="col-lg-2 col-form-label col-form-label-sm">Importe:</label>
+                                <input type="number" id = "importe" class="col-lg-2 form-control form-control-sm  text-right focusIn">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row my-1">
+                        <div class="col-10">
+                            <div class="row">
+                                <div class="col-lg-1">
+                                    <label for="glosa" class="col-form-label col-form-label-sm">Glosa:</label>
+                                </div>
+                                <div class="col-lg-11">
+                                    <div class="row my-1">
+                                        <input type="text" id = "glosa" class="col-lg-8 form-control form-control-sm  text-left focusIn">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        
+        <div class="container-fluid border">
+            <div class="row border my-1">
+                <div class="col-lg-12 border">
+                    <div class="row">
+                        <label for="subtotal_2" class="col-lg-2 col-form-label col-form-label-sm">Subtotal 2:</label>
+                        <input type="number" id="subtotal_2" class="col-lg-2 form-control form-control-sm  text-right">
+                        <label for="mixta_2" class="col-lg-2 col-form-label col-form-label-sm">Mix 2:</label>
+                        <input type="number" id = "mixta_2" class="col-lg-2 form-control form-control-sm  text-right">
+                        <label for="impuesto_2" class="col-lg-2 col-form-label col-form-label-sm">Impuesto:</label>
+                        <input type="number" id = "impuesto_2" class="col-lg-2 form-control form-control-sm  text-right focusIn">
+                        <label for="icbper_2" class="col-lg-2 col-form-label col-form-label-sm">Icbper:</label>
+                        <input type="number" id = "icbper_2" class="col-lg-2 form-control form-control-sm  text-right focusIn">
+                        <label for="importe_2" class="col-lg-2 col-form-label col-form-label-sm">Importe 2:</label>
+                        <input type="number" id = "importe_2" class="col-lg-2 form-control form-control-sm  text-right">
+                        <label for="percepcion_2" class="col-lg-2 col-form-label col-form-label-sm">Percep. 2:</label>
+                        <input type="number" id = "percepcion_2" class="col-lg-2 form-control form-control-sm  text-right focusIn">
+                    </div>
+                    
+                                    
+                </div>
+            </div>
+            <div class="row border my-1">
+                <div class="col-lg-12 border">
+                    <div class="row">
+
+                        <label for="retencion_no_domiciliado" class="col-lg-2 col-form-label col-form-label-sm">Retencion No Domic.:</label>
+                        <select class="col-lg-2 form-control form-control-sm  c_mantenimientos" id="retencion_no_domiciliado">
+                        </select>
+                        <div class="col-lg-1">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="retencion_check" >
+                            </div>
+                        </div>
+                        <input type="number" id = "porcentaje_retencion" class="col-lg-1 form-control form-control-sm  text-right focusIn">
+                        <label for="" class="col-lg-1 col-form-label col-form-label-sm">%</label>
+                        <input type="number" id = "monto_retencion" class="col-lg-1 form-control form-control-sm  text-right focusIn">
+                        <div class="col-lg-4" id="clasificacion_si_no">
+                            <form class="">
+                                <div class="form-group row ">
+                                    <label for="clasificacion" class="col-lg-6 col-form-label col-form-label-sm">Clasifición Bien y Servicios:</label>
+                                    <select class="col-lg-6 form-control form-control-sm  c_mantenimientos" id="clasificacion">
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        
+                        <div class="col-lg-2">
+                            <div class="row">
+                                <label for="responsable" class="col-xl-5 col-form-label col-form-label-sm">Responsable:</label>
+                                <select class="col-xl-7 form-control form-control-sm " id="responsable">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="row">
+                                <label for="fecha_referencia" class="col-lg-2 col-form-label col-form-label-sm">Fecha Ref.:</label>
+                                <input type="date" id = "fecha_referencia" class="col-lg-4 form-control form-control-sm  text-right">
+                            </div>  
+                        </div>
+                    </div>
+                
+                    <div class="row">
+                        <label for="percepcion_check" class="col-lg-1 col-form-label col-form-label-sm">Percepcion:</label>
+                        <input class="col-lg-1 align-self-center" type="checkbox" id="percepcion_check" >
+                        <input type="number" id = "porcentaje_percepcion" class="col-lg-1 form-control form-control-sm  text-right focusIn">
+                        <label for="porcentaje_percepcion" class="col-lg-1 col-form-label col-form-label-sm">%</label>
+                        <label for="percepcion" class="col-lg-2 col-form-label col-form-label-sm">Percepcion:</label>
+                        <input type="number" id = "percepcion" class="col-lg-2 form-control form-control-sm  text-right focusIn">
+                    </div>
+                    <div class="col-lg-1">
+                        <div class="row my-1">
+                            <div class="col-12">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="contabilizada" >
+                                    <label class="form-check-label col-form-label-sm" for="contabilizada">Contabiliza</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row my-1">
+                            <div class="col-12">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="manual_2" >
+                                    <label class="form-check-label col-form-label-sm" for="manual_2">Manual</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row my-1">
+                            <div class="col-12">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="no_costos" >
+                                    <label class="form-check-label col-form-label-sm" for="no_costos">No Costos</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="d-none">
+    <input id="user-Ventas_Mas_Igv" type="text" value="{{user.ventas_mas_igv}}">
+    <input id="user-Unidad_negocio" type="text" value="{{user.codigo_unidad_negocio}}">
+    <input id="user-codigo_centro_costos" type="text" value="{{user.codigo_centro_costos}}">
+    <input id="user-codigo_punto_venta" type="text" value="{{user.codigo_punto_venta}}">
+    <input id="user-codigo_ninguno" type="text" value="00">
+    <input id="user-Busqueda_Punto_Venta" type="text" value="{{user.globales_busqueda_pto_venta}}">
+    <input id="modulo_formatos" type="text" value="guia">
+    <input id="modulo_cob_pag" type="text" value="{{cob_pag}}">
+    <input id="subvoucher_predeterminado" type="text" value="{{subvoucher}}">
+</div>
+
+{{> mantenimientos/ventas_pendientes}}
+{{> mantenimientos/detalle_contable}}
+{{> mantenimientos/lista_mantenimientos}}
+{{> mantenimientos/documentos_listas}}
+
+<script src="/js/mantenimientos/cabecera_provisiones.js"></script>
+<script src="/js/modulos/contabilidad/provisiones.js"></script>
+
+{{/if}}

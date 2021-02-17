@@ -35,6 +35,11 @@ router.get('/kardex_serie',isLoggedin,async (req, res) => {
     res.render("modulos/almacen/kardex_serie");
 });
 
+router.get('/pruebas',async (req, res) => {
+    const { modulo } = req.params;
+    res.render("modulos/almacen/prueba",{layout: false});
+});
+
 router.get('/data.json',async (req, res) => {
 var data  =[
 		{"OrderID":"10835","OrderDate":"1998-01-15 00:00:00","CustomerID":"ALFKI","EmployeeID":"1","Freight":"69.5300","ShipName":"Alfreds Futterkiste"},

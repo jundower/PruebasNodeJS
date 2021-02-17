@@ -151,6 +151,34 @@ router.post('/lista', async (req, res) => {
     "where idempresa=@codigo_empresa \n"+
     "and tipo_auxiliar=@tipo \n";
 
+    var query_undifened =
+    "select  \n"+
+    "(Hanexos_2.tipo_auxiliar +' - '+ Htipaux.cnom_tipaux) as Tipo_Auxiliar, \n"+
+    "codigo as Codigo, \n"+
+    "ruc as Ruc, \n"+
+    "nombre as Nombre, \n"+
+    "direccion as Direccion, \n"+
+    "telefono as Telefono, \n"+
+    "fax as Fax, \n"+
+    "correo_electronico as Correo, \n"+
+    "contacto as Contacto, \n"+
+    "tipo_documento as Tipo_Documento, \n"+
+    "pais as Pais, \n"+
+    "excluye_percepcion as Excluye_Percepcion, \n"+
+    "percepcion as Si_Percepcion, \n"+
+    "percepcion_documento as Documento_Percepcion, \n"+
+    "retencion as Si_Retencion, \n"+
+    "porc_retencion as Porc_Retencion, \n"+
+    "porc_percepcion as Porc_Percepcion, \n"+
+    "detraccion_sn as Si_Detraccion, \n"+
+    "grupo_anexo as Grupo_Anexo, \n"+
+    "buen_contribuyente as Buen_Contribuyente, \n"+
+    "Erp_Observacion as Observacion \n"+
+    "from Hanexos_2 inner join Htipaux on\n"+   
+    "Hanexos_2.idempresa = Htipaux.ccod_empresa and \n"+
+    "Hanexos_2.tipo_auxiliar = Htipaux.ccod_tipaux \n"+
+    "where idempresa =  @codigo_empresa \n";
+
     switch (tipo){
         case "12":
             query=query_12;
@@ -160,6 +188,9 @@ router.post('/lista', async (req, res) => {
         break;
         case "41":
             query=query_41;
+        break;
+        case undefined:
+            query=query_undifened;
         break;
     }
 

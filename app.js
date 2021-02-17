@@ -13,7 +13,7 @@ const app = express();
 require('./lib/passport');
 
 // Settings
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 5000);
 app.set('trust proxy', true) //Agregado para leer la ip del cliente
 app.set('views', path.join(__dirname, 'views'));
 app.engine('.hbs', exphbs({
@@ -53,8 +53,21 @@ app.use((req, res, next) => {
 });
 
 // Routes
+app.use('/css', express.static(path.join(__dirname, '../node_modules/bootstrap')));
+app.use('/css', express.static(path.join(__dirname, '../node_modules/jquery-ui-themes')));
+app.use('/js', express.static(path.join(__dirname, '../node_modules/jquery/dist')));
+// app.use('/js', express.static(path.join(__dirname, '../node_modules/@popper.js/core/dist/cjs')));
+app.use('/js', express.static(path.join(__dirname, '../node_modules/bootstrap/dist/js')));
+app.use('/js', express.static(path.join(__dirname, '../node_modules/jquery-ui-dist')));
+app.use('/js', express.static(path.join(__dirname, '../node_modules/free-jqgrid')));
+
+// 
+// app.use('/css', path.join(__dirname, '../node_modules/jquery-ui-dist'));
+console.log(path.join(__dirname, '../node_modules/bootstrap/dist/css'));
+
 app.use(require('./routes/index'));
 app.use(require('./routes/authentication'));
+
 
 app.use('/empresas',require('./routes/mantenimientos/empresas.js'));
 app.use('/productos',require('./routes/mantenimientos/productos'));
@@ -71,6 +84,8 @@ app.use('/clientes',require('./routes/mantenimientos/clientes.js'));
 app.use('/unidades',require('./routes/mantenimientos/unidades.js'));
 app.use('/talonarios',require('./routes/mantenimientos/talonarios.js'));
 app.use('/forma_pago',require('./routes/mantenimientos/forma_pago.js'));
+
+
 app.use('/lista_precios',require('./routes/mantenimientos/lista_precios.js'));
 app.use('/tipo_cambio',require('./routes/mantenimientos/tipo_cambio.js'));
 app.use('/vendedor',require('./routes/mantenimientos/vendedor.js'));
@@ -97,6 +112,7 @@ app.use('/clasificacion_bien_servicios',require('./routes/mantenimientos/clasifi
 app.use('/periodo_contable',require('./routes/mantenimientos/periodo_contable.js'));
 app.use('/retencion_no_domiciliado',require('./routes/mantenimientos/retencion_no_domiciliados.js'));
 app.use('/cuentas_corrientes',require('./routes/mantenimientos/cuentas_corrientes.js'));
+
 app.use('/cobrador',require('./routes/mantenimientos/cobrador.js'));
 app.use('/familias',require('./routes/mantenimientos/familias.js'));
 app.use('/subfamilias',require('./routes/mantenimientos/subfamilias.js'));
@@ -127,6 +143,10 @@ app.use('/asiento_patron',require('./routes/mantenimientos/asiento_patron.js'));
 
 
 app.use('/configuraciones',require('./routes/modulos/configuraciones/configuraciones.js'));
+
+// app.use('/provisiones',require('./routes/modulos/contabilidad/provisiones.js'));
+// app.use('/letras',require('./routes/modulos/contabilidad/letras_cxc.js'));
+
 app.use('/cancelacion',require('./routes/modulos/financiero/cancelacion.js'));
 
 app.use('/contabilidad',require('./routes/modulos/contabilidad/contabilidad.js'));
@@ -136,6 +156,14 @@ app.use('/provisiones',require('./routes/modulos/provisiones/provisiones.js'));
 app.use('/letras',require('./routes/modulos/provisiones/letras_cxc.js'));
 app.use('/detraccion',require('./routes/modulos/provisiones/detraccion.js'));
 app.use('/retencion',require('./routes/modulos/provisiones/retencion.js'));
+
+app.use('/ventas',require('./routes/modulos/ventas/ventas.js'));
+app.use('/cotizacion',require('./routes/modulos/ventas/cotizacion.js'));
+app.use('/pedido',require('./routes/modulos/ventas/pedido.js'));
+app.use('/guia',require('./routes/modulos/ventas/guia.js'));
+app.use('/facturacion',require('./routes/modulos/ventas/facturacion.js'));
+app.use('/sunat',require('./routes/modulos/ventas/sunat.js'));
+app.use('/reportes_ventas',require('./routes/modulos/ventas/reportes_ventas.js'));
 
 app.use('/punto_venta',require('./routes/modulos/punto_venta/punto_venta.js'));
 app.use('/toma_pedidos',require('./routes/modulos/punto_venta/toma_pedidos.js'));
@@ -147,13 +175,6 @@ app.use('/configuracion_tarjeta',require('./routes/modulos/punto_venta/configura
 app.use('/configuracion_tipo_pago',require('./routes/modulos/punto_venta/configuracion_tipo_pago.js'));
 app.use('/reportes_punto_venta',require('./routes/modulos/punto_venta/reportes_punto_venta.js'));
 
-app.use('/ventas',require('./routes/modulos/ventas/ventas.js'));
-app.use('/cotizacion',require('./routes/modulos/ventas/cotizacion.js'));
-app.use('/pedido',require('./routes/modulos/ventas/pedido.js'));
-app.use('/guia',require('./routes/modulos/ventas/guia.js'));
-app.use('/facturacion',require('./routes/modulos/ventas/facturacion.js'));
-app.use('/sunat',require('./routes/modulos/ventas/sunat.js'));
-app.use('/reportes_ventas',require('./routes/modulos/ventas/reportes_ventas.js'));
 app.use('/compras',require('./routes/modulos/compras/compras.js'));
 app.use('/requerimientos',require('./routes/modulos/compras/requerimientos.js'));
 app.use('/orden_compra',require('./routes/modulos/compras/orden_compra.js'));
@@ -161,6 +182,7 @@ app.use('/pre_cotizacion',require('./routes/modulos/compras/pre_cotizacion.js'))
 app.use('/comparativo_precios',require('./routes/modulos/compras/comparativo_precios.js'));
 app.use('/reportes_compras',require('./routes/modulos/compras/reportes_compras.js'));
 app.use('/dua',require('./routes/modulos/compras/dua.js'));
+
 app.use('/almacen',require('./routes/modulos/almacen/almacen.js'));
 app.use('/guia_entrada',require('./routes/modulos/almacen/guia_entrada.js'));
 app.use('/transaccion_almacen',require('./routes/modulos/almacen/transaccion_almacen.js'));
@@ -168,9 +190,9 @@ app.use('/reportes_almacen',require('./routes/modulos/almacen/reportes_almacen.j
 
 app.use('/tablas',require('./routes/modulos/mantenimientos/tablas.js'));
 
+
 // Public
 app.use(express.static(path.join(__dirname, 'public')));
-
 
 // Starting
 app.listen(app.get('port'), () => {
